@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>不求甚解學經濟-信息設計(二)-多個接收者(1) | 不求甚解學經濟</title><meta name="keywords" content="信息設計,貝葉斯勸說,Information Design,Bayesian Persuasion,貝葉斯說服,博弈論,Game Theory,Mechanism Design"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="信息設計學習筆記係列。 Ina Taneva, 2019, AEJ: Micro 這篇文章裏提到的BNE和BCE指的是除了信息設計者以外的參與人之間的均衡概念，與KG(2011)不同，KG指的是發送者和接收者之間的均衡概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-信息設計(二)-多個接收者(1)">
+<meta property="og:url" content="https://brandonsli.com/p/2b781b99.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="信息設計學習筆記係列。 Ina Taneva, 2019, AEJ: Micro 這篇文章裏提到的BNE和BCE指的是除了信息設計者以外的參與人之間的均衡概念，與KG(2011)不同，KG指的是發送者和接收者之間的均衡概念。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2020-12-30T09:34:33.000Z">
+<meta property="article:modified_time" content="2021-08-03T08:17:17.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://brandonsli.com/p/2b781b99"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="qCKYVlYYJxGHTmeJ"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8735908405048796',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-103535631-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-103535631-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-信息設計(二)-多個接收者(1)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-03 16:17:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-信息設計(二)-多個接收者(1)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-12-30T09:34:33.000Z" title="發表於 2020-12-30 17:34:33">2020-12-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-03T08:17:17.000Z" title="更新於 2021-08-03 16:17:17">2021-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-信息設計(二)-多個接收者(1)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>信息設計學習筆記係列。</p>
+<p>Ina Taneva, 2019, AEJ: Micro</p>
+<p>這篇文章裏提到的BNE和BCE指的是除了信息設計者以外的參與人之間的均衡概念，與KG(2011)不同，KG指的是發送者和接收者之間的均衡概念。</p>
+<span id="more"></span>
+<p>在這一篇文章中，依然了採取共同先驗的假設。分析將會極大地簡化。預計後麵我會整理自己閱讀的其他文章的筆記。如 On Information Design in Games，該文對信念的處理較為複雜(並且允許更多的均衡選擇可能)；Bayesian Persuasion with Heterogeneous Priors，關於異質性先驗信念等。</p>
+<hr />
+<p>根據海薩尼教條：在共同先驗的假設下，參與人後驗信念的差異隻能來源於其所擁有信息的差異。所以採取共同先驗假設可以更好地分析信息的作用。如果採取異質性先驗假設，那麼為了識別出信息和先驗各自的作用，需要施加額外的約束條件。</p>
+<hr />
+<p>當存在多個接收者時，信息設計問題引進了更多的複雜性。比如不同接收者對於世界狀態信念的差異，接收者之間對彼此策略的不確定性，接收者之間的對其他人信念的不確定性，接收者之間的策略互動等。</p>
+<p>當考慮多個接收者(以及信息設計者)具有相同的先驗信念時，問題將會被簡化。但依然需要處理接收者之間的策略互動問題。</p>
+<p>當模型中存在多個均衡時，信息設計者可以起到均衡選擇的作用。特別地，當考慮混合策略均衡時，信息設計者的協調作用可以避免一種福利較差的情況出現：如果不存在這種協調機製，福利較差的情況可能以正的機率在均衡中出現。</p>
+<p>接下來我們回顧一下相關策略的知識，以及其與混合策略的區別等。</p>
+<h2 id="預備知識">預備知識</h2>
+<h3 id="混合策略與相關策略的區別">混合策略與相關策略的區別</h3>
+<p>當考慮策略型博弈(Normal Form, Strategic Form)時，</p>
+<p>給定有限策略集們<span class="math inline">\(S_{i}\)</span>對於每個參與人<span class="math inline">\(i\in\mathscr{P}\)</span>，其中<span class="math inline">\(\mathscr{P}\)</span>為有限的參與人集。則參與人<span class="math inline">\(i\)</span>的混合策略為<span class="math inline">\(\Delta(S_{i})\)</span>。</p>
+<p>從而混合策略的策略組合集為 <span class="math display">\[\Pi_{i\in\mathscr{P}}\Delta(S_{i})\]</span></p>
+<p>而相關策略組合集為 <span class="math display">\[\Delta(\Pi_{i\in\mathscr{P}}S_{i})\]</span></p>
+<p>在相關策略概念的産生之初，需要借用一個虛擬的外部觀察者或隨機推薦機製，比如拋硬幣等，在硬幣的結果揭曉後，參與人根據事先約定的正反麵與相應的某個納什均衡之間的對應關係來行動。在信息設計文獻中，産生貝葉斯相關策略的人可以是實際的信息設計者。</p>
+<p>任意的相關策略組合<span class="math inline">\(\Pi=\Delta(\Pi_{i\in\mathscr{P}}S_{i})\)</span>由滿足如下條件的那些分佈<span class="math inline">\(\rho\)</span>們構成</p>
+<ol type="1">
+<li><span class="math inline">\(\rho(s)\geq 0,\forall s\in S\)</span></li>
+<li><span class="math inline">\(\sum_{s\in S}\rho(s)=1\)</span></li>
+</ol>
+<p>而任意的混合策略組合<span class="math inline">\(\{\prod_{i}\sigma_{i}(s_{i}),\forall i,s_{i}\in S_{i}\}\)</span>所引緻的分佈<span class="math inline">\(I\)</span>由滿足如下條件的那些分佈<span class="math inline">\(\rho^{\sigma}\)</span>們構成</p>
+<p><span class="math display">\[I=\{\rho^{\sigma}\in\Pi:\rho^{\sigma}(s)=\prod_{i\in\mathscr{P}}\sigma_{i}(s_{i}),\forall s\in S\}\]</span></p>
+<p>註意這裏使用了一個轉換，混合策略組合是各自獨立的混合策略的笛卡爾乘積，是各個人在各自策略上混合後再組合在一起，但相關策略組合是直接在各人策略組合上的機率，為了比較，需要把混合策略組合也轉換成各人策略組合上的機率，這就是混合策略組合所引緻的分佈。<span class="math inline">\(I\)</span>的定義式錶明了它的意義。</p>
+<hr />
+<p>舉個例子，如果有兩個參與人<span class="math inline">\(1\)</span>、<span class="math inline">\(2\)</span>，其策略分別為<span class="math inline">\(S_{1}=\{L,R\}\)</span>和<span class="math inline">\(S_{2}=\{A,B\}\)</span>：</p>
+<p>則混合策略的策略組合集為<span class="math inline">\(\Delta(L,R)\times\Delta(A,B)\)</span>，即由兩條線段（兩條線段即分別由頂點<span class="math inline">\(L,R\)</span>和頂點<span class="math inline">\(A,B\)</span>張成的兩個二維空間裏的單純形）的笛卡爾乘積構成的矩形；</p>
+<p>而相關策略的策略組合集為<span class="math inline">\(\Delta((L,R)\times(A,B))\)</span>，即由四個頂點<span class="math inline">\((L,A)(L,B)(R,A)(R,B)\)</span>張成的四維空間裏的單純形：一個三維的四麵體。</p>
+<hr />
+<p>混合策略的策略組合集所引緻的分佈可以被視為相關策略的策略組合集中的一個低維麵，在這個麵上，各人的策略彼此獨立。即</p>
+<p><span class="math display">\[I\subset\Pi\]</span></p>
+<p>二者的區別相當於乘積分佈(獨立者的聯合分佈等於邊際分佈的乘積)與任意聯合分佈(聯合分佈未必等於邊際分佈的乘積)的區別。所以，當一個相關策略是一個乘積測度時，那麼它也是由某個混合策略組合集所引緻的分佈。</p>
+<h3 id="相關均衡">相關均衡</h3>
+<p>相關策略組合集是相關均衡的選擇集，但並不是其中每一個組合都能夠成為相關均衡。當考慮行動建議式相關策略時，隻有那些使得參與人聽從建議至少不會比不聽從差的相關策略組合才滿足Obedience約束，即能夠使得參與人遵照建議來行動，這樣的相關策略組合才能成為相關均衡。</p>
+<p>相關均衡通過引入與偏好無關的不確定(同樣可以錶示為狀態空間和參與人的類型，但這個狀態空間中的狀態與參與人的支付/效用無關，而僅僅是協調機製)來實現對結果的協調，並把所有需要的相關性和隨機性交給這個協調/信號生成機製，從而參與人在觀察到信號之後，仍然可以各自獨立地行動，並僅使用純策略，但依然能實現相關性和隨機性。</p>
+<p>Aumann (1987)給出的相關均衡定義如下(可以與後文貝葉斯相關均衡相比較)：</p>
+<ol type="1">
+<li><span class="math inline">\(\rho(s)\geq 0,\forall s\in S\)</span></li>
+<li><span class="math inline">\(\sum_{s\in S}\rho(s)=1\)</span></li>
+<li><span class="math inline">\(\sum_{s_{-i}\in S_{-i}}\rho(s)[u_{i}(s_{i},s_{-i})-u_{i}(s^{\prime}_{i},s_{-i})]\geq 0,\forall i,s_{i},s^{\prime}_{i}\in S_{i}\)</span></li>
+</ol>
+<p>第三條就是Obedience約束，這錶明<span class="math inline">\(C\)</span>是<span class="math inline">\(\Pi\)</span>中的元素根據Obedience約束挑選出來的。</p>
+<p>納什均衡就是<span class="math inline">\(C\cap I\)</span>中的元素，即那些可以由各參與人彼此獨立的策略選擇所引緻的相關均衡就是納什均衡。</p>
+<p>一般來說，所有可能的支付嚮量(無論是否構成均衡)集的凸包是最大的；其次是滿足個人理性的支付嚮量(下界是由這樣一個支付嚮量組成：其中每個分量都是相應參與人支付的最小最大化點)，其中每一點可以在無窮期重複博弈框架下由無名氏定理實現；納什均衡的支付嚮量集是最小的，代錶所有能觀察到的支付結果(意即均衡結果)；納什均衡的支付嚮量的凸包都可以被某個相關均衡實現，並且，某些情況下相關均衡支付嚮量集的凸包比納什均衡的支付嚮量集的凸包更大，即相關均衡可以實現用納什均衡無法實現的帕纍托改進，同時相關均衡支付嚮量集的凸包還是要小於所有滿足個人理性的支付嚮量集的凸包。</p>
+<p>當然，作為由頂點（<span class="math inline">\(j\)</span>的純策略）張成的單純形（<span class="math inline">\(j\)</span>的混合策略），它也可以是<span class="math inline">\(i\neq j\)</span>對<span class="math inline">\(j\)</span>行為的估計(conjecture)；在這種解讀下，參與人<span class="math inline">\(j\)</span>的混合策略意涵的是其他參與人對<span class="math inline">\(j\)</span>會採取何種策略的不確定性，盡管<span class="math inline">\(j\)</span>本身採取的是純策略，但其他人對<span class="math inline">\(j\)</span>的不確定性使<span class="math inline">\(j\)</span>看起來在採取混合策略。盡管這隻是混合策略的衆多解讀方式之一，不過其能更好地與相關策略相對應。在相關策略裏，不確定性存在於外部觀察者或信息設計者所推薦行為的産生方式，但具體産生的推薦以及參與人所採取的策略依然是純策略。即：推薦者通過隨機機製，具體地建議參與人該採取何種純策略。同樣地，在這種解讀下，當我們說<span class="math inline">\(i\)</span>的策略是對<span class="math inline">\(j\)</span>策略的最優反應時，其實指的是<span class="math inline">\(i\)</span>的策略是對<span class="math inline">\(i\)</span>自己所主觀認為的<span class="math inline">\(j\)</span>會採取何種策略（即conjecture）的最優反應；若彼此互為最優反應，且主觀的conjecture與對方客觀採取的策略相一緻時，則實現了均衡。（但如果有多於兩個參與人，則某個參與人對於其他人策略的conjecture同樣涉及correlate與否的問題：在某一個人的估計中，其他人的策略之間是否可以達成協調，比如依賴於一個除了作出估計的人以外其他人可以觀測到的信號）。參與人的貝葉斯理性體現在：形成對於其他參與人將會採取策略的估計，並根據估計選擇期望效用最大化的策略。</p>
+<hr />
+<p>當考慮展開型博弈(Extensive Form)時，前述區別會相應地發生變化。例如，展開型博弈中的混合策略的形式其實與策略型博弈中相關策略相近；而展開型博弈中的行為策略與策略型博弈中混合策略的形式類似，隻不過相應地，在此處代錶跨人際的笛卡爾乘積變成了同一個人跨信息集的笛卡爾乘積。但此處不再詳述。 ***</p>
+<p>當納入類型集/狀態集後，可以相應地定義貝葉斯相關均衡，後麵會詳述。</p>
+<h2 id="模型">模型</h2>
+<p>策略型博弈。參與人集合<span class="math inline">\(N=\{1,...,N\}\)</span>，每個參與人<span class="math inline">\(i\in I\)</span>具有有限行動空間<span class="math inline">\(A_{i}\)</span>，行動組合為<span class="math inline">\(A=A_{1}\times ...\times A_{N}\)</span>。有限狀態集<span class="math inline">\(\Theta\)</span>，元素為<span class="math inline">\(\theta\)</span>。每個參與人具有效用函數<span class="math inline">\(u_{i}:A\times\Theta\rightarrow\mathbb{R}\)</span>。信息設計者效用函數為<span class="math inline">\(V:A\times\Theta\rightarrow\mathbb{R}\)</span>。信息設計者既可以使<span class="math inline">\(N\)</span>個參與人之一，也可以是作為中央計畫者的外部者。信息設計者和參與人具有共同的先驗信念<span class="math inline">\(\phi\in\text{int}(\Delta(\Theta))\)</span>，並且這一點是共同知識。於是，基本博弈結構為<span class="math inline">\(G=((A_{i},u_{i})_{i=1}^{N},\phi)\)</span>。</p>
+<p>信息結構為<span class="math inline">\(S=((T_{i})_{i=1}^{N},\pi)\)</span>，其中<span class="math inline">\(T_{i}\)</span>是信息設計者嚮參與人<span class="math inline">\(i\)</span>發送的潛在可能信號集，每個可能信號集都是有限集；<span class="math inline">\(\pi:\Theta\rightarrow\Delta(T)\)</span>為條件信號分佈，其中<span class="math inline">\(T=T_{1}\times ...\times T_{N}\)</span>，其元素為<span class="math inline">\(t=(t_{1},...,t_{N})\)</span>，其中<span class="math inline">\(t_{i}\in T_{i}\)</span>。</p>
+<p>結合在一起<span class="math inline">\((G,S)\)</span>定義了一個不完全信息博弈。參與人<span class="math inline">\(i\)</span>的策略為<span class="math inline">\(\beta_{i}:T_{i}\rightarrow\Delta(A_{i})\)</span>。</p>
+<p>給定基本博弈<span class="math inline">\(G\)</span>，信息設計者公開宣佈並承諾一個信息結構<span class="math inline">\(S\)</span>，這一點隨之成為共同知識。當狀態根據先驗機率<span class="math inline">\(\phi\)</span>生成後，經過條件信號分佈<span class="math inline">\(\pi\)</span>轉換為一係列私人的信號實現，並分別單獨揭露給各個參與人。但這隻是一般情形，如果信息結構<span class="math inline">\(S\)</span>的設計恰好使得<span class="math inline">\(T_{i}=T^{\prime}\)</span>並且經過<span class="math inline">\(\pi\)</span>轉換稱相同的信號，那麼單獨揭露的完全可以是相同的信號實現，同時由於信息結構是事先承諾的，因此雖然單獨揭露但事實上生成的相同信號也成為了共同知識。在觀察到信號實現<span class="math inline">\(t_{i}\)</span>後，參與人<span class="math inline">\(i\)</span>根據先驗信念、信息結構來形成關於狀態和其他參與人的後驗信念，並採取行動<span class="math inline">\(\beta_{i}(\cdot|t_{i})\in\Delta(A_{i})\)</span>來最大化個人的期望效用。在各個人最優行動的情況下，引緻了一個以狀態為條件的、關於行動組合的條件分佈，這個條件分佈就是貝葉斯納什均衡。</p>
+<h3 id="定義1.-貝葉斯納什均衡">定義1. 貝葉斯納什均衡</h3>
+<p>給定博弈<span class="math inline">\((G,S)\)</span>，如果對於任何參與人<span class="math inline">\(i\)</span>、可能的信號實現<span class="math inline">\(t_{i}\in T_{i}\)</span>以及滿足<span class="math inline">\(\beta_{i}(a_{i}|t_{i})&gt;0\)</span>的<span class="math inline">\(a_{i}\in A_{i}\)</span>來說，某策略組合<span class="math inline">\(\beta\)</span>滿足</p>
+<p>$$ <span class="math display">\[\begin{align}\sum_{a_{-i},t_{-i},\theta}\phi(\theta)\pi(t_{i},t_{-i}|\theta)(\prod_{j\neq i}\beta_{j}(a_{j}|t_{j}))u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\sum_{a_{-i},t_{-i},\theta}\phi(\theta)\pi(t_{i},t_{-i}|\theta)(\prod_{j\neq i}\beta_{j}(a_{j}|t_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>則分佈<span class="math inline">\(v:\Theta\rightarrow\Delta(A)\)</span></p>
+<p>$$ v(a|)=<em>{tT}(t|)(</em>{j=1}^{N}<em>{j}(a</em>{j}|t_{j}))</p>
+<p>$$</p>
+<p>是<span class="math inline">\((G,S)\)</span>的一個貝葉斯納什均衡引緻的在參與人行為組合上的一個分佈。記為<span class="math inline">\(\text{BNE}(G,S)={v}\)</span>。</p>
+<p>其中<span class="math inline">\(u_{i}((a_{i},a_{-i}),\theta)\)</span>錶明參與人實現的效用既依賴於所有參與人的行動，也依賴於世界狀態；<span class="math inline">\(\beta_{j}(a_{j}|t_{j})\)</span>是當參與人<span class="math inline">\(j\)</span>接收到了<span class="math inline">\(t_{j}\)</span>這個信號之後，採取行動<span class="math inline">\(a_{j}\)</span>的機率，而<span class="math inline">\((\prod_{j\neq i}\beta_{j}(a_{j}|t_{j}))\)</span>意味著行為人之間的策略選擇是獨立的、因此可以做乘積。<span class="math inline">\(\pi(t_{i},t_{-i}|\theta)\)</span>是當真實狀態為<span class="math inline">\(\theta\)</span>時<span class="math inline">\(\pi\)</span>這個信息結構分別給<span class="math inline">\(i\)</span>和所有<span class="math inline">\(j\neq i\)</span>發出<span class="math inline">\(t_{i}\)</span>和<span class="math inline">\(t_{-i}=\prod_{j\neq i}t_{j}\)</span>信號的機率；<span class="math inline">\(\phi(\theta)\)</span>是真實狀態為<span class="math inline">\(\theta\)</span>的先驗信念。</p>
+<p>每個信息結構<span class="math inline">\(S\)</span>都能引緻一個貝葉斯納什均衡的集合<span class="math inline">\(\text{BNE}(G,S)\)</span>，信息設計者在多種信息結構之間選擇，選擇標準是其引緻的貝葉斯納什均衡在事前最大化信息設計者的期望效用。這一問題可以分成如下步驟來處理：先刻畫可能的貝葉斯納什均衡集<span class="math inline">\(\cup_{S}\text{BNE}(G,S)\)</span>，稱之為約束集；再通過選擇最優的行為-類型分佈<span class="math inline">\(v^{\star}\)</span>來實現信息設計者的事前期望效用；最後尋找到能引緻這一分佈<span class="math inline">\(v^{\star}\)</span>的信息結構<span class="math inline">\(S^{\star}\)</span>，以使得<span class="math inline">\(v^{\star}\)</span>是博弈<span class="math inline">\((G,S^{\star})\)</span>下的貝葉斯納什均衡。這就引出了如下這個刻畫貝葉斯納什均衡的方法。</p>
+<h3 id="定義2.-貝葉斯相關均衡">定義2. 貝葉斯相關均衡</h3>
+<p>一個分佈<span class="math inline">\(v:\Theta\rightarrow\Delta(A)\)</span>，如果對於任何參與人<span class="math inline">\(i\)</span>和<span class="math inline">\(a_{i}\in A_{i}\)</span>，如果滿足下式，則是一個貝葉斯相關均衡。</p>
+<p>$$ <span class="math display">\[\begin{align}\sum_{a_{-i},\theta}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\sum_{a_{-i},\theta}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>記為<span class="math inline">\(\text{BCE}(G)\)</span>。</p>
+<p>前麵不等式就是開頭預備知識中提到的Obedience約束，即使得參與人願意遵照建議來行動。由於相關策略組合是直接在各參與人的行動組合上直接指定機率，因此與<span class="math inline">\(\text{BNE}(G,S)\)</span>相比，隻需要<span class="math inline">\(v(a_{i},a_{-i}|\theta)\)</span>一項而非各參與人彼此獨立的策略相乘。同時，均衡隻要求冇有參與人願意單方麵偏離，所以在比較<span class="math inline">\(i\)</span>在<span class="math inline">\(a_{i}\)</span>(接收到的建議)和<span class="math inline">\(a^{\prime}_{i}\)</span>之間的選擇時，給定其他人按照建議<span class="math inline">\(a_{-i}\)</span>行動。</p>
+<p>在完備信息情形中，參與人對於效用相關的參數冇有什麼不確定性(如果參與人有任何不確定性那也是來源於對其他參與人會採取什麼行為是不確定的)，如果策略組合給定了，那麼效用也給定了，即世界狀態隻有一種。如果引入狀態空間的概念從而引入不確定，也僅僅是為了協調，狀態空間中狀態與參與人的支付/效用無關，因此不能被稱為世界狀態。而在不完備信息情形中，對於給定的策略組合來說，在不同的世界狀態下參與人以及設計者所能得到的效用是不同的，效用除了依賴於策略組合，還依賴於世界狀態。這是貝葉斯相關均衡與相關均衡的區別。</p>
+<h2 id="命題1">命題1</h2>
+<p><span class="math inline">\(\text{BCE}(G)=\cup_{S}\text{BNE}(G,S)\)</span></p>
+<p>證明：</p>
+<ol type="1">
+<li><span class="math inline">\(\text{BCE}(G)\subset\cup_{S}\text{BNE}(G,S)\)</span></li>
+</ol>
+<p>任取<span class="math inline">\(v\in\text{BCE}(G)\)</span>，根據BCE的定義，有對於任何參與人<span class="math inline">\(i\)</span>和<span class="math inline">\(a_{i}\in A_{i}\)</span>，如果滿足下式，則是一個貝葉斯相關均衡。</p>
+<p>$$ <span class="math display">\[\begin{align}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>那麼便可以構造信息結構<span class="math inline">\(S^{\star}=(A,\pi^{\star})\)</span>為對於任何<span class="math inline">\(a\in A\)</span>和<span class="math inline">\(\theta\in\Theta\)</span></p>
+<p>$$ ^{}(a|)=v(a|)</p>
+<p>$$</p>
+<p>(這一步就是構造一個直接信息結構，並且使得這個信息結構中的條件機率等於我們所需要的相關性。)</p>
+<p>並構造參與人<span class="math inline">\(i\)</span>的策略<span class="math inline">\(\beta^{\star}_{i}\)</span>為對於任何<span class="math inline">\(a_{i},a^{\prime}_{i}\in A_{i}\)</span></p>
+<p>$$ ^{}<em>{i}(a^{}</em>{i}|a_{i})= \begin{cases} 1, a_{i}=a<sup>{}<em>{i}\ 0, a</em>{i}a</sup>{}_{i} \end{cases}</p>
+<p>$$</p>
+<p>(由於行動建議是確定的，盡管行動建議的生成過程是隨機的，這樣各個參與人的策略不是0就是1，因此對於那些我們要引緻的1來說，將其連乘並與信息結構中的條件機率相乘，就使得在相關的建議生成機製下各個參與人相互獨立地採取策略的結果完全模仿了貝葉斯相關均衡的分佈。)</p>
+<p>那麼，給定其他人遵照<span class="math inline">\(\beta^{\star}_{-i}\)</span>，當參與人<span class="math inline">\(i\)</span>觀察到信號<span class="math inline">\(a^{\prime}_{i}\)</span>而採取行動<span class="math inline">\(a_{i}\)</span>時，其期望效用為</p>
+<p>$$ <span class="math display">\[\begin{align}
+\sum_{a_{-i},a^{\prime}_{-i},\theta}\phi(\theta)\pi^{\star}(a_{i},a^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|a^{\prime}_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+=\sum_{a_{-i},\theta}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)
+\end{align}\]</span></p>
+<p>$$</p>
+<p>根據BCE的約束條件</p>
+<p>$$ <span class="math display">\[\begin{align}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>和上式，可知BNE的約束條件得到滿足</p>
+<p>$$ <span class="math display">\[\begin{align}
+\sum_{a_{-i},a^{\prime}_{-i},\theta}\phi(\theta)\pi^{\star}(a_{i},a^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|a^{\prime}_{j}))u_{i}((a_{i},a_{-i}),\theta)\\
+\sum_{a_{-i},a^{\prime}_{-i},\theta}\phi(\theta)\pi^{\star}(a_{i},a^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|a^{\prime}_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)
+\end{align}\]</span></p>
+<p>$$</p>
+<p>因此，由前述定義的<span class="math inline">\(\beta^{\star}\)</span>所引緻的分佈</p>
+<p>$$ <em>{a<sup>{}A}</sup>{}(a^{}|)(</em>{j=1}<sup>{N}<em>{j}(a</em>{j}|a</sup>{}_{j}))=v(a|)</p>
+<p>$$</p>
+<p>就是<span class="math inline">\((G,S^{\star})\)</span>的一個BNE。即<span class="math inline">\(v\in\text{BNE}(G,S^{\star})\)</span>。</p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\cup_{S}\text{BNE}(G,S^{\star})\subset\text{BCE}(G)\)</span></li>
+</ol>
+<p>任選<span class="math inline">\(\tilde{v}\in\cup_{S}\text{BNE}(G,S)\)</span>，則存在某個<span class="math inline">\(\tilde{S}=(\tilde{T},\tilde{\pi})\)</span>和<span class="math inline">\(\beta\)</span>使得</p>
+<p>$$ (a|)=<em>{}(|)(</em>{j=1}^{N}<em>{j}(a</em>{j}|_{j}))</p>
+<p>$$</p>
+<p>(在貝葉斯納什均衡中，可以採用任何的信息結構。但是我們可以通過合並操作，來使得直接建議能夠模仿任何的信息結構。即，將任意的某個信息結構的潛在信號可能集中的元素，按照其所引緻的參與人的行動來分類；對於某個所引緻的行動，將能夠引緻它的各種信號的機率加總，作為建議這個行動的機率。例如，如果參與人的行為是“不打傘”或“打傘”，而某個信息結構是一組“晴天”、“多雲”、“下雨”及其各自的機率，那麼打包組合而成的新信息結構就是把“晴天”和“多雲”打包成“不打傘”，把“下雨”變成“打傘”，並且把推薦“不打傘”的條件機率作為原先的信息結構中“晴天”和“多雲”的條件機率之和，把推薦“打傘”的條件機率作為原先的信息結構中“下雨”的條件機率。由於我們是按照所引緻的行為來打包，並且對於任一行為來說，引緻它的機率都冇有改變，所以這兩種信息結構從行為、結果或彼此的效用來說都冇有改變。)</p>
+<p>對於任何使得<span class="math inline">\(\beta_{i}(a_{i}|\tilde{t}_{i})&gt;0\)</span>的<span class="math inline">\(a_{i}\)</span>來說，根據BNE的定義，對於任何<span class="math inline">\(i\in T,\tilde{t}_{i}\in\tilde{T}_{j}\)</span>和<span class="math inline">\(a^{\prime}_{i}\)</span> A_{i}來說，都有</p>
+<p>$$ <span class="math display">\[\begin{align}
+\sum_{a_{-i},\tilde{t}^{\prime}_{-i},\theta}\phi(\theta)\tilde{\pi^{\star}}(\tilde{t}_{i},\tilde{t}^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|\tilde{t}^{\prime}_{j}))u_{i}((a_{i},a_{-i}),\theta)\\
+\sum_{a_{-i},\tilde{t}^{\prime}_{-i},\theta}\phi(\theta)\tilde{\pi^{\star}}(\tilde{t}_{i},\tilde{t}^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|\tilde{t}^{\prime}_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)
+\end{align}\]</span></p>
+<p>$$</p>
+<p>但將等式兩邊同乘<span class="math inline">\(\beta_{i}(a_{i}|\tilde{t}_{i})\)</span>並對<span class="math inline">\(\tilde{t}_{i}\)</span>進行加總，由</p>
+<p>$$ <span class="math display">\[\begin{align}
+\sum_{a_{-i},\tilde{t},\theta}\phi(\theta)\tilde{\pi^{\star}}(\tilde{t}_{i},\tilde{t}^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|\tilde{t}^{\prime}_{j}))u_{i}((a_{i},a_{-i}),\theta)\\
+
+\sum_{a_{-i},\tilde{t},\theta}\phi(\theta)\tilde{\pi^{\star}}(\tilde{t}_{i},\tilde{t}^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta^{\star}_{j}(a_{j}|\tilde{t}^{\prime}_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)
+\end{align}\]</span> $$</p>
+<p>代入</p>
+<p>$$ (a|)=<em>{}(|)(</em>{j=1}^{N}<em>{j}(a</em>{j}|_{j}))</p>
+<p>$$</p>
+<p>得</p>
+<p>$$ <span class="math display">\[\begin{align}\phi(\theta)\tilde{v}(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\phi(\theta)\tilde{v}(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>即<span class="math inline">\(\tilde{v}\in\text{BCE}(G)\)</span>。</p>
+<p>由此可知，信息設計者跨信息結構(有無窮多個)的優化問題，與在貝葉斯相關均衡中選擇使自己期望效用最大化的問題，是等價的。即，不論採取何種信息結構，所能實現的貝葉斯納什均衡，都可以被某個貝葉斯相關均衡實現。這樣，就無需做跨信息結構的優化，而隻需要在貝葉斯相關均衡中找到那個使得信息設計者事前期望效用最大化的分佈<span class="math inline">\(v^{\star}\)</span>，再從中還原出特定的信息結構<span class="math inline">\(S^{\star}\)</span>就好了。</p>
+<p>但通過開頭給出的混合策略組合與相關策略組合的區別，我們知道混合策略組合隻是相關策略組合一個更低維度的子集：參與人策略之間的某些相關性可被相關策略組合實現，但無法被“各自獨立的混合策略”之組合實現。因此，為了使相關策略組合與跨信息結構的混合策略組合相等同，我們需要一個將相關策略組合中的相關性引入混合策略組合集的方法：這就要通過信息結構，使得信號實現及其與真實狀態之間的關係被引入參與人的策略中去。通過選擇合適的信息結構，可以使得參與人獲取關於世界狀態和其他參與人的信息，從而引緻所需要的、參與人的均衡行為之間的相關性。在證明中，我們構造的<span class="math inline">\(\pi\)</span>就實現了這種相關性，從而使得在這種信息結構下，各參與人相獨立的策略選擇能夠實現在所要實施的相關均衡中所要求的相關性。</p>
+<h2 id="引理1">引理1</h2>
+<p><span class="math inline">\(\text{BCE}(G)\)</span>是<span class="math inline">\(\Delta(A)^{\Theta}\)</span>中的一個非空凸多胞形。</p>
+<p>證明：由於<span class="math inline">\(\text{BCE}(G)\)</span>是一些分佈的集合，這些分佈<span class="math inline">\(v:\Theta\rightarrow\Delta(A)\)</span>滿足</p>
+<ol type="1">
+<li><span class="math inline">\(v(a|\theta)\geq 0,\forall a\in A,\theta\in\Theta\)</span>,</li>
+<li><span class="math inline">\(\sum_{a\in A}v(a|\theta)=1,\forall\theta\in\Theta\)</span>,</li>
+<li><span class="math inline">\(\sum_{a_{-i},\theta}\phi(\theta)v((a_{i},a_{-i})|\theta)u_{i}((a_{i},a_{-i}),\theta)\geq\sum_{a_{-i},\theta}\phi(\theta)v((a^{\prime}_{i},a_{-i})|\theta)u_{i}((a_{i},a_{-i}),\theta),\forall i\in I,a_{i}\in A_{i}\)</span>和<span class="math inline">\(a^{\prime}_{i}\in A_{i}\)</span></li>
+</ol>
+<p>其中條件1和2使得<span class="math inline">\(v\)</span>確實是一個機率分佈，而條件3即BCE的激勵相同約束。</p>
+<p>前兩個條件定義了一個<span class="math inline">\(\Delta(A)^{\Theta}\)</span>中的一個單純形，這個單純形中的點都可以作為貝葉斯相關策略組合，但尚不足以作為貝葉斯相關均衡。這些貝葉斯相關策略組合可以視為，在各參與人行為組合上指定任意的聯合分佈。</p>
+<p>條件3錶明，按建議行動帶來的期望效用不會比其他行動低。</p>
+<p>這三個條件是 Aumann (1987) 相關均衡定義的推廣，加入了世界狀態的元素。具體地，在完備信息情況下，參與人對收益是確定的，而隻對其他人的策略是不確定的，因此收益相關的參數是平凡的，世界狀態根據定義是單點集；參與人類型是對協調者會如何建議的刻畫。而在不完備信息情況下，在不同的世界狀態下參與人的收益是不同的，因此世界狀態是多點集，協調者/信息設計者的建議取決於世界狀態(根據我們對信息結構的設定)。</p>
+<p>所有約束對於<span class="math inline">\(v\)</span>都是線性的，根據Stinchcombe (2011)，BCE(G)非空。而線性約束的可行集若有界便為凸多胞形。</p>
+<p>並且由於BCE(G)是<span class="math inline">\(\Delta(A)^{\Theta}\)</span>的閉子集，因此BCE(G)是緊集。有界的凸多胞形可以錶示為有限個極點的凸包，這樣生成的凸包天然是緊凸集。</p>
+<p>從而，從無窮多種信息結構裏跨信息結構的最優化，可以利用BCE(G)及其為非空凸多胞形的性質，通過求解線性規劃問題解決，由於命題1，這不會漏解。</p>
+<hr />
+<p>關於多胞形一詞，我不太確定使用得是否正確。其原文為polytope。但關於其定義，以及與polyhedron之間的關係，本身就定義繁多並且並不彼此等價。我對這個詞的理解和使用是這樣的：有限多個半空間的交集，稱為polyhedron；如果這個polyhedron還是有界的，那麼便稱為polytope(即我使用的“多胞形”一詞)。</p>
+<p>從而，按這種定義方式，才有“線性約束的可行集若有界便為凸多胞形”這一說法。如果按不同的術語，例如並不把有界的條件加在多胞形的定義上，而隻是將多胞形定義為有限多個半空間的交集的話，那麼這句話應為“線性約束的可行集是凸多胞形”。</p>
+<p>而當我使用單純形(simplex)一詞時，多指“單位單純形”，即可以用來作為機率分佈集和凸組合係數集的單純形。而單純形就是最簡單(simplest)的polytope之意。 ***</p>
+<p>設計者的目標函數</p>
+<p>$$ <em>{v</em>{S}(G,S)}<em>{v}[V]=</em>{v<em>{S}(G,S)}</em>{a,}V(a,)v(a|)()</p>
+<p>$$</p>
+<p>定義3. 給定基本博弈<span class="math inline">\(G\)</span>，如果信息結構<span class="math inline">\(S=(T,\pi)\)</span>滿足<span class="math inline">\(T_{i}=A_{i},\forall i\in I\)</span>，則稱這個信息結構是直接的(即行動建議式的)。</p>
+<h2 id="命題2">命題2</h2>
+<p>給定基本博弈<span class="math inline">\(G\)</span>，任給一個<span class="math inline">\(v\in\cup_{S}\text{BNE}(G,S)\)</span>，都存在一個直接信息結構<span class="math inline">\(S_{v}=(A,v)\)</span>使得<span class="math inline">\(v\in\text{BNE}(G,S_{v})\)</span></p>
+<p>證明：給定任一基本博弈<span class="math inline">\(G\)</span>和分佈<span class="math inline">\(v\in\cup_{S}\text{BNE}(G,S)\)</span>，根據命題1我們知道<span class="math inline">\(v\in\text{BCE}(G)\)</span>，從而對於任何參與人<span class="math inline">\(i\)</span>和<span class="math inline">\(a_{i},a^{\prime}_{i}\in A_{i}\)</span>都有</p>
+<p>$$ <span class="math display">\[\begin{align}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>則考慮信息結構<span class="math inline">\(S_{v}=(A,\pi_{v})\)</span>，其中<span class="math inline">\(\pi_{v}(a|\theta)=v(a|\theta)\)</span>對於任何<span class="math inline">\(a\in A\)</span>和<span class="math inline">\(\theta\in\Theta\)</span>。在博弈<span class="math inline">\((G,S)\)</span>中，考慮如下策略</p>
+<p>$$ <em>{i}(a^{}</em>{i}|a_{i})= \begin{cases} 1, a_{i}=a<sup>{}<em>{i}\ 0, a</em>{i}a</sup>{}_{i} \end{cases}</p>
+<p>$$</p>
+<p>對於任何<span class="math inline">\(a_{i},a^{\prime}_{i}\in A_{i}\)</span>，給定其他人遵照<span class="math inline">\(\beta_{-i}\)</span>，當參與人<span class="math inline">\(i\)</span>觀察到信號<span class="math inline">\(a^{\prime}_{i}\)</span>而採取行動<span class="math inline">\(a_{i}\)</span>時，其期望效用為</p>
+<p>$$ <span class="math display">\[\begin{align}
+\sum_{a_{-i},a^{\prime}_{-i},\theta}\phi(\theta)\pi_{v}(a_{i},a^{\prime}_{-i}|\theta)(\prod_{j\neq i}\beta_{j}(a_{j}|a^{\prime}_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+=\sum_{a_{-i},\theta}\phi(\theta)\pi_{v}(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+=\sum_{a_{-i},\theta}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)
+\end{align}\]</span></p>
+<p>$$</p>
+<p>將上式結合BCE的約束條件</p>
+<p>$$ <span class="math display">\[\begin{align}\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\phi(\theta)v(a_{i},a_{-i}|\theta)u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>可以得到對於每個參與人<span class="math inline">\(i\)</span></p>
+<p>$$ <span class="math display">\[\begin{align}\sum_{a_{-i},t_{-i},\theta}\phi(\theta)\pi_{v}(t_{i},t_{-i}|\theta)(\prod_{j\neq i}\beta_{j}(a_{j}|t_{j}))u_{i}((a_{i},a_{-i}),\theta)\\
+\geq\sum_{a_{-i},t_{-i},\theta}\phi(\theta)\pi_{v}(t_{i},t_{-i}|\theta)(\prod_{j\neq i}\beta_{j}(a_{j}|t_{j}))u_{i}((a^{\prime}_{i},a_{-i}),\theta)\\
+\forall a^{\prime}_{i}\in A_{i}
+\end{align}\]</span></p>
+<p>$$</p>
+<p>而這正是使得<span class="math inline">\(\beta\)</span>成為<span class="math inline">\((G,S_{v})\)</span>的BNE的約束條件，並且此時</p>
+<p>$$ <em>{a<sup>{}A}<em>{v}(a^{}|)(</em>{i=1}</sup>{N}</em>{i}(a_{i}|a^{}<em>{i}))=</em>{v}(a|)=v(a|)</p>
+<p>$$</p>
+<p>對於每個<span class="math inline">\(a\in A\)</span>和<span class="math inline">\(\theta\in\Theta\)</span>都成立，因此<span class="math inline">\(v\in\text{BNE}(G,S_{v})\)</span>。</p>
+<p>推論. 最優信息結構為<span class="math inline">\(S^{\star}=(A,\pi^{\star})\)</span>，其中<span class="math inline">\(\pi^{\star}(a|\theta)=v^{\star}(a|\theta)\)</span>，而<span class="math inline">\(v^{\star}\in\text{arg}\max_{v\in\text{BCE}(G)}\mathbb{E}_{v}[V]\)</span>。</p>
+<h2 id="應用對稱二元環境">應用：對稱二元環境</h2>
+<p>暫略</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/2b781b99.html">https://brandonsli.com/p/2b781b99.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-ND</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打賞</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/2b881b90.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不求甚解學經濟-一些簡單的凸分析</div></div></a></div><div class="next-post pull-right"><a href="/p/a008de02.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Propaganda to Persuade</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E5%82%99%E7%9F%A5%E8%AD%98"><span class="toc-number">1.</span> <span class="toc-text">預備知識</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E7%AD%96%E7%95%A5%E8%88%87%E7%9B%B8%E9%97%9C%E7%AD%96%E7%95%A5%E7%9A%84%E5%8D%80%E5%88%A5"><span class="toc-number">1.1.</span> <span class="toc-text">混合策略與相關策略的區別</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E9%97%9C%E5%9D%87%E8%A1%A1"><span class="toc-number">1.2.</span> <span class="toc-text">相關均衡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A91.-%E8%B2%9D%E8%91%89%E6%96%AF%E7%B4%8D%E4%BB%80%E5%9D%87%E8%A1%A1"><span class="toc-number">2.1.</span> <span class="toc-text">定義1. 貝葉斯納什均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A92.-%E8%B2%9D%E8%91%89%E6%96%AF%E7%9B%B8%E9%97%9C%E5%9D%87%E8%A1%A1"><span class="toc-number">2.2.</span> <span class="toc-text">定義2. 貝葉斯相關均衡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E9%A1%8C1"><span class="toc-number">3.</span> <span class="toc-text">命題1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%90%861"><span class="toc-number">4.</span> <span class="toc-text">引理1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E9%A1%8C2"><span class="toc-number">5.</span> <span class="toc-text">命題2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%87%89%E7%94%A8%E5%B0%8D%E7%A8%B1%E4%BA%8C%E5%85%83%E7%92%B0%E5%A2%83"><span class="toc-number">6.</span> <span class="toc-text">應用：對稱二元環境</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="教育即自由,學術即反抗,事實即顛覆" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

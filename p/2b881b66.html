@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>不求甚解學經濟-可測最大值定理 | 不求甚解學經濟</title><meta name="keywords" content="數理經濟學,貝葉斯勸說,Information Design,Bayesian Persuasion,貝葉斯說服,博弈論,Game Theory,Mechanism Design"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="可測最大值定理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-可測最大值定理">
+<meta property="og:url" content="https://brandonsli.com/p/2b881b66.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="可測最大值定理">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2021-10-10T16:06:33.000Z">
+<meta property="article:modified_time" content="2021-10-11T08:18:02.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://brandonsli.com/p/2b881b66"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="qCKYVlYYJxGHTmeJ"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8735908405048796',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-103535631-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-103535631-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-可測最大值定理',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-11 16:18:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-可測最大值定理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2021-10-10T16:06:33.000Z" title="發表於 2021-10-11 00:06:33">2021-10-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-10-11T08:18:02.000Z" title="更新於 2021-10-11 16:18:02">2021-10-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B8%E7%90%86%E7%B6%93%E6%BF%9F%E5%AD%B8/">數理經濟學</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-可測最大值定理"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>可測最大值定理</p>
+<span id="more"></span>
+<h2 id="預備">預備</h2>
+<h3 id="定義可分空間">定義：可分空間</h3>
+<p>具有可數稠密子集的空間被稱爲可分空間。例如實數係為可分空間，其可數稠密子集為有理數集。</p>
+<h3 id="定義可度量化空間">定義：可度量化空間</h3>
+<p>給定一個拓撲空間，如果可以找到某個度量，使得該度量所引致的拓撲恰好就是該拓撲空間所配備的拓撲，則稱該拓撲空間為可度量化空間。</p>
+<h3 id="定義上逆強逆">定義：上逆/強逆</h3>
+<p>給定一個對應 <span class="math inline">\(\phi:S\Rightarrow X\)</span>，定義其上逆為 <span class="math inline">\(\phi^{u}\)</span> 為對於任何 <span class="math inline">\(A\subset X\)</span>，<span class="math inline">\(\phi^{l}(A)=\left\{s\in S:\phi(s)\subset A\right\}\)</span>。</p>
+<h3 id="定義下逆弱逆">定義：下逆/弱逆</h3>
+<p>給定一個對應 <span class="math inline">\(\phi:S\Rightarrow X\)</span>，定義其下逆為 <span class="math inline">\(\phi^{l}\)</span> 為對於任何 <span class="math inline">\(A\subset X\)</span>，<span class="math inline">\(\phi^{l}(A)=\left\{s\in S:\phi(s)\cap A\neq\O\right\}\)</span>。</p>
+<h3 id="定義弱可測對應">定義：弱可測對應</h3>
+<p>一個對應 <span class="math inline">\(\phi:S\Rightarrow X\)</span>，如果對於任何開集 <span class="math inline">\(G\subset X\)</span>，其弱逆 <span class="math inline">\(\phi^{l}\)</span> 是可測的即 <span class="math inline">\(\phi^{l}(G)\in\Sigma\)</span>，則稱這個對應是弱可測對應。</p>
+<h3 id="定義乘積-sigma-代數">定義：乘積 <span class="math inline">\(\sigma\)</span> 代數</h3>
+<p>給定一族空間 <span class="math inline">\(X_{i}\)</span> 對於 <span class="math inline">\(i=1,...,n\)</span> 及相應的 <span class="math inline">\(\sigma\)</span> 代數 <span class="math inline">\(\Sigma_{i}\)</span>，則乘積 <span class="math inline">\(\sigma\)</span> 代數 <span class="math inline">\(\bigotimes_{i}\Sigma_{i}\)</span> 定義爲由可測“矩形” <span class="math inline">\(\times_{i}\Sigma_{i}\)</span> <strong>生成</strong>的 <span class="math inline">\(\sigma\)</span> 代數。</p>
+<p>例如，對於 <span class="math inline">\(X_{1}=X_{2}=\mathbb{R}\)</span> 來説，其可測矩形真的就是矩形，例如取區間 <span class="math inline">\((a_{1},b_{1})\subset X_{1}\)</span> 和區間 <span class="math inline">\((a_{2},b_{2})\subset X_{2}\)</span>，這個矩形就是以 <span class="math inline">\(a_{1},a_{2},b_{1},b_{2}\)</span> 為四個頂點的矩形，但由矩形們構成的集合族并不滿足 <span class="math inline">\(\sigma\)</span> 代數的要求，所以在 <span class="math inline">\(\mathbb{R}^{2}\)</span> 上的乘積 <span class="math inline">\(\sigma\)</span> 代數是由這些矩形們<strong>生成</strong>的 <span class="math inline">\(\sigma\)</span> 代數而不是這些矩形們本身。</p>
+<h3 id="定義caratheodory-函數">定義：Caratheodory 函數</h3>
+<p>給定可測空間 <span class="math inline">\((S,\Sigma)\)</span> 和拓撲空間 <span class="math inline">\(X\)</span>，一個函數 <span class="math inline">\(f:S\times X\rightarrow\mathbb{R}\)</span> 是 Caratheodory 函數如果：</p>
+<ul>
+<li>對於任何 <span class="math inline">\(x\in X\)</span>，函數 <span class="math inline">\(f^{x}:=f(\cdot,x):S\rightarrow\mathbb{R}\)</span> 是 <span class="math inline">\((\Sigma,\mathscr{B}_{\mathbb{R}})\)</span> 可測的，其中 <span class="math inline">\(\mathscr{B}_{\mathbb{R}}\)</span> 是 <span class="math inline">\(\mathbb{R}\)</span> 上的 Borel <span class="math inline">\(\sigma\)</span> 代數。</li>
+<li>對於任何 <span class="math inline">\(s\in S\)</span>，函數 <span class="math inline">\(f_{s}:=f(s,\cdot):x\rightarrow\mathbb{R}\)</span> 是連續函數。</li>
+</ul>
+<h3 id="定義聯合可測">定義：聯合可測</h3>
+<p>給定三個可測空間 <span class="math inline">\((S,\Sigma)\)</span>、<span class="math inline">\((X,\mathscr{B}_{X})\)</span> 和 <span class="math inline">\((\mathbb{R},\mathscr{B}_{\mathbb{R}}\)</span>，如果函數 <span class="math inline">\(f:S\times X\rightarrow\mathbb{R}\)</span> 是 <span class="math inline">\((\Sigma\bigotimes\mathscr{B}_{X},\mathscr{B}_{\mathbb{R}})\)</span> 可測的，則稱函數 <span class="math inline">\(f\)</span> 是聯合可測的。</p>
+<h3 id="定義可測選擇">定義：可測選擇</h3>
+<p>給定一個對應 <span class="math inline">\(\mu:S\Rightarrow X\)</span>，如果存在某個單值可測函數 <span class="math inline">\(g:S\rightarrow X\)</span>，使得對於每個 <span class="math inline">\(s\in S\)</span> 都有 <span class="math inline">\(g(s)\in\mu(s)\)</span>，則稱 <span class="math inline">\(g\)</span> 是 <span class="math inline">\(\mu\)</span> 的一個可測選擇。</p>
+<h2 id="引理-1">引理 1</h2>
+<p>給定可分可度量化空間 <span class="math inline">\(X\)</span>，給定可測空間 <span class="math inline">\((S,\Sigma)\)</span>。一個對應 <span class="math inline">\(\phi:S\Rightarrow X\)</span> 為有非空緊值得弱可測對應，當且僅當存在一個可測選擇序列 <span class="math inline">\(\left\{g_{n}\right\}\)</span>，使得對於任何 <span class="math inline">\(s\in S\)</span> 都有 <span class="math inline">\(\phi(s)=\bar{\left\{g_{1}(s),g_{2}(s),...\right\}}\)</span>。</p>
+<p>證明：待補充。</p>
+<h3 id="引理-2">引理 2</h3>
+<p>Caratheodory 函數是聯合可測的。</p>
+<p>證明：待補充。</p>
+<h3 id="引理-3">引理 3</h3>
+<p>可測函數們的複合函數也是可測函數。</p>
+<p>證明：待補充。</p>
+<h3 id="filippov-隱函數定理">Filippov 隱函數定理</h3>
+<p>給定可分可度量化空間 <span class="math inline">\(X\)</span>，給定可測空間 <span class="math inline">\((S,\Sigma)\)</span>。令 <span class="math inline">\(\phi:S\Rightarrow X\)</span> 為有非空緊值得弱可測對應，及 <span class="math inline">\(f:S\times X\rightarrow\mathbb{R}\)</span> 為 Caratheodory 函數。令可測函數 <span class="math inline">\(\pi:S\rightarrow\mathbb{R}\)</span> 為對於任何 <span class="math inline">\(s\in S\)</span> 都存在某個 <span class="math inline">\(x\in\phi(s)\)</span> 使得 <span class="math inline">\(\pi(s)=f(s,x)\)</span>，則對應 <span class="math inline">\(\gamma:S\Rightarrow X\)</span> 定義爲</p>
+<p><span class="math display">\[\gamma(s)=\left\{x\in\phi(s):f(s,x)=\pi(s)\right\}\]</span></p>
+<p>是可測對應。并且可測對應 <span class="math inline">\(\gamma\)</span> 擁有可測選擇函數，即存在某個可測函數 <span class="math inline">\(\xi:S\rightarrow X\)</span> 滿足 <span class="math inline">\(\xi(s)\in\gamma(s)\)</span> 這個 <span class="math inline">\(\xi\)</span> 是 <span class="math inline">\(\gamma\)</span> 之選擇的條件，以及繼承了 <span class="math inline">\(\gamma\)</span> 本身的性質 <span class="math inline">\(pi(s)=f(s,\xi(s))\)</span> 對於每個 <span class="math inline">\(s\in S\)</span> 都成立。</p>
+<p>證明：待補充。</p>
+<h2 id="可測最大值定理">可測最大值定理</h2>
+<p>給定可分可度量化空間 <span class="math inline">\(X\)</span>，給定可測空間 <span class="math inline">\((S,\Sigma)\)</span>。令 <span class="math inline">\(\phi:S\Rightarrow X\)</span> 為有非空緊值得弱可測對應，及 <span class="math inline">\(f:S\times X\rightarrow\mathbb{R}\)</span> 為 Caratheodory 函數。定義值函數 <span class="math inline">\(m:S\rightarrow\mathbb{R}\)</span> 為</p>
+<p><span class="math display">\[m(s):=\max_{x\in\phi(x)}f(s,x)\]</span></p>
+<p>解對應 <span class="math inline">\(\mu:S\Rightarrow X\)</span> 為</p>
+<p><span class="math display">\[\mu(s):=\left\{x\in\phi(x):f(s,x)=m(s)\right\}\]</span></p>
+<p>則：</p>
+<ul>
+<li>值函數 <span class="math inline">\(m\)</span> 為可測函數</li>
+<li>解對應 <span class="math inline">\(\mu\)</span> 有非空緊值</li>
+<li>解對應 <span class="math inline">\(\mu\)</span> 為可測對應，並具有可測選擇</li>
+</ul>
+<h3 id="可測最大值定理證明">可測最大值定理：證明</h3>
+<p>根據 Berge 最大值定理，值函數 <span class="math inline">\(m\)</span> 是定義良好的，并且解對應 <span class="math inline">\(\mu\)</span> 具有非空緊值。</p>
+<p>根據引理 1，由假設 <span class="math inline">\(\phi:S\Rightarrow X\)</span> 為有非空緊值得弱可測對應可知存在可測選擇函數序列 <span class="math inline">\(\left\{g_{n}\right\}\)</span> 使得對於每個 <span class="math inline">\(s\in S\)</span> 都有 <span class="math inline">\(\phi(s)=\bar{\left\{g_{1}(s),g_{2}(s),...\right\}}\)</span>。</p>
+<p>據此定義向量值汎函 <span class="math inline">\(h_{n}:S\rightarrow S\times X\)</span> 為 <span class="math inline">\(h_{n}(s):=(s,g_{n}(s))\)</span>，則對於每個 <span class="math inline">\(n\)</span> 來説 <span class="math inline">\(h_{n}\)</span> 都是 <span class="math inline">\((\Sigma,\Sigma\bigotimes\mathscr{B}_{X})\)</span> 可測的。</p>
+<p>由於 <span class="math inline">\(f\)</span> 是 Caratheodory 函數，根據引理2，<span class="math inline">\(f\)</span> 是 <span class="math inline">\((\Sigma,\mathscr{B}_{X})\)</span> 聯合可測的，又 <span class="math inline">\(h_{n}\)</span> 都 <span class="math inline">\((\Sigma,\Sigma\bigotimes\mathscr{B}_{X})\)</span> 可測的，因此根據引理 3 其複合 <span class="math inline">\(f\circ h_{n}\)</span> 是 <span class="math inline">\(\Sigma\)</span> 可測的。又</p>
+<p><span class="math display">\[\begin{aligned}
+m(s)=&amp;\max_{x\in\phi(s)}f(s,x)\\
+=&amp;\sup_{n\in\mathbb{N}}f(s,g_{n}(s))\\
+=&amp;\sup_{n\in\mathbb{N}}f(h_{n}(s))\\
+=&amp;\sup_{n\in\mathbb{N}}\lbrack f\circ h_{n}\rbrack(s)
+\end{aligned}\]</span></p>
+<p>所以 <span class="math inline">\(m:S\rightarrow\mathbb{R}\)</span> 是 <span class="math inline">\(\Sigma\)</span> 可測的。從而根據 Filippov 隱函數定理，解對應 <span class="math inline">\(\mu:S\Rightarrow X\)</span> 是可測對應，并且擁有可測選擇函數，即存在某個單值可測函數 <span class="math inline">\(\xi:S\rightarrow X\)</span> 滿足對於每個 <span class="math inline">\(s\in S\)</span> 都有 <span class="math inline">\(\xi(s)\in\mu(s)\)</span>，當然 <span class="math inline">\(\xi\)</span> 也繼承了 <span class="math inline">\(\mu\)</span> 的性質，即對於每個 <span class="math inline">\(s\)</span> 來說 <span class="math inline">\(\xi(s)\)</span> 都是原問題的最大解。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/2b881b66.html">https://brandonsli.com/p/2b881b66.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-ND</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打賞</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/p/2b881b2d.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不求甚解學經濟-一些簡單的單調比較靜態分析</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E5%82%99"><span class="toc-number">1.</span> <span class="toc-text">預備</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E5%8F%AF%E5%88%86%E7%A9%BA%E9%96%93"><span class="toc-number">1.1.</span> <span class="toc-text">定義：可分空間</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E5%8F%AF%E5%BA%A6%E9%87%8F%E5%8C%96%E7%A9%BA%E9%96%93"><span class="toc-number">1.2.</span> <span class="toc-text">定義：可度量化空間</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E4%B8%8A%E9%80%86%E5%BC%B7%E9%80%86"><span class="toc-number">1.3.</span> <span class="toc-text">定義：上逆&#x2F;強逆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E4%B8%8B%E9%80%86%E5%BC%B1%E9%80%86"><span class="toc-number">1.4.</span> <span class="toc-text">定義：下逆&#x2F;弱逆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E5%BC%B1%E5%8F%AF%E6%B8%AC%E5%B0%8D%E6%87%89"><span class="toc-number">1.5.</span> <span class="toc-text">定義：弱可測對應</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E4%B9%98%E7%A9%8D-sigma-%E4%BB%A3%E6%95%B8"><span class="toc-number">1.6.</span> <span class="toc-text">定義：乘積 \(\sigma\) 代數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9caratheodory-%E5%87%BD%E6%95%B8"><span class="toc-number">1.7.</span> <span class="toc-text">定義：Caratheodory 函數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E8%81%AF%E5%90%88%E5%8F%AF%E6%B8%AC"><span class="toc-number">1.8.</span> <span class="toc-text">定義：聯合可測</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%BE%A9%E5%8F%AF%E6%B8%AC%E9%81%B8%E6%93%87"><span class="toc-number">1.9.</span> <span class="toc-text">定義：可測選擇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%90%86-1"><span class="toc-number">2.</span> <span class="toc-text">引理 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%90%86-2"><span class="toc-number">2.1.</span> <span class="toc-text">引理 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%90%86-3"><span class="toc-number">2.2.</span> <span class="toc-text">引理 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#filippov-%E9%9A%B1%E5%87%BD%E6%95%B8%E5%AE%9A%E7%90%86"><span class="toc-number">2.3.</span> <span class="toc-text">Filippov 隱函數定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%B8%AC%E6%9C%80%E5%A4%A7%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">可測最大值定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%B8%AC%E6%9C%80%E5%A4%A7%E5%80%BC%E5%AE%9A%E7%90%86%E8%AD%89%E6%98%8E"><span class="toc-number">3.1.</span> <span class="toc-text">可測最大值定理：證明</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="教育即自由,學術即反抗,事實即顛覆" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

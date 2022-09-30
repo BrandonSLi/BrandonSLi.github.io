@@ -1,0 +1,584 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>不求甚解學經濟-信息設計(一)-單發送者單接收者 | 不求甚解學經濟</title><meta name="keywords" content="信息設計,貝葉斯勸說,Information Design,Bayesian Persuasion,貝葉斯說服,博弈論,Game Theory,Mechanism Design"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="信息設計學習筆記係列。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-信息設計(一)-單發送者單接收者">
+<meta property="og:url" content="https://brandonsli.com/p/2b881b98.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="信息設計學習筆記係列。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2020-11-20T16:06:33.000Z">
+<meta property="article:modified_time" content="2021-10-11T08:13:59.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://brandonsli.com/p/2b881b98"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="qCKYVlYYJxGHTmeJ"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8735908405048796',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-103535631-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-103535631-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-信息設計(一)-單發送者單接收者',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-11 16:13:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-信息設計(一)-單發送者單接收者</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-11-20T16:06:33.000Z" title="發表於 2020-11-21 00:06:33">2020-11-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-10-11T08:13:59.000Z" title="更新於 2021-10-11 16:13:59">2021-10-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-信息設計(一)-單發送者單接收者"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>信息設計學習筆記係列。</p>
+<span id="more"></span>
+<p>貝葉斯勸説：Kamenica and Gentzkow (2011) Cheap Talk 勸説：Lipnowski and Ravid (2020)</p>
+<p>這一部分研究了：當一方(接收者)的行為既影響自己的效用、又影響另一方(發送者)的效用時，發送者如何通過改變接收者的信念而影響其行動、從而提高自己的效用。</p>
+<p>當發送者在真實世界狀態揭曉之前選擇向接收者傳遞信號的方法 (信息結構) 時，稱發送者具有承諾能力，這對應於貝葉斯勸説的情形；</p>
+<p>當發送者觀察到真實世界狀態之後再選擇向接收者傳遞信號，并且沒有撒謊或其他信號成本、且信號内容在事後不可驗證時，稱發送者 (完全) 不具有 (任何承諾能力)，這對應於 Cheap Talk 情形。</p>
+<p>還可以有其他情形，如：有信號成本的 (signaling or costly signal) 情形；可事後驗證 (Hard Evidence) 情形等。</p>
+<h2 id="模型">模型</h2>
+<h3 id="基本設定">基本設定</h3>
+<p>一個信息發送者(Sender)，一個信息接收者(Receiver)。</p>
+<p>世界狀態是未知的，狀態空間為有限集 <span class="math inline">\(\Omega\)</span>，行動空間為緊集 <span class="math inline">\(A\)</span>。</p>
+<p>發送者和接收者對於世界的狀態有一個共同的先驗信念 <span class="math inline">\(\mu_{0}\)</span>，其支撐集為全集(所有狀態都有可能發生)。 <span class="math inline">\(\mu_{0}(\omega)\)</span> 指當冇有額外的信息時，發送者和接收者認為真實狀態是 <span class="math inline">\(\omega\)</span>的機率。<span class="math inline">\(\mu_{0}\)</span>支撐集為全集這一假設的限製性並不是很強，我們總可以通過重新定義<span class="math inline">\(\Omega\)</span>來使這一點得到滿足，即：如果某個<span class="math inline">\(\omega^{\prime}\in\Omega\)</span>有<span class="math inline">\(\mu_{0}(\omega^{\prime})=0\)</span>，那麼無妨重新定義<span class="math inline">\(\Omega^{\ast}=\Omega\setminus\left\lbrace \omega^{\prime}\right\rbrace\)</span>，反正我們也不認為<span class="math inline">\(\omega^{\prime}\)</span>會發生（<span class="math inline">\(\mu_{0}(\omega^{\prime})=0\)</span>的含義）</p>
+<p>接收者不能直接觀察到真實的狀態，但在觀察到發送者發送的信號之後，根據先驗信念進行貝葉斯更新，並據此採取行動 <span class="math inline">\(a\in A\)</span>，其行動既影響自己的效用，又影響發送者的效用。(假設我們在行動空間<span class="math inline">\(A\)</span>中隻包含了那些有實際意義者，即<span class="math inline">\(\forall a\in A,\exists \mu,\text{ such that }a\in a^*(\mu)\)</span>，或者說，如果某個行動，無論接收者持有什麼信念都不會採取，那麼就不把它包含在行動空間裏)</p>
+<p>既然接收者採取的行動同時影響二者的效用，那麼發送者便會試圖影響接收者的行為，從而使其更多地符合發送者自己的利益。但在這裏，發送者不能直接規定接收者做什麼(可以做出拓展使其同時具有直接規定行為的能力，但在這篇論文裏，按作者所說，為了集中考慮信息的作用，隔絕了這種直接規定的通路。據說這一點也是與機製設計理論的不同之處，如 Bergemann and Morris, 2019 指出的)，而是可以通過信息結構來影響接收者的信念，從而間接地影響接收者的行為。</p>
+<p>貝葉斯勸説與 Signaling game 的區別則在於，貝葉斯勸説裏的信號並不具有直接影響效用的作用。在 Signaling game 裏，為了實現 Seperating equilibrium，其<strong>通過行為發送信號</strong>的<strong>成本</strong>需要有差異(如高能力者獲取高學曆的成本更低，使得低能力者難以模仿)。與 Cheap Talk 的區別在於，這裏發送者是有承諾能力的，發送者承諾信息結構發生在真實狀態揭曉之前並且無法在真實狀態揭曉之後反悔，其信號具有實際含義，因此發送者的 Talk 不 Cheap。</p>
+<p>發送者的效用函數 <span class="math inline">\(v(a,\omega)\)</span>，接收者的效用函數 <span class="math inline">\(u(a,\omega)\)</span>，二者各自都是關於<span class="math inline">\(a\)</span>和<span class="math inline">\(\omega\)</span>的連續函數。</p>
+<p>其中發送者的效用函數可以取決於世界狀態<span class="math inline">\(\omega\)</span>，也可以不取決於它；但<strong>接收者的效用函數必須取決於世界狀態</strong>，因為在目前的框架內，這種依賴關係是發送者<strong>僅有的</strong>可以影響接收者行為的作用點。</p>
+<p>信息結構 <span class="math inline">\((S,q)\)</span></p>
+<p><span class="math inline">\(S\)</span></p>
+<p><span class="math inline">\(q:\Omega\rightarrow\Delta(S)\)</span></p>
+<p>信息結構有兩部分，<span class="math inline">\(S\)</span> 是發送者想讓接收者所能觀測到的信號的<strong>潛在可能集</strong>，<span class="math inline">\(q\)</span> 是一組條件機率，既當真實狀態是 <span class="math inline">\(\omega\in\Omega\)</span> 時，觀測到信號 <span class="math inline">\(s\in S\)</span> 的條件機率。這也就意味著，發送者可以指定信號的潛在可能集 <span class="math inline">\(S\)</span> 以及對應關係 <span class="math inline">\(q\)</span>，但是無法控製具體實現哪個 <span class="math inline">\(s\in S\)</span>，並且隱含假設當某個 <span class="math inline">\(s\in S\)</span> 實現之後，發送者不能反悔。</p>
+<p>我們稱 <span class="math inline">\(s\in S\)</span> 為<strong>信號實現</strong>(即實際出現的信號)。</p>
+<p>發送者能讓信號實現通過信息結構依賴於世界狀態，在這個意義上，<strong>發送者比接收者具有信息優勢</strong>，或者更恰當地說<strong>發送者具有考察出關於真實狀態信息的能力優勢</strong>；但當發送者承諾信息結構時，真實狀態尚未揭曉，那麼在這個意義上<strong>發送者與接收者的信息是對稱的</strong>。發送者<strong>承諾</strong>一個信息結構，意味著<strong>發送者能夠可信地將自己考察真實狀態信息的能力隻發揮在一定範圍內</strong>。因此，“發送者”這一稱呼其實不太合適，與 Cheap Talk 相比，此處<strong>“發送者”在行動時也並不知曉真實狀態是什麼</strong>。如果我們採取“信息獲取”與“信息披露”的區別，那麼當“發送者”在觀察到私人信息後再嚮“接收者”傳遞信息的情形，可以稱為“信息披露”，而這篇文章裏“發送者”可信地承諾採取何種精度的信息獲取機製可以稱為“信息獲取”。發送者本身有私人信息的情形，比如 Myerson (1981) 的 Good News and Bad News, (1983) 的 Mechanism Design by an Informed Principal，或者 Nguyen and Tan (2021) 的 Costly messages，還有 Koessler (2021)等。</p>
+<p>發送者說自己不會完全發揮，那麼接收者也會相信發送者隻考察出了部分的真實情況，並且接收者知道發送者無法反悔，接收者知道隻生成了這麼多信息，在這篇文章裏，並不存在發送者撒謊的可能，同時，接收者是貝葉斯理性的，接受者也並冇有被欺騙。發送者選擇信息結構發生在真實狀態揭曉之前，因此發送者選擇了哪種信息結構這一行為並不包含著關於真實狀態的什麼信息。</p>
+<p>發送者在真實狀態揭曉之前就已經通過信息結構確定了真實狀態與信號實現之間的對應關係，因此信號實現的含義在事前就被確定了，而不是如 Cheap Talk 般在均衡中確定的。</p>
+<p>接收者可以觀察到發送者選擇了什麼信息結構，可以根據觀察到的信號實現來逆推實際狀態可能是什麼，但無法直接觀察到真實狀態。</p>
+<h3 id="timing">Timing</h3>
+<ol type="1">
+<li>發送者承諾一個信息結構 <span class="math inline">\((S,q)\)</span>；</li>
+<li>接收者觀察到信息結構 <span class="math inline">\((S,q)\)</span>；</li>
+<li>真實狀態(根據先驗機率)揭曉，並經過信息結構(即根據條件機率)轉換為信號實現，信號實現為接收者觀測到；</li>
+<li>接收者根據先驗信念和信號實現進行貝葉斯更新，根據後驗機率採取行動。</li>
+<li>發送者和接收者的效用實現，博弈結束。</li>
+</ol>
+<p>可以看到，在發送者承諾信息結構的時候，世界狀態仍未揭曉。因此，盡管發送者確實通過自己的行為使得接收者的信念發生了改變，但這裏不涉及“欺騙”問題：發送者也不知道真實的世界狀態為何，發送者所選擇的信息結構是共同知識，特別地，信息結構中所包含的機率同樣為接收者所知。對於博弈中欺騙與誤導的模型化處理，可見 Sobel (2020) 。</p>
+<h3 id="策略">策略</h3>
+<p>發送者的策略：<span class="math inline">\(S\)</span> 和 <span class="math inline">\(q\)</span>。即信息結構。</p>
+<p>接收者的策略：行動規則(action rule)。接收者根據觀測到的信號實現(進行貝葉斯更新)，採取“信號依賴”的行動。(取決於信號實現的行動，用詞仿照“狀態依賴”)</p>
+<h3 id="均衡">均衡</h3>
+<p>解概念：完美貝葉斯均衡。註意：從信息設計的角度來說，這是個靜態問題，並且不是個博弈論問題。因為在信息設計的脈絡下談到解概念 (如：貝葉斯相關均衡，協調均衡等) 時，指的是多個接收方之間的均衡，而這裏隻有一個接收方。但在 Sender-Receiver 脈絡下，這是個動態問題，完美貝葉斯均衡指的是發送者和接收者之間的均衡。並且，由於這裏冇有非均衡路徑問題，所以是完美貝葉斯是均衡而不隻是貝葉斯納什均衡。</p>
+<p>一般性地，均衡由三個部分組成 <span class="math inline">\((\mu_{s},q(\omega),a(s))\)</span>，其中</p>
+<ul>
+<li><span class="math inline">\(\mu(s)\)</span> 為信念系統，由 <span class="math inline">\(\mu_{0}\)</span> 和 <span class="math inline">\(q(\omega)\)</span> 根據貝葉斯更新形成；</li>
+<li><span class="math inline">\(q(\theta)\)</span> 滿足發送者的貝葉斯理性；</li>
+<li><span class="math inline">\(a(s)\)</span> 最大化接收者的事中效用函數 (滿足接收者的貝葉斯理性)。</li>
+</ul>
+<p>均衡結果 <span class="math inline">\((\tau,s)\in\Delta\Delta(\Omega)\times\mathbb{R}\)</span> 為均衡 <span class="math inline">\((\mu_{s},q(\omega),a(s))\)</span> 所引致的後驗信念分佈和發送者的事前效用。</p>
+<p>在貝葉斯勸説情形中，<span class="math inline">\(q(\theta)\)</span> 滿足發送者的貝葉斯理性體現爲最大化發送者的事前效用函數；在 Cheap Talk 情形中體現爲最大化發送者的事中效用函數，在事中階段發送者已經擁有了私人信息 (觀察到了世界狀態)，所以 Cheap Talk 情形施加了額外的關於發送者的激勵相容約束。爲了突出在貝葉斯勸説情形中信息結構的選擇無需滿足發送者的事中激勵相容約束的這一點，也稱貝葉斯勸説中的均衡為承諾機制、均衡結果為承諾結果。</p>
+<p>在均衡中，接收者的行動規則應該是對發送者的信息結構的最優反應。同時發送者的信息結構也應該是對接收者的行動規則的最優反應。</p>
+<p>接收者的後驗信念 <span class="math inline">\(\mu_{s}(\cdot)\in\Delta(\Omega)\)</span>(即給定觀察到信號 <span class="math inline">\(s\)</span> 的情況下，真實狀態為某個 <span class="math inline">\(\omega\)</span> 的條件機率)由貝葉斯法則生成：</p>
+<p><span class="math display">\[\mu_{s}(\omega)=\frac{\mu_{0}(\omega)\cdot q(s\mid\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\cdot q(s\mid\omega^{\prime})}\]</span></p>
+<p>接收者根據這個後驗信念來選擇行動<span class="math inline">\(a(\mu_{s})\)</span>來最大化其期望效用：</p>
+<p><span class="math display">\[\mathbb{E}_{\mu_{s}}u(a,\omega) = \sum_{\omega\in\Omega}\mu_{s}(\omega)u(a,\omega)\]</span></p>
+<p>當接收者的期望效用最大化問題有多個解( <span class="math inline">\(\left\lbrace a^{\ast}(\mu)\right\rbrace&gt;1\)</span> )時，即不同的行動都能帶來那個相同的最大值，那麼選擇其中那個能為發送者帶來最大效用的行動<span class="math inline">\(\hat{a}(\mu)=\arg\max_{a\in\left\lbrace a^{\ast}(\mu)\right\rbrace}\sum_{\omega}v(a,\omega)\mu(\omega)\)</span>。由於發送者和接收者的效用函數不必相同(當然正因為如此才有勸說/說服的必要)，因此對於接收者來說帶來相同效用值(此時是最大值)的解，未必也給發送者帶來相同的效用值。</p>
+<p>發送者選擇信息結構 <span class="math inline">\((S,q)\)</span>，(通過影響接收者的行為而間接地)使得期望效用最大化：</p>
+<p><span class="math display">\[\mathbb{E}_{Pr(s)}\mathbb{E}_{\mu_{s}}v(a,\omega) = \sum_{s\in S}Pr(s)\sum_{\omega\in\Omega}\mu_{s}v(a(\mu_{s},\omega))\]</span></p>
+<p>其中 <span class="math inline">\(Pr(s)\)</span> 錶示在給定信息結構的情況下，信號<span class="math inline">\(s\)</span>被接收者所觀察到的邊際(即已對各種可能的世界狀態加總後的)機率，<span class="math inline">\(a(\mu_{s})\)</span>中的<span class="math inline">\(\mu_{s}\)</span>是接收者的後驗信念，而取期望時候<span class="math inline">\(\mathbb{E}_{\mu_{s}}\)</span>中的<span class="math inline">\(\mu_{s}\)</span>是發送者的後驗信念，盡管在這篇文章中二者是重合的，但在概念上做出這種區分是有必要的。</p>
+<p><span class="math display">\[Pr(s)=\sum_{\omega\in\Omega}q(s\mid\omega)\mu_{0}(\omega)\]</span></p>
+<p>由於我們已經假定接收者在觀察到信號實現後，會根據後驗信念採取最優行動，因此整個問題可以簡化為隻有發送者一個行為主體的問題，其中發送者在決策時是預計到自己的行動會引緻接收者的最優行動的，在發送者的問題中，接收者的行為是“機械的”。</p>
+<h3 id="行動建議">行動建議</h3>
+<p>根據顯示原理(revelation principle，待補充)，可以將問題簡化為隻考慮“直接信息結構”(用詞仿照“直接機製”)：<span class="math inline">\(S\subset A\)</span>,並且接收者的均衡行動與信號實現相同。這種由發送者直接建議接收者應該做什麼的信息結構被稱為<strong>行動建議式信息結構</strong>。</p>
+<p>這意味著：發送者直接根據自己事先宣佈的信息結構中的條件機率機械地告訴接收者該做什麼，(不同於作為條件機率的後驗信念是在接收者那邊)這裏的條件機率還是在發送者這邊(信號實現是由<strong>自然</strong>根據<strong>發送者選擇的信息結構</strong>生成)，發送者告訴接收者的是採取何種“純策略”而不是以多少的機率做哪件事<span class="math inline">\(a(\mu)\)</span>，盡管接收者實際採取的行為與信號實現背後的真實狀態之間的對應關係<span class="math inline">\(a(\omega)\)</span>是隨機的。</p>
+<hr />
+<p>在行動建議式信息結構下，信號的潛在可能集已經被固定為<span class="math inline">\(A\)</span>(或<span class="math inline">\(A\)</span>的子集)了，這時候<span class="math inline">\(q:\Omega\rightarrow\Delta(S)\)</span>與<span class="math inline">\(q:\Omega\rightarrow\Delta(\Omega\times S)\)</span>在一定條件下是等價的(待補充：<em>Crawford and Sobel, 1982 腳註</em>)</p>
+<hr />
+<h2 id="分析">分析</h2>
+<p>在某些情況下，發送者尋找最優信息結構的問題可以簡化為發送者尋找在後驗信念上的最優分佈的問題。當然，無論是尋找最優信息結構還是尋找後驗信念上的最優分佈，都是在給定接收者會對後驗信念採取最優反應的前提下，因此接收者的“參與約束”或“激勵相容約束”總是得到滿足的：發送者都是在接收者的最優反應的前提下來影響接收者。（類似於Stackelberg模型）</p>
+<p>在前麵敘述關於發送者兩層期望效用式我們提到，在真實狀態揭曉之前，發送者便已事先承諾了信息結構。因此，對於給定的信息結構來說，尚未揭曉的真實狀態會(盡管是依據發送者自己選擇的信息結構)引緻不確定的信號，哪種信號會實際出現會影響接收者的貝葉斯更新過程，從而影響其後驗信念。</p>
+<p>給定發送者選擇的信息結構，當時尚未揭曉的真實狀態，會使發送者在決策時對於具體引緻接收者的哪種後驗信念具有不確定性，因此，某個<strong>信號實現</strong><span class="math inline">\(s \in S\)</span>會由於背後意味著的<span class="math inline">\(\omega \in \Omega\)</span>而引緻一個<strong>後驗信念</strong>，那麼，一個<strong>信息結構</strong><span class="math inline">\((S,q)\)</span>就引緻了後驗信念上的一個<strong>分佈</strong>(由於接收者是根據後驗信念行動，這也意味著信息結構引緻了接收者行為的一個分佈)。反之，對於後驗信念上的一個分佈，和一個信息結構，當它們之間滿足一定的關係時，我們也可說以那個分佈是由那個信息結構所引緻的。</p>
+<p>後驗信念上的某個分佈 <span class="math inline">\(\tau\in\Delta(\mu)=\Delta(\Delta(\Omega))\)</span>，和信息結構 <span class="math inline">\((S,q)\)</span> 之間，若滿足以下關係，則我們說 <span class="math inline">\(\tau\)</span> 是由 <span class="math inline">\((S,q)\)</span> 引緻的：</p>
+<p>1.貝葉斯更新。對於每個狀態 <span class="math inline">\(\omega\in\Omega\)</span> 和任何信號實現 <span class="math inline">\(s\in S\)</span>，都有</p>
+<p><span class="math display">\[\mu_{s}(\omega)=\frac{\mu_{0}(\omega)\cdot q(s\mid\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\cdot q(s\mid\omega^{\prime})}\]</span></p>
+<p>2.所有可能通過某個可能信號實現<span class="math inline">\(s\in S\)</span>所生成的後驗信念<span class="math inline">\(\mu_{s}\)</span>，構成這個後驗信念上的分佈的支撐集。</p>
+<p><span class="math display">\[\text{supp}(\tau)=\left\lbrace \mu_{s}\right\rbrace_{s\in S}\]</span></p>
+<p>3.對於任何可能出現的後驗信念 <span class="math inline">\(\mu\)</span>，這個後驗信念出現的機率 <span class="math inline">\(\tau(\mu)\)</span>，等於所有那些可以通過某個信號實現而使得接收者生成這個後驗信念的機率的加總。</p>
+<p><span class="math display">\[\tau(\mu)=\sum_{s:\mu_{s}=\mu}Pr(s)\\
+=\sum_{s:\mu_{s}=\mu}\sum_{\omega\in\Omega}q(s\mid\omega)\mu_{0}(\omega)\]</span></p>
+<p>我們稱在後驗機率上的一個分佈 <span class="math inline">\(\tau(\cdot)\)</span> 是<strong>貝葉斯可行</strong>的，若它使得後驗機率的期望等於先驗機率：</p>
+<p><span class="math display">\[\sum_{support(\tau)}\mu\cdot\tau(\mu)=\mu_{0}\]</span></p>
+<p>可見，如果一個分佈<span class="math inline">\(\tau\)</span>是由信息結構<span class="math inline">\((S,q)\)</span>所引緻的，則</p>
+<p><span class="math display">\[\begin{aligned}
+\sum_{\mu\in\text{supp}(\tau)}\tau(\mu)\mu(\omega)
+&amp;=\sum_{\mu\in\text{supp}(\tau)}\sum_{s:\mu_{s}=\mu}\sum_{\omega^{\prime}\in\Omega}q(s|\omega^{\prime})\mu_{0}(\omega^{\prime})\mu(\omega)\\
+&amp;=\sum_{\mu\in\text{supp}(\tau)}\sum_{s:\mu_{s}=\mu}q(s|\omega)\mu_{0}(\omega)\\
+&amp;=[\sum_{\mu\in\text{supp}(\tau)}\sum_{s:\mu_{s}=\mu}q(s|\omega)]\mu_{0}(\omega)\\
+&amp;=1\cdot\mu_{0}(\omega)\\
+&amp;=\mu_{0}(\omega)
+\end{aligned}\]</span></p>
+<hr />
+<p>貝葉斯可行也稱作貝葉斯一緻性，它由叠代期望定律而來。它是這裏的激勵相容約束：在接收者事前看來，按照發送者給出的信號行動不會比按先驗信念行動差。順便提一句，我們說的期望效用最大化，都是指<strong>不確定性消失前</strong>的<strong>主觀機率</strong>期望效用最大化，如果有時候看起來是使用了客觀機率，那其實隻意味著這時候主觀機率與客觀機率重合；如果有時候看起來博弈結果並冇有最大化參與人的效用，那隻是意味是<strong>事前理性</strong>不等於<strong>事後理性</strong>，而我們隻要求事前理性。</p>
+<p>這裏事前與事後的區分是不確定性以及最終效用的實現與否，但從整個博弈來看，某個參與人採取事前計畫的時候，可能已經處於整個博弈的事中了。</p>
+<p>比如，在不完備信息博弈的框架中，通常將參與人獲取自己信號/類型前的處境稱為事前，而在獲取自己信號/類型後的處境稱為事中。比如，當發送者已經對接收者傳遞了某個信號後，接收者觀察到了信號，並考慮如何根據形成的後驗信念(條件機率)做最優化決策時，便是這個博弈的事中階段。但由於此時不確定性尚未消失、隻有當接收者實際採取行動後效用才會最終實現，因此當其做最優化考量時其目標函數依然是<strong>期望</strong>效用。</p>
+<p>按照對博弈時間線而非對不確定性消失與否的區分，還可以定義事前期望效用與事中期望效用，比如</p>
+<p><span class="math display">\[\mathbb{E}_{\theta}\mathbb{E}_{S}u(a_{p(s^{\prime})},\theta)\]</span></p>
+<p>就是事前期望效用，而</p>
+<p><span class="math display">\[\mathbb{E}_{\theta}u(a(p_{s}),\theta|s)\]</span></p>
+<p>就是事中期望效用。其區別在於是否獲得了除先驗以外的信息，無論這個信息是別人傳遞給自己的關於世界狀態或其他人的信息，還是參與人觀察到的關於自己的比如成本等信息。</p>
+<hr />
+<p>從而，每個信息結構都能引緻後驗信念上的一個分佈，由信息結構引緻的後驗信念上的分佈，由於行為人的貝葉斯理性，總是滿足貝葉斯可行性。給定後驗信念上的一個分佈，並且後驗信念的期望等於先驗信念，總是存在可以引緻後驗信念上這個給定分佈的信息。</p>
+<p>基於信念的方法：將發送者的策略和均衡信念系統都等同於後驗信念上的事前分佈 <span class="math inline">\(\tau\in\Delta\Delta\Omega\)</span>，如果這個分佈滿足貝葉斯可行性 <span class="math inline">\(\int\mu d\tau(\mu)=\mu_{0}\)</span>，則稱這個分佈 <span class="math inline">\(\tau\)</span> 為一個信息政策。</p>
+<p>均衡結果：<span class="math inline">\((\tau,v)\in\Delta\Delta\times\mathbb{R}\)</span>，由均衡 <span class="math inline">\((\mu_{s},a(s),q(\omega))\)</span> 所引致的一對元素，分別爲後驗信念的分佈和發送者的事前效用。</p>
+<p>如果一個均衡結果中的 <span class="math inline">\(\tau\)</span> 并非退化的 (<span class="math inline">\(\tau=\delta(\mu_{0})\)</span>，即 <span class="math inline">\(\tau(\mu_{0})=1,\tau(\mu_{s})=0,\forall\mu_{s}\neq\mu_{0}\)</span>)，則稱接收者的後驗信念上的這個分佈 <span class="math inline">\(\tau\)</span> 是有信息量的。</p>
+<p>如果僅關注均衡結果，那麽基於信念的方法與原問題是等價的。</p>
+<p>因此，有如下引理</p>
+<h3 id="引理一">引理一</h3>
+<p>選擇最優的信息結構和選擇信息政策是等價的，即：</p>
+<p><span class="math display">\[\max_{(S,q)}\mathbb{E}_{q}v(a(\mu_{s},\omega))\]</span></p>
+<p>與</p>
+<p><span class="math display">\[\begin{aligned}
+&amp;\max\mathbb{E}_{\tau}v(a(\mu_{s},\omega))\\
+&amp;s.t.\\
+&amp;\mathbb{E}_{\tau}\tau(\mu_{s})=\mu_{0}
+\end{aligned}\]</span></p>
+<p>是等價的。</p>
+<p>將發送者關於接收者後驗信念的值函數記為<span class="math inline">\(\hat {v}(\mu)=\mathbb {E}_{\mu}v(\hat {a}(\mu),\omega)\)</span>，其中<span class="math inline">\(\hat {a}(\mu)\)</span>是當接收者擁有後驗信念<span class="math inline">\(\mu\)</span>是所採取的均衡(最優)行為。在這裏，<span class="math inline">\(\mu\)</span>是接收者的後驗信念，會影響接收者的行動，因此會影響發送者的效用；但是在當前的框架下，<span class="math inline">\(\mu\)</span>也是發送者的後驗信念，如果發送者的效用也依賴於實際的世界狀態，接收者的給定行為在不同的世界狀態下會給發送者帶來不同的效用。後驗信念在發送者的值函數中出現了兩次。</p>
+<p>則前述問題進一步等價為</p>
+<p><span class="math display">\[\begin{aligned}
+&amp;\max\mathbb{E}_{\tau}\hat{v}(a(\mu_{s},\omega))\\
+&amp;s.t.\\
+&amp;\mathbb{E}_{\tau}\tau(\mu_{s})=\mu_{0}
+\end{aligned}\]</span></p>
+<p>在離散情形下，發送者的問題為</p>
+<p><span class="math display">\[v^{*}=\max _{\tau} \sum_{\mu \in supp(\tau)} \hat {v}(\hat{a}(\mu),\omega)\tau(\mu)\]</span> s.t. <span class="math display">\[\sum_{\mu \in supp (\tau)} \mu \tau(\mu)=\mu_{0}\]</span> 當給定最優的後驗信念上的分佈<span class="math inline">\(\tau^{*}\)</span>時， 最優信息結構可以如下生成(給定我們採用的是直接推薦)</p>
+<p><span class="math display">\[q^{*} (s_{\mu}|\omega)=\frac {\mu(\omega)\tau^{*}(\mu)} {\mu_{0}(\omega)}\]</span></p>
+<h3 id="命題一">命題一</h3>
+<p>下述三個命題是等價的：</p>
+<ol type="1">
+<li>存在使得發送者期望效用最大化(實現<span class="math inline">\(v^{\ast}\)</span>)的行動建議式信息結構。</li>
+<li>存在使得發送者期望效用最大化(實現<span class="math inline">\(v^{\ast}\)</span>)的信息結構。</li>
+<li>存在使得發送者期望效用最大化(實現<span class="math inline">\(v^{\ast}\)</span>)的貝葉斯可行的後驗信念上的分佈。</li>
+</ol>
+<p>證明：</p>
+<p><span class="math display">\[1\rightarrow 2\]</span></p>
+<p>根據定義，行動建議式信息結構也是一種信息結構。</p>
+<p><span class="math display">\[2\rightarrow 1\]</span></p>
+<p>給定使得發送者達到最大效用<span class="math inline">\(v^*\)</span>的信息結構<span class="math inline">\((S,q)\)</span>，我們把其中引緻接收者採取均衡行為的那些信號實現記為</p>
+<p><span class="math display">\[S^{a}=\left\lbrace s|\hat{a}(\mu_{s})=a\right\rbrace\]</span></p>
+<p>考慮另一個信息結構<span class="math inline">\((s^{\prime},q^{\prime})\)</span></p>
+<p>其中信號實現的潛在可能集<span class="math inline">\(s^{\prime}=A\)</span>，並把那些能引緻接收者採取行動<span class="math inline">\(a\)</span>的各種條件機率加總</p>
+<p><span class="math display">\[q^{\prime}(a|\omega)=\sum_{s\in S^{a}}q(s|\omega)\]</span></p>
+<p>(即，首先替換潛在可能集為行動建議，然後將引緻同一行為的信息結構多個組成部分“打包”成一個條件機率)</p>
+<p>此時，</p>
+<p><span class="math display">\[\begin{aligned}
+\mu^{\prime}_{a}(\omega)&amp;=\frac{\mu_{0}(\omega)q^{\prime}(a|\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})q^{\prime}(s^{\prime}|\omega^{\prime})}\\
+&amp;=\frac{\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}
+\end{aligned}\]</span></p>
+<p>對於任何一個行動<span class="math inline">\(a\in A\)</span>，都有</p>
+<p><span class="math display">\[\begin{aligned}
+\sum_{\omega\in\Omega}u(a,\omega)\mu^{\prime}_{a}(\omega)&amp;=\sum_{\omega}u(a,\omega)\frac{\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}\\
+&amp;=\sum_{\omega}u(a,\omega)\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)\frac{1}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}\\
+&amp;=\sum_{\omega}u(\hat{a}(\mu_{s}),\omega)\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)\frac{1}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}\\
+&amp;\geq\sum_{\omega}u(a^{\star},\omega)\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)\frac{1}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}\\
+&amp;=\sum_{\omega}u(a^{\star},\omega)\mu^{\prime}_{a}(\omega)\\
+\forall a^{\star}\in A
+\end{aligned}\]</span></p>
+<p><span class="math inline">\(S^{a}\)</span>中的點是根據以下標準挑選出來的，首先，給定先驗信念和原有的信息結構(因此我們需要把信念展開才能比較接收者的行為)，接收者在持有後驗信念<span class="math inline">\(\mu_{s},\forall s\)</span>時採取最優反應<span class="math inline">\(\left\lbrace a^{\ast}(\mu_{s})\right\rbrace\)</span>，從其中挑選出來對發送者最有利的<span class="math inline">\(\hat{a}(\mu)\)</span>，並且將那些使接收者採取相同行為的不同信號實現聚在一起<span class="math inline">\(S^{a}=\left\lbrace s|\hat{a}(\mu_{s})=a\right\rbrace\)</span>。因此，根據定義，<span class="math inline">\(a\)</span>是接收者對於<span class="math inline">\(s\in S^{a}\)</span>這些信號的最優反應；當<span class="math inline">\(s^{\prime}=A\)</span>，並把那些引緻相同行為<span class="math inline">\(a(s)=a,\forall s\in S^{a}\)</span>的不同信號實現之條件機率“打包”在一起之後，<span class="math inline">\(a\)</span>(接收者的行為)依然是對於根據<span class="math inline">\(q^{\prime}(\cdot|\omega)\)</span>生成的<span class="math inline">\(a\)</span>(發送者的推薦)的最優反應。</p>
+<p>由此，我們根據任一最優信息結構<span class="math inline">\((S,q)\)</span>，通過重新定義信號實現的潛在可能集、並“打包”引緻接收者相同均衡行為的條件機率，構造出了一個給發送者帶來相同效用值<span class="math inline">\(v^*\)</span>的行動建議式信息結構<span class="math inline">\((s^{\prime},q^{\prime})=(A,q^{\prime})\)</span>。</p>
+<!-- ---
+
+貝葉斯可行的要求，就是這個框架下**對於接收者的激勵相容約束**，並且這個激勵相容約束是緊的。即發送者使得接收者恰好處於聽從發送者的推薦來行動與直接按照先驗機率來行動**在事前看來**恰好無差異。盡管事後看來，接收者的效用有可能會受到損失。
+
+當已經觀察到信號實現為$s$，並且發送者已經建議了$a$時，如果接收者按照先驗信念採取行動，其效用為
+
+$$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)$$
+
+接收者按照發送者的建議採取行動時，其效用為
+
+$$\sum_{\omega}u(a,\omega)\mu_{s}(\omega)$$
+
+剛才我們已經看到，發送者的行動建議會使得“$a$(接收者的行為)也是對於根據$q(\cdot|\omega)$生成的$a$(發送者的推薦)的最優反應”，因此前式等價於
+
+$$\sum_{\omega}u(\hat{a}(\mu_{s}),\omega)\mu_{s}(\omega)$$
+
+但根據$\hat{a}(\mu)$的定義可知
+
+$$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{a}(\mu_{s}),\omega)\mu_{s}(\omega)$$
+
+--- -->
+<p><span class="math display">\[1\rightarrow 3\]</span></p>
+<p>給定一個貝葉斯可行的後驗信念上的分佈<span class="math inline">\(\tau\)</span>，記 <span class="math display">\[q(s|\omega)=\frac{\mu_{s}(\omega)\tau(\mu_{s})}{\mu_{0}(\omega)}\]</span> 由於我們假設先驗信念具有全支撐，因此分母總是為正的，上式具有良好定義。 從而 <span class="math display">\[q(s|\omega)\mu_{0}(\omega)=\mu_{s}(\omega)\tau(\mu_{s})\]</span> 進而 <span class="math display">\[\sum_{\omega\in\Omega}q(s|\omega)\mu_{0}(\omega)=\sum_{\omega\in\Omega}\mu_{s}(\omega)\tau(\mu_{s})
+\]</span></p>
+<p><span class="math display">\[3\rightarrow 2\]</span></p>
+<p>根據引理一，每個信息結構<span class="math inline">\((S,q)\)</span>都對應於一個後驗信念上的分佈<span class="math inline">\(\tau\)</span>。因此</p>
+<p><span class="math display">\[\begin{aligned}
+&amp;\mathbb{E}_{\tau}\sum_{\omega}\hat{v}(\hat{a}(\mu),\omega)\mu(\omega)\\
+&amp;=\sum_{\mu\in\text{supp}(\tau)}\tau(\mu)\sum_{\omega}\hat{v}(\hat{a}(\mu),\omega)\mu(\omega)\\
+&amp;=\sum_{\mu\in\text{supp}(\tau)}[\sum_{s:\mu_{s}=\mu}\sum_{\omega^{\prime}}q(s|\omega^{\prime})\mu_{0}(\omega^{\prime})][\sum_{\omega}\hat{v}(\hat{a}(\mu),\omega)\mu(\omega)]\\
+&amp;=\sum_{\mu\in\text{supp}(\tau)}\sum_{\omega}\sum_{s:\mu_{s}=\mu}\sum_{\omega^{\prime}}q(s|\omega^{\prime})\mu_{0}(\omega)\mu_{s}(\omega)\hat{v}(\hat{a}(\mu),\omega)\\
+&amp;=\sum_{\mu\in\text{supp}(\tau)}\sum_{\omega}\sum_{s:\mu_{s}=\mu}\mu_{0}(\omega)q(s|\omega)\hat{v}(\hat{a}(\mu),\omega)\\
+&amp;=\sum_{s}\sum_{\omega}\mu_{0}(\omega)q(s|\omega)\hat{v}(\hat{a}(\mu_{s},\omega))\\
+&amp;=\mathbb{E}_{(S,q)}\hat{v}(\hat{a}(\mu_{s}),\omega)
+\end{aligned}\]</span></p>
+<hr />
+<p>因此，在最優信息結構下</p>
+<p><span class="math display">\[\begin{aligned}
+&amp;\sum_{\omega}u(\hat{a}(\mu_{s}),\omega)\mu_{s}(\omega)\\
+\geq&amp;\sum_{\omega}u(a^{\ast}(\mu_{s}),\omega)\mu_{s}(\omega)\\
+\geq&amp;\sum_{\omega}u(a^{\ast}(\mu_{0}),\omega)\mu_{s}(\omega)\\
+\end{aligned}\]</span></p>
+<p>即在最優信息結構下，接收者聽從建議不會得到比僅僅按照先驗信息行動更低的期望效用。但這一性質是由於給定的信號實現與背後的真實狀態之間是以機率連接的，按照效用實現來劃分，這是事前性質。當效用實現之後，效用的實現值取決於真實的世界狀態，從事後來看，在效用實現之後，聽從建議的接收者可能會發現實際的效用值低於直接按照先驗信念行動的預設效用。即，盡管期望值不會低於預設效用，但參與取期望的各個組成部分不必高於預設效用。(同時，由於我們的框架是關註發送者的效用，因此，後文中對於發送者來說的<span class="math inline">\(\forall\mu\text{ with }\tau(\mu)&gt;0,V(\mu)=\hat{v}(\mu)\)</span>這一性質對於接收者來說不成立。)</p>
+<hr />
+<p>這個命題回答了如下問題：</p>
+<ul>
+<li>為什麼行動建議式的信息結構就足夠了？</li>
+<li>為什麼“選擇最優信息結構”等價於“選擇後驗信念上的最優分佈”？</li>
+</ul>
+<h3 id="推論一">推論一</h3>
+<p>發送者能夠通過勸說獲利，當且僅當存在一個貝葉斯可行的後驗信念上的分佈<span class="math inline">\(\tau\in\Delta\Delta(\Omega)\)</span>使得</p>
+<p><span class="math display">\[\mathbb{E}_{\tau}\hat{v}(\mu)&gt;\hat{v}(\mu_{0})\]</span></p>
+<p>其最優值<span class="math inline">\(v^{\ast}\)</span>由下式給出</p>
+<p><span class="math display">\[\begin{aligned}
+&amp;\max\mathbb{E}_{\tau}\hat{v}(a(\mu_{s},\omega))\\
+&amp;s.t.\\
+&amp;\mathbb{E}_{\tau}\tau(\mu_{s})=\mu_{0}
+\end{aligned}\]</span></p>
+<p>其中<span class="math inline">\(\hat{v}(\mu)\)</span>為發送者的效用關於接收者的後驗信念<span class="math inline">\(\mu\)</span>的值函數。</p>
+<p>然而，這隻是錶明，如果存在最優信息結構/勸說/分享信息/後驗信念上的分佈的話，應該怎麼找出來。但它本身並不意味著最優解存在。但而，後麵我們可以看到，偏嚮發送者的“打破僵局”慣例(即，給定接收者持有的後驗信念，如果接收者的最優解是多點集，則選出其中使得發送者效用最高的一個)保證了最優解的存在。</p>
+<h3 id="凹化解">凹化解</h3>
+<p>將發送者的期望效用錶示為關於接收者的後驗信念的函數，這種後驗信念與效用值的對應關係錶示為一個函數。(假定當接收者有多個最優行動時，選出其中對發送者最有利的那一個，從而這真的是一個單值的函數關係，而不是多值的對應關係)</p>
+<p>發送者效用函數的凹化函數，就是那些<strong>逐點取值不小於效用函數取值</strong>的<strong>凹函數</strong>中，<strong>逐點函數值最小</strong>的那一個。</p>
+<p>此處“凹化”術語可能稍微有些奇怪。但其實對函數的凹化其實是在給函數的圖像做<strong>凸</strong>包。當目標函數變成凹函數之後，最大化問題就可以使用常規的最優化方法來進行求解。(在凸分析中，相關概念可見concave/convex closure, concav(convex-)ify, concav(convex-)ification, concave/convex envelope, conjugate, major(minor-)ization等)</p>
+<p>為什麼能夠找到滿足這樣性質的凹函數呢？因為，發送者第二層期望效用是在通過後驗信念的分佈做組合，這種組合使得上麵不凹的地方被磨平了。在當前的假設下，對後驗信念上的分佈再次取期望得到的效用就是這個凹函數。在機率分佈集--單純形這個緊集上對一個上半連續(semi，不是hemi，這是由於“當存在接收者的多個最優行為時選擇對發送者最有利的一個”這個假設，並且，由於雙層期望效用是由第一層期望效用(發送者效用關於接收者後驗信念的值函數)的凸組合得來的，它繼承了上半連續的性質)做最大化，解總是存在的。</p>
+<p>定義函數<span class="math inline">\(\hat{v}(\mu)\)</span>的下圖的凸包</p>
+<p><span class="math display">\[V=co(\left\lbrace (v,\mu)\in\mathbb{R}\times\Delta(\Omega)|v\leq\hat{v}(\mu)\right\rbrace)\]</span></p>
+<p>對於接收者的任意後驗信念<span class="math inline">\(\mu\in\Delta(\Omega)\)</span>，定義發送者效用值函數的凹化函數，</p>
+<p><span class="math display">\[V(\mu)=\sup\left\lbrace v\in\mathbb{R}|(v,\mu)\in V\right\rbrace\]</span></p>
+<p>那些凹化後的函數值嚴格高於值函數的地方，該處對應的信念，就是那些當它們是先驗信念的時候，發送者可以通過操控信念而得利的地方。(但這也意味著，當發送者關於接收者後驗信念的值函數已經為凹函數的時候，凹化函數就等於原來的函數，二者完全重合，此時發送者無法通過擾動信念獲利。)(另有一種採用仿射函數的等價定義方式，可見Aliprantis and Border, 2006)</p>
+<p>通過比較在先驗信念處，值函數和凹化函數值，可以得知發送者是否可以通過擾動信念而獲利。當可以獲利的時候，那些使得“值函數的凸組合成為凹化函數值”的點們，就是應該最優信息結構引緻的後驗信念。</p>
+<p>其中，貝葉斯可行的要求，使得“發送者可以通過擾動信念而獲得的最大效用”<span class="math inline">\(v^{*}\)</span>，與凹化函數在先驗信念處的取值<span class="math inline">\(V(\mu_{0})\)</span>相同，因此給予了我們通過凹化法來求解最優問題的合理性。</p>
+<p>下麵總結了一些信息披露程度與信念在單純形中的位置之間的關係。</p>
+<ul>
+<li>完全披露：對應於單純形的一個頂點。</li>
+<li>完全無信息：對應於單純形的一個特定內點(先驗信念)。</li>
+<li>部分披露：對應於單純形的某個非頂點。</li>
+<li>強披露：對應於單純形的邊界。</li>
+</ul>
+<p><em>註：完全披露與 Seperating 是有區別的，完全披露是直接揭露出世界狀態，而 Seperating 是能讓別人通過其行為完全地倒推出世界狀態。</em></p>
+<p>頂點意味著接收者通過觀察信號實現，能夠確定地倒推出真實的世界狀態是哪個；非頂點意味著某些信息並冇有被發送者傳遞給接收者，其中內點意味著接收者認為每種狀態都有可能，盡管對各種狀態發生機率的判斷或許不同於先驗信念，而某條邊意味著接收者已經倒推出這條邊<strong>對麵</strong>的那個點所代錶狀態是不可能的。</p>
+<h3 id="推論二">推論二</h3>
+<p>發送者通過擾動後驗信念所能得到的最大效用是<span class="math inline">\(V(\mu_{0})\)</span>，發送者能夠通過擾動後驗信念得利當且僅當</p>
+<p><span class="math display">\[V(\mu_{0})&gt;\hat{v}(\mu_{0})\]</span></p>
+<p>我們說發送者願意分享信息，如果存在某個後驗信念<span class="math inline">\(\mu\)</span>，使得給定發送者持有這個後驗信念時：發送者通過分享信息，引緻接收者也持有這個後驗信念<span class="math inline">\(\mu\)</span>並依此行動帶給發送者的效用，要高於雖然發送者持有這個後驗信念<span class="math inline">\(\mu\)</span>但不分享信息使接收者按先驗信念<span class="math inline">\(\mu_{0}\)</span>並依此行動帶給發送者的效用。</p>
+<p><span class="math display">\[\hat{v}(\mu)&gt;\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)\]</span></p>
+<p>其中對<span class="math inline">\(\omega\)</span>的加總意味著這是事前的比較，世界狀態尚未揭曉，而發送者對不同後驗信念<span class="math inline">\(\mu_{s}=\mu\)</span>與<span class="math inline">\(\mu_{s}=\mu_{0}\)</span>的比較是預測性質的。</p>
+<p>盡管從錶麵上來，發送者願意分享信息與發送者能夠通過分享信息/勸說/擾動後驗信念來獲利是同一件事，而事實上，發送者是否願意分享信息是取決於是否存在某個滿足要求的後驗信念<span class="math inline">\(\mu\)</span>，但當發送者分享信息後，不同的信號實現會引緻不同的後驗信念，比如既有那個滿足要求的後驗信念<span class="math inline">\(\mu\)</span>又有另外一個<span class="math inline">\(\mu^{\prime}\)</span>(除非完全不分享信息，那麼就隻會有一個<span class="math inline">\(\mu_{0}\)</span>)，這時發送者是否能夠通過分享信息獲利還取決於接收者的行為<span class="math inline">\(\hat{a}(\mu)\)</span>帶來的<span class="math inline">\(\hat{v}(\mu)\)</span>和<span class="math inline">\(\hat{a}(\mu^{\prime})\)</span>帶來的<span class="math inline">\(\hat{v}(\mu^{\prime})\)</span>。</p>
+<p>我們接下來可以看到：如果發送者能夠通過勸說來獲利，那麼發送者一定願意分享信息；但發送者願意分享信息，並不意味著發送者能夠通過勸說來獲利，額外的條件是接收者的偏好在先驗信念處是離散的。</p>
+<h3 id="命題二">命題二</h3>
+<ol type="1">
+<li><p>如果發送者不願意分享信息，那意味著發送者不能通過勸說來獲利。</p></li>
+<li><p>如果發送者願意分享信息，並且接收者的偏好在先驗信念處是離散的，那麼發送者便可以通過勸說來獲利。</p></li>
+<li><p>如果接收者的行動可能集<span class="math inline">\(A\)</span>為有限集，則接收者的偏好在先驗信念<span class="math inline">\(\mu_{0}\)</span>處<strong>通常</strong>是離散的。(“通常”是指 generic property，即不滿足文中性質的情況測度為0，由於冇看過中文的高等機率論/測度論內容，我不太清楚這個詞在中文裏的錶述為何)</p></li>
+</ol>
+<p>我們說接收者的偏好在信念<span class="math inline">\(\mu\)</span>處是離散的，如果接收者在持有信念時<span class="math inline">\(\mu\)</span>通過最優行動<span class="math inline">\(\hat{a}(\mu)\)</span>所能得到的期望效用，要比接收雖然持有信念<span class="math inline">\(\mu\)</span>、但採取任何其他行動<span class="math inline">\(\forall a\neq\hat{a}(\mu)\)</span>所得到的期望效用都要高出某個嚴格為正的<span class="math inline">\(\epsilon&gt;0\)</span>，即</p>
+<p><span class="math display">\[\exists\epsilon&gt;0,\text{such that}\sum u(\hat{a}(\mu),\omega)\mu(\omega)&gt;\sum u(a,\omega)\mu(\omega)+\epsilon\]</span></p>
+<p>根據假設<span class="math inline">\(\forall\mu,\exists \hat{a}(\mu)\)</span>，又<span class="math inline">\(u\)</span>是連續函數，從而<span class="math inline">\(\sum_{\omega}u(a,\omega)\mu(\omega)\)</span>是連續函數，因此如果接收者的偏好在<span class="math inline">\(\mu\)</span>處是離散的，則<span class="math inline">\(\exists\delta&gt;0\)</span>，使得<span class="math inline">\(\forall\mu^{\prime}\in N(\mu,\delta)\)</span>，都有<span class="math inline">\(\sum u(\hat{a}(\mu),\omega)\mu^{\prime}(\omega)&gt;\sum u(a,\omega)\mu^{\prime}(\omega)\)</span>，因此<span class="math inline">\(\hat{a}(\mu^{\prime})=\hat{a}(\mu)\)</span>。</p>
+<p>證明：</p>
+<ol type="1">
+<li><p>如果發送者不願意分享信息，那麼<span class="math inline">\(\forall\mu,\hat{v}(\mu)\leq\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)\)</span>。即不論發送者持有何種後驗信念<span class="math inline">\(\mu\)</span>，他都甯願接收者僅根據先驗信念<span class="math inline">\(\mu_{0}\)</span>採取行動<span class="math inline">\(\hat{a}(\mu_{0})\)</span>。這時給定一個引緻<span class="math inline">\(\tau\)</span>的<span class="math inline">\(q\)</span>，它能為發送者帶來的最大效用為<span class="math inline">\(\sum_{s\in S}\tau_{s}\hat{v}(\mu_{s})\leq\sum_{s\in S}\tau_{s}\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)=\hat{v}(\mu_{0})\)</span>，這意味著發送者通過擾動信念所能得到的最大期望效用都不會高於讓接收者按先驗信念行動能給他帶來的效用高。</p></li>
+<li><p>給定接收者採取當信念為<span class="math inline">\(\mu_{0}\)</span>時的最優行動<span class="math inline">\(\hat{a}(\mu_{0})\)</span>，其在不同信念下的加總<span class="math inline">\(\sum u(\hat{a}(\mu_{0}),\omega)\mu(\omega)\)</span>關於信念<span class="math inline">\(\mu\)</span>是線性的，從而是連續函數。又接收者的偏好在<span class="math inline">\(\mu_{0}\)</span>處是離散的，因此當其信念離<span class="math inline">\(\mu_{0}\)</span>不太遠時他仍然願意採用<span class="math inline">\(\hat{a}(\mu_{0})\)</span>，即<span class="math inline">\(\exists \delta&gt;0\)</span>使得<span class="math inline">\(\forall \mu\in N(\mu_{0},\delta)\)</span>，都有<span class="math inline">\(\hat{a}(\mu)=\hat{a}(\mu_{0})\)</span>。既然發送者願意分享信息，那麼存在某個<span class="math inline">\(\mu_{h}\)</span>使得<span class="math inline">\(\hat{v}(\mu_{h})&gt;\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{h}(\omega)\)</span>。考慮一個從<span class="math inline">\(\mu_{h}\)</span>出發、通過<span class="math inline">\(\mu_{0}\)</span>的射線，由於我們假設<span class="math inline">\(\mu_{0}\)</span>具有全支撐，<span class="math inline">\(\mu_{0}\)</span>是個內點，那麼存在某個<span class="math inline">\(\mu_{l}\in N(\mu_{0},\delta)\)</span>使得<span class="math inline">\(\mu_{0}=\gamma\cdot\mu_{l}+(1-\gamma)\mu_{h}\)</span>其中<span class="math inline">\(\gamma\in (0,1)\)</span>。我們把這個凸組合的係數作為後驗信念<span class="math inline">\(\mu_{l}\)</span>和<span class="math inline">\(\mu_{h}\)</span>在後驗信念上的分佈<span class="math inline">\(\tau\)</span>中的機率：<span class="math inline">\(\tau(\mu_{l})=\gamma\)</span>及<span class="math inline">\(\tau(\mu_{h})=1-\gamma\)</span>。由於接收者在先驗信念<span class="math inline">\(\mu_{0}\)</span>處的偏好是離散的，而<span class="math inline">\(\mu_{l}\in N(\mu_{0},\delta)\)</span>，因此<span class="math inline">\(\hat{a}(\mu_{l})=\hat{a}(\mu_{0})\)</span>，此時<span class="math inline">\(\hat{v}(\mu_{l})=\sum_{\omega}v(\hat{a}(\mu_{l}),\omega)\mu_{l}(\omega)=\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{l}(\omega)\)</span>。從而</p></li>
+</ol>
+<p><span class="math display">\[\begin{aligned}
+\gamma\hat{v}(\mu_{l})+(1-\gamma)\hat{v}(\mu_{h})\\
+=&amp;\gamma\sum_{\omega}v(\hat{a}(\mu_{l}),\omega)\mu_{l}(\omega)+(1-\gamma)\sum_{\omega}v(\hat{a}(\mu_{h}),\omega)\mu_{h}(\omega)\\
+=&amp;\gamma\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{l}(\omega)+(1-\gamma)\sum_{\omega}v(\hat{a}(\mu_{h}),\omega)\mu_{h}(\omega)\\
+&gt;&amp;\gamma\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{l}(\omega)+(1-\gamma)\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{h}(\omega)\\
+=&amp;\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)[\gamma\mu_{l}(\omega)+(1-\gamma)\mu_{h}(\omega)]\\
+=&amp;\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{0}(\omega)\\
+=&amp;\hat{v}(\mu_{0})
+\end{aligned}\]</span></p>
+<p>即</p>
+<p><span class="math display">\[\gamma\hat{v}(\mu_{l})+(1-\gamma)\hat{v}(\mu_{h})&gt;\hat{v}(\mu_{0})\]</span></p>
+<p>這就是</p>
+<p><span class="math display">\[\mathbb{E}_{\tau}\hat{v}(\mu)&gt;\hat{v}(\mu_{0})\]</span></p>
+<p>即發送者能夠通過勸說獲利。</p>
+<hr />
+<p>直覺：如果接收者的偏好在先驗處是離散的，那就意味著在先驗附近的那些信念處，接收者將會採取與先驗處相同的行動。那麼，當接收者按先驗採取的預設行動對於發送者來說不利時，那麼有可能通過披露信息獲利。因為披露信息會帶來不確定性、經過自然轉換為不同的信號實現，有時候這一實現對發送者來說有利、有時候不利。但即使不利也無所謂，因為在信念上的凸組合可以包含一個離先驗較近的後驗信念，使得在最優信息結構下最壞的結果本來在不披露信息時也要以機率1發生，但現在這個不好的情況隻是以小於1的機率發生，而且同時還有更好的情況也會發生。</p>
+<hr />
+<ol start="3" type="1">
+<li>我們先錶明，當給定<span class="math inline">\(A\)</span>為有限集時，如果接收者者的偏好在某個信念<span class="math inline">\(\mu\)</span>處不是離散的，那麼接收者必然在當持有這個信念時對至少兩個行動<span class="math inline">\(\hat{a}(\mu)\)</span>和<span class="math inline">\(a\neq\hat{a}(\mu)\)</span>無差異<span class="math inline">\(\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)=\sum_{\omega}u(a,\omega)\mu(\omega)\)</span>。</li>
+</ol>
+<p>使用逆否證法。假設不存在這樣一個<span class="math inline">\(a\)</span>(即在信念<span class="math inline">\(\mu\)</span>下任何<span class="math inline">\(a^{\prime}\)</span>對於接收者來說都不是與<span class="math inline">\(\hat{a}(\mu)\)</span>無差異的)，那麼可以定義<span class="math inline">\(\epsilon&gt;0\)</span>為</p>
+<p><span class="math display">\[\epsilon=\frac{1}{2}\min_{a^{\prime}\neq\hat{a}(\mu)}\left\lbrace \sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)-\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)\right\rbrace\]</span></p>
+<p>由於在信念<span class="math inline">\(\mu\)</span>下任何<span class="math inline">\(a^{\prime}\)</span>對於接收者來說都不是與<span class="math inline">\(\hat{a}(\mu)\)</span>無差異的，並且<span class="math inline">\(\hat{a}(\mu)\)</span>是<span class="math inline">\(\mu\)</span>下的最優反應，因此<span class="math inline">\(\epsilon\)</span>是嚴格大於0的，並且已經假設<span class="math inline">\(A\)</span>是有限集，從而最小值總能取到。但這樣的話</p>
+<p><span class="math display">\[\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)&gt;\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)+\epsilon,\forall a^{\prime}\neq\hat{a}(\mu)\]</span></p>
+<p>這就意味著接收者的偏好在<span class="math inline">\(\mu\)</span>處是離散的。逆否證成。</p>
+<p>接下來，我們錶明使得接收者在不同行動間無差異的信念集具有零測度(即接收者的偏好隻在具有零測度的信念下是不離散的)。</p>
+<p>這樣的信念集為</p>
+<p><span class="math display">\[\left\lbrace \mu|\exists a\neq\hat{a}(\mu),\text{ such that }\sum_{\omega}u(a,\omega)\mu(\omega))=\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)\right\rbrace\]</span></p>
+<p>我們可以進一步錶明，這個信念集的某個超集具有零測度。即，將<span class="math inline">\(\hat{a}(\mu)\)</span>與任意<span class="math inline">\(a\)</span>的比較，放寬為任意<span class="math inline">\(a\)</span>與任意<span class="math inline">\(a^{\prime}\)</span>的比較。由於<span class="math inline">\(A\)</span>是有限集，<span class="math inline">\(a\)</span>與<span class="math inline">\(a^{\prime}\)</span>的組合也隻有有限種可能，而有限個零測集之並仍為零測集，因此我們隻需證明接收者在給定的兩個行動<span class="math inline">\(a\)</span>與<span class="math inline">\(a^{\prime}\)</span>無差異的信念集<span class="math inline">\(\left\lbrace \mu\right\rbrace\)</span>具有零測度。</p>
+<p>這樣的信念集為</p>
+<p><span class="math display">\[\left\lbrace \mu|,\exists a\neq a^{\prime},\text{ such that }\sum_{\omega}u(a,\omega)\mu(\omega))=\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)\right\rbrace\]</span></p>
+<p>由於<span class="math inline">\(\Omega\)</span>為有限集(註意，<span class="math inline">\(\Omega\)</span>一直假設為有限集，但<span class="math inline">\(A\)</span>在整體框架中隻假設為緊集，隻是在當前命題的第三部分時，我們錶明如果<span class="math inline">\(A\)</span>也時有限集將會得到那些性質)，我們可以將其錶示為<span class="math inline">\(\Omega=\left\lbrace \omega_{i}\right\rbrace_{i}\)</span>(並隨意指定<span class="math inline">\(|\Omega|=n\)</span>)，進而記<span class="math inline">\(\beta_{i}\)</span>為</p>
+<p><span class="math display">\[\beta_{i}=u(a,\omega_{i})-u(a^{\prime},\omega_{i}),i=1,...,n\]</span></p>
+<p>以及</p>
+<p><span class="math display">\[\beta=[\beta_{1},...,\beta_{n}]\]</span></p>
+<p>和</p>
+<p><span class="math display">\[\mu=[\mu(\omega_{1}),...,\mu(\omega_{n})]\]</span></p>
+<p>前麵的信念集可以進一步錶達為</p>
+<p><span class="math display">\[\left\lbrace \mu|\beta^{T}\mu=0\right\rbrace\]</span></p>
+<p>由於我們僅將那些接收者有可能採取的行動包含在了行動空間裏，即<span class="math inline">\(\forall a\in A,\exists\mu,\text{ such that } a\in a^{\ast}(\mu)\)</span>，所以任何<span class="math inline">\(a^{\prime}\)</span>都是某個<span class="math inline">\(\mu^{\prime}\)</span>的最優反應。同時，由於我們打破僵局的慣例是“當接收者有多個最優反應時，選取其中對發送者最有利的那一個”，那麼行動空間可以進一步精煉為<span class="math inline">\(\forall a\in A,\exists\mu,\text{ such that }\left\lbrace a\right\rbrace=a^{\ast} (\mu)\)</span>，因此肯定存在某個<span class="math inline">\(\omega\)</span>使得<span class="math inline">\(u(a,\omega)\neq u(a^{\prime},\omega)\)</span>(否則，要麼那個<span class="math inline">\(a^{\prime}\)</span>是不會被採取的，要麼那個<span class="math inline">\(a^{\prime}\)</span>是多餘的)，因此至少存在一個<span class="math inline">\(\beta_{i}\neq 0\)</span>。由此，<span class="math inline">\(\beta\)</span>是個秩至少為1的線性變換，但在給定<span class="math inline">\(a\)</span>和<span class="math inline">\(a^{\prime}\)</span>的情況下，<span class="math inline">\(\beta\)</span>作為嚮量其秩至多為1，兩者結合可知<span class="math inline">\(\beta\)</span>的秩恰好為1，那麼根據 Rank-Nullity定理，作為<span class="math inline">\(\beta\)</span>之核的線性空間<span class="math inline">\(\left\lbrace \mu|\beta^{T}\mu=0\right\rbrace\)</span>的秩為<span class="math inline">\(n-1\)</span>，而<span class="math inline">\(n\)</span>維空間的任何<span class="math inline">\(m\)</span>維（<span class="math inline">\(m&lt;n\)</span>）子空間的測度都為0。</p>
+<h3 id="定理一">定理一</h3>
+<p>存在一個最優的信息結構，在最優的信息結構下，發送者所能得到的最大效用為<span class="math inline">\(v^{\ast}=V(\mu_{0})\)</span>。</p>
+<p>證明：由於我們已經錶明了，最優信息結構的存在，與滿足貝葉斯可行的後驗信念上的最優分佈存在，之間是等價的。因此，我們接下來證明，存在滿足貝葉斯可行的後驗信念上的最優分佈。</p>
+<p>首先，我們錶示<span class="math inline">\(\hat{v}(\mu)\)</span>關於<span class="math inline">\(\mu\)</span>是上半(semi)連續的。</p>
+<p><span class="math display">\[\left\lbrace (\mu,v)|v\leq\hat{v}(\mu)\right\rbrace\]</span></p>
+<p>是個閉集。</p>
+<p>假設<span class="math inline">\(\hat{v}(\mu)\)</span>在某個<span class="math inline">\(\mu\)</span>處不連續，由於<span class="math inline">\(\hat{v}(\mu)=\sum_{\omega}v(\hat{a}(\mu),\omega)\mu(\omega)\)</span>，而<span class="math inline">\(v(a,\omega)\)</span>關於<span class="math inline">\(a\)</span>和<span class="math inline">\(\omega\)</span>是假設為連續的，<span class="math inline">\(\sum_{\omega}v(a,\omega)\mu(\omega)\)</span>關於<span class="math inline">\(\mu\)</span>是線性從而是連續的，因此這個不連續隻可能出現在<span class="math inline">\(\hat{a}(\mu)\)</span>與<span class="math inline">\(\mu\)</span>之間的關係上。但根據 Berge's Maximun Pricinple，當目標函數<span class="math inline">\(u(a,\omega)\)</span>連續(註意，現在我們轉換到了接收者問題)、約束對應<span class="math inline">\(a(\mu):\Delta(\Omega)\rightarrow A\)</span>是緊值的連續對應(註意，其實在本文中我們並冇有施加任何約束)時，值函數<span class="math inline">\(u(\mu)=u(a^{\ast}(\mu),\omega)\)</span>是連續函數，解對應<span class="math inline">\(a^{\ast}(\mu)\)</span>是上半(hemi)連續的。我們前麵看到<span class="math inline">\(\hat{a}(\mu)\)</span>關於<span class="math inline">\(\mu\)</span>不是連續的，但<span class="math inline">\(a^{\ast}(\mu)\)</span>關於<span class="math inline">\(\mu\)</span>又是上半(hemi)連續的，而同時能滿足這兩點的情況就是<span class="math inline">\(a^{\ast}(\mu)\)</span>在<span class="math inline">\(\mu\)</span>處是一個滿足上半(hemi)連續的非單點集(非單點，因此不是連續的)。</p>
+<p>即</p>
+<p><span class="math display">\[\left\lbrace (\mu,a)|a\in a^{\ast}(\mu)\right\rbrace\]</span></p>
+<p>是個閉集。</p>
+<p>非單點集意味著<span class="math inline">\(\hat{a}(\mu)\)</span>(我們根據“對發送者最有利”的標準選出來的)是<span class="math inline">\(a^{\ast}(\mu)\)</span>的嚴格子集。即</p>
+<p><span class="math display">\[\hat{v}(\mu)=\max_{a\in a^{\ast}(\mu)}\sum_{\omega}v(a,\omega)\mu(\omega)\]</span></p>
+<p>根據hemi-semi定理，<span class="math inline">\(\hat{v}(\mu)\)</span>是上半(semi)連續的。</p>
+<hr />
+<p>補充：hemi-semi定理，僅敘述與此處相關的upper部分。</p>
+<p>假設可行性對應<span class="math inline">\(a:\Delta(\Omega)\rightarrow A\)</span>是非空、緊值的。如果<span class="math inline">\(f:gr(a)\rightarrow\mathbb{R}\)</span>是上半(semi)連續的，那麼如下定義的<span class="math inline">\(\hat{v}\)</span>就能取到最大值。並且，如果<span class="math inline">\(a\)</span>是點<span class="math inline">\(\mu^{\prime}\)</span>處是上半(hemi)連續的，那麼<span class="math inline">\(\hat{v}\)</span>在點<span class="math inline">\(\mu^{\prime}\)</span>處是上半(semi)連續的。</p>
+<p><span class="math display">\[\hat{v}(\mu)=\max{f(\mu,a(\mu))}\]</span></p>
+<p>將<span class="math inline">\(f\)</span>取為<span class="math inline">\((a(\mu),\sum_{\omega}v(a(\mu),\omega)\mu(\omega))\)</span>即可。</p>
+<p>證明可見KC Border的Notes中"correspondences"一章，或 Aliprantis and Border (2006) Lemma 17.30，P569。</p>
+<p>應用在此處即意味著：<span class="math inline">\(f\)</span> 是發送者期望效用函數的圖 <span class="math inline">\((a(\mu),\sum_{\omega}v(a(\mu),\omega)\mu(\omega))\)</span>，其中 <span class="math inline">\(v(a,\omega)\)</span> 關於 <span class="math inline">\(a\)</span> 的連續性是根據假設得到的，而 <span class="math inline">\(\sum_{\omega}v(a,\omega)\mu(\omega)\)</span> 關於 <span class="math inline">\(a\)</span> 的連續性是根據前一點以及它作爲求和函數相結合得到的；這裏的可行性對應 <span class="math inline">\(a^{\star}\)</span> 為對接收者對於給定的後驗信念所得的最大化問題的解集 (根據將 Berge 最大值定理應用與接收者問題，這個對應是上半連續的；這一對應，在接收者問題中是解對應，在當前這個打破平局問題中是約束對應)，我們從接收者最大化問題的解集中選取對於發送者最有利的哪一個 (這是我們假設的打破平局的規則) 就意味著在做 <span class="math inline">\(\max_{a\in a^{\star}(\mu)}\sum_{\omega}v(a,\omega)\mu(\omega)\)</span>，將其值函數定義爲 <span class="math inline">\(\hat{v}(\mu)=\max_{a\in a^{\ast}(\mu)}\sum_{\omega}v(a,\omega)\mu(\omega)\)</span>。</p>
+<p>根據 hemi-semi 定理，<span class="math inline">\(\hat{v}(\mu)\)</span> 就是關於 <span class="math inline">\(\mu\)</span> 的上半連續函數。</p>
+<p>這就意味著，如果最優信息結構所引緻的後驗信念中包含一個內點信念<span class="math inline">\(\mu\)</span>，而接收者的均衡行為<span class="math inline">\(\hat{a}(\mu)\)</span>對於發送者來說是最好的，那麼接收者在做這個選擇的時候必然對於多個選擇是無差異的<span class="math inline">\(|\left\lbrace a^{\ast}(\mu)\right\rbrace|&gt;1\)</span>。</p>
+<hr />
+<!-- 因此，當最優信息結構引緻了後驗信念時：
+
+- 如果後驗信念是頂點，則接收者確定地採取了最優行動；
+- 如果後驗信念是先驗點，則接收者完全根據先驗信念採取行動；
+- 如果後驗信念是內點，則接收者的最優行動有多個等價解，而我們從中選出對發送者最有利的一個。
+
+接收者的期望效用最大化問題為： -->
+<!-- $$\begin{aligned}
+
+\end{aligned}$$ -->
+<!-- 如果$\mu^{\prime}$是被最優信息結構引緻的後驗信念之一，那麼它一定使得凹化函數與值函數取值相等$V(\mu^{\prime})=\hat{v}(\mu^{\prime})$。 -->
+<!-- 如果發送者能夠通過勸說獲利，那麼，當發送者採用最優信息結構時，接收者在那些均衡中被引緻的內點後驗信念上的偏好將不會是離散的。
+
+註意，我們隻說在最優信息結構下的內點後驗信念上，接收者的偏好不是離散的。但對於先驗信念(已被假設為全支撐)來說雖然也是內點信念，但接收者的偏好是離散的。並且，我們隻要求那些內點後驗信念，不要求邊界點後驗信念。
+
+### 命題十二
+
+如果$\hat{v}$單調，並且$A$為有限集，發送者能夠通過勸說獲利，那麼對於任何一個最優信息結構下均衡中內點後驗信念$\mu$，或者(1)$\mu$是引緻$\hat{a}(\mu)$的最差信念；或者(2)發送者和接收者在$\mu$處對於兩個不同的行為無差異。 -->
+<p>---未完成---</p>
+<h2 id="例子">例子</h2>
+<h3 id="公訴人">公訴人</h3>
+<p>發送者：公訴人；接收者：法官。</p>
+<p>公訴人提供證據，證據能以一定機率錶明嫌疑人（非參與人）是否有罪。選擇採取何種效力的證據，這一行為就是選擇信息結構。</p>
+<p>公訴人與法官對於嫌疑人有罪與否有相同的先驗信念<span class="math inline">\(\mu_{0}(guilty)=0.3\)</span>，法官通過觀察公訴人提供的證據、進行貝葉斯更新，並決定是否判決嫌疑人有罪。</p>
+<p>公訴人當最終法官判決嫌疑人有罪時得到效用1，無罪時得到效用0。無論事實上嫌疑人是否有罪。</p>
+<p>法官僅當做出公正判決時得到效用1，即實際有罪時判決有罪、實際無罪時判決無罪。其他時候得到效用0。</p>
+<p>可以看到公訴人與法官的效用是部分沖突的：當嫌疑人實際有罪時，二者的利益相同；當嫌疑人實際無罪時，二者的利益是沖突的，公訴人仍然希望法官判其有罪，但法官願意判其無罪。</p>
+<p>同時，這個例子裏發送者(公訴人)的效用僅取決於接收者(法官)的行為，而不取決於真實狀態。</p>
+<p>對於發送者來說，最優的信息結構應該是什麼樣的？應該是使得：當接收者選擇“判為無罪”時，接收者確定嫌疑人(非參與人)無罪，而當接收者選擇”判為有罪”時，接收者在“判為無罪”和“判為無罪”之間是無差異的。</p>
+<p>所以發送者要引緻的後驗信念，應該是由<span class="math inline">\(\mu(guilty)=0\)</span>和<span class="math inline">\(\mu(guilty)=0.5\)</span>所組成。</p>
+<p>但貝葉斯可行這一約束要求<span class="math inline">\(0.3=x0+(1-x)0.5\)</span>，所以<span class="math inline">\(x=0.4\)</span>而<span class="math inline">\((1-x)=0.6\)</span>，即應使得接收者以0.4的機率持有<span class="math inline">\(\mu(guilty)=0\)</span>這一後驗信念，以0.6的機率持有<span class="math inline">\(\mu(guilty)=0.5\)</span>這一後驗信念。</p>
+<hr />
+<p>將接收者的信念作為橫軸，發送者的效用作為縱軸，可知發送者的效用函數由兩個水準的線段組成，當接收者的信念“嫌疑人有罪”這一機率小於1/2時，發送者的效用恆為0，而當大於1/2時恆為1。</p>
+<p>因此這個效用函數的凹化應通過信念為0和1/2處的函數值的某個凸組合得到，否則，例如，如果由0和某個<span class="math inline">\(\mu&gt;1/2\)</span>組成，那麼組合出的函數值在信念由1/2到<span class="math inline">\(\mu\)</span>之間都是小於那條恆為1的水準線的，這不符合凹化函數的構造定義。</p>
+<p>當然，這隻是說最優的信息結構應該引緻這樣的後驗信念，如果不是最優信息結構，可以引緻其他的後驗信念。比如，由0和1這兩個後驗信念所構成的是完全退化的後驗分佈，代錶在每種世界狀態下，信號的實現是完全確定的，賦予0的權重，就是接收者被推薦應該判嫌疑人無罪的比例，賦予1的權重，就是接收者被推薦應該判嫌疑人有罪的比例，而貝葉斯可行的要求告訴我們，應該賦予0這個後驗信念以0.7的權重、賦予1這個後驗信念以0.3的權重，即有十分之三的時間應推薦法官判嫌疑人有罪，這對應於完全披露；再如，由0.3這個與先驗信念相同的後驗信念，同時賦予它以1的權重便滿足貝葉斯可行，這種信息結構就代錶著冇有任何信息被傳遞，接收者仍然以先驗信念來行動。</p>
+<p>還有一個要求是不論是否在最優信號下，都需要滿足的：如果引緻了一個在先驗左側的後驗，那麼必須要同時引緻另一個在先驗右側的後驗，反之亦然，否則，如果所有後驗都在先驗的同一側，它們的凸組合就不會等於先驗，這樣就違背了貝葉斯可行的要求。</p>
+<p>在當前這個例子裏，由於後驗信念可以錶示在一維空間裏(一般地，如果世界狀態空間為有限的N維，那麼信念空間為N-1維)，即可以隻考慮“嫌疑人有罪”的機率，便落在一維的0-1區間裏，所以，在行動建議式信息結構的模式下隻需要兩個信號就足夠了，分別為給定世界狀態下推薦“你應判嫌疑人有罪”的條件機率，以及給定世界狀態下推薦“你應判嫌疑人無罪”的條件機率這兩個，這是因為，根據 Caratheodory 定理，不需要用超過兩個後驗機率來組合成一個給定的先驗機率。這對應於機製設計理論中的 Revelation Principle。 ***</p>
+<p>根據最優信息結構的構建</p>
+<p><span class="math display">\[q^{*} (s_{\mu}|\omega)=\frac {\mu(\omega)\tau^{*}(\mu)} {\mu_{0}(\omega)}\]</span></p>
+<p>可以求得，發送者的信息結構應該使得當真實狀態為“嫌疑人有罪”自然生成“你應該判為有罪”這一信號實現(行為推薦)的機率為 <span class="math display">\[q(g|guilty)=(0.5×0.6)/0.3=1\]</span> 發送者的信息結構應該使得當真實狀態為“嫌疑人有罪”自然生成“你應該判為無罪”這一信號實現(行為推薦)的機率為 <span class="math display">\[q(i|guilty)=(0×0.4)/0.3=0\]</span> 發送者的信息結構應該使得當真實狀態為“嫌疑人無罪”自然生成“你應該判為有罪”這一信號實現(行為推薦)的機率為 <span class="math display">\[q(g|innocent)=[(1-0.5)×0.6]/(1-0.3)=3/7\]</span> 發送者的信息結構應該使得當真實狀態為“嫌疑人無罪”自然生成“你應該判為無罪”這一信號實現(行為推薦)的機率為 <span class="math display">\[q(i|innocent)=[(1-0)×0.4]/(1-0.3)=4/7\]</span></p>
+<h2 id="參考文獻">參考文獻</h2>
+<ol type="1">
+<li>Kamenica, E., &amp; Gentzkow, M. (2011). Bayesian persuasion. American Economic Review, 101(6), 2590-2615.</li>
+<li>Aliprantis, C. D., Border, K. C. (2006). Infinite Dimensional Analysis: a Hitchhiker's Guide. Berlin; London: Springer.</li>
+<li>Bergemann, D., &amp; Morris, S. (2019). Information design: A unified perspective. Journal of Economic Literature, 57(1), 44-95.</li>
+<li>Xiang Sun's Lecture Notes.</li>
+<li>Kai Hao Yang's Lecture Notes.</li>
+<li>Vohra, R. V. (2004). Advanced mathematical economics. Routledge.</li>
+<li>KC Border's Lecture Notes.</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/2b881b98.html">https://brandonsli.com/p/2b881b98.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-ND</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打賞</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/a008de02.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Propaganda to Persuade</div></div></a></div><div class="next-post pull-right"><a href="/p/0a743s09.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">文獻閱讀</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">基本設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#timing"><span class="toc-number">1.2.</span> <span class="toc-text">Timing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%96%E7%95%A5"><span class="toc-number">1.3.</span> <span class="toc-text">策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1"><span class="toc-number">1.4.</span> <span class="toc-text">均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%8B%95%E5%BB%BA%E8%AD%B0"><span class="toc-number">1.5.</span> <span class="toc-text">行動建議</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%90%86%E4%B8%80"><span class="toc-number">2.1.</span> <span class="toc-text">引理一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A1%8C%E4%B8%80"><span class="toc-number">2.2.</span> <span class="toc-text">命題一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%AB%96%E4%B8%80"><span class="toc-number">2.3.</span> <span class="toc-text">推論一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B9%E5%8C%96%E8%A7%A3"><span class="toc-number">2.4.</span> <span class="toc-text">凹化解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%AB%96%E4%BA%8C"><span class="toc-number">2.5.</span> <span class="toc-text">推論二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A1%8C%E4%BA%8C"><span class="toc-number">2.6.</span> <span class="toc-text">命題二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%E4%B8%80"><span class="toc-number">2.7.</span> <span class="toc-text">定理一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">3.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E8%A8%B4%E4%BA%BA"><span class="toc-number">3.1.</span> <span class="toc-text">公訴人</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><span class="toc-number">4.</span> <span class="toc-text">參考文獻</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="教育即自由,學術即反抗,事實即顛覆" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

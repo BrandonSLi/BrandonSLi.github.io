@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>不求甚解學經濟-不動點定理（六）塔斯基不動點定理 Tarski's Fixed Point Theorem 及其他 | 不求甚解學經濟</title><meta name="keywords" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="介紹一些簡單的格點知識、超模概念以及塔斯基不動點定理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-不動點定理（六）塔斯基不動點定理 Tarski&#39;s Fixed Point Theorem 及其他">
+<meta property="og:url" content="https://brandonsli.com/p/a6db2415.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="介紹一些簡單的格點知識、超模概念以及塔斯基不動點定理。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2017-11-14T13:55:18.000Z">
+<meta property="article:modified_time" content="2021-09-06T11:22:42.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://brandonsli.com/p/a6db2415"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="qCKYVlYYJxGHTmeJ"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8735908405048796',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-103535631-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-103535631-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-不動點定理（六）塔斯基不動點定理 Tarski\'s Fixed Point Theorem 及其他',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-09-06 19:22:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-不動點定理（六）塔斯基不動點定理 Tarski's Fixed Point Theorem 及其他</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2017-11-14T13:55:18.000Z" title="發表於 2017-11-14 21:55:18">2017-11-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-09-06T11:22:42.000Z" title="更新於 2021-09-06 19:22:42">2021-09-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-不動點定理（六）塔斯基不動點定理 Tarski's Fixed Point Theorem 及其他"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>介紹一些簡單的格點知識、超模概念以及塔斯基不動點定理。</p>
+<span id="more"></span>
+<h2 id="格-lattice">格 Lattice</h2>
+<h3 id="偏序集">偏序集</h3>
+<p>給定一個集合 <span class="math inline">\(X\)</span>，如果能夠在 <span class="math inline">\(X\)</span> 上定義一個序關係 <span class="math inline">\(\geq\)</span>，使得 <span class="math inline">\(\geq\)</span> 在 <span class="math inline">\(X\)</span> 上滿足自反性、反對稱性和傳遞性，那麽 <span class="math inline">\((X,\geq)\)</span> 便是一個偏序集。</p>
+<p>【舉例】嚮量的序關係</p>
+<p><span class="math inline">\(\forall i\)</span></p>
+<p><span class="math inline">\(x = y\)</span> iff <span class="math inline">\(x_{i} = y_{i}\)</span>;</p>
+<p><span class="math inline">\(x\geq y\)</span> iff <span class="math inline">\(x_{i}\geq y_{i}\)</span>;</p>
+<p><span class="math inline">\(x&gt;y\)</span> iff <span class="math inline">\(x_{i}\geq y_{i}\)</span>且至少有一個不等式嚴格成立；</p>
+<p><span class="math inline">\(x&gt;&gt;y\)</span> iff <span class="math inline">\(x_{i}&gt;y_{i}\)</span>.</p>
+<h3 id="meet-與-join">meet 與 join</h3>
+<p>給定偏序集 <span class="math inline">\((X,\geq)\)</span> 上的一對元素 <span class="math inline">\(x,y\in X\)</span>，定義元素 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的 meet (<span class="math inline">\(\wedge\)</span>) 和 join (<span class="math inline">\(\vee\)</span>) 為</p>
+<p><span class="math display">\[\begin{aligned}
+x \wedge y &amp;:=\sup\left\{z\in X;x\geq z,y\geq z\right\}\\
+x \vee y &amp;:= \inf\left\{z\in X;z\geq x,z\geq y\right\}
+\end{aligned}\]</span></p>
+<p>其中 <span class="math inline">\(\sup\)</span> 和 <span class="math inline">\(\inf\)</span> 是相對於偏序集 <span class="math inline">\((X,\geq)\)</span> 上的序關係而言的，例如 <span class="math inline">\(\geq\)</span> 可以是歐式空間中的逐維大小關係、集合中的包含關係等等。</p>
+<p>【舉例】</p>
+<p><span class="math inline">\(x = (x_{1},...,x_{n})\)</span>;</p>
+<p><span class="math inline">\(y = (y_{1},...,y_{n})\)</span>.</p>
+<p>meet: <span class="math inline">\(x\wedge y = z = (z_{1},...,z_{n})\)</span></p>
+<p>其中對於每個<span class="math inline">\(i\)</span>，<span class="math inline">\(z_{i}\)</span>都是從相應的第<span class="math inline">\(i\)</span>項<span class="math inline">\(x_{i}\)</span>與<span class="math inline">\(y_{i}\)</span>之間選取較小的那個；即<span class="math inline">\(\forall i\)</span>,<span class="math inline">\(z_{i} = min\lbrace x_{i},y_{i} \rbrace\)</span>;</p>
+<p>join: <span class="math inline">\(x\vee y = z = (z_{1},...,z_{n})\)</span></p>
+<p>其中對於每個<span class="math inline">\(i\)</span>，<span class="math inline">\(z_{i}\)</span>都是從相應的第<span class="math inline">\(i\)</span>項<span class="math inline">\(x_{i}\)</span>與<span class="math inline">\(y_{i}\)</span>之間選取較大的那個；即<span class="math inline">\(\forall i\)</span>,<span class="math inline">\(z_{i} = max\lbrace x_{i},y_{i} \rbrace\)</span>;</p>
+<h3 id="def-lattice">Def: Lattice</h3>
+<p>給定一個偏序集 <span class="math inline">\((X,\geq)\)</span> 如果對於集合中的任意<strong>一對</strong>元素 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span>，都滿足</p>
+<p><span class="math display">\[\begin{aligned}
+x \wedge y &amp;:=\sup\left\{z\in X;x\geq z,y\geq z\right\}\in X\\
+x \vee y &amp;:= \inf \left\{z\in X;z\geq x,z\geq y\right\}\in X
+\end{aligned}\]</span></p>
+<p>則稱偏序集 <span class="math inline">\((X,\geq)\)</span> 為一個 Lattice。</p>
+<p>【舉例】給定一個集合<span class="math inline">\(X\subset\mathbb R^{n}\)</span>，如果集合<span class="math inline">\(X\)</span>中的任意<strong>一對</strong>元素 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 之meet和join都還在<span class="math inline">\(X\)</span>之內，則稱<span class="math inline">\(X\)</span>為一個Lattice。即<span class="math inline">\(\forall x,y\)</span>，都有<span class="math inline">\(x\wedge y\in X\)</span> 并且 <span class="math inline">\(x\vee y\in X\)</span>。</p>
+<p>註意，此處我們不要求任意子集的 meet 和 join 都在集合之內 (那是完備格的要求)，而隻要求任意一對元素。</p>
+<h3 id="def-sublattice">Def: Sublattice</h3>
+<p>給定一個格 <span class="math inline">\((X,\geq)\)</span> 和一個子集 <span class="math inline">\(S\subset X\)</span>，如果對於任何一對 <span class="math inline">\(x,y\in S\)</span>，都滿足 <span class="math inline">\(x\wedge y\in S\)</span> 和 <span class="math inline">\(x\vee y\in S\)</span>，則稱 <span class="math inline">\(S\)</span> 是 <span class="math inline">\(X\)</span> 在 <span class="math inline">\(\geq\)</span> 下的一個子格。</p>
+<h3 id="fact-子格">Fact: 子格</h3>
+<p>給定一個格 <span class="math inline">\((X,\geq)\)</span> 和一個子集 <span class="math inline">\(S\subset X\)</span>，<span class="math inline">\(S\)</span> 是 <span class="math inline">\(X\)</span> 在 <span class="math inline">\(\geq\)</span> 下的一個子格當且僅當 <span class="math inline">\(S\geq S\)</span>。</p>
+<h3 id="def-最大最小元">Def: 最大（最小）元</h3>
+<p>給定一個 Lattice集合 <span class="math inline">\(\subset\mathbb R^{n}\)</span>，如果 <span class="math inline">\(\forall x\in X\)</span> 都有 <span class="math inline">\(x^{\ast}\geq x\)</span>（<span class="math inline">\(x^{\ast}\leq x\)</span>），則稱元素 <span class="math inline">\(x^{\ast}\in X\)</span> 為格 <span class="math inline">\(X\)</span> 的最大（最小）元。</p>
+<h3 id="th3">Th3</h3>
+<p>非空緊格必有最大及最小元。</p>
+<p>證明</p>
+<p>對於每個<span class="math inline">\(i\in\lbrace 1,2,...,n \rbrace\)</span>，從各<span class="math inline">\(x_{i}\)</span>中選擇使得第<span class="math inline">\(i\)</span>個坐標取到最大值的那一個作為<span class="math inline">\(z^{i}\in X\)</span>，即<span class="math inline">\(z^{i}\in arg max_{x\in X}x_{i}\)</span>。 由於<span class="math inline">\(X\)</span>為緊集，因此對於任何一個<span class="math inline">\(i\)</span>，如上所述的最大元<span class="math inline">\(z^{i}\)</span>都是可以找到的。令<span class="math inline">\(y = z^{1}\vee z^{2}\vee ...\vee z^{n}\)</span>。而由於<span class="math inline">\(X\)</span>是格，格內元素之join仍在格內，即<span class="math inline">\(y\in X\)</span>。取<span class="math inline">\(y = (z_{1}^{1},...,z_{n}^{n})\)</span>，即<span class="math inline">\(y\)</span>的每個坐標都是那些能出現在該坐標的備選項中最大的，因此有<span class="math inline">\(y\geq x\)</span>對於所有<span class="math inline">\(x\in X\)</span>。</p>
+<h3 id="def-強集序">Def 強集序</h3>
+<p>給定格 <span class="math inline">\((X,\geq_{\text{for elements}})\)</span> ，對於任何子集 <span class="math inline">\(A,B\subset X\)</span>，定義強集序 <span class="math inline">\(\geq_{\text{for sets}}\)</span> 為</p>
+<p><span class="math display">\[A\geq_{\text{for sets}} B\text{ iff } (\forall x\in A,y\in B)[y\geq_{\text{for elements}} x\Rightarrow (x\in B)\text{ and }(y\in A) ]\]</span></p>
+<p>此處關於序關係的下標是爲了明確表明是應用於元素還是集合，但通過語境可以做出此種區分，因此後文將不再明確寫出。</p>
+<p>對於來自於同一個格的兩個子集來説，一個子集“大”與另一個子集等價於任選一對元素，其中更“大”的元素來自更“大”的集合，更“小”的元素來自更“小”的集合。</p>
+<p>但這<strong>并不意味著</strong>，從更“大”的集合中任選一個元素，從更“小”的集合中任選一個元素，前一個元素一定“大於”后一個元素。但<strong>確實意味著</strong>，更“大”的集合中的“最大元”一定“大於”更“小”集合中的“最大元”，并且更“大”集合中的“最小元”一定“大於”更“小”集合中的“最小元”，即：強集序只能保證極端元素的排序關係，更不能保證其中每個元素的排序關係，這也是爲什麽在超模博弈中，只有極端納什均衡具有單調比較靜態關係，但無法保證任意納什均衡具有單調比較靜態關係。</p>
+<h3 id="def4-超模性">Def4: 超模性</h3>
+<p>給定一個格 <span class="math inline">\((X,\geq)\)</span> 以及函數 <span class="math inline">\(f:X\rightarrow\mathbb{R}\)</span>。如果對於所有的 <span class="math inline">\(z,z^{\prime}\in X\)</span> 都滿足</p>
+<p><span class="math display">\[f(z)+f(z^{\prime})\leq f(z\vee z^{\prime})+f(z\wedge z^{\prime})\]</span></p>
+<p>則稱函數 <span class="math inline">\(f\)</span> 具有超模性。</p>
+<p>兩個小性質：超模任意正的常數倍仍是超模；兩個超模的和仍是超模。</p>
+<p>如果 <span class="math inline">\(X\)</span> 不僅是個偏序集，而且是個綫序集 (任何兩個元素都可以比較大小，例如 <span class="math inline">\(\mathbb{R}\)</span>)，那麽所有的函數都具有超模性 (前述不等式以等式成立)。因此可知，超模性具有 bites 僅當函數的定義域并非綫序時 (例如 <span class="math inline">\(\mathbb{R}^{N}\)</span>)，否則超模性是平凡地成立的。</p>
+<p>超模性是基數性質，未必在單調正變化下保持 (那是擬超模性的性質)。</p>
+<h3 id="th5">Th5</h3>
+<p>任選取兩個格<span class="math inline">\(x\subset\mathbb R^{n}\)</span>，<span class="math inline">\(y\subset\mathbb R^{n}\)</span>，取定義在<span class="math inline">\(X\times Y\)</span>上的一個超模<span class="math inline">\(f:X\times Y\rightarrow\mathbb R\)</span>。如果對於任意的<span class="math inline">\(y\in Y\)</span>，<span class="math inline">\(h(y) = max_{x\in X}f(x,y)\)</span>都有良好定義，則<span class="math inline">\(h\)</span>也是<span class="math inline">\(X\)</span>上的超模。（類比Berge極大值定理）</p>
+<p>證明</p>
+<p>選取<span class="math inline">\(y^{1},y^{2}\in Y\)</span>，以及<span class="math inline">\(x^{1},x^{2}\in X\)</span>，使得<span class="math inline">\(h(y^{i}) = f(x^{i},y^{i})\)</span>對於<span class="math inline">\(i = 1,2\)</span>均成立。則有</p>
+<p><span class="math display">\[h(y^{1})+h(y^{2}) = f(x^{1},y^{1})+f(x^{2},y^{2})\]</span></p>
+<p>（根據我們對於<span class="math inline">\(h(\cdot)\)</span>的設定）</p>
+<p><span class="math display">\[\leq f(x^{1}\wedge x^{2},y^{1}\wedge y^{2})+f(x^{1}\vee x^{2},y^{1}\vee y^{2})\]</span></p>
+<p>（根據我們對於<span class="math inline">\(f(\cdot)\)</span>是超模的設定）</p>
+<p><span class="math display">\[\leq h(y^{1}\wedge y^{2})+h(y^{1}\vee y^{2})\]</span></p>
+<p>（再次根據我們對於<span class="math inline">\(h(\cdot)\)</span>的設定）。<span class="math inline">\(\square\)</span></p>
+<h3 id="def-乘積格">Def: 乘積格</h3>
+<p>給定偏序集們 <span class="math inline">\((X_{i},\geq_{i})_{i\in N^{\text{finite}}}\)</span>，定義偏序集 <span class="math inline">\(X:=\Pi_{i\in N^{\text{finite}}}X_{i}\)</span>，以及對於 <span class="math inline">\(x,y\in X\)</span></p>
+<p><span class="math display">\[x\geq y\text{ iff }x_{i}\geq_{i}y_{i},\forall i\]</span></p>
+<p>則稱 <span class="math inline">\((X,\geq)\)</span> 為乘積格。</p>
+<h3 id="def-增差">Def: 增差</h3>
+<p>給定一個乘積格 <span class="math inline">\((X,\geq)\)</span>，函數 <span class="math inline">\(f:X\rightarrow\mathbb{R}\)</span> 滿足增差條件，當且僅當，任選維度 <span class="math inline">\(i\neq j;i,j\in N\)</span>，給定 <span class="math inline">\((i,j;x_{ij};x_{i},x_{i}^{\prime};x_{j},x_{j}^{\prime})\)</span>，每當 <span class="math inline">\(x_{i}^{\prime}\geq x_{i}\)</span> 和 <span class="math inline">\(x_{j}^{\prime}\geq x_{j}\)</span> 都有</p>
+<p><span class="math display">\[f(x_{i}^{\prime},x_{j}^{\prime};x_{-ij})-f(x_{i},x_{j}^{\prime};x_{-ij})\geq f(x_{i}^{\prime},x_{j};x_{-ij})-f(x_{i},x_{j};x_{-ij})\]</span></p>
+<p>注意前式要對任意選取的一對 <span class="math inline">\(i\neq j;i,j\in N\)</span> 都成立。</p>
+<p>【舉例】令<span class="math inline">\(X\subset\mathbb R^{n}\)</span>為一個格，函數<span class="math inline">\(f:X\rightarrow\mathbb R\)</span>。對於每個<span class="math inline">\(z\in X\)</span>，每對不同的指標<span class="math inline">\(i,j\)</span>以及相應的<span class="math inline">\(z_{i}^{\ast}\geq z_{i}\)</span>，<span class="math inline">\(z_{j}^{\ast}\geq z_{j}\)</span>，如果都有</p>
+<p><span class="math display">\[f(z_{-ij},z_{i}^{\ast},z_{j}^{\ast})-f(z_{-ij},z_{i}^{\ast},z_{j})\geq f(z_{-ij},z_{i},z_{j}^{\ast})-f(z_{-ij},z_{i},z_{j})\]</span></p>
+<p>則稱函數<span class="math inline">\(f\)</span>對於<span class="math inline">\(X\)</span>中的每對元素滿足<strong>增差性</strong>。</p>
+<p>增差是基數性質，未必在單調正變換下保持。</p>
+<h3 id="th7">Th7</h3>
+<p><span class="math inline">\(X\subset\mathbb R^{n}\)</span>而<span class="math inline">\(f:X\rightarrow\mathbb R\)</span>。則函數<span class="math inline">\(f\)</span>為超模當且僅當<span class="math inline">\(f\)</span>在<span class="math inline">\(X\)</span>上滿足增差性。</p>
+<h3 id="def.-單交叉一">Def. 單交叉(一)</h3>
+<p>假設自變量集為 <span class="math inline">\(X\subset\mathbb{R}\)</span>，參數集為 <span class="math inline">\(T\subset\mathbb{R}\)</span>。一個函數 <span class="math inline">\(f:X\cdot T\rightarrow\mathbb{R}\)</span> 對於 <span class="math inline">\((x,t)\)</span> 滿足單交叉性質，如果對於任何 <span class="math inline">\(x^{\prime}&gt; x\)</span> 和 <span class="math inline">\(t^{\prime}&gt; t\)</span> 都有</p>
+<p><span class="math display">\[\begin{aligned}
+f(x^{\prime},t)\geq f(x,t)&amp;\Rightarrow f(x^{\prime},t^{\prime}\geq f(x,t^{\prime}))\\
+f(x^{\prime},t)&gt; f(x,t)&amp;\Rightarrow f(x^{\prime},t^{\prime}&gt; f(x,t^{\prime}))
+\end{aligned}\]</span></p>
+<h3 id="def.-單交叉二">Def. 單交叉(二)</h3>
+<p>假設自變量集 <span class="math inline">\(X\)</span> 是一個格，參數集 <span class="math inline">\(T\)</span> 是一個偏序集。一個函數 <span class="math inline">\(f:X\cdot T\rightarrow\mathbb{R}\)</span> 對於 <span class="math inline">\((x,t)\)</span> 滿足單交叉性質，如果對於任何 <span class="math inline">\(x^{\prime}&gt; x\)</span> 和 <span class="math inline">\(t^{\prime}&gt; t\)</span> 都有</p>
+<p><span class="math display">\[\begin{aligned}
+f(x^{\prime},t)\geq f(x,t)&amp;\Rightarrow&amp; f(x^{\prime},t^{\prime}\geq f(x,t^{\prime}))\\
+f(x^{\prime},t)&gt; f(x,t)&amp;\Rightarrow&amp; f(x^{\prime},t^{\prime}&gt; f(x,t^{\prime}))
+\end{aligned}\]</span></p>
+<p>單交叉是序數性質，可以在單調正變換下保持。</p>
+<h2 id="塔斯基不動點定理">塔斯基不動點定理</h2>
+<p>完備格的定義和非減自映射的性質是證明Lemma 2進而證明塔斯基不動點定理的關鍵。</p>
+<h3 id="def.-完備格">Def. 完備格</h3>
+<p>我們稱<span class="math inline">\((A,\leq)\)</span>是一個<strong>完備格</strong>當且僅當<span class="math inline">\((A,\leq)\)</span>是偏序集並且<span class="math inline">\(A\)</span>的每個子集都有上確界(當然也有下確界性質)。</p>
+<p>註意，格的定義要求任意一對兒元素的 meet 和 join 仍在集合之內，而完備格的定義的相應要求施加於任何子集 (不僅任意一對，還得任意三個、任意四個……) 之上。</p>
+<h3 id="def.-非減自映射">Def. 非減自映射</h3>
+<p>任給偏序集<span class="math inline">\((A,\leq)\)</span>。函數（自映射）<span class="math inline">\(f:A\rightarrow A\)</span> 稱為<span class="math inline">\((A,\leq)\)</span>上的<strong>非減自映射</strong>當且僅當對<span class="math inline">\(A\)</span>中任意兩個元素<span class="math inline">\(x,y\in A\)</span> ，每當<span class="math inline">\(x\leq y\)</span>便有<span class="math inline">\(f(x)\leq f(y)\)</span>。</p>
+<h3 id="lemma-1">Lemma 1</h3>
+<p>任給完備格<span class="math inline">\((A,\leq)\)</span>。<span class="math inline">\(f:A\rightarrow A\)</span>為<span class="math inline">\((A,\leq)\)</span>上的任一非減自映射，則：</p>
+<p>（1）對所有的<span class="math inline">\(a,b\in A​\)</span> ，若<span class="math inline">\(a\leq b​\)</span>，則<span class="math inline">\((\left[a,b\right],\leq)​\)</span>也是一個完備格。其中，<span class="math inline">\(\left[a,b\right]=\lbrace x\in A\mid a\leq x\leq b \rbrace ​\)</span>。</p>
+<p>（2）對所有的<span class="math inline">\(a,b\in A\)</span> ，若<span class="math inline">\(a\leq b\)</span>、<span class="math inline">\(a\leq f(a)\)</span>且<span class="math inline">\(f(b)\leq b\)</span>，則<span class="math inline">\(f\mid_{\left[a,b\right]}\)</span>是<span class="math inline">\((\left[a,b\right],\leq)\)</span>上的非減自映射。其中，<span class="math inline">\(f\mid_{\left[a,b\right]}\)</span>錶示函數<span class="math inline">\(f\)</span>在<span class="math inline">\(\left[a,b\right]\)</span>上的限製。</p>
+<h3 id="lemma-2">Lemma 2</h3>
+<p>任給完備格<span class="math inline">\((A,\leq)\)</span>，<span class="math inline">\(f:A\rightarrow A\)</span>為<span class="math inline">\((A,\leq)\)</span>上的任一非減自映射，則<span class="math inline">\(f\)</span>有一個最大的不動點和一個最小的不動點。</p>
+<p>註意，這裏確界的存在來自於完備格的定義，隻要是完備格那麼根據定義其確界都在集合之內。這跟我們採用的是 <span class="math inline">\(\mathbb{R}\)</span> 還是 <span class="math inline">\(\mathbb{R}^{N}\)</span> 作爲例子是無關的，完備格這個偏序集使用的序關係不必與實數集或歐式空間上的序關係相同。</p>
+<p>證明</p>
+<p>任給完備格<span class="math inline">\((A,\leq)\)</span>，<span class="math inline">\(f:A\rightarrow A\)</span>為<span class="math inline">\((A,\leq)\)</span>上的任一非減自映射。</p>
+<p>我們令$D=xA xf(x) $， $E = xA xf(x) <span class="math inline">\(。設\)</span>B<span class="math inline">\(是\)</span>f$的所有不動點的集合。</p>
+<p>取<span class="math inline">\(d\)</span>為<span class="math inline">\(D\)</span>的上確界（因為<span class="math inline">\(D\)</span>是<span class="math inline">\(A\)</span>的子集，根據<span class="math inline">\((A,\leq)\)</span>是完備格的定義，這個上確界是存在的），那麼我們有：對每一個 <span class="math inline">\(x\in D\)</span>，<span class="math inline">\(f(d) = f(\sup D) \geq f(x) \geq x\)</span> （因為<span class="math inline">\(f\)</span>是非減自映射，集合上確界的函數總是不小於集合中任何其他元素的函數）。所以<span class="math inline">\(f(d)\)</span>也是<span class="math inline">\(D\)</span>的一個上界。從而<span class="math inline">\(f(d) \geq d\)</span>，滿足我們對集合<span class="math inline">\(D\)</span>的設定(即$D=xAxf(x) <span class="math inline">\()，即\)</span>d D$ 。<span class="math inline">\(D\)</span>有屬於自身的上確界<span class="math inline">\(d\)</span>，所以<span class="math inline">\(d\)</span>是<span class="math inline">\(D\)</span>中的最大元。</p>
+<p>另一方麵，因為<span class="math inline">\(f(d) \geq d\)</span>，利用<span class="math inline">\(f\)</span>的非減性，有<span class="math inline">\(f(f(d))\geq f(d)\)</span>，再次滿足我們對集合<span class="math inline">\(D\)</span>的設定，故而<span class="math inline">\(f(d)\in D\)</span>。而<span class="math inline">\(d\)</span>是<span class="math inline">\(D\)</span>的最大元，故<span class="math inline">\(d\geq f(d)\)</span>。結合我們上一步得到的<span class="math inline">\(f(d) \geq d\)</span>有 <span class="math inline">\(f(d)=d\)</span> ，即<span class="math inline">\(d\)</span>是<span class="math inline">\(f\)</span>的一個不動點，<span class="math inline">\(d \in B\)</span>。</p>
+<p>由於<span class="math inline">\(B=D\cap E\)</span>從而<span class="math inline">\(B \subset D\)</span>，同時<span class="math inline">\(d\in B\)</span>所以<span class="math inline">\(D\)</span>的最大元<span class="math inline">\(d\)</span> 也是<span class="math inline">\(B\)</span>的最大元。即<span class="math inline">\(f\)</span>有最大不動點，這個最大不動點就是<span class="math inline">\(D\)</span>的上確界。</p>
+<p>同理可證<span class="math inline">\(E\)</span>的下確界是<span class="math inline">\(f\)</span>的最小不動點。<span class="math inline">\(\square\)</span></p>
+<h3 id="th.-塔斯基不動點定理">Th. 塔斯基不動點定理</h3>
+<p>完備格<span class="math inline">\((A,\leq)\)</span>上的任一非減自映射<span class="math inline">\(f\)</span>都有不動點，並且<span class="math inline">\(f\)</span>的全體不動點在<span class="math inline">\(\leq\)</span>下組成一個完備格。</p>
+<p>證明</p>
+<p>Step 1. 由Lemma 2 ，我們知道函數 <span class="math inline">\(f\)</span> 在完備格 <span class="math inline">\((A,\leq)\)</span> 上存在一個不動點。</p>
+<p>Step 2. 設<span class="math inline">\(f\)</span>的所有不動點的集合是 <span class="math inline">\(B\)</span>，我們證明<span class="math inline">\((B,\leq)\)</span>是一個完備格。</p>
+<p>按照完備格的定義，我們隻需證明在<span class="math inline">\(\leq\)</span>下的偏序集<span class="math inline">\(B\)</span>的每個子集<span class="math inline">\(C\)</span>在<span class="math inline">\(B\)</span>中有上確界。</p>
+<p>Step 3. 任選一個集合<span class="math inline">\(C\subset B\)</span>，取<span class="math inline">\(a\)</span>為<span class="math inline">\(C\)</span>在<span class="math inline">\(A\)</span>中的上確界，取<span class="math inline">\(b\)</span>為<span class="math inline">\(A\)</span>的最大元（即<span class="math inline">\(A\)</span>在<span class="math inline">\(A\)</span>中的上確界），根據完備格的定義，我們知道它們在 <span class="math inline">\(A\)</span> 中存在，而我們需要證明它們也在 <span class="math inline">\(C\)</span> 中。</p>
+<p>因為對每一個<span class="math inline">\(x \in C\)</span> ，<span class="math inline">\(f(a) = f(\sup C) \geq f(x) = x\)</span>，所以 <span class="math inline">\(f(a)\)</span>是 <span class="math inline">\(C\)</span> 的上界。從而 <span class="math inline">\(f(a) \geq \sup C = a\)</span> 。</p>
+<p>而<span class="math inline">\(b\)</span>為<span class="math inline">\(A\)</span>的最大元，從而<span class="math inline">\(f(b) \leq b\)</span>，所以按照Lemma 1(1)<span class="math inline">\(\left( \left[ a , b \right] , \leq \right)\)</span>，而按照Lemma 1(2)，<span class="math inline">\(f\mid _{\left[ a ,b\right]}\)</span>是完備格 <span class="math inline">\(\left( \left[ a , b \right] , \leq \right)\)</span>上的非減自映射。</p>
+<p>按照Lemma 2 ，<span class="math inline">\(f \mid _{\left[ a , b \right]}\)</span>在 <span class="math inline">\(\left( \left[ a , b \right] , \leq\right)\)</span> 上有一個最小的不動點，即滿足“不小於<span class="math inline">\(C\)</span>中任一元素”的最小不動點。從而這個不動點就是<span class="math inline">\(C\)</span>在<span class="math inline">\(B\)</span>中的上確界。<span class="math inline">\(\square\)</span></p>
+<p>脫胎於： [1] Vohra R V. Advanced mathematical economics[M]. Routledge, 2004. [2] Corbae D, Stinchcombe M B, Zeman J. An introduction to mathematical analysis for economic theory and econometrics[M]. Princeton University Press, 2009.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/a6db2415.html">https://brandonsli.com/p/a6db2415.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-ND</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打賞</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/db900c1b.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不务正业学计量（二）</div></div></a></div><div class="next-post pull-right"><a href="/p/c9c31a7a.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">阿罗-理性选择函数与排序</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC-lattice"><span class="toc-number">1.</span> <span class="toc-text">格 Lattice</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%8F%E5%BA%8F%E9%9B%86"><span class="toc-number">1.1.</span> <span class="toc-text">偏序集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#meet-%E8%88%87-join"><span class="toc-number">1.2.</span> <span class="toc-text">meet 與 join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-lattice"><span class="toc-number">1.3.</span> <span class="toc-text">Def: Lattice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-sublattice"><span class="toc-number">1.4.</span> <span class="toc-text">Def: Sublattice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fact-%E5%AD%90%E6%A0%BC"><span class="toc-number">1.5.</span> <span class="toc-text">Fact: 子格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%85%83"><span class="toc-number">1.6.</span> <span class="toc-text">Def: 最大（最小）元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#th3"><span class="toc-number">1.7.</span> <span class="toc-text">Th3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-%E5%BC%B7%E9%9B%86%E5%BA%8F"><span class="toc-number">1.8.</span> <span class="toc-text">Def 強集序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def4-%E8%B6%85%E6%A8%A1%E6%80%A7"><span class="toc-number">1.9.</span> <span class="toc-text">Def4: 超模性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#th5"><span class="toc-number">1.10.</span> <span class="toc-text">Th5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-%E4%B9%98%E7%A9%8D%E6%A0%BC"><span class="toc-number">1.11.</span> <span class="toc-text">Def: 乘積格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def-%E5%A2%9E%E5%B7%AE"><span class="toc-number">1.12.</span> <span class="toc-text">Def: 增差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#th7"><span class="toc-number">1.13.</span> <span class="toc-text">Th7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def.-%E5%96%AE%E4%BA%A4%E5%8F%89%E4%B8%80"><span class="toc-number">1.14.</span> <span class="toc-text">Def. 單交叉(一)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def.-%E5%96%AE%E4%BA%A4%E5%8F%89%E4%BA%8C"><span class="toc-number">1.15.</span> <span class="toc-text">Def. 單交叉(二)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A1%94%E6%96%AF%E5%9F%BA%E4%B8%8D%E5%8B%95%E9%BB%9E%E5%AE%9A%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">塔斯基不動點定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#def.-%E5%AE%8C%E5%82%99%E6%A0%BC"><span class="toc-number">2.1.</span> <span class="toc-text">Def. 完備格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#def.-%E9%9D%9E%E6%B8%9B%E8%87%AA%E6%98%A0%E5%B0%84"><span class="toc-number">2.2.</span> <span class="toc-text">Def. 非減自映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lemma-1"><span class="toc-number">2.3.</span> <span class="toc-text">Lemma 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lemma-2"><span class="toc-number">2.4.</span> <span class="toc-text">Lemma 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#th.-%E5%A1%94%E6%96%AF%E5%9F%BA%E4%B8%8D%E5%8B%95%E9%BB%9E%E5%AE%9A%E7%90%86"><span class="toc-number">2.5.</span> <span class="toc-text">Th. 塔斯基不動點定理</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="教育即自由,學術即反抗,事實即顛覆" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

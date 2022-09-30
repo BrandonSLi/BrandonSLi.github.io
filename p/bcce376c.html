@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani's Fixed Point Theorem | 不求甚解學經濟</title><meta name="keywords" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这一部分是角谷静夫不动点定理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani&#39;s Fixed Point Theorem">
+<meta property="og:url" content="https://brandonsli.com/p/bcce376c.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="这一部分是角谷静夫不动点定理。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2017-09-04T16:02:31.000Z">
+<meta property="article:modified_time" content="2021-08-01T16:06:17.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://brandonsli.com/p/bcce376c"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="qCKYVlYYJxGHTmeJ"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8735908405048796',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-103535631-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-103535631-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani\'s Fixed Point Theorem',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-08-02 00:06:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?fe2aae043a36fd466ededd57622c094f";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 鏈接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani's Fixed Point Theorem</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2017-09-04T16:02:31.000Z" title="發表於 2017-09-05 00:02:31">2017-09-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-01T16:06:17.000Z" title="更新於 2021-08-02 00:06:17">2021-08-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%A6%E7%BB%8F%E6%B5%8E/">不求甚解学经济</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani's Fixed Point Theorem"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>这一部分是角谷静夫不动点定理。</p>
+<span id="more"></span>
+<p>Brouwer适用于函数，Kakutani适用于一般意义上的对应，这种对应又称为「集值函数」。「对应」 <span class="math inline">\(C:X\Rightarrow Y\)</span>，取值为<span class="math inline">\(Y\)</span>的某子集。也可视为函数<span class="math inline">\(F:X\rightarrow\mathcal{P}(Y)\)</span>，其中<span class="math inline">\(\mathcal{P}(Y)\)</span>为<span class="math inline">\(Y\)</span>的幂集。</p>
+<p>［引理］ 若<span class="math inline">\(X=A\cup B\)</span>（但不要求<span class="math inline">\(A\cap B=\varnothing\)</span>），<span class="math inline">\(f:A\rightarrow Y\)</span>；<span class="math inline">\(g:B\rightarrow Y\)</span>；<span class="math inline">\(h:X\rightarrow Y\)</span>，而<span class="math inline">\(f(x)\)</span>在那些<span class="math inline">\(x\in A\)</span>连续，<span class="math inline">\(g(x)\)</span>在那些<span class="math inline">\(x\in B\)</span>连续，且<span class="math inline">\(f(x)=g(x)\)</span>当<span class="math inline">\(x\in A\cap B\)</span>。定义<span class="math inline">\(h(x)=f(x)\)</span>当<span class="math inline">\(x\in A\)</span>；<span class="math inline">\(h(x)=g(x)\)</span>当<span class="math inline">\(x\in B\)</span>,<br />
+则<span class="math inline">\(h(x)\)</span>在<span class="math inline">\(X\)</span>连续。</p>
+<p>「Kakutani 不动点定理」<span class="math inline">\(X\)</span>为欧氏空间中非空紧凸集，<span class="math inline">\(C:X\Rightarrow Y\)</span>有闭图（即<span class="math inline">\(Graph C=\lbrace (x,y)\in X\times Y:y\in C(x) \rbrace\)</span>为闭集），且任给<span class="math inline">\(x\in X\)</span>有<span class="math inline">\(C(x)\)</span>为非空闭凸集。则存在<span class="math inline">\(x^{\ast}\in X\)</span>，使得<span class="math inline">\(x^{\ast}\in C(x^{\ast})\)</span>。</p>
+<p>［证明］</p>
+<p>先在单纯形上证明。</p>
+<p>①对单纯形<span class="math inline">\(\Delta\)</span>做<span class="math inline">\(k\)</span>次重心剖分。将第<span class="math inline">\(k\)</span>次剖分所得到的顶点们记为<span class="math inline">\(V\_{0}(k), V\_{1}(k),…,V\_{n}(k)\)</span>。</p>
+<p>②构造引理中所使用的函数<span class="math inline">\(h(x)\)</span>。</p>
+<p>将顶点集合<span class="math inline">\(\lbrace V\_{0}(k), V\_{1}(k),…,V\_{n}(k) \rbrace\)</span>定义为引理中所需要的<span class="math inline">\(A\)</span>。将<span class="math inline">\(co(V\_{0}(k),V\_{1}(k),…V\_{n}(k))\)</span>定义为引理中所需要的<span class="math inline">\(B\)</span>。</p>
+<p>任选<span class="math inline">\(x\_{n}\)</span>，若<span class="math inline">\(x\_{n}\in\lbrace V\_{0}(k), V\_{1}(k),…V\_{n}(k) \rbrace\)</span>，因<span class="math inline">\(C(x\_{n})\)</span>取值为一个集合，则从集合中任选一个<span class="math inline">\(y\in C(x\_{n})\)</span>，并定义<span class="math inline">\(f(x\_{n})=y\)</span>。因<span class="math inline">\(C\)</span>为闭图，意即<span class="math inline">\(Graph C=\lbrace (x,y):y\in C(x) \rbrace\)</span>为闭集。也就是说取序列<span class="math inline">\(\lbrace x\_{k} \rbrace\_{k}\)</span>和<span class="math inline">\(\lbrace y\_{k} \rbrace\_{k}\)</span>，若<span class="math inline">\(x\_{k}\rightarrow x\)</span>，<span class="math inline">\(y\_{k}\rightarrow y\)</span>，且<span class="math inline">\((x\_{k},y\_{k})\in Graph C\)</span>（即<span class="math inline">\(y\_{k}\in C(x\_{k})\)</span>），则有<span class="math inline">\((x,y)\in Graph C\)</span>（即<span class="math inline">\(y\in C(x)\)</span>）。因此，当<span class="math inline">\(x\_{k}\rightarrow x\)</span>且<span class="math inline">\(y\_{k}\rightarrow y\)</span>，我们定义的函数<span class="math inline">\(f(x\_{k})=y\_{k}\)</span>满足<span class="math inline">\(f(x)=y\)</span>。而这就表示<span class="math inline">\(f\)</span>为连续函数。</p>
+<p>若<span class="math inline">\(x\_{n}\in co(V\_{0}(k),V\_{1}(k),…,V\_{n}(k))\)</span>，则将其表示为<span class="math inline">\(x\_{n}=\sum\_{i}θ\_{j}V\_{j}(k)\)</span>，亦即<span class="math inline">\(x\_{n}\)</span>可以表示为顶点<span class="math inline">\(V\_{j}(k)\)</span>们的凸组合，定义<span class="math inline">\(g(x\_{n})=\sum\theta\_{j}g\_{j}(V\_{j}(k))\)</span>，而<span class="math inline">\(g\_{j}(V\_{j}(k))=f(V\_{j}(k))\)</span>。即通过将单纯形内任一点表示成顶点们的凸组合，我们便可以使用上一步中仅作用于顶点的函数<span class="math inline">\(f\)</span>来表示未必是顶点的任意一个<span class="math inline">\(x\_{n}\)</span>，而为表示区别，此时的<span class="math inline">\(f\)</span>记为<span class="math inline">\(g\_{j}\)</span>。而<span class="math inline">\(g\)</span>是连续函数<span class="math inline">\(g\_{j}\)</span>的凸组合，仍然为连续函数。</p>
+<p>定义<span class="math inline">\(h\)</span>为引理中所要求的样子，即：若<span class="math inline">\(x\in A\)</span>则<span class="math inline">\(h(x)=f(x)\)</span>，若<span class="math inline">\(x\in B\)</span>则<span class="math inline">\(h(x)=g(x)\)</span>。且易知若<span class="math inline">\(x\in A\cap B\)</span>，则依据前述方式定义有<span class="math inline">\(g(x)=f(x)\)</span>，此时这两种定义方式是一致的。</p>
+<p>故而根据Brouwer，存在<span class="math inline">\(x\_{n}^{\ast}\)</span>使得<span class="math inline">\(x\_{n}^{\ast}=h(x\_{n}^{\ast})\)</span>。</p>
+<p>③因各<span class="math inline">\(θ\_{j}\)</span>在<span class="math inline">\(\[0,1\]\)</span>中，根据<strong>Bolzano-Weierstrass定理</strong> “紧集中的实序列必有收敛子列”。取序列<span class="math inline">\(\lbrace θ\_{j\_{k}} \rbrace\_{k}\)</span>收敛于<span class="math inline">\(θ\_{j}^{\ast}\)</span>。其中序列的第<span class="math inline">\(k\)</span>项均取自相应的第<span class="math inline">\(k\)</span>次剖分。</p>
+<p>同理，各<span class="math inline">\(h(V\_{j})\)</span>在<span class="math inline">\(△\)</span>中，可取<span class="math inline">\(\lbrace h\_{k}(V\_{j\_{k}}) \rbrace\_{k}\)</span>收敛于<span class="math inline">\(y\_{j^{\ast}}\)</span>。</p>
+<p>而当剖分细致程度越来越高，即<span class="math inline">\(k\rightarrow\infty\)</span>时（为了便于理解，此处可以视之为，随着越剖越细每个小子形的面积趋近于<span class="math inline">\(0\)</span>），有<span class="math inline">\(\lbrace V\_{j\_{k}} \rbrace\_{k}\)</span>以及<span class="math inline">\(\lbrace x\_{k} \rbrace\_{k}\)</span>收敛于同一个<span class="math inline">\(x^{\ast}\)</span>。</p>
+<p>④当每一项<span class="math inline">\((V\_{j\_{k}},h\_{k}(V\_{j\_{k}}))\in Graph C\)</span>，已知C有闭图，则极限<span class="math inline">\((x^{\ast}, y\_{j}^{\ast})\in Graph C\)</span>，即<span class="math inline">\(y\_{j}^{\ast}\in C(x^{\ast})\)</span>。</p>
+<p>而<span class="math inline">\(x^{\ast}=h(x^{\ast})=\sum\_{j}θ\_{j}^{\ast}y\_{j}^{\ast}\)</span>，其中<span class="math inline">\(y\_{j}^{\ast}\in C(x^{\ast})\)</span>。这就意味着<span class="math inline">\(x^{\ast}\in coC(x^{\ast})\)</span>，但已知<span class="math inline">\(C\)</span>为凸值的，因而<span class="math inline">\(coC(x^{\ast})=C(x^{\ast})\)</span>。即得<span class="math inline">\(x^{\ast}\in C(x^{\ast})\)</span>。</p>
+<p>在单纯形上得证。</p>
+<p>将其推广到一般的非空紧凸集时，步骤与Brouwer类似，暂略。<span class="math inline">\(\square\)</span></p>
+<p><em>脱胎于：</em></p>
+<p><em>Border K C. Fixed point theorems with applications to economics and game theory[M]. Cambridge university press, 1989.</em></p>
+<p><em>Ichiishi T. Game theory for economic analysis[M]. Elsevier, 2014.</em></p>
+<p><em>俞建. 博弈论与非线性分析[M]. 科学出版社, 2008.</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/bcce376c.html">https://brandonsli.com/p/bcce376c.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-ND</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打賞</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/df84da2.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不求甚解学经济-不动点定理（五）樊畿不等式 Ky Fan's Minmax Inequality</div></div></a></div><div class="next-post pull-right"><a href="/p/dd33e338.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer's Fixed Point Theorem</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/android-chrome-512x512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由,學術即反抗,事實即顛覆</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://twitter.com/BrandonLi9254"><i class="fab fa-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:brandonsongli@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/2b881b66.html" title="不求甚解學經濟-可測最大值定理">不求甚解學經濟-可測最大值定理</a><time datetime="2021-10-10T16:06:33.000Z" title="發表於 2021-10-11 00:06:33">2021-10-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/2b881b2d.html" title="不求甚解學經濟-一些簡單的單調比較靜態分析">不求甚解學經濟-一些簡單的單調比較靜態分析</a><time datetime="2021-08-31T16:06:33.000Z" title="發表於 2021-09-01 00:06:33">2021-09-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/2b871s90.html" title="不求甚解學經濟-一些簡單的概率論">不求甚解學經濟-一些簡單的概率論</a><time datetime="2021-08-11T16:06:33.000Z" title="發表於 2021-08-12 00:06:33">2021-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/4d882b10.html" title="不求甚解學經濟-信息設計(A2)-一些賽侷理論與信息經濟學">不求甚解學經濟-信息設計(A2)-一些賽侷理論與信息經濟學</a><time datetime="2021-08-08T16:06:33.000Z" title="發表於 2021-08-09 00:06:33">2021-08-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/a008ab02.html" title="不求甚解學經濟-信息設計：序言">不求甚解學經濟-信息設計：序言</a><time datetime="2021-08-03T20:22:31.000Z" title="發表於 2021-08-04 04:22:31">2021-08-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="教育即自由,學術即反抗,事實即顛覆" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
