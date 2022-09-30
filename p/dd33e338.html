@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer's Fixed Point Theorem | 不求甚解學經濟</title><meta name="keywords" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这一部分是布劳威尔不动点定理，下次是从Brouwer到Kakutani。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer&#39;s Fixed Point Theorem">
+<meta property="og:url" content="https://brandonsli.com/p/dd33e338.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="这一部分是布劳威尔不动点定理，下次是从Brouwer到Kakutani。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2017-09-04T14:35:53.000Z">
+<meta property="article:modified_time" content="2021-08-01T16:06:27.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/dd33e338"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer\'s Fixed Point Theorem',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-02 00:06:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer's Fixed Point Theorem</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2017-09-04T14:35:53.000Z" title="發表於 2017-09-04 22:35:53">2017-09-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-01T16:06:27.000Z" title="更新於 2021-08-02 00:06:27">2021-08-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%A6%E7%BB%8F%E6%B5%8E/">不求甚解学经济</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解学经济-不动点定理（三）布劳威尔不动点定理 Brouwer's Fixed Point Theorem"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>这一部分是布劳威尔不动点定理，下次是从Brouwer到Kakutani。</p>
+<span id="more"></span>
+
+<h1 id="定理："><a href="#定理：" class="headerlink" title="定理："></a>定理：</h1><p><strong>从非空紧凸集射到此集自身的连续函数具有不动点。</strong></p>
+<p>即：</p>
+<p>$X\in\mathbb R^{n}$ 为一个非空紧凸集，而$f:X\rightarrow X$ 为连续函数，则存在$x\in X$使得$f(x)&#x3D;x$。</p>
+<h2 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h2><h3 id="Step1"><a href="#Step1" class="headerlink" title="Step1."></a>Step1.</h3><p>在最简单的非空紧凸集即单纯形$\Delta$上证明。</p>
+<p>设任意连续函数$h:\Delta\rightarrow\Delta$。</p>
+<p>任取$x\in\Delta$，将其写成重心坐标形式即$x&#x3D;\sum x_{i}v_{i}$，其中$v_{i}$为第$i$个顶点，$x_{i}$为系数。(记得n维单纯形为n+1个仿射无关的顶点之凸组合)，$h:\Delta\rightarrow\Delta$，而$h(x)&#x3D;\sum h_{i}(x) v_{i}$。满足$\sum x_{i}&#x3D;\sum h_{i}(x)&#x3D;1$。</p>
+<p>将$F_{i}$定义为$\lbrace x\in\Delta:h_{i} (x)\leq x_{i}  \rbrace &#x3D;\lbrace  x\in\Delta:h_{i} (x)-x_{i} \leq 0 \rbrace $。意即$F_{i}$由那些被$h$射之后比被射之前在第$i$顶点方向上更靠近重心的点组成。</p>
+<p>而根据设定，$h​$在$\Delta​$上连续，且$x​$在$\Delta​$上连续，从而$h_{i}(x)-x_{i}​$在$\Delta​$上连续。而某函数$f​$在定义域上连续等价于其不好集$\lbrace x\in X:f(x)\leq c \rbrace ​$及不差集$\lbrace x\in X:f(x)\geq c \rbrace ​$为闭集，因此$F_{i}​$对每个$i​$均为闭集。</p>
+<h4 id="Claim"><a href="#Claim" class="headerlink" title="Claim"></a>Claim</h4><p>$\forall i_{0},…,i_{k},(k&#x3D;0,…,n)$有$co(V_{i1},…,V_{ik})\in\bigcup_{i}F_{i}$。</p>
+<p>即从顶点中任选一组顶点（也可以所有顶点都选），这组被选中的点构成的凸包要在那些闭集$F_{i}$的闭之中。这一步是为了应用KKM lemma。证明：if not，即在凸包中存在一点不满足$F_{i}$的定义，即不满足$h_{i}(x)\geq x_{i}$而相反却是$h_{i}(x)&lt;x_{i},\forall i$，将会得到$1&#x3D;\sum x_{i}&lt;\sum h_{i}(x)&#x3D;1$，矛盾。</p>
+<p>故而，适用KKM lemma，$\exists x^{\ast}\in\Delta,s.th.x^{\ast}\in\cap F_{i}$ ，即满足$\forall i$有$h_{i}(x^{\ast})\leq x_{i}^{\ast}$，但$1&#x3D;\sum x_{i}^{\ast}\leq\sum h_{i}(x^{\ast})&#x3D;1$，因此只能为$x_{i}^{\ast}&#x3D;h_{i}(x^{\ast}),∀i$，即$h(x^{\ast})&#x3D;x^{\ast}$。</p>
+<h3 id="Step2"><a href="#Step2" class="headerlink" title="Step2."></a>Step2.</h3><p>令$X$为欧氏空间中非空紧凸集。$f:X\rightarrow X$为连续函数。</p>
+<h4 id="同胚"><a href="#同胚" class="headerlink" title="[同胚]"></a>[同胚]</h4><p>$X$与$\Delta$为同胚，若存在$g: X\rightarrow\Delta$，$g^{-1}:\Delta\rightarrow X$，且$g$与$g^{-1}$均为连续函数。   </p>
+<p>$h:\Delta\rightarrow\Delta,h(x)&#x3D;g(f(g^{-1}(x)))$，因为$g$、$f$、$g^{-1}$均为连续函数，因此$h$亦连续，根据Step1，$h$存在不动点，即$h(x^{\ast})&#x3D;g(f(g^{-1}(x^{\ast})))$，亦即$f(g^{-1}(x^{\ast}))&#x3D;g^{-1}(x^{\ast})$，但这就意味着$g^{-1}(x^{\ast})$是$f$的不动点。$\square$</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://brandonsli.com">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/dd33e338.html">https://brandonsli.com/p/dd33e338.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/bcce376c.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不求甚解学经济-不动点定理（四）角谷静夫不动点定理 Kakutani's Fixed Point Theorem</div></div></a></div><div class="next-post pull-right"><a href="/p/485c51d0.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不求甚解学经济-不动点定理（二）KKM引理</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由，學術即反抗，事實即顛覆</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">定理：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">证明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1"><span class="toc-number">1.1.1.</span> <span class="toc-text">Step1.</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Claim"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">Claim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2"><span class="toc-number">1.1.2.</span> <span class="toc-text">Step2.</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E8%83%9A"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">[同胚]</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/undefined.html" title="Hello World"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/p/undefined.html" title="Hello World">Hello World</a><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/6da8d1b9.html" title="塔西佗陷阱"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"/></a><div class="content"><a class="title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca8d8b6.html" title="城市成本"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"/></a><div class="content"><a class="title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f9a7.html" title="經濟學隨想"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"/></a><div class="content"><a class="title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f8b6.html" title="收藏夾"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"/></a><div class="content"><a class="title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

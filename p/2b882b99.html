@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>不求甚解學經濟-信息設計-The Persuasion Duality | 不求甚解學經濟</title><meta name="keywords" content="信息設計,貝葉斯勸說,Information Design,Bayesian Persuasion,貝葉斯說服,博弈論,Game Theory,Mechanism Design"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="信息設計學習筆記係列。 The Persuasion Duality Dworczak, P., &amp; Kolotilin, A. (2019)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-信息設計-The Persuasion Duality">
+<meta property="og:url" content="https://brandonsli.com/p/2b882b99.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="信息設計學習筆記係列。 The Persuasion Duality Dworczak, P., &amp; Kolotilin, A. (2019)">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2021-03-18T16:06:33.000Z">
+<meta property="article:modified_time" content="2021-08-03T08:19:21.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/2b882b99"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-信息設計-The Persuasion Duality',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-03 16:19:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-信息設計-The Persuasion Duality</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2021-03-18T16:06:33.000Z" title="發表於 2021-03-19 00:06:33">2021-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-03T08:19:21.000Z" title="更新於 2021-08-03 16:19:21">2021-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-信息設計-The Persuasion Duality"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>信息設計學習筆記係列。</p>
+<p>The Persuasion Duality</p>
+<p>Dworczak, P., &amp; Kolotilin, A. (2019)</p>
+<span id="more"></span>
+
+<h2 id="預備知識"><a href="#預備知識" class="headerlink" title="預備知識"></a>預備知識</h2><h3 id="text-weak-star-拓撲"><a href="#text-weak-star-拓撲" class="headerlink" title="$\text{weak}^{\star}$拓撲"></a>$\text{weak}^{\star}$拓撲</h3><p>給定嚮量空間$X$，將定義在$X$上的所有連續線性泛函（強調連續是因為$X$可能是無限維空間，此時線性函數並不自動就是連續的，預設採用範數引緻的度量拓撲）$f:X\rightarrow\mathbb{R}$們記為$X^{\star}$，那麼使得所有這些$f\in X^{\star}$連續的、最小的（如果不要求最小，那麼它們本來在範數引緻的度量拓撲下就已經是連續的）在$X$上的拓撲，就是$X$上的 weak topology，記為$\sigma(X,X^{\star})$；</p>
+<p>進而，給定$X^{\star}$，同樣將那些使得連續線性泛函$g:X^{\star}\rightarrow\mathbb{R}$們$g\in X^{\star\star}$連續的最小拓撲為$\sigma(X^{\star},X^{\star\star})$，這一拓撲是定義在$X^{\star}$上的weak topology；</p>
+<p>最後，由於$X\subset X^{\star\star}$，將$\sigma(X^{\star},X^{\star\star})$削弱為$\sigma(X^{\star},X)$，則得到了在$X^{\star}$上的$\text{weak}^{\star}$ topology。</p>
+<p>更弱的拓撲具有更少的開集、更多的閉集和緊集、更多的連續函數。</p>
+<h3 id="Riesz-Markov-Kakutani-representation-theorem"><a href="#Riesz-Markov-Kakutani-representation-theorem" class="headerlink" title="Riesz-Markov-Kakutani representation theorem"></a>Riesz-Markov-Kakutani representation theorem</h3><p>任一線性連續(等價於線性有界)泛函$H\in\Delta(\Omega)$都可以用某個$P\in C(\Omega)$錶示為$H(\mu)&#x3D;\int_{\Omega}P(\omega)d\mu(\omega)$。</p>
+<p>這個隻是夠用的版本，實際的 RMK 錶示定理適用範圍更廣，比如$\Delta(\Omega)$可以推廣為任何局部緊的Hausdorff空間、取值可以為複數等等，可見Rudin (1987)。</p>
+<h3 id="凸序"><a href="#凸序" class="headerlink" title="凸序"></a>凸序</h3><p>對於兩個隨機變數$A$和$B$，如果任給凸函數$u$，都有$\mathbb{E}[u(A)]\leq\mathbb{E}[u(B)]$，則稱$A$在凸序意義下小於$B$，記為$A\leq_{cx}B$。</p>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>狀態空間$\Omega$為緊度量空間。令$\Delta(\Omega)$為$\Omega$上的 Borel 機率測度的集合，並具有$\text{weak}^{\star}$ topology。先驗信念$\mu_{0}$具有全支撐。目標函數$V:\Delta(\Omega)\rightarrow\mathbb{R}$為上半(semi)連續的。</p>
+<p>那麼，為什麼我們需要在$\Delta(\Omega)$上的$\text{weak}^{\star}$ topology 呢？後麵我們會看到，因為我們需要使得$\Delta(\Omega)$是個緊度量空間、從而保證最優化問題解的存在性。並且，雖然機率測度並不是線性的，但構成我們問題的<em>積分</em>操作是線性的。但這一設定也會帶來一些問題，後麵會詳述。</p>
+<h3 id="Primal-Problem"><a href="#Primal-Problem" class="headerlink" title="Primal Problem"></a>Primal Problem</h3><p>(P)</p>
+<p>選擇$\tau\in\Delta(\Delta(\Omega))$，來最大化</p>
+<p>$$\begin{align}<br>\int_{\Delta(\Omega)}V(\mu)d\tau(\mu)\<br>s.t.\int_{\Delta}\mu d\tau(\mu)&#x3D;\mu_{0}<br>\end{align}$$</p>
+<h3 id="Dual-Problem"><a href="#Dual-Problem" class="headerlink" title="Dual Problem"></a>Dual Problem</h3><p>(D)</p>
+<p>選擇$P\in C(\Omega)$，其中$C(\Omega)$為$\Omega$上連續函數的集合，來最小化</p>
+<p>$$\begin{align}<br>\int_{\Omega}P(\omega)d\mu_{0}(\omega)\<br>s.t.\int_{\Omega}P(\omega)d\mu(\omega)\geq V(\mu)\<br>\forall\mu\in\Delta(\Omega)<br>\end{align}$$</p>
+<p>原問題解的存在性</p>
+<p>首先，我們錶明，當$\Omega$為緊度量空間時，$\Delta(\Omega)$在$\text{weak}^{\star}$拓撲下也是緊的，並且是可度量化的。</p>
+<p>Lemma 1. 緊Hausdorff空間X是可度量化的，當且僅當$C(X)$是可分的Banach格。</p>
+<p>格範數是一個關於嚮量絕對值單調的範數，賦範Riesz空間是結合了格範數的Riesz空間。如果這個範數還具有完備性，則這個空間就成為了Banach格。</p>
+<p>因為$\Omega$為度量空間，根據定義，$\Omega$是可度量化的 Hausdorff 空間。因此，$C(X)$是一個可分的 Banach 格。</p>
+<p>Lemma 2. (Alaoglu’s Thm)一個賦範空間的範數對偶上的閉單位球，是$\text{weak}^{\star}$緊的。從而，範數對偶的一個子集是$\text{weak}^{\star}$緊的當且僅當它是$\text{weak}^{\star}$閉且範數有界的。</p>
+<p>Lemma 3. 一個賦範空間是可分的，當且僅當其對偶空間的閉單位求是$\text{weak}^{\star}$可度量化的。</p>
+<p>因此，$C(X)$中的閉單位球是$\text{weak}^{\star}$緊且$\text{weak}^{\star}$可度量化的。作為這個閉單位球的子集，$\Delta(\Omega)$是$\text{weak}^{\star}$緊且$\text{weak}^{\star}$可度量化的。進而，$\Delta(\Delta(\Omega))$是$\text{weak}^{\star}$緊且$\text{weak}^{\star}$可度量化的。因為$\tau\rightarrow\int_{\Delta(\Omega)}\mu d\tau(\mu)$是連續函數，滿足約束$\int_{\Delta(\Omega)}\mu d\tau(\mu)&#x3D;\mu_{0}$的那些分佈$\tau$們是個閉集(單點集$\mu_{0}$是閉集，而連續函數使得閉集的原像閉)，而緊空間的閉子集是緊集，因此那些可行的$\tau$們構成一個緊集。</p>
+<p>Def. 令$\Omega$為度量空間，並賦予 Borel $\sigma$代數$\Sigma$。稱$(\Omega,\Sigma)$上的機率測度序列$\mu_{n}$弱$\star$收斂於$(\Omega,\Sigma)$上的機率測度$\mu$，如果對於任何 usc 且上有界的函數$f$，都有$\lim\sup\mathbb{E}<em>{n}f(x)\leq \mathbb{E}f(x)$。其中$\mathbb{E}</em>{n}$是函數$f(x)$關於$\mu_{n}$的期望，$\mathbb{E}$是關於$\mu$的。</p>
+<p>根據假設，$V$在採用$\text{weak}^{\star}$拓撲下是上半連續的，由於其定義域$\Delta(\Omega)$為緊集，因此其為上有界的，因此函數$\int_{\Delta(\Omega)}V(\mu)d\tau(\mu)$也是上半連續的。</p>
+<p>從而，根據 Weierstrass 定理，緊集${\tau\in\Delta(Delta(\Omega)):\int_{\Delta(\Omega)}\mu d\tau(mu)&#x3D;\mu_{0}}$上的上半連續函數$\int_{\Delta(\Omega)}V(\mu)d\tau(\mu)$可以取到最大值。</p>
+<h2 id="對偶"><a href="#對偶" class="headerlink" title="對偶"></a>對偶</h2><h3 id="Thm-1-弱對偶"><a href="#Thm-1-弱對偶" class="headerlink" title="Thm 1. 弱對偶"></a>Thm 1. 弱對偶</h3><p>如果某個$\tau\in\Delta(\Delta(\Omega))$對於問題(P)可行，且某個$P\in C(\Omega)$對於問題(D)可行，則</p>
+<p>(G)</p>
+<p>$$\int_{\Omega}P(\omega)d\mu_{0}(\omega)\geq\int_{\Delta(\Omega)}V(\mu)d\tau(\mu)$$</p>
+<p>此外，如果(G)以等式成立，即</p>
+<p>(0)</p>
+<p>$$\int_{\Omega}P(\omega)d\mu_{0}(\omega)&#x3D;\int_{\Delta(\Omega)}V(\mu)d\tau(\mu)$$</p>
+<p>則前述$\tau$和$P$分別為問題(P)和問題(D)的最優解。</p>
+<h3 id="Prop-1-無對偶缺口"><a href="#Prop-1-無對偶缺口" class="headerlink" title="Prop 1. 無對偶缺口"></a>Prop 1. 無對偶缺口</h3><h3 id="Def-1-正則性"><a href="#Def-1-正則性" class="headerlink" title="Def 1. 正則性"></a>Def 1. 正則性</h3><p>如果$\hat{V}$在先驗信念$\mu_{0}$處是超可微的，則稱勸說問題為正則的。當勸說問題正則時，存在仿射連續函數$\bar{V}:\Delta(\Omega)\rightarrow\mathbb{R}$使得$\bar{V}(\mu_{0})&#x3D;\hat{V}(\mu_{0})$且對於任何$\mu\in\Delta{\Omega}$都有$\bar{V}(\mu)\geq\hat{V}(\mu)$。</p>
+<p>(即仿射函數$\bar{V}$ majorize 了$\hat{V}$，此時這一仿射函數的斜率就是$\hat{V}$在$\mu_{0}$處的超梯度。</p>
+<p>回憶超梯度的定義：考慮有限維情況，給定$f$是凸集$C\in\mathbb{R}^{n}$上的凹函數，那麼我們稱一個嚮量$p\in\mathbb{R}^{n}$是$f$在點$x$處的超梯度，若嚮量$p$滿足，對於任何$y$有如下超梯度不等式：</p>
+<p>$$f(x)+p(y-x)\geq f(y)$$</p>
+<p>並且當給定$x$時，仿射函數$f(x)+p(y-x)$就是函數$f$在$x$點處的超微分。而在有限維情況下，凹函數在每個內點處都是超可微的。由於我們假設全支撐，$\mu_{0}$就是內點。因此$\hat{V}$在先驗信念$\mu_{0}$處必然是超可微的，正則性自然成立。同樣地，也可以將這一仿射函數理解為$\hat{V}$在$\mu_{0}$處的支撐超平麵。</p>
+<p>但由於我們當前考慮的是無限維情況，需要對前述$p(y-x)$的錶述做進一步推廣。這就要用到 Riesz-Markov-Kakutani representation theorem，根據這一定理，任一線性連續(等價於線性有界)泛函$H\in\Delta(\Omega)$都可以用某個$P\in C(\Omega)$錶示為$H(\mu)&#x3D;\int_{\Omega}P(\omega)d\mu(\omega)$，從而超梯度不等式變為，對於所有$\mu\in\Delta(\Omega)$</p>
+<p>$$\hat{V}(\mu_{0})+\int_{\Omega}P(\omega)d\mu(\omega)\geq\hat{V}(\mu)$$</p>
+<p>但在$\Omega$為無窮集的情況時，機率測度的集合在$\text{weak}^{\star}$拓撲下的相對內部是空集，任何$\mu_{0}$即使是全支撐也是邊界點，此時“支撐超平麵”可能是垂直的，這種情況下其實所謂的支撐超平麵(根據定義，斜率應為有限值，但垂直對應於“斜率”為無窮大)是不存在的。一般地，在無限維空間中，凹性和上半連續不足以保證即使在內點處支撐超平麵的存在。因此需要特別地假設正則性，而非像有限維情況下那般自然成立。</p>
+<p>由於可能出問題的情況是“支撐超平麵”具有無窮“斜率”，因此保證正則性的一個自然地條件就是關於函數$\hat{V}$本身在$\mu_{0}$處斜率的限製，如果這個斜率是有限值，那麼其相應的支撐超平麵也具有有限斜率，這種對於斜率的限製可以通過施加 Lipschitz 條件來實現：即，要求$\hat{V}$的 Lipschitz 常數為有限值，或者說，$\hat{V}$是 Lipschitz 連續的。)</p>
+<h3 id="Thm-2-強對偶"><a href="#Thm-2-強對偶" class="headerlink" title="Thm 2. 強對偶"></a>Thm 2. 強對偶</h3><p>Primal問題與Dual問題具有相同的解並滿足強對偶性，當且僅當勸說問題是正則的。</p>
+<h3 id="Corollary-1-互補鬆弛性"><a href="#Corollary-1-互補鬆弛性" class="headerlink" title="Corollary 1. 互補鬆弛性"></a>Corollary 1. 互補鬆弛性</h3><p>Primal 問題的某個可行分佈$\tau$與 Dual 問題的某個可行價格$P$分別為兩個問題的解，當且僅當</p>
+<p>$$\text{support}(\tau)\subset{\mu\in\Delta(\Omega):\int_{\Omega}P(\omega)d\mu(\omega)&#x3D;V(\mu)}$$</p>
+<p>證明：</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://brandonsli.com">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/2b882b99.html">https://brandonsli.com/p/2b882b99.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/2b883h99.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不求甚解學經濟-信息設計(三)-多個接收者(2)</div></div></a></div><div class="next-post pull-right"><a href="/p/2b882b10.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不求甚解學經濟-信息設計(A1)-不確定性和信息的表示與比較</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由，學術即反抗，事實即顛覆</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E5%82%99%E7%9F%A5%E8%AD%98"><span class="toc-number">1.</span> <span class="toc-text">預備知識</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#text-weak-star-%E6%8B%93%E6%92%B2"><span class="toc-number">1.1.</span> <span class="toc-text">$\text{weak}^{\star}$拓撲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Riesz-Markov-Kakutani-representation-theorem"><span class="toc-number">1.2.</span> <span class="toc-text">Riesz-Markov-Kakutani representation theorem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B8%E5%BA%8F"><span class="toc-number">1.3.</span> <span class="toc-text">凸序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Primal-Problem"><span class="toc-number">2.1.</span> <span class="toc-text">Primal Problem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dual-Problem"><span class="toc-number">2.2.</span> <span class="toc-text">Dual Problem</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8D%E5%81%B6"><span class="toc-number">3.</span> <span class="toc-text">對偶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Thm-1-%E5%BC%B1%E5%B0%8D%E5%81%B6"><span class="toc-number">3.1.</span> <span class="toc-text">Thm 1. 弱對偶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prop-1-%E7%84%A1%E5%B0%8D%E5%81%B6%E7%BC%BA%E5%8F%A3"><span class="toc-number">3.2.</span> <span class="toc-text">Prop 1. 無對偶缺口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Def-1-%E6%AD%A3%E5%89%87%E6%80%A7"><span class="toc-number">3.3.</span> <span class="toc-text">Def 1. 正則性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Thm-2-%E5%BC%B7%E5%B0%8D%E5%81%B6"><span class="toc-number">3.4.</span> <span class="toc-text">Thm 2. 強對偶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Corollary-1-%E4%BA%92%E8%A3%9C%E9%AC%86%E5%BC%9B%E6%80%A7"><span class="toc-number">3.5.</span> <span class="toc-text">Corollary 1. 互補鬆弛性</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/undefined.html" title="Hello World"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/p/undefined.html" title="Hello World">Hello World</a><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/6da8d1b9.html" title="塔西佗陷阱"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"/></a><div class="content"><a class="title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca8d8b6.html" title="城市成本"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"/></a><div class="content"><a class="title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f9a7.html" title="經濟學隨想"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"/></a><div class="content"><a class="title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f8b6.html" title="收藏夾"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"/></a><div class="content"><a class="title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

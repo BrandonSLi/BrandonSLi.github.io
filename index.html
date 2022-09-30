@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>不求甚解學經濟 - Brandon Song Li 的經濟學學習筆記</title><meta name="keywords" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="不求甚解學經濟">
+<meta property="og:url" content="https://brandonsli.com/index.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-09-30 09:55:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">不求甚解學經濟</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/p/0a743s09.html" title="文獻閱讀"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文獻閱讀"></a></div><div class="recent-post-info"><a class="article-title" href="/p/0a743s09.html" title="文獻閱讀">文獻閱讀</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置頂</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2019-10-06T13:40:00.000Z" title="發表於 2019-10-06 21:40:00">2019-10-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">文獻閱讀記錄
+
+
+2022
+Brito B. Paulo. Ch1-Malthusian. –2022-01-04.
+Hallam Arne. Functional Forms for Consumer Theory. –2022-01-04
+高华：《红太阳是怎样升起的——延安整风运动的来龙去脉》，香港中文大学出版社。–2022-01-06
+GROSSMAN, Gene M., et al. Balanced growth despite Uzawa. American Economic Review, 2017, 107.4: 1293-1312. 包括 online appendix–2021-01-06
+SASAKURA, By Kazuyuki. How Uzawa differs from Lucas. Oxford Economic Papers, 2021. –2022-01-07
+XIE, Danyang. Divergence in Economic Performance: Transitional Dynamics with Multiple Equilibria ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/p/3e891b09.html" title="不求甚解學經濟-信息設計係列"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不求甚解學經濟-信息設計係列"></a></div><div class="recent-post-info"><a class="article-title" href="/p/3e891b09.html" title="不求甚解學經濟-信息設計係列">不求甚解學經濟-信息設計係列</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置頂</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2021-06-02T09:34:33.000Z" title="發表於 2021-06-02 17:34:33">2021-06-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="content">
+
+目錄
+序言
+一: 貝葉斯勸說
+二: 多個接收者1
+三: 多個接收者2
+四: 異質性先驗
+五: 靜態目標的動態實施：固定狀態
+六: 動態情形：外生可變狀態
+七: 動態情形：內生可變狀態
+八: 抗拒勸說
+番外: Basic Cheap Talk
+番外: Propaganda to Persuade
+番外: The Persuasion Duality
+A1：信息的錶示與比較
+A2：一些賽侷理論
+A3：一些簡單的凸分析
+A4：一些簡單的概率論
+A5：一些簡單的綫性規劃
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/p/undefined.html" title="Hello World"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/p/undefined.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/p/6da8d1b9.html" title="塔西佗陷阱"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"></a></div><div class="recent-post-info"><a class="article-title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/p/8ca8d8b6.html" title="城市成本"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"></a></div><div class="recent-post-info"><a class="article-title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%8F%BE%E5%AF%A6%E9%97%9C%E6%B3%A8/">現實關注</a></span></div><div class="content">
+
+數據來源：
+https://www.numbeo.com/property-investment/rankings_current.jsp
+https://stats.oecd.org/index.aspx?queryid=66670
+https://www.deutschlandinzahlen.de/index.php
+生活成本計算基準：兩人生活；10%時間在外就餐，其中廉價就餐時間佔一半；在外喝咖啡時間適中；平均每周每人一次娛樂(看電影、飯局、夜生活等。例如每周只有一次看電影但兩個人一起看就算兩次，因爲買了兩張電影票，所以如果是兩個人每兩周才一起看一次電影就算做平均每周每人一次娛樂)；兩個人每天合計抽0.7包香烟；從不喝酒；在家就餐時吃中餐；開車適中；每月一次出租車；每月支付公交卡(這三個設置是互相關聯的，如果公交卡使用較少，那麽開車或者出租車的使用就需要相應增加)；兩個人均有健身卡；每年一次、一次一周的廉價旅游；購買衣服和鞋子的次數始終；租房、遠離市中心的一居室；不養育孩子、從而無需考慮教育支出。
+花費計價：月度
+收入：可支配收入。取中位數(如果中位數不可得，則采取平均數， ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/p/8ca4f9a7.html" title="經濟學隨想"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"></a></div><div class="recent-post-info"><a class="article-title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">這裏是一些經濟學隨想。
+
+
+概念釐清腐敗以政治權力壟斷關鍵性行業 (例如電力、通信等) 也是一種腐敗。
+規定&#x2F;約定“規定”是不值得遵守的，因爲它是强權者單方面命令的。就算遵守了規定，也可能是出於無奈；如果不遵守規定，也未必是什麽可恥的行爲；
+“約定”是值得遵守的，因爲它是相關各方彼此之間做出的承諾。在理論上，法律應該屬於約定&#x2F;契約的一種，而非屬於規定。
+不配合与上一條有相同之處。在指責別人不配合&#x2F;不遵守規定之前，先要想一想，爲什麽對方不願意配合&#x2F;不願意遵守約定。
+爲什麽地方政府要隱瞞？如果地方政府如實匯報了會怎麽樣？
+爲什麽人們不願意被帶走隔離&#x2F;隱瞞行程？如果被帶走隔離了會怎麽樣？
+爲什麽不願意配合呢？他們在規則或約定的指定中有發言權嗎？對於自己并未直接或間接參與制定的約定，他有義務遵守嗎？
+憲法憲法是一種約定&#x2F;契約。憲法是制定公權力不能做什麽的，憲法是保護個人的。
+個人不存在“違反憲法”、“不尊重憲法”的可能，這是根據定義就不可能存在的。
+潛在地具有“違反憲法”、“不尊重憲法”的可能性的只有公權力。
+說真話需要强調的是“說真 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/p/8ca4f8b6.html" title="收藏夾"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"></a></div><div class="recent-post-info"><a class="article-title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">記錄一些比較有用的網站
+
+
+https://euvsdisinfo.eu/
+https://www.snopes.com/
+https://www.politifact.com/
+https://www.mygopen.com/
+https://www.factcheck.org/
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/p/0a743s19.html" title="技術要求與經濟含義"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="技術要求與經濟含義"></a></div><div class="recent-post-info"><a class="article-title" href="/p/0a743s19.html" title="技術要求與經濟含義">技術要求與經濟含義</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2021-12-15T13:40:00.000Z" title="發表於 2021-12-15 21:40:00">2021-12-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">技術要求與經濟含義
+
+
+
+用動態規劃的語言來説，爲使貝爾曼方程的解存在，可以通過施加布萊克維爾充分條件的辦法做到。這要求存在一個 $0\leq\beta&lt;1$，爲此我們尋找到了“相對於未來，人們更重視現在”這一經濟學解釋。
+
+根據宇澤弘文平衡增長路徑定理，生產函數應該關於生產要素聯合滿足一次齊次性質（例如：關於資本和勞動力聯合規模報酬不變，但由於勞動力增長不能内生地跟上資本積纍的步伐，所以可以通過引入勞動增進形技術進步以使資本積纍内生地跟上外生技術進步的步伐來實現外生經濟增長）但是在完全競爭情形下，一次齊次生產函數最優化一節條件的雅可比行列式為0（即 $F_{KK}F_{LL}-(F_{KL})^2&#x3D;0$），所以無法根據一節條件分別地給出資本需求和勞動力需求（隱函數定理的條件不滿足），而只能給出資本需求和勞動力需求之比，最終導致我們需要分析人均形式。
+
+綫性函數會有 Bang-Bang solution 這一問題，因爲當控制變量以綫性形式進入目標函數時，控制變量將會在一節條件中消失，因此需要額外的條件來確定控制變量的取值。這一問題體現在資本積纍的動態方程中，最優投資路徑 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/p/2b881b66.html" title="不求甚解學經濟-可測最大值定理"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不求甚解學經濟-可測最大值定理"></a></div><div class="recent-post-info"><a class="article-title" href="/p/2b881b66.html" title="不求甚解學經濟-可測最大值定理">不求甚解學經濟-可測最大值定理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2021-10-10T16:06:33.000Z" title="發表於 2021-10-11 00:06:33">2021-10-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B8%E7%90%86%E7%B6%93%E6%BF%9F%E5%AD%B8/">數理經濟學</a></span></div><div class="content">可測最大值定理
+
+
+預備定義：可分空間具有可數稠密子集的空間被稱爲可分空間。例如實數係為可分空間，其可數稠密子集為有理數集。
+定義：可度量化空間給定一個拓撲空間，如果可以找到某個度量，使得該度量所引致的拓撲恰好就是該拓撲空間所配備的拓撲，則稱該拓撲空間為可度量化空間。
+定義：上逆&#x2F;強逆給定一個對應 $\phi:S\Rightarrow X$，定義其上逆為 $\phi^{u}$ 為對於任何 $A\subset X$，$\phi^{l}(A)&#x3D;\left{s\in S:\phi(s)\subset A\right}$。
+定義：下逆&#x2F;弱逆給定一個對應 $\phi:S\Rightarrow X$，定義其下逆為 $\phi^{l}$ 為對於任何 $A\subset X$，$\phi^{l}(A)&#x3D;\left{s\in S:\phi(s)\cap A\neq\emptyset\right}$。
+定義：弱可測對應一個對應 $\phi:S\Rightarrow X$，如果對於任何開集 $G\subset X$，其弱逆 $\phi^{l}$ 是可測的即 $\phi ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/p/2b881b2d.html" title="不求甚解學經濟-一些簡單的單調比較靜態分析"><img class="post_bg" src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不求甚解學經濟-一些簡單的單調比較靜態分析"></a></div><div class="recent-post-info"><a class="article-title" href="/p/2b881b2d.html" title="不求甚解學經濟-一些簡單的單調比較靜態分析">不求甚解學經濟-一些簡單的單調比較靜態分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2021-08-31T16:06:33.000Z" title="發表於 2021-09-01 00:06:33">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">一些簡單的單調比較靜態分析
+
+
+某些預備知識可參見不動點定理（六）塔斯基不動點定理 Tarski’s Fixed Point Theorem 及其他
+例如：
+Def 強集序給定格 $(X,\geq_{\text{for elements}})$ ，對於任何子集 $A,B\subset X$，定義強集序 $\geq_{\text{for sets}}$ 為
+$$A\geq_{\text{for sets}} B\text{ iff } (\forall x\in A,y\in B)[y\geq_{\text{for elements}} x\Rightarrow (x\in B)\text{ and }(y\in A) ]$$
+此處關於序關係的下標是爲了明確表明是應用於元素還是集合，但通過語境可以做出此種區分，因此後文將不再明確寫出。
+對於來自於同一個格的兩個子集來説，一個子集“大”與另一個子集等價於任選一對元素，其中更“大”的元素來自更“大”的集合，更“小”的元素來自更“小”的集合。
+但這并不意味著，從更“大”的集合中任選一個元素，從更“小”的集合中任選一個元素，前一個元素一定“大於” ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由，學術即反抗，事實即顛覆</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/undefined.html" title="Hello World"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/p/undefined.html" title="Hello World">Hello World</a><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/6da8d1b9.html" title="塔西佗陷阱"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"/></a><div class="content"><a class="title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca8d8b6.html" title="城市成本"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"/></a><div class="content"><a class="title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f9a7.html" title="經濟學隨想"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"/></a><div class="content"><a class="title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f8b6.html" title="收藏夾"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"/></a><div class="content"><a class="title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分類</span>
+            <a class="card-more-btn" href="/categories/" title="檢視更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%A6%E7%BB%8F%E6%B5%8E/"><span class="card-category-list-name">不求甚解学经济</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/"><span class="card-category-list-name">不求甚解學經濟</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/"><span class="card-category-list-name">信息設計</span><span class="card-category-list-count">16</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B8%E7%90%86%E7%B6%93%E6%BF%9F%E5%AD%B8/"><span class="card-category-list-name">數理經濟學</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E6%84%9F/"><span class="card-category-list-name">杂感</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%8F%BE%E5%AF%A6%E9%97%9C%E6%B3%A8/"><span class="card-category-list-name">現實關注</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BF%BB%E8%AF%91/"><span class="card-category-list-name">翻译</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>歸檔</span><a class="card-more-btn" href="/archives/" title="檢視更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章數目 :</div><div class="item-count">44</div></div><div class="webinfo-item"><div class="item-name">本站訪客數 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站總訪問量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最後更新時間 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-09-30T01:55:18.094Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>經濟學隨想 | 不求甚解學經濟</title><meta name="keywords" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="這裏是一些經濟學隨想。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="經濟學隨想">
+<meta property="og:url" content="https://brandonsli.com/p/8ca4f9a7.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="這裏是一些經濟學隨想。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2022-01-23T16:37:12.000Z">
+<meta property="article:modified_time" content="2022-06-08T07:34:19.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/8ca4f9a7"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '經濟學隨想',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-08 15:34:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">經濟學隨想</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-06-08T07:34:19.000Z" title="更新於 2022-06-08 15:34:19">2022-06-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="經濟學隨想"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>這裏是一些經濟學隨想。</p>
+<span id="more"></span>
+
+<h2 id="概念釐清"><a href="#概念釐清" class="headerlink" title="概念釐清"></a>概念釐清</h2><h3 id="腐敗"><a href="#腐敗" class="headerlink" title="腐敗"></a>腐敗</h3><p>以政治權力壟斷關鍵性行業 (例如電力、通信等) 也是一種腐敗。</p>
+<h3 id="規定-x2F-約定"><a href="#規定-x2F-約定" class="headerlink" title="規定&#x2F;約定"></a>規定&#x2F;約定</h3><p>“規定”是不值得遵守的，因爲它是强權者單方面命令的。就算遵守了規定，也可能是出於無奈；如果不遵守規定，也未必是什麽可恥的行爲；</p>
+<p>“約定”是值得遵守的，因爲它是相關各方彼此之間做出的承諾。在理論上，法律應該屬於約定&#x2F;契約的一種，而非屬於規定。</p>
+<h3 id="不配合"><a href="#不配合" class="headerlink" title="不配合"></a>不配合</h3><p>与上一條有相同之處。在指責別人不配合&#x2F;不遵守規定之前，先要想一想，爲什麽對方不願意配合&#x2F;不願意遵守約定。</p>
+<p>爲什麽地方政府要隱瞞？如果地方政府如實匯報了會怎麽樣？</p>
+<p>爲什麽人們不願意被帶走隔離&#x2F;隱瞞行程？如果被帶走隔離了會怎麽樣？</p>
+<p>爲什麽不願意配合呢？他們在規則或約定的指定中有發言權嗎？對於自己并未直接或間接參與制定的約定，他有義務遵守嗎？</p>
+<h3 id="憲法"><a href="#憲法" class="headerlink" title="憲法"></a>憲法</h3><p>憲法是一種約定&#x2F;契約。憲法是制定<strong>公權力不能做什麽</strong>的，憲法是<strong>保護個人</strong>的。</p>
+<p>個人不存在“違反憲法”、“不尊重憲法”的可能，這是根據定義就不可能存在的。</p>
+<p>潛在地具有“違反憲法”、“不尊重憲法”的可能性的只有公權力。</p>
+<h3 id="說真話"><a href="#說真話" class="headerlink" title="說真話"></a>說真話</h3><p>需要强調的是“說真心話”，發乎真心；而不是“說真話”。真心話僅關乎是否發乎真心，可以允許受信息、知識或個人思維方式的限制所導致的言語與事實不符，也可以避免歪打正着地說違心話卻與事實相符。</p>
+<h3 id="關注現實"><a href="#關注現實" class="headerlink" title="關注現實"></a>關注現實</h3><p>以可靠性存疑的數據為原材料、以掌握程度不純熟的方法為工具、回避關鍵性問題並重複政治强權者的話語來做出的經濟學論文，稱不上對理解現實有所幫助。</p>
+<h3 id="洗腦"><a href="#洗腦" class="headerlink" title="洗腦"></a>洗腦</h3><p>洗腦也應包括：阻止人形成批判性的思維方式、獲取信息的意願、深入思考的能力和意願等。新一代的少年人中很多已經成爲了僵尸。</p>
+<p>失去上述意願的表現例如對真相、事實與真心話的不屑、不在乎甚至虛無。如果是不屑，那麽起碼被洗腦者還是知道有真相存在的，但如果是虛無的態度，那麽洗腦者已經完全地犬儒化的，根本不相信有真相的存在。價值也是同理：被洗腦到了不相信公平、正義、自由、尊嚴等等的地步。有的被洗腦者還會主動地為洗腦者辯護，這時，結合上不相信真相與價值的態度，就很容易造成普遍地“對人不對事”：同一件事，我們做就是正當的、“敵人”(往往是假想敵，有時在洗腦者與被洗腦者的共同努力下會將假想敵逼迫成真敵人)做就是邪惡的。</p>
+<p>洗腦者也會製造讓被洗腦者“習得性無助”的系統。被洗腦者已經完全絕望，覺得做什麽、説什麽都沒用，放棄嘗試、放棄掙扎(這也是爲什麽“叛出家鄉須趁早”)。被洗腦者會主動放棄獲取信息、對不同的聲音回以類似本能的恐懼與仇恨。</p>
+<p>這是一項極大的罪惡。</p>
+<h3 id="COVID-19期間的語言污染"><a href="#COVID-19期間的語言污染" class="headerlink" title="COVID-19期間的語言污染"></a>COVID-19期間的語言污染</h3><p>“境外輸入”：以模糊疫情在中國武漢起源的事實、篡改公共記憶。</p>
+<p>“請您配合”、“積極配合&#x2F;響應”、“感謝您的配合”、“請您體諒”：能選擇配合、也能選擇不配合的時候，選擇了配合，才算作配合。這只是<strong>强制</strong>或<strong>命令</strong>的其他説法而已，但已經對“配合”、“體諒”等詞匯造成了污染。</p>
+<p>“拒絕外賣不饞嘴”：疫情封校期間不允許外賣進校園(據悉民宅小區沒有這種限制)，但卻説成讓學生們“拒絕外賣不饞嘴”。與前例同理，能拒絕、也能不拒絕的時候，選擇了拒絕，才算作拒絕。沒得選不叫拒絕，同樣，沒得選也不叫被選中了(“是歷史和人民選擇了中共”這類説法是後一種語言污染的例子)。</p>
+<p>“志願者”、“志願軍”：被强行要求去做某事，那麽被迫做這件事的人就不能被叫做“志願者”。韓戰中的中共軍隊同理。</p>
+<p>“躺平”：正常國家研發mRNA等有效疫苗、開發特效藥、給一般民衆或者收入無保障群體、兒童發錢，你管這叫躺平？</p>
+<h2 id="理解中國"><a href="#理解中國" class="headerlink" title="理解中國"></a>理解中國</h2><p>散人對中國掌權者的行事模式有過這樣的描述：</p>
+<ul>
+<li>管殺不管埋</li>
+<li>新規追既往</li>
+<li>説話不算話</li>
+</ul>
+<p>例如：封城可以先封了再説，你們餓著就餓著，有病看不了就看不了，管毬你們；新出的規定卻追究過去的行爲(這是不合法的，即使它本身是法)；說封兩周就封兩個月。等等。</p>
+<p>沒有事先囤菜的人不該被指責。因爲在這種權力體制下，會發生什麽是不可預期的。就算你碰巧囤了菜，沒在這個問題上受委屈，還會在其他很多方面受委屈。做培訓的人該被指責入錯了行嗎？政策的不確定性是系統性的，災害也基本是政策性的。</p>
+<h2 id="中國經濟學"><a href="#中國經濟學" class="headerlink" title="中國經濟學"></a>中國經濟學</h2><p>這裏的“中國經濟學”是一種嘲諷用法，用以嘲諷那些將明明是普世的經濟學原理稱爲“西方經濟學”並强調應有“中國特色”的言論。</p>
+<ol>
+<li>“民貧則力富”；“農有餘食，則薄燕於歲”<br>—《商君書·弱民》</li>
+</ol>
+<p>即勞動力供給的收入效應。若農有餘食，則居民將會逐漸更重視閑暇。</p>
+<ol start="2">
+<li>“利出一孔”<br>—《管子‧國蓄》、《商君書·弱民》</li>
+</ol>
+<p>同理還有鹽的官營。那些需求的價格彈性較低的必需品或者基礎設施，是最能盈利的，所以要由政府或者政治利益集團來掌控。儘管可能會被冠以不同的名義：“關係國計民生”、“國防安全”、“反壟斷”、“反資本無序擴張”等等。</p>
+<ol start="3">
+<li><p>農業稅的削減或廢除是因爲農業已經不再是經濟中的主要部分，相應地，流轉稅讓人避無可避。</p>
+</li>
+<li><p>“是故明君制民之產，必使仰足以事父母，俯足以畜妻子，樂歲終身飽，凶年免於死亡。然後驅而之善，故民之從之也輕。今也制民之產，仰不足以事父母，俯不足以畜妻子，樂歲終身苦，凶年不免於死亡。此惟救死而恐不贍，奚暇治禮義哉？”<br>—《孟子·梁惠王上》</p>
+</li>
+</ol>
+<p>社會福利思想。</p>
+<ol start="5">
+<li>“無恆產而有恆心者，惟士為能。若民，則無恆產，因無恆心。”<br>—《孟子·梁惠王上》</li>
+</ol>
+<p>士(反動學術權威、臭老九、臭公知等)的“恆心”是由内在偏好驅動的。</p>
+<p>民的“恆心”是需求的收入彈性大於1的產品。聯想 Kongsamut, Rebelo and Xie (2001) 的結構轉型理論中使用的 Stone-Geary 非位似效用函數，只有滿足了“恆產”這一固定投入的要求，才會有“恆心”。</p>
+<ol start="6">
+<li>“橘生淮南則為橘，生於淮北則為枳，葉徒相似，其實味不同。所以然者何？水土異也。今民生於齊不盜，入楚則盜，得無楚之水土使民善盜耶？”<br>—《晏子春秋·雜下之十》</li>
+</ol>
+<p>人性是相通的，但人會對激勵做出反應。</p>
+<p>(“叛出家鄉要趁早”：如果已經由於長時間生活在不健康的社會環境中，因爲自覺或不自覺地對“懲善揚惡”的激勵機制做出反應，而養成了下意識的思考與行爲模式，那麽即使後面有機會換到健康的社會環境中，也無法順利地變回本該長成的正常人)</p>
+<ol start="7">
+<li>“邦有道，貧且賤焉，恥也；邦無道，富且貴焉，恥也。”<br>—《論語·泰伯》</li>
+</ol>
+<p>競爭機制是中性的。競爭機制的勝出者是最適應這個給定的競爭的，無論是“優勝劣汰”還是“劣勝優汰”。</p>
+<p>如果機制是鼓勵“投機取巧、不擇手段、損人利己”的，那麽在這個機制下的勝出者就會是那些做出在道德上可恥的行爲的人；</p>
+<p>如果機制是鼓勵“耐心者有好報、與人爲善”的，那麽在這個機制下被淘汰的人就會是那些并未做出在道德上令人尊敬的行爲的人。(此處邏輯我還沒理清楚，好像有些問題)</p>
+<p>舉個例子，什麽樣的機制是懲罰耐心而鼓勵投機取巧的呢？具有潛在的被沒收風險，説不定哪天就“被偷稅漏稅”、被沒收、“被非法集資”了；做基礎研究的人，需要有“板凳要坐十年冷”的覺悟、而不是有完善的保障使其不必坐冷板凳；願意為日後發展打下堅實基礎的人，既無法接觸到能為自己打下堅實基礎的資源、又會在評優評先的競賽中出局，還會招致別人的冷嘲熱諷；一個具有集權或極權的、不尊重自由、不保護產權的非民主政治制度的國家，搭配上一個愛亂揮“王霸拳”，<strong>内耗内行、專業外行</strong>的“領導人”；使得願意專注於產品的企業家成爲“行業冥燈”的市場體系……等等。</p>
+<ol start="8">
+<li>“靜其民而不擾，佚其民而不勞；不擾，則民自循；不勞，則民自試，故曰：「上無事而民自試。」”<br>—《管子·形勢解》</li>
+</ol>
+<p>別瞎極霸折騰，別一頓王霸拳亂揮。當權者只要把綁繩鬆開一點，老百姓會活得很好；當權者如果不給縛上綁繩(那可能這裏的當權者就與前一句裏的性質不同了，所以相應地，我把“老百姓”一詞換成了“民衆”，或者説“公民們”)，那民衆會活得非常好。</p>
+<p>民衆的自組織力量才是王道；建基於民衆的自組織之上的民族，才是行的“王道”而不再是“霸道”。</p>
+<ol start="9">
+<li>“刑不可知，則威不可測”<br>—《春秋左傳正義》</li>
+</ol>
+<p>Obfuscation。</p>
+<h2 id="瞎聊"><a href="#瞎聊" class="headerlink" title="瞎聊"></a>瞎聊</h2><h3 id="權錢結合"><a href="#權錢結合" class="headerlink" title="權錢結合"></a>權錢結合</h3><p>權錢結合可以有兩種方式：通過權力獲得金錢、通過金錢獲得權力。二者對經濟的含義是不同的：對於前者來説，不能過於保護財產權，至少需要通過權力才能保護財產權，否則便無法利用權力來掠奪他人的資源；對於後者來説，其獲得權力后更有可能會保護財產權，因爲這是他本身的利益。</p>
+<h3 id="動態無效率-儲蓄過多"><a href="#動態無效率-儲蓄過多" class="headerlink" title="動態無效率(儲蓄過多)"></a>動態無效率(儲蓄過多)</h3><p>拉姆齊模型不存在動態無效率(儲蓄過多)<strong>是我們假設來的</strong>，而<strong>不是因爲儲蓄率是内生的</strong>。根據假設，拉姆齊模型中需要存在動態一般均衡，因此必須有 $\rho&gt;n$ 成立(否則用來貼現終生收入的利率將低於工資增長率、終生收入及消費需求將趨向於無窮)，而是恰恰是不存在動態無效率的要求。但在世代交曡模型中，無論 $\rho&gt;n$ 還是 $\rho\leq n$ 與動態一般均衡的存在性均不矛盾，因此有可能存在動態無效率，永葆青春模型同理。</p>
+<h3 id="期望效用函數"><a href="#期望效用函數" class="headerlink" title="期望效用函數"></a>期望效用函數</h3><p>vNM效用函數：給定我們已經觀察到的某個決策者的行爲，施加關於偏好的某些識別假設，可以構建出(推測出、顯示出)決策者對結果的偏好(而這是在現實生活中觀測不到的)，并且用來刻畫這種背後偏好的伯努利效用函數是基數的(在正綫性變換下保持性質：不受更改原點和度量單位的影響)，同時滿足，伯努利效用函數以狀態的概率作爲權重的加權平均就是期望效用函數(而期望效用函數是序數的，即在任何單調正變換下均保持性質)。即使某個效用函數看起來可能不是綫性的(比如以概率為冪次的Cobb-Douglas函數)，但由於它是序數的從而在經過單調正變換后(在這個例子裏是對數變換)依然可以成爲關於概率和伯努利效用函數為綫性的期望效用函數。在理論設定上，對結果的偏好是基礎，對行爲的偏好是引致的；在現實中，只能觀察到決策者的行爲，不能直接觀察到決策者的偏好。伯努利效用函數未必是綫性的，但期望效用函數是綫性的。伯努利效用函數：基數，關於結果；期望效用函數：序數，關於行爲。</p>
+<p>因爲期望效用函數是綫性的，所以至少對於博弈論、拍賣理論、機制設計、信息設計等微觀理論來説，綫性規劃都是有用的。</p>
+<h3 id="内耗"><a href="#内耗" class="headerlink" title="内耗"></a>内耗</h3><p>人爲製造本不需要的門檻，其中掌握了跨門檻技巧的人便有了“優勢”。但如果從效率考慮，這些門檻本來是不該存在的。在中國社會裏的許多“心眼兒”、“門道”、“説道”、“社會經驗”、“話術”等等都是這種性質。在一個正常社會裏，這些門檻的存在不應如此汎濫，至少在平常的人際交往(而非商業、政治等特定領域)中無需如此廣汎的“言外之意”、“弦外之音”，在日常交易中無需如此廣汎地“警惕刷讚”、“學會看追評”、“不敢寫差評，否則商家會持續電話騷擾&#x2F;騎手上門威脅”等等。</p>
+<p>例如：爲什麽在58同城上尋找房源時，明明已經標注了租金價格，仍然需要潛在房客去“有經驗地”私聊問一句“真實房租是多少？”，如果不問，則常常在看房時，中介才會告知與頁面標注不同的真實租金價格。如果需要面議，那麽頁面價格標注的意義何在？這就是一例人爲製造的障礙。</p>
+<h3 id="發聲"><a href="#發聲" class="headerlink" title="發聲"></a>發聲</h3><p>千萬別説“你以爲就你聰明，別人心裏都明白、就是不説，你還是太單純、太簡單”之類的話。</p>
+<p>首先，不能影響行爲的信息就不能算作有效的信息(學術圈裏：沒有發表論文就不算有知識)。如果你不發聲(其實無論是説話還是在網路上發言，都是“行動”的一種)、不行動，那麽你跟心裏糊塗沒有任何區別。或許你會説，雖然我不行動，但因爲我心裏明白所以我規避了很多風險，也可以在未來不掉到坑裏。但其實你沒有搞清楚，“我規避了很多風險，也可以在未來不掉到坑裏”這已經是“信息改變了行動”的一個體現，你已經行動了。</p>
+<p>其次，出於無奈，例如爲了保護家人、爲了避免被喝茶給家人和自己造成的不便等等，而選擇自保，這是可以被體諒和理解的，也沒有人會嘲笑你。但你應該心裏知道，這是出於無奈的，這是不對的，這不是什麽光榮、什麽值得炫耀的事情，如果別人沒有像你一樣做出那些出於無奈的行動，你也沒有什麽可嘲笑他們“簡單、單純、傻”之類的理由。沒有勇氣的人去嘲笑有勇氣的人，這是很荒唐的事情。老羅曾經講過一個關於盜版軟件的段子，你是窮學生，用盜版軟件沒人會笑話你，但你心裏要知道這是不對的，將來有錢了還是要用正版軟件，但你去嘲笑別人花錢買正版軟件的，這就不對了。</p>
+<p>最後，如果你確實出於無奈，而不能發聲，那就保持沉默吧。別去為强權當傳聲筒、別去歌頌。你出於無奈保持沉默，沒人會笑話你；但如果你明明心裏明白，但去為强權當傳聲筒、去歌頌，那你就是坏了。</p>
+<h3 id="社會達爾文主義"><a href="#社會達爾文主義" class="headerlink" title="社會達爾文主義"></a>社會達爾文主義</h3><p>往往有人會誤以爲經濟學者是尊崇“優勝劣汰”的社會達爾文主義者，但事實未必。</p>
+<p><strong>理性人是對激勵做出反應，如果激勵機制是“懲惡揚善、優勝劣汰”那麽勝出者就會是善者、優者；如果激勵機制是“懲善揚惡、劣勝優汰”，那麽勝出者就會是惡者、劣者。</strong></p>
+<p>理性人的反應是<strong>中性</strong>的，理性人對激勵機制的反應不會因爲激勵機制是“向進化引導”還是“向退化引導”而有所不同，如果有所不同，那只能是你沒把模型建立得完整，比如，理性人的偏好裏可能還包括道德、公正等價值但你在現有模型中把這些該考慮進去的東西遺漏了。</p>
+<p>所以重點是怎麽設計或改進(如果你持有非設計的演化觀點，那麽就不是“設計”而是“引導”)激勵機制，使得激勵機制能夠獎勵那些符合我們所重視的價值的行爲、懲罰那些我們所不認同的行爲。</p>
+<p>如果現有的激勵機制使得“好人沒好報”、“不貪混不下去”、大家都圖眼前利益做些短平快的事情而不去做需要耗時耗力還有很大不確定性的投資，那麽改變之著力點應該在修正激勵機制，而不是空喊世風日下、人心不古。</p>
+<p>理性人“會對激勵機制做出反應”這件事是<strong>中性</strong>的，這件事也是<strong>人性是相通的</strong>這句論斷的一個體現。<strong>人性相通，但激勵機制不同</strong>。在人類社會中，如果你<strong>不承認激勵機制</strong>(或者説體制、制度)<strong>有問題</strong>，那麽你就等於在<strong>說生活在這個激勵機制之下的人有問題</strong>，激勵機制是可以改的，但想要改造人就沒那麽容易了。知道了這一點，再想想，相比於因爲批評制度有問題而被汙名化的公共知識分子，跟不承認制度有問題(從而相等於說人種有問題)的小粉紅，<strong>到底是誰在辱華？</strong></p>
+<h2 id="反洗腦"><a href="#反洗腦" class="headerlink" title="反洗腦"></a>反洗腦</h2><h3 id="使用能反應實際情形的詞匯"><a href="#使用能反應實際情形的詞匯" class="headerlink" title="使用能反應實際情形的詞匯"></a>使用能反應實際情形的詞匯</h3><p>封城就是封城，不是什麽“全域靜態管理”。</p>
+<h3 id="留神自己的用詞、表述方式和思維習慣"><a href="#留神自己的用詞、表述方式和思維習慣" class="headerlink" title="留神自己的用詞、表述方式和思維習慣"></a>留神自己的用詞、表述方式和思維習慣</h3><p>擺脫“事情要分兩方面”、“辯證地看問題”等句式；<br>慎用“評價”、“打倒”、“平反”等詞匯。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://brandonsli.com">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/8ca4f9a7.html">https://brandonsli.com/p/8ca4f9a7.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/8ca8d8b6.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">城市成本</div></div></a></div><div class="next-post pull-right"><a href="/p/8ca4f8b6.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">收藏夾</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由，學術即反抗，事實即顛覆</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E9%87%90%E6%B8%85"><span class="toc-number">1.</span> <span class="toc-text">概念釐清</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%85%90%E6%95%97"><span class="toc-number">1.1.</span> <span class="toc-text">腐敗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%8F%E5%AE%9A-x2F-%E7%B4%84%E5%AE%9A"><span class="toc-number">1.2.</span> <span class="toc-text">規定&#x2F;約定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%85%8D%E5%90%88"><span class="toc-number">1.3.</span> <span class="toc-text">不配合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%86%B2%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">憲法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AA%AA%E7%9C%9F%E8%A9%B1"><span class="toc-number">1.5.</span> <span class="toc-text">說真話</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%9C%E6%B3%A8%E7%8F%BE%E5%AF%A6"><span class="toc-number">1.6.</span> <span class="toc-text">關注現實</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%97%E8%85%A6"><span class="toc-number">1.7.</span> <span class="toc-text">洗腦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COVID-19%E6%9C%9F%E9%96%93%E7%9A%84%E8%AA%9E%E8%A8%80%E6%B1%A1%E6%9F%93"><span class="toc-number">1.8.</span> <span class="toc-text">COVID-19期間的語言污染</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E4%B8%AD%E5%9C%8B"><span class="toc-number">2.</span> <span class="toc-text">理解中國</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%9C%8B%E7%B6%93%E6%BF%9F%E5%AD%B8"><span class="toc-number">3.</span> <span class="toc-text">中國經濟學</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9E%8E%E8%81%8A"><span class="toc-number">4.</span> <span class="toc-text">瞎聊</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%8A%E9%8C%A2%E7%B5%90%E5%90%88"><span class="toc-number">4.1.</span> <span class="toc-text">權錢結合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%84%A1%E6%95%88%E7%8E%87-%E5%84%B2%E8%93%84%E9%81%8E%E5%A4%9A"><span class="toc-number">4.2.</span> <span class="toc-text">動態無效率(儲蓄過多)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E6%9C%9B%E6%95%88%E7%94%A8%E5%87%BD%E6%95%B8"><span class="toc-number">4.3.</span> <span class="toc-text">期望效用函數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%80%97"><span class="toc-number">4.4.</span> <span class="toc-text">内耗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BC%E8%81%B2"><span class="toc-number">4.5.</span> <span class="toc-text">發聲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E6%9C%83%E9%81%94%E7%88%BE%E6%96%87%E4%B8%BB%E7%BE%A9"><span class="toc-number">4.6.</span> <span class="toc-text">社會達爾文主義</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E6%B4%97%E8%85%A6"><span class="toc-number">5.</span> <span class="toc-text">反洗腦</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%83%BD%E5%8F%8D%E6%87%89%E5%AF%A6%E9%9A%9B%E6%83%85%E5%BD%A2%E7%9A%84%E8%A9%9E%E5%8C%AF"><span class="toc-number">5.1.</span> <span class="toc-text">使用能反應實際情形的詞匯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%99%E7%A5%9E%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%A8%E8%A9%9E%E3%80%81%E8%A1%A8%E8%BF%B0%E6%96%B9%E5%BC%8F%E5%92%8C%E6%80%9D%E7%B6%AD%E7%BF%92%E6%85%A3"><span class="toc-number">5.2.</span> <span class="toc-text">留神自己的用詞、表述方式和思維習慣</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/undefined.html" title="Hello World"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/p/undefined.html" title="Hello World">Hello World</a><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/6da8d1b9.html" title="塔西佗陷阱"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"/></a><div class="content"><a class="title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca8d8b6.html" title="城市成本"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"/></a><div class="content"><a class="title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f9a7.html" title="經濟學隨想"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"/></a><div class="content"><a class="title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f8b6.html" title="收藏夾"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"/></a><div class="content"><a class="title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

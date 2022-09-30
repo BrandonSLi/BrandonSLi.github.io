@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>不求甚解學經濟-信息設計(五)-靜態問題的動態實施 | 不求甚解學經濟</title><meta name="keywords" content="信息設計,貝葉斯勸說,Information Design,Bayesian Persuasion,貝葉斯說服,博弈論,Game Theory,Mechanism Design"><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Sequential Information Design 這篇文章提出了適用於將靜態目標以動態博弈實施的相關均衡概念：Coordinated Equilibrium。這篇文章是建立在 Salcedo (2017) 基礎上的拓展，Salcedo (2017) 研究了，在完備信息情形下，給定基本博弈，不論採取何種拓展形(例如哪個參與人先行動等)，我們能對均衡結果做出何種穩健的預測，並且給定某個均衡結">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不求甚解學經濟-信息設計(五)-靜態問題的動態實施">
+<meta property="og:url" content="https://brandonsli.com/p/9a743s09.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:description" content="Sequential Information Design 這篇文章提出了適用於將靜態目標以動態博弈實施的相關均衡概念：Coordinated Equilibrium。這篇文章是建立在 Salcedo (2017) 基礎上的拓展，Salcedo (2017) 研究了，在完備信息情形下，給定基本博弈，不論採取何種拓展形(例如哪個參與人先行動等)，我們能對均衡結果做出何種穩健的預測，並且給定某個均衡結">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/index2.jpg">
+<meta property="article:published_time" content="2021-04-02T09:34:33.000Z">
+<meta property="article:modified_time" content="2021-08-09T13:58:23.000Z">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brandonsli.com/img/index2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/9a743s09"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟-信息設計(五)-靜態問題的動態實施',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-09 21:58:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-信息設計(五)-靜態問題的動態實施</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2021-04-02T09:34:33.000Z" title="發表於 2021-04-02 17:34:33">2021-04-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-09T13:58:23.000Z" title="更新於 2021-08-09 21:58:23">2021-08-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-信息設計(五)-靜態問題的動態實施"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Sequential Information Design</p>
+<p>這篇文章提出了適用於將靜態目標以動態博弈實施的相關均衡概念：Coordinated Equilibrium。這篇文章是建立在 Salcedo (2017) 基礎上的拓展，Salcedo (2017) 研究了，在完備信息情形下，給定基本博弈，不論採取何種拓展形(例如哪個參與人先行動等)，我們能對均衡結果做出何種穩健的預測，並且給定某個均衡結果，如何構建某個(未必唯一的)拓展形來實現這個均衡結果。在這篇SID中，Ely和Doval考察了，當信息結構和拓展形同時可變、並且信息結構與拓展形的變動有一緻性時，我們能對均衡結果做出何種穩健的預測，並且給定某個均衡結果，如果構建某個拓展形和與之一緻的信息結構來實現這個均衡結果。(根據 Myerson (1986) ，在不完備信息情形下，信息的傳遞應與博弈形式具有一緻性，例如從前知道的現在仍然知道、在整個博弈開始前的免洗信息傳遞不足以實現每一期都有新信息傳遞所能實現的結果從而策略式不足以分析多階段問題等等。)</p>
+<p>在這篇文章的處理下，拓展式的設計是和信息結構的設計整合在一起的。如果不要求將拓展式的設計和信息結構整合在一起，那麼可以特設一個信息結構，並且其解讀要符合“一次就完”的限製性，比如目前已經有將信息設計整合進DSGE模型來研究財政政策和貨幣政策的文章，由於動態隨機一般均衡所要求的更多設定，以及信息設計問題的複雜性，尚未出現能將拓展式(哪怕隻是多階段式)的設計整合進動態隨機一般均衡框架的文章。</p>
+<p>但目前這篇文章的處理也具有一定的限製性。在當前框架下，盡管博弈的進行過程是動態的，但從對目標的實施意義上來看，仍然是一個靜態的問題：有一個固定的目標，有一個盡管不確定但一旦揭曉就不會在博弈的動態進行過程中改變的世界狀態，博弈隻進行一次就結束。因此，對於那種要求將世界狀態設定為狀態變數、在每一期因行為人的行動而改變的問題是無法處理的，這也是難以將信息設計整合於總量經濟學框架的一個原因，對於這一問題，在 Information design in multi-stage games (2021) 一文中也有所論述，據稱在該文中可以處理世界狀態因參與人行為而改變的動態問題，但目前我還冇仔細研讀那篇論文，如果有必要的話後麵也會再記對那篇論文的閱讀筆記。</p>
+<p>因此，這篇論文的“動態”隻體現在博弈展開過程上，也可稱為“固定狀態情形”。即，盡管世界狀態是不確定的，但並不會在博弈過程中改變。如果我們把這個“信息結構與博弈展開式”的結合視爲一個 (廣義) 機制，那麽這篇論文考察的是如何通過一個“動態機制”來實施給定的目標，卻并不是考察的動態問題。</p>
+<span id="more"></span>
+
+<h2 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h2><p>$N$個參與人，每個參與人$i$的有限行動集$A_{i}$。其效用$u_{i}(a,\theta)$既依賴於大家的行動組合$a\in\times_{i}A_{i}$，也依賴於真實的世界狀態$\theta$，$\theta\in\Theta$，$\Theta$為有限集。可以指定也可以不指定在$\Theta$上的某個共同先驗$\rho$。</p>
+<p>定義1. 計畫。一個計劃是一個樹，其中每個節點都屬於某個參與人$i$，並以$i$的某個行動$a_{i}\in A_{i}$為標識。在屬於$i$的每個節點處，對於其每個行動$a_{i}\in A_{i}$都有且僅有一個枝杈，並且在樹上的每條路徑都隻通過對於$i$的唯一節點。</p>
+<p>解讀：這意味著在計劃中，每個參與人都會行動，並且僅會行動一次。相當於將每個參與人的行動拚接起來。雖然對於每個參與人每個可能的行動節點，都需要指定一個行動，但事實上實現的從初始節點貫通到某個終結節點的是唯一一條路徑。</p>
+<p>將計劃$p$放在一起組成集合$P$。本文用計劃來代錶相機的行動建議組合，即，計劃的每個組成部分都是，告訴各個參與人，在每種需要該參與人行動的可能節點上，建議他採取哪個行動，但每個參與人都隻能觀察到這個計劃$p$中與自己有關的部分，而無法觀察到整個$p$。</p>
+<p>如果每個參與人都按照計劃的建議來行動，那麼這時候形成的從初始節點貫通到終結節點的路徑就稱為遵從路徑。</p>
+<p>具體地，記$[a_{i}]$為那些計劃們的集合，這些計劃的共同之處在於告訴了參與人$i$在這個時候輪到他來行動，並且推薦了參與人$i$採取行動$a_{i}$。參與人$i$隻能知道這個建議來自某個$p\in[a_{i}]$，但無法確定是哪個$p$。</p>
+<hr>
+<p>動態博弈的拓展式錶達是更具有一般性的，其中有一類較有限製性的是多階段博弈：有明確的時間安排，並且通常在每一步都可以觀察到上一步別人都做了什麼。多階段博弈比更具一般性的拓展式博弈更適合宏觀建模。</p>
+<hr>
+<h2 id="協調均衡"><a href="#協調均衡" class="headerlink" title="協調均衡"></a>協調均衡</h2><p>定義2. 協調均衡。在世界狀態與計劃集合上一個的聯合分佈$\pi\in\Delta(\Theta\times P)$，如果對於每個參與人$i$及其可能行動$a_{i},b_{i}\in A_{i}$來說，如下遵從約束得到滿足，那麼這個$\pi$就是一個協調均衡：</p>
+<p>$$\sum_{\theta\in\Theta,p\in[a_{i}]}\pi(\theta,p)[u_{i}(a_{i},p,\theta)-u_{i}(b_{i},p,\theta)]\geq 0$$</p>
+<p>其中$u_{i}(a_{i},p,\theta)$錶示各參與人接收到了$p$中對應於他自己的那部分建議$a_{i}$，並且真實狀態為$\theta$，而參與人$i$按照計劃$p$來行動時的事後效用；</p>
+<p>那麼$u_{i}(b_{i},p,\theta)$錶示各參與人接收到了$p$中對應於他自己的那部分建議$a_{i}$，並且真實狀態為$\theta$，而參與人$i$採取行動$b_{i}\in A_{i}$時的事後效用；</p>
+<p>二者之差，並以聯合機率$\pi(\theta,p)$進行加總，所得到的便是期望效用之差，因此這個條件錶示遵照建議能夠得到最大的期望效用(盡管並不一定唯一)。</p>
+<p>當存在某個共同先驗(但不必如此)$\rho\in\Delta(\Theta)$時，如果$\sum_{p\in[a_{i}]}\pi(\theta,p)&#x3D;\rho(\theta)$，那麼就稱這個$\pi$是與$\rho$相一緻的。</p>
+<p>給定世界狀態$\Theta$與聯合分佈$\pi\in\Delta(\Theta,p)$之間的對應關係，給定某個計劃(建議組合)$p$，如果對於每個參與人來說，按照$p$中對應於他的部分來行動滿足其遵從約束，那麼這時$p$會引緻一個在世界狀態與行動組合上的聯合分佈，我們稱這個$\alpha\in\Delta(\Theta\times A)$為一個結果。如果使用的聯合分佈$\pi$是一個協調均衡，那麼這樣得到的$\alpha$就是一個協調均衡結果。</p>
+<p>給定一個基本博弈$G&#x3D;(N,{A_{i}}<em>{i},\Theta,{u</em>{i}}<em>{i})$(或者$G&#x3D;(N,{A</em>{i}}<em>{i},\Theta,{u</em>{i}}<em>{i},\rho)$)，當我們將計劃的展開做為這個基本博弈的拓展式框架，並且附上某個$\pi$以及根據$p$而生成的信息集(參與人$i$隻能知道這個建議來自某個$p\in[a</em>{i}]$)，那麼這時得到的這個(依賴於特定$\pi$的)拓展式博弈可以記為$\Gamma(\pi)$，其時間線為：設計者承諾某個$P$和$\pi$，自然根據某個$\pi$生成$(\theta,p)$，然後博弈按照$p$進行。給定某個特定的拓展式博弈$\Gamma(\pi)$，每個參與人的遵從策略就是，在由$p$生成的信息集上，按照建議組合$p$中對應於他的那部分建議$a_{i}$來行動。如果$\pi$是基本博弈的一個協調均衡，那麼每個參與人都採用遵從策略就是其相應的拓展式博弈$\Gamma(\pi)$上的一個貝葉斯納什均衡。</p>
+<p>當$\pi$變動時，我們就得到了基本博弈$G$的標準拓展形。</p>
+<p>定理1. 如果$\pi$是一個協調均衡，且其協調均衡結果為$\alpha$，那麼在對應於這個協調均衡的拓展式博弈$\Gamma(\pi)$上，每個參與人採取遵從策略就構成了一個貝葉斯納什均衡，並且引緻的結果就是$\alpha$。</p>
+<h3 id="自存的協調均衡"><a href="#自存的協調均衡" class="headerlink" title="自存的協調均衡"></a>自存的協調均衡</h3><p>定義3. 考慮一個具有完美回憶的有限動態拓展式博弈。如果對於每個參與人 $i$ 來說，給定 $\sigma_{-i}$ 那些能夠到達的信息集在 $\sigma$ 下都確實到達了，那麼這個 $\sigma$ 就被稱為一個自存的協調均衡。</p>
+<h2 id="協調均衡與經典解概念"><a href="#協調均衡與經典解概念" class="headerlink" title="協調均衡與經典解概念"></a>協調均衡與經典解概念</h2><p>這裏考慮兩種經典解概念：序貫均衡和完美貝葉斯均衡。</p>
+<h3 id="作為序貫均衡的自存協調均衡"><a href="#作為序貫均衡的自存協調均衡" class="headerlink" title="作為序貫均衡的自存協調均衡"></a>作為序貫均衡的自存協調均衡</h3><p>命題1. 每個自存的貝葉斯納什均衡都是一個序貫均衡策略組合。</p>
+<p>解讀：由於序貫均衡是信念和策略組合構成的 assessment ，但貝葉斯納什均衡隻有策略組合，因此隻能判斷貝葉斯納什均衡與序貫均衡中的策略組合那一部分是否相同。這個命題錶示，自存的貝葉斯納什均衡是序貫均衡的精煉。</p>
+<p>給定策略組合$\sigma$，對於信息集$h$，在所有參與人均按照$\sigma$來行動時，如果信息集$h$中有某個節點會以正機率到達，便稱這個信息集$h$在策略組合$\sigma$下<strong>被達到</strong>，或<strong>在行動路徑上</strong>。給定其他人的策略$\sigma_{-i}$，如果某個參與人$i$，通過其自己的某個行動$\sigma^{\prime}<em>{i}$，所形成的策略組合$\sigma^{\prime}&#x3D;(\sigma^{\prime}</em>{i},\sigma_{-i})$使得某個信息集$h^{\prime}$在$\sigma^{\prime}$下被達到，那麼便稱這個信息集$h^{\prime}$在原先的$\sigma$下就是<strong>可達的</strong>，並且當$\sigma_{i}&#x3D;\sigma^{\prime}_{i}$時就確實被達到了。</p>
+<p>對於每個參與人$i$的每個$a_{i}\ A_{i}$，如果存在任何一個協調均衡，使得協調均衡結果$\alpha\in\Delta(\Theta\times A)$賦予$a_{i}$正的機率，那麼便把這個$a_{i}$放到$C_{i}^{1}$裏，但$C_{i}^{1}$中的元素們不必都是在同一個協調均衡下以正機率出現，隻要各自可以找到某個協調均衡就可以。</p>
+<p>當對於每個$i$都進行過這一輪剔除後，將${C_{i}^{1}}<em>{i}$們作為各個參與人的新行動集。然後構造$C</em>{i}^{2}$，為那些可以被某個協調均衡以正機率實現的行動$a_{i}\in C_{i}^{1}$所組成，並且記$P^{C^{1}}$為隻採用$C^{1}&#x3D;\times_{i}C_{i}^{1}$的計劃。繼續重複這個過程，直到得到最後無法再剔除的$C_{i}^{\infty}&#x3D;C_{i}$，並記$C&#x3D;\times_{i}C_{i}$，及其隻使用$C$中元素的計劃們構成的集合$P^{C}$。</p>
+<p>定義4. 如果一個協調均衡對$P^{C}$中的計劃賦予機率1，那麼這個協調均衡就是自存的。</p>
+<p>定理2. 對於任何一個自存的協調均衡結果 $\alpha$<br>和任一 $\epsilon&gt;0$ ，都存在一個經典拓展式，使得該經典拓展式的貝葉斯納什均衡所帶來的結果，與 $\alpha$ 可以任意逼近，即距離小於 $\epsilon$。</p>
+<p>證明：選定任一自存的協調均衡 $\pi$ 及其結果 $\alpha$。對於每個參與人 $i$ 和行動 $a_{i}\in C_{i}$ ，都存在一個自存的協調均衡，記為 $\pi_{a_{i}}$，它所引緻的結果賦正機率以 $a_{i}$，</p>
+<h3 id="作為完美貝葉斯均衡的協調均衡"><a href="#作為完美貝葉斯均衡的協調均衡" class="headerlink" title="作為完美貝葉斯均衡的協調均衡"></a>作為完美貝葉斯均衡的協調均衡</h3><p>定義5. 當可能時均滿足貝葉斯法則</p>
+<p>對於一個給定的評估$(\beta,\upsilon)$，如果存在一個條件機率係統$\mu$，使得對於每個信息集$h_{i}$及其節點$y$，都滿足</p>
+<ol>
+<li><p>$\upsilon(y|h_{i})&#x3D;\mu(y|h_{i})$</p>
+</li>
+<li><p>$\beta^{\Sigma}(y)&#x3D;\mu(\cdot|y),\forall\mu(y|h_{i})]0$</p>
+</li>
+</ol>
+<p>即，這個評估中關於信念的部分$\upsilon$與條件機率係統相同；對於具體的某個$\sigma\in y$(即通過策略組合$\sigma$能到達y節點)，其條件機率與行為策略組合相同。</p>
+<p>定義6. 序貫理性</p>
+<p>一個評估$(\beta,\upsilon)$，如果對於所有參與人$i$及其信息集$h_{i}$，以及任一其他單方麵偏離$\beta^{\prime}_{i}$來說，都滿足</p>
+<p>$$\sum_{y\in h_{i}}\upsilon(y|h_{i})[\Upsilon(\beta|y)-\Upsilon(\beta^{\prime}<em>{i},\beta</em>{-i}|y)]\geq 0$$</p>
+<p>那麼便稱這個評估是序貫理性的。</p>
+<p>定義7. 完美貝葉斯均衡</p>
+<p>一個評估，如果是序貫理性的，並且當可能時均滿足貝葉斯法則，那麼這個評估便是一個完美貝葉斯均衡。</p>
+<p>定義8. 偏離協調均衡</p>
+<p>任給一個計劃$p$，任給一個節點$x$，$x$不必在計劃$p$的展開上(可能是多次偏離後到達的)，但從$x$開始往後，都按$p$來行動，那麼$q&#x3D;(p,x)$就是一個偏離計劃。將所有偏離計劃的集合記為$Q$。任給一族行動子集$B&#x3D;(B_{1},…,B_{N})$，考慮那些在行動子集$B$以外的行動們，如$a_{i}\notin B_{i}$對於每個參與人$i$，那些給參與人$i$推薦$a_{i}$的偏離計劃如$q\in [a_{i}]$，一個在世界狀態與偏離計劃集合上的聯合分佈$\pi\in\Delta(\Theta\times Q)$，如果對於任何$b_{i}\in A_{i}$，都滿足下述遵從約束，則稱這個$\pi$為一個偏離協調均衡。</p>
+<p>引入偏離是為了處理在非均衡路徑，或者在給定策略組合下應賦予0機率節點後的路徑上的最優選擇問題。非均衡路徑上也應採取最優選擇，是子博弈完美均衡的要求；將其拓展到不完備信息情況下，就是在那些給定策略組合下應賦予0機率的節點後也應採取最優選擇。因此，為了探討完美貝葉斯均衡的概念， 需要對這種情況進行分析。(序貫均衡與此稍有不同，序貫均衡也是子博弈完美的，但其對“結構一緻性”的設定使得收斂序列中不存在機率為0的節點，每個節點都以正機率出現)</p>
+<p>$$\sum_{\theta\in\Theta,q\in [a_{i}]}\pi(\theta,q)[u_{i}(a_{i},q,\theta)-u_{i}(b_{i},q,\theta)]\geq 0$$</p>
+<h2 id="逆關係"><a href="#逆關係" class="headerlink" title="逆關係"></a>逆關係</h2><p>定義9. 可行</p>
+<p>給定一個基本博弈。一個擁有完美回憶的有限拓展形被稱為可行的，如果它滿足</p>
+<p>定理4. 給定一個基本博弈及其某個可行拓展形$\Gamma$</p>
+<ol>
+<li>如果$\Gamma$擁有一個結果為$\alpha$的貝葉斯納什均衡，那麼$\alpha$也可以被某個協調均衡實現。</li>
+<li>如果$\Gamma$擁有一個結果為$\alpha$的自存均衡，那麼$\alpha$也可以被某個自存協調均衡所實現。</li>
+<li>如果$\Gamma$擁有一個結果為$\alpha$的完美貝葉斯均衡均衡，那麼$\alpha$也可以被某個協調均衡所實現，這個協調均衡以機率1採取$P^{D}$中的計劃。</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://brandonsli.com">Brandon Song Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://brandonsli.com/p/9a743s09.html">https://brandonsli.com/p/9a743s09.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://brandonsli.com" target="_blank">不求甚解學經濟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/9a723l99.html"><img class="prev-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不求甚解學經濟-信息設計(八)-抗拒勸說</div></div></a></div><div class="next-post pull-right"><a href="/p/3a483h91.html"><img class="next-cover" src="/img/index2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不求甚解學經濟-信息設計(四)-異質性先驗</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Brandon Song Li</div><div class="author-info__description">教育即自由，學術即反抗，事實即顛覆</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">基本設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%94%E8%AA%BF%E5%9D%87%E8%A1%A1"><span class="toc-number">2.</span> <span class="toc-text">協調均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AD%98%E7%9A%84%E5%8D%94%E8%AA%BF%E5%9D%87%E8%A1%A1"><span class="toc-number">2.1.</span> <span class="toc-text">自存的協調均衡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%94%E8%AA%BF%E5%9D%87%E8%A1%A1%E8%88%87%E7%B6%93%E5%85%B8%E8%A7%A3%E6%A6%82%E5%BF%B5"><span class="toc-number">3.</span> <span class="toc-text">協調均衡與經典解概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%82%BA%E5%BA%8F%E8%B2%AB%E5%9D%87%E8%A1%A1%E7%9A%84%E8%87%AA%E5%AD%98%E5%8D%94%E8%AA%BF%E5%9D%87%E8%A1%A1"><span class="toc-number">3.1.</span> <span class="toc-text">作為序貫均衡的自存協調均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%82%BA%E5%AE%8C%E7%BE%8E%E8%B2%9D%E8%91%89%E6%96%AF%E5%9D%87%E8%A1%A1%E7%9A%84%E5%8D%94%E8%AA%BF%E5%9D%87%E8%A1%A1"><span class="toc-number">3.2.</span> <span class="toc-text">作為完美貝葉斯均衡的協調均衡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E9%97%9C%E4%BF%82"><span class="toc-number">4.</span> <span class="toc-text">逆關係</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/undefined.html" title="Hello World"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/p/undefined.html" title="Hello World">Hello World</a><time datetime="2022-09-30T01:37:05.537Z" title="發表於 2022-09-30 09:37:05">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/6da8d1b9.html" title="塔西佗陷阱"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塔西佗陷阱"/></a><div class="content"><a class="title" href="/p/6da8d1b9.html" title="塔西佗陷阱">塔西佗陷阱</a><time datetime="2022-03-25T16:00:12.000Z" title="發表於 2022-03-26 00:00:12">2022-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca8d8b6.html" title="城市成本"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="城市成本"/></a><div class="content"><a class="title" href="/p/8ca8d8b6.html" title="城市成本">城市成本</a><time datetime="2022-03-19T16:00:12.000Z" title="發表於 2022-03-20 00:00:12">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f9a7.html" title="經濟學隨想"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="經濟學隨想"/></a><div class="content"><a class="title" href="/p/8ca4f9a7.html" title="經濟學隨想">經濟學隨想</a><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/8ca4f8b6.html" title="收藏夾"><img src="/img/index2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏夾"/></a><div class="content"><a class="title" href="/p/8ca4f8b6.html" title="收藏夾">收藏夾</a><time datetime="2022-01-23T16:00:12.000Z" title="發表於 2022-01-24 00:00:12">2022-01-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Brandon Song Li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
