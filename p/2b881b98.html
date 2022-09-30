@@ -152,7 +152,7 @@
 <p>無論發送者的效用怎樣地依賴於接收者的行爲，只要接收者的行爲只取決於自己的效用，那麽就可以稱爲<strong>一階貝葉斯勸説</strong>，單個接收者的問題天然地屬於一階貝葉斯勸説，如果存在多個接收者，那麽當接收者 $i$ 的效用只取決於接收者 $i$ 自己的行爲(因此只需要關注<strong>一階信念</strong>，即關於世界狀態的信念)、從而無需關注其他接收者 $j\neq i$ 的行爲及信念(即無需關注<strong>高階信念</strong>)時，也屬於一階貝葉斯勸説。“一階貝葉斯勸説”中的“一階”指的是“一階信念”。</p>
 <h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><h3 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h3><p>一個信息發送者(Sender)，一個信息接收者(Receiver)。</p>
 <p>世界狀態是未知的，狀態空間為有限集 $\Omega$，行動空間為緊集 $A$。</p>
-<p>發送者和接收者對於世界的狀態有一個共同的先驗信念 $\mu<em>{0}$，其支撐集為全集(所有狀態都有可能發生)。 $\mu</em>{0}(\omega)$ 指當冇有額外的信息時，發送者和接收者認為真實狀態是 $\omega$的機率。$\mu<em>{0}$支撐集為全集這一假設的限製性並不是很強，我們總可以通過重新定義$\Omega$來使這一點得到滿足，即：如果某個$\omega^{\prime}\in\Omega$有$\mu</em>{0}(\omega^{\prime})=0$，那麼無妨重新定義$\Omega^{\ast}=\Omega\setminus\left\lbrace \omega^{\prime}\right\rbrace$，反正我們也不認為$\omega^{\prime}$會發生（$\mu_{0}(\omega^{\prime})=0$的含義）</p>
+<p>發送者和接收者對於世界的狀態有一個共同的先驗信念 $\mu_{0}$，其支撐集為全集(所有狀態都有可能發生)。 $\mu_{0}(\omega)$ 指當冇有額外的信息時，發送者和接收者認為真實狀態是 $\omega$的機率。$\mu_{0}$支撐集為全集這一假設的限製性並不是很強，我們總可以通過重新定義$\Omega$來使這一點得到滿足，即：如果某個$\omega^{\prime}\in\Omega$有$\mu_{0}(\omega^{\prime})=0$，那麼無妨重新定義$\Omega^{\ast}=\Omega\setminus\left\lbrace \omega^{\prime}\right\rbrace$，反正我們也不認為$\omega^{\prime}$會發生（$\mu_{0}(\omega^{\prime})=0$的含義）</p>
 <p>接收者不能直接觀察到真實的狀態，但在觀察到發送者發送的信號之後，根據先驗信念進行貝葉斯更新，並據此採取行動 $a\in A$，其行動既影響自己的效用，又影響發送者的效用。(假設我們在行動空間$A$中隻包含了那些有實際意義者，即$\forall a\in A,\exists \mu,\text{ such that }a\in a^*(\mu)$，或者說，如果某個行動，無論接收者持有什麼信念都不會採取，那麼就不把它包含在行動空間裏)</p>
 <p>既然接收者採取的行動同時影響二者的效用，那麼發送者便會試圖影響接收者的行為，從而使其更多地符合發送者自己的利益。但在這裏，發送者不能直接規定接收者做什麼(可以做出拓展使其同時具有直接規定行為的能力，但在這篇論文裏，按作者所說，為了集中考慮信息的作用，隔絕了這種直接規定的通路。據說這一點也是與機製設計理論的不同之處，如 Bergemann and Morris, 2019 指出的)，而是可以通過信息結構來影響接收者的信念，從而間接地影響接收者的行為。</p>
 <p>貝葉斯勸説與 Signaling game 的區別則在於，貝葉斯勸説裏的信號並不具有直接影響效用的作用。在 Signaling game 裏，為了實現 Seperating equilibrium，其<strong>通過行為發送信號</strong>的<strong>成本</strong>需要有差異(如高能力者獲取高學曆的成本更低，使得低能力者難以模仿)。與 Cheap Talk 的區別在於，這裏發送者是有承諾能力的，發送者承諾信息結構發生在真實狀態揭曉之前並且無法在真實狀態揭曉之後反悔，其信號具有實際含義，因此發送者的 Talk 不 Cheap。</p>
@@ -189,9 +189,9 @@
 <p>在均衡中，接收者的行動規則應該是對發送者的信息結構的最優反應。同時發送者的信息結構也應該是對接收者的行動規則的最優反應。</p>
 <p>接收者的後驗信念 $\mu_{s}(\cdot)\in\Delta(\Omega)$(即給定觀察到信號 $s$ 的情況下，真實狀態為某個 $\omega$ 的條件機率)由貝葉斯法則生成：</p>
 <script type="math/tex; mode=display">\mu_{s}(\omega)=\frac{\mu_{0}(\omega)\cdot q(s\mid\omega)}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\cdot q(s\mid\omega^{\prime})}</script><p>接收者根據這個後驗信念來選擇行動$a(\mu_{s})$來最大化其期望效用：</p>
-<script type="math/tex; mode=display">\mathbb{E}_{\mu_{s}}u(a,\omega) = \sum_{\omega\in\Omega}\mu_{s}(\omega)u(a,\omega)</script><p>當接收者的期望效用最大化問題有多個解( $\left\lbrace a^{\ast}(\mu)\right\rbrace&gt;1$ )時，即不同的行動都能帶來那個相同的最大值，那麼選擇其中那個能為發送者帶來最大效用的行動$\hat{a}(\mu)=\arg\max<em>{a\in\left\lbrace a^{\ast}(\mu)\right\rbrace}\sum</em>{\omega}v(a,\omega)\mu(\omega)$。由於發送者和接收者的效用函數不必相同(當然正因為如此才有勸說/說服的必要)，因此對於接收者來說帶來相同效用值(此時是最大值)的解，未必也給發送者帶來相同的效用值。</p>
+<script type="math/tex; mode=display">\mathbb{E}_{\mu_{s}}u(a,\omega) = \sum_{\omega\in\Omega}\mu_{s}(\omega)u(a,\omega)</script><p>當接收者的期望效用最大化問題有多個解( $\left\lbrace a^{\ast}(\mu)\right\rbrace&gt;1$ )時，即不同的行動都能帶來那個相同的最大值，那麼選擇其中那個能為發送者帶來最大效用的行動$\hat{a}(\mu)=\arg\max_{a\in\left\lbrace a^{\ast}(\mu)\right\rbrace}\sum_{\omega}v(a,\omega)\mu(\omega)$。由於發送者和接收者的效用函數不必相同(當然正因為如此才有勸說/說服的必要)，因此對於接收者來說帶來相同效用值(此時是最大值)的解，未必也給發送者帶來相同的效用值。</p>
 <p>發送者選擇信息結構 $(S,q)$，(通過影響接收者的行為而間接地)使得期望效用最大化：</p>
-<script type="math/tex; mode=display">\mathbb{E}_{Pr(s)}\mathbb{E}_{\mu_{s}}v(a,\omega) = \sum_{s\in S}Pr(s)\sum_{\omega\in\Omega}\mu_{s}v(a(\mu_{s},\omega))</script><p>其中 $Pr(s)$ 錶示在給定信息結構的情況下，信號$s$被接收者所觀察到的邊際(即已對各種可能的世界狀態加總後的)機率，$a(\mu<em>{s})$中的$\mu</em>{s}$是接收者的後驗信念，而取期望時候$\mathbb{E}<em>{\mu</em>{s}}$中的$\mu_{s}$是發送者的後驗信念，盡管在這篇文章中二者是重合的，但在概念上做出這種區分是有必要的。</p>
+<script type="math/tex; mode=display">\mathbb{E}_{Pr(s)}\mathbb{E}_{\mu_{s}}v(a,\omega) = \sum_{s\in S}Pr(s)\sum_{\omega\in\Omega}\mu_{s}v(a(\mu_{s},\omega))</script><p>其中 $Pr(s)$ 錶示在給定信息結構的情況下，信號$s$被接收者所觀察到的邊際(即已對各種可能的世界狀態加總後的)機率，$a(\mu_{s})$中的$\mu_{s}$是接收者的後驗信念，而取期望時候$\mathbb{E}_{\mu_{s}}$中的$\mu_{s}$是發送者的後驗信念，盡管在這篇文章中二者是重合的，但在概念上做出這種區分是有必要的。</p>
 <script type="math/tex; mode=display">Pr(s)=\sum_{\omega\in\Omega}q(s\mid\omega)\mu_{0}(\omega)</script><p>由於我們已經假定接收者在觀察到信號實現後，會根據後驗信念採取最優行動，因此整個問題可以簡化為隻有發送者一個行為主體的問題，其中發送者在決策時是預計到自己的行動會引緻接收者的最優行動的，在發送者的問題中，接收者的行為是“機械的”。</p>
 <h3 id="行動建議"><a href="#行動建議" class="headerlink" title="行動建議"></a>行動建議</h3><p>根據顯示原理(revelation principle，待補充)，可以將問題簡化為隻考慮“直接信息結構”(用詞仿照“直接機製”)：$S\subset A$,並且接收者的均衡行動與信號實現相同。這種由發送者直接建議接收者應該做什麼的信息結構被稱為<strong>行動建議式信息結構</strong>。</p>
 <p>這意味著：發送者直接根據自己事先宣佈的信息結構中的條件機率機械地告訴接收者該做什麼，(不同於作為條件機率的後驗信念是在接收者那邊)這裏的條件機率還是在發送者這邊(信號實現是由<strong>自然</strong>根據<strong>發送者選擇的信息結構</strong>生成)，發送者告訴接收者的是採取何種“純策略”而不是以多少的機率做哪件事$a(\mu)$，盡管接收者實際採取的行為與信號實現背後的真實狀態之間的對應關係$a(\omega)$是隨機的。</p>
@@ -229,7 +229,7 @@
 <p>從而，每個信息結構都能引緻後驗信念上的一個分佈，由信息結構引緻的後驗信念上的分佈，由於行為人的貝葉斯理性，總是滿足貝葉斯可行性。給定後驗信念上的一個分佈，並且後驗信念的期望等於先驗信念，總是存在可以引緻後驗信念上這個給定分佈的信息。</p>
 <p>基於信念的方法：將發送者的策略和均衡信念系統都等同於後驗信念上的事前分佈 $\tau\in\Delta\Delta\Omega$，如果這個分佈滿足貝葉斯可行性 $\int\mu d\tau(\mu)=\mu_{0}$，則稱這個分佈 $\tau$ 為一個信息政策。</p>
 <p>均衡結果：$(\tau,v)\in\Delta\Delta\times\mathbb{R}$，由均衡 $(\mu_{s},a(s),q(\omega))$ 所引致的一對元素，分別爲後驗信念的分佈和發送者的事前效用。</p>
-<p>如果一個均衡結果中的 $\tau$ 并非退化的 ($\tau=\delta(\mu<em>{0})$，即 $\tau(\mu</em>{0})=1,\tau(\mu<em>{s})=0,\forall\mu</em>{s}\neq\mu_{0}$)，則稱接收者的後驗信念上的這個分佈 $\tau$ 是有信息量的。</p>
+<p>如果一個均衡結果中的 $\tau$ 并非退化的 ($\tau=\delta(\mu_{0})$，即 $\tau(\mu_{0})=1,\tau(\mu_{s})=0,\forall\mu_{s}\neq\mu_{0}$)，則稱接收者的後驗信念上的這個分佈 $\tau$ 是有信息量的。</p>
 <p>如果僅關注均衡結果，那麽基於信念的方法與原問題是等價的。</p>
 <p>因此，有如下引理</p>
 <h3 id="引理一"><a href="#引理一" class="headerlink" title="引理一"></a>引理一</h3><p>選擇最優的信息結構和選擇信息政策是等價的，即：</p>
@@ -272,7 +272,7 @@
 &\geq\sum_{\omega}u(a^{\star},\omega)\mu_{0}(\omega)\sum_{s\in S^{a}}q(s|\omega)\frac{1}{\sum_{\omega^{\prime}\in\Omega}\mu_{0}(\omega^{\prime})\sum_{s^{\prime}\in S^{a}}q(s^{\prime}|\omega^{\prime})}\\
 &=\sum_{\omega}u(a^{\star},\omega)\mu^{\prime}_{a}(\omega)\\
 \forall a^{\star}\in A
-\end{aligned}</script><p>$S^{a}$中的點是根據以下標準挑選出來的，首先，給定先驗信念和原有的信息結構(因此我們需要把信念展開才能比較接收者的行為)，接收者在持有後驗信念$\mu<em>{s},\forall s$時採取最優反應$\left\lbrace a^{\ast}(\mu</em>{s})\right\rbrace$，從其中挑選出來對發送者最有利的$\hat{a}(\mu)$，並且將那些使接收者採取相同行為的不同信號實現聚在一起$S^{a}=\left\lbrace s|\hat{a}(\mu_{s})=a\right\rbrace$。因此，根據定義，$a$是接收者對於$s\in S^{a}$這些信號的最優反應；當$s^{\prime}=A$，並把那些引緻相同行為$a(s)=a,\forall s\in S^{a}$的不同信號實現之條件機率“打包”在一起之後，$a$(接收者的行為)依然是對於根據$q^{\prime}(\cdot|\omega)$生成的$a$(發送者的推薦)的最優反應。</p>
+\end{aligned}</script><p>$S^{a}$中的點是根據以下標準挑選出來的，首先，給定先驗信念和原有的信息結構(因此我們需要把信念展開才能比較接收者的行為)，接收者在持有後驗信念$\mu_{s},\forall s$時採取最優反應$\left\lbrace a^{\ast}(\mu_{s})\right\rbrace$，從其中挑選出來對發送者最有利的$\hat{a}(\mu)$，並且將那些使接收者採取相同行為的不同信號實現聚在一起$S^{a}=\left\lbrace s|\hat{a}(\mu_{s})=a\right\rbrace$。因此，根據定義，$a$是接收者對於$s\in S^{a}$這些信號的最優反應；當$s^{\prime}=A$，並把那些引緻相同行為$a(s)=a,\forall s\in S^{a}$的不同信號實現之條件機率“打包”在一起之後，$a$(接收者的行為)依然是對於根據$q^{\prime}(\cdot|\omega)$生成的$a$(發送者的推薦)的最優反應。</p>
 <p>由此，我們根據任一最優信息結構$(S,q)$，通過重新定義信號實現的潛在可能集、並“打包”引緻接收者相同均衡行為的條件機率，構造出了一個給發送者帶來相同效用值$v^*$的行動建議式信息結構$(s^{\prime},q^{\prime})=(A,q^{\prime})$。</p>
 <!-- ---
 
@@ -348,7 +348,7 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <p>頂點意味著接收者通過觀察信號實現，能夠確定地倒推出真實的世界狀態是哪個；非頂點意味著某些信息並冇有被發送者傳遞給接收者，其中內點意味著接收者認為每種狀態都有可能，盡管對各種狀態發生機率的判斷或許不同於先驗信念，而某條邊意味著接收者已經倒推出這條邊<strong>對麵</strong>的那個點所代錶狀態是不可能的。</p>
 <h3 id="推論二"><a href="#推論二" class="headerlink" title="推論二"></a>推論二</h3><p>發送者通過擾動後驗信念所能得到的最大效用是$V(\mu_{0})$，發送者能夠通過擾動後驗信念得利當且僅當</p>
 <script type="math/tex; mode=display">V(\mu_{0})>\hat{v}(\mu_{0})</script><p>我們說發送者願意分享信息，如果存在某個後驗信念$\mu$，使得給定發送者持有這個後驗信念時：發送者通過分享信息，引緻接收者也持有這個後驗信念$\mu$並依此行動帶給發送者的效用，要高於雖然發送者持有這個後驗信念$\mu$但不分享信息使接收者按先驗信念$\mu_{0}$並依此行動帶給發送者的效用。</p>
-<script type="math/tex; mode=display">\hat{v}(\mu)>\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)</script><p>其中對$\omega$的加總意味著這是事前的比較，世界狀態尚未揭曉，而發送者對不同後驗信念$\mu<em>{s}=\mu$與$\mu</em>{s}=\mu_{0}$的比較是預測性質的。</p>
+<script type="math/tex; mode=display">\hat{v}(\mu)>\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)</script><p>其中對$\omega$的加總意味著這是事前的比較，世界狀態尚未揭曉，而發送者對不同後驗信念$\mu_{s}=\mu$與$\mu_{s}=\mu_{0}$的比較是預測性質的。</p>
 <p>盡管從錶麵上來，發送者願意分享信息與發送者能夠通過分享信息/勸說/擾動後驗信念來獲利是同一件事，而事實上，發送者是否願意分享信息是取決於是否存在某個滿足要求的後驗信念$\mu$，但當發送者分享信息後，不同的信號實現會引緻不同的後驗信念，比如既有那個滿足要求的後驗信念$\mu$又有另外一個$\mu^{\prime}$(除非完全不分享信息，那麼就隻會有一個$\mu_{0}$)，這時發送者是否能夠通過分享信息獲利還取決於接收者的行為$\hat{a}(\mu)$帶來的$\hat{v}(\mu)$和$\hat{a}(\mu^{\prime})$帶來的$\hat{v}(\mu^{\prime})$。</p>
 <p>我們接下來可以看到：如果發送者能夠通過勸說來獲利，那麼發送者一定願意分享信息；但發送者願意分享信息，並不意味著發送者能夠通過勸說來獲利，額外的條件是接收者的偏好在先驗信念處是離散的。</p>
 <h3 id="命題二"><a href="#命題二" class="headerlink" title="命題二"></a>命題二</h3><p>(1) 如果發送者不願意分享信息，那意味著發送者不能通過勸說來獲利。</p>
@@ -357,8 +357,8 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <p>我們說接收者的偏好在信念$\mu$處是離散的，如果接收者在持有信念時$\mu$通過最優行動$\hat{a}(\mu)$所能得到的期望效用，要比接收雖然持有信念$\mu$、但採取任何其他行動$\forall a\neq\hat{a}(\mu)$所得到的期望效用都要高出某個嚴格為正的$\epsilon&gt;0$，即</p>
 <script type="math/tex; mode=display">\exists\epsilon>0,\text{such that}\sum u(\hat{a}(\mu),\omega)\mu(\omega)>\sum u(a,\omega)\mu(\omega)+\epsilon</script><p>根據假設$\forall\mu,\exists \hat{a}(\mu)$，又$u$是連續函數，從而$\sum_{\omega}u(a,\omega)\mu(\omega)$是連續函數，因此如果接收者的偏好在$\mu$處是離散的，則$\exists\delta&gt;0$，使得$\forall\mu^{\prime}\in N(\mu,\delta)$，都有$\sum u(\hat{a}(\mu),\omega)\mu^{\prime}(\omega)&gt;\sum u(a,\omega)\mu^{\prime}(\omega)$，因此$\hat{a}(\mu^{\prime})=\hat{a}(\mu)$。</p>
 <p>證明：</p>
-<p>(1) 如果發送者不願意分享信息，那麼$\forall\mu,\hat{v}(\mu)\leq\sum<em>{\omega}v(\hat{a}(\mu</em>{0}),\omega)\mu(\omega)$。即不論發送者持有何種後驗信念$\mu$，他都甯願接收者僅根據先驗信念$\mu<em>{0}$採取行動$\hat{a}(\mu</em>{0})$。這時給定一個引緻$\tau$的$q$，它能為發送者帶來的最大效用為$\sum<em>{s\in S}\tau</em>{s}\hat{v}(\mu<em>{s})\leq\sum</em>{s\in S}\tau<em>{s}\sum</em>{\omega}v(\hat{a}(\mu<em>{0}),\omega)\mu</em>{s}(\omega)=\hat{v}(\mu_{0})$，這意味著發送者通過擾動信念所能得到的最大期望效用都不會高於讓接收者按先驗信念行動能給他帶來的效用高。</p>
-<p>(2) 給定接收者採取當信念為$\mu<em>{0}$時的最優行動$\hat{a}(\mu</em>{0})$，其在不同信念下的加總$\sum u(\hat{a}(\mu<em>{0}),\omega)\mu(\omega)$關於信念$\mu$是線性的，從而是連續函數。又接收者的偏好在$\mu</em>{0}$處是離散的，因此當其信念離$\mu<em>{0}$不太遠時他仍然願意採用$\hat{a}(\mu</em>{0})$，即$\exists \delta&gt;0$使得$\forall \mu\in N(\mu<em>{0},\delta)$，都有$\hat{a}(\mu)=\hat{a}(\mu</em>{0})$。既然發送者願意分享信息，那麼存在某個$\mu<em>{h}$使得$\hat{v}(\mu</em>{h})&gt;\sum<em>{\omega}v(\hat{a}(\mu</em>{0}),\omega)\mu<em>{h}(\omega)$。考慮一個從$\mu</em>{h}$出發、通過$\mu<em>{0}$的射線，由於我們假設$\mu</em>{0}$具有全支撐，$\mu<em>{0}$是個內點，那麼存在某個$\mu</em>{l}\in N(\mu<em>{0},\delta)$使得$\mu</em>{0}=\gamma\cdot\mu<em>{l}+(1-\gamma)\mu</em>{h}$其中$\gamma\in (0,1)$。我們把這個凸組合的係數作為後驗信念$\mu<em>{l}$和$\mu</em>{h}$在後驗信念上的分佈$\tau$中的機率：$\tau(\mu<em>{l})=\gamma$及$\tau(\mu</em>{h})=1-\gamma$。由於接收者在先驗信念$\mu<em>{0}$處的偏好是離散的，而$\mu</em>{l}\in N(\mu<em>{0},\delta)$，因此$\hat{a}(\mu</em>{l})=\hat{a}(\mu<em>{0})$，此時$\hat{v}(\mu</em>{l})=\sum<em>{\omega}v(\hat{a}(\mu</em>{l}),\omega)\mu<em>{l}(\omega)=\sum</em>{\omega}v(\hat{a}(\mu<em>{0}),\omega)\mu</em>{l}(\omega)$。從而</p>
+<p>(1) 如果發送者不願意分享信息，那麼$\forall\mu,\hat{v}(\mu)\leq\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)$。即不論發送者持有何種後驗信念$\mu$，他都甯願接收者僅根據先驗信念$\mu_{0}$採取行動$\hat{a}(\mu_{0})$。這時給定一個引緻$\tau$的$q$，它能為發送者帶來的最大效用為$\sum_{s\in S}\tau_{s}\hat{v}(\mu_{s})\leq\sum_{s\in S}\tau_{s}\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)=\hat{v}(\mu_{0})$，這意味著發送者通過擾動信念所能得到的最大期望效用都不會高於讓接收者按先驗信念行動能給他帶來的效用高。</p>
+<p>(2) 給定接收者採取當信念為$\mu_{0}$時的最優行動$\hat{a}(\mu_{0})$，其在不同信念下的加總$\sum u(\hat{a}(\mu_{0}),\omega)\mu(\omega)$關於信念$\mu$是線性的，從而是連續函數。又接收者的偏好在$\mu_{0}$處是離散的，因此當其信念離$\mu_{0}$不太遠時他仍然願意採用$\hat{a}(\mu_{0})$，即$\exists \delta&gt;0$使得$\forall \mu\in N(\mu_{0},\delta)$，都有$\hat{a}(\mu)=\hat{a}(\mu_{0})$。既然發送者願意分享信息，那麼存在某個$\mu_{h}$使得$\hat{v}(\mu_{h})&gt;\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{h}(\omega)$。考慮一個從$\mu_{h}$出發、通過$\mu_{0}$的射線，由於我們假設$\mu_{0}$具有全支撐，$\mu_{0}$是個內點，那麼存在某個$\mu_{l}\in N(\mu_{0},\delta)$使得$\mu_{0}=\gamma\cdot\mu_{l}+(1-\gamma)\mu_{h}$其中$\gamma\in (0,1)$。我們把這個凸組合的係數作為後驗信念$\mu_{l}$和$\mu_{h}$在後驗信念上的分佈$\tau$中的機率：$\tau(\mu_{l})=\gamma$及$\tau(\mu_{h})=1-\gamma$。由於接收者在先驗信念$\mu_{0}$處的偏好是離散的，而$\mu_{l}\in N(\mu_{0},\delta)$，因此$\hat{a}(\mu_{l})=\hat{a}(\mu_{0})$，此時$\hat{v}(\mu_{l})=\sum_{\omega}v(\hat{a}(\mu_{l}),\omega)\mu_{l}(\omega)=\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu_{l}(\omega)$。從而</p>
 <script type="math/tex; mode=display">\begin{aligned}
 \gamma\hat{v}(\mu_{l})+(1-\gamma)\hat{v}(\mu_{h})\\
 =&\gamma\sum_{\omega}v(\hat{a}(\mu_{l}),\omega)\mu_{l}(\omega)+(1-\gamma)\sum_{\omega}v(\hat{a}(\mu_{h}),\omega)\mu_{h}(\omega)\\
@@ -373,7 +373,7 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <hr>
 <p>直覺：如果接收者的偏好在先驗處是離散的，那就意味著在先驗附近的那些信念處，接收者將會採取與先驗處相同的行動。那麼，當接收者按先驗採取的預設行動對於發送者來說不利時，那麼有可能通過披露信息獲利。因為披露信息會帶來不確定性、經過自然轉換為不同的信號實現，有時候這一實現對發送者來說有利、有時候不利。但即使不利也無所謂，因為在信念上的凸組合可以包含一個離先驗較近的後驗信念，使得在最優信息結構下最壞的結果本來在不披露信息時也要以機率1發生，但現在這個不好的情況隻是以小於1的機率發生，而且同時還有更好的情況也會發生。</p>
 <hr>
-<p>(3) 我們先錶明，當給定$A$為有限集時，如果接收者者的偏好在某個信念$\mu$處不是離散的，那麼接收者必然在當持有這個信念時對至少兩個行動$\hat{a}(\mu)$和$a\neq\hat{a}(\mu)$無差異$\sum<em>{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)=\sum</em>{\omega}u(a,\omega)\mu(\omega)$。</p>
+<p>(3) 我們先錶明，當給定$A$為有限集時，如果接收者者的偏好在某個信念$\mu$處不是離散的，那麼接收者必然在當持有這個信念時對至少兩個行動$\hat{a}(\mu)$和$a\neq\hat{a}(\mu)$無差異$\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)=\sum_{\omega}u(a,\omega)\mu(\omega)$。</p>
 <p>使用逆否證法。假設不存在這樣一個$a$(即在信念$\mu$下任何$a^{\prime}$對於接收者來說都不是與$\hat{a}(\mu)$無差異的)，那麼可以定義$\epsilon&gt;0$為</p>
 <script type="math/tex; mode=display">\epsilon=\frac{1}{2}\min_{a^{\prime}\neq\hat{a}(\mu)}\left\lbrace \sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)-\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)\right\rbrace</script><p>由於在信念$\mu$下任何$a^{\prime}$對於接收者來說都不是與$\hat{a}(\mu)$無差異的，並且$\hat{a}(\mu)$是$\mu$下的最優反應，因此$\epsilon$是嚴格大於0的，並且已經假設$A$是有限集，從而最小值總能取到。但這樣的話</p>
 <script type="math/tex; mode=display">\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)>\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)+\epsilon,\forall a^{\prime}\neq\hat{a}(\mu)</script><p>這就意味著接收者的偏好在$\mu$處是離散的。逆否證成。</p>
@@ -381,7 +381,7 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <p>這樣的信念集為</p>
 <script type="math/tex; mode=display">\left\lbrace \mu|\exists a\neq\hat{a}(\mu),\text{ such that }\sum_{\omega}u(a,\omega)\mu(\omega))=\sum_{\omega}u(\hat{a}(\mu),\omega)\mu(\omega)\right\rbrace</script><p>我們可以進一步錶明，這個信念集的某個超集具有零測度。即，將$\hat{a}(\mu)$與任意$a$的比較，放寬為任意$a$與任意$a^{\prime}$的比較。由於$A$是有限集，$a$與$a^{\prime}$的組合也隻有有限種可能，而有限個零測集之並仍為零測集，因此我們隻需證明接收者在給定的兩個行動$a$與$a^{\prime}$無差異的信念集$\left\lbrace \mu\right\rbrace$具有零測度。</p>
 <p>這樣的信念集為</p>
-<script type="math/tex; mode=display">\left\lbrace \mu|,\exists a\neq a^{\prime},\text{ such that }\sum_{\omega}u(a,\omega)\mu(\omega))=\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)\right\rbrace</script><p>由於$\Omega$為有限集(註意，$\Omega$一直假設為有限集，但$A$在整體框架中隻假設為緊集，隻是在當前命題的第三部分時，我們錶明如果$A$也時有限集將會得到那些性質)，我們可以將其錶示為$\Omega=\left\lbrace \omega<em>{i}\right\rbrace</em>{i}$(並隨意指定$|\Omega|=n$)，進而記$\beta_{i}$為</p>
+<script type="math/tex; mode=display">\left\lbrace \mu|,\exists a\neq a^{\prime},\text{ such that }\sum_{\omega}u(a,\omega)\mu(\omega))=\sum_{\omega}u(a^{\prime},\omega)\mu(\omega)\right\rbrace</script><p>由於$\Omega$為有限集(註意，$\Omega$一直假設為有限集，但$A$在整體框架中隻假設為緊集，隻是在當前命題的第三部分時，我們錶明如果$A$也時有限集將會得到那些性質)，我們可以將其錶示為$\Omega=\left\lbrace \omega_{i}\right\rbrace_{i}$(並隨意指定$|\Omega|=n$)，進而記$\beta_{i}$為</p>
 <script type="math/tex; mode=display">\beta_{i}=u(a,\omega_{i})-u(a^{\prime},\omega_{i}),i=1,...,n</script><p>以及</p>
 <script type="math/tex; mode=display">\beta=[\beta_{1},...,\beta_{n}]</script><p>和</p>
 <script type="math/tex; mode=display">\mu=[\mu(\omega_{1}),...,\mu(\omega_{n})]</script><p>前麵的信念集可以進一步錶達為</p>
@@ -390,7 +390,7 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <p>證明：由於我們已經錶明了，最優信息結構的存在，與滿足貝葉斯可行的後驗信念上的最優分佈存在，之間是等價的。因此，我們接下來證明，存在滿足貝葉斯可行的後驗信念上的最優分佈。</p>
 <p>首先，我們錶示$\hat{v}(\mu)$關於$\mu$是上半(semi)連續的。</p>
 <script type="math/tex; mode=display">\left\lbrace (\mu,v)|v\leq\hat{v}(\mu)\right\rbrace</script><p>是個閉集。</p>
-<p>假設$\hat{v}(\mu)$在某個$\mu$處不連續，由於$\hat{v}(\mu)=\sum<em>{\omega}v(\hat{a}(\mu),\omega)\mu(\omega)$，而$v(a,\omega)$關於$a$和$\omega$是假設為連續的，$\sum</em>{\omega}v(a,\omega)\mu(\omega)$關於$\mu$是線性從而是連續的，因此這個不連續隻可能出現在$\hat{a}(\mu)$與$\mu$之間的關係上。但根據 Berge’s Maximun Pricinple，當目標函數$u(a,\omega)$連續(註意，現在我們轉換到了接收者問題)、約束對應$a(\mu):\Delta(\Omega)\rightarrow A$是緊值的連續對應(註意，其實在本文中我們並冇有施加任何約束)時，值函數$u(\mu)=u(a^{\ast}(\mu),\omega)$是連續函數，解對應$a^{\ast}(\mu)$是上半(hemi)連續的。我們前麵看到$\hat{a}(\mu)$關於$\mu$不是連續的，但$a^{\ast}(\mu)$關於$\mu$又是上半(hemi)連續的，而同時能滿足這兩點的情況就是$a^{\ast}(\mu)$在$\mu$處是一個滿足上半(hemi)連續的非單點集(非單點，因此不是連續的)。</p>
+<p>假設$\hat{v}(\mu)$在某個$\mu$處不連續，由於$\hat{v}(\mu)=\sum_{\omega}v(\hat{a}(\mu),\omega)\mu(\omega)$，而$v(a,\omega)$關於$a$和$\omega$是假設為連續的，$\sum_{\omega}v(a,\omega)\mu(\omega)$關於$\mu$是線性從而是連續的，因此這個不連續隻可能出現在$\hat{a}(\mu)$與$\mu$之間的關係上。但根據 Berge’s Maximun Pricinple，當目標函數$u(a,\omega)$連續(註意，現在我們轉換到了接收者問題)、約束對應$a(\mu):\Delta(\Omega)\rightarrow A$是緊值的連續對應(註意，其實在本文中我們並冇有施加任何約束)時，值函數$u(\mu)=u(a^{\ast}(\mu),\omega)$是連續函數，解對應$a^{\ast}(\mu)$是上半(hemi)連續的。我們前麵看到$\hat{a}(\mu)$關於$\mu$不是連續的，但$a^{\ast}(\mu)$關於$\mu$又是上半(hemi)連續的，而同時能滿足這兩點的情況就是$a^{\ast}(\mu)$在$\mu$處是一個滿足上半(hemi)連續的非單點集(非單點，因此不是連續的)。</p>
 <p>即</p>
 <script type="math/tex; mode=display">\left\lbrace (\mu,a)|a\in a^{\ast}(\mu)\right\rbrace</script><p>是個閉集。</p>
 <p>非單點集意味著$\hat{a}(\mu)$(我們根據“對發送者最有利”的標準選出來的)是$a^{\ast}(\mu)$的嚴格子集。即</p>
@@ -400,7 +400,7 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <p>假設可行性對應$a:\Delta(\Omega)\rightarrow A$是非空、緊值的。如果$f:gr(a)\rightarrow\mathbb{R}$是上半(semi)連續的，那麼如下定義的$\hat{v}$就能取到最大值。並且，如果$a$是點$\mu^{\prime}$處是上半(hemi)連續的，那麼$\hat{v}$在點$\mu^{\prime}$處是上半(semi)連續的。</p>
 <script type="math/tex; mode=display">\hat{v}(\mu)=\max{f(\mu,a(\mu))}</script><p>將$f$取為$(a(\mu),\sum_{\omega}v(a(\mu),\omega)\mu(\omega))$即可。</p>
 <p>證明可見KC Border的Notes中”correspondences”一章，或 Aliprantis and Border (2006) Lemma 17.30，P569。</p>
-<p>應用在此處即意味著：$f$ 是發送者期望效用函數的圖 $(a(\mu),\sum<em>{\omega}v(a(\mu),\omega)\mu(\omega))$，其中 $v(a,\omega)$ 關於 $a$ 的連續性是根據假設得到的，而 $\sum</em>{\omega}v(a,\omega)\mu(\omega)$ 關於 $a$ 的連續性是根據前一點以及它作爲求和函數相結合得到的；這裏的可行性對應 $a^{\star}$ 為對接收者對於給定的後驗信念所得的最大化問題的解集 (根據將 Berge 最大值定理應用與接收者問題，這個對應是上半連續的；這一對應，在接收者問題中是解對應，在當前這個打破平局問題中是約束對應)，我們從接收者最大化問題的解集中選取對於發送者最有利的哪一個 (這是我們假設的打破平局的規則) 就意味著在做 $\max<em>{a\in a^{\star}(\mu)}\sum</em>{\omega}v(a,\omega)\mu(\omega)$，將其值函數定義爲 $\hat{v}(\mu)=\max<em>{a\in a^{\ast}(\mu)}\sum</em>{\omega}v(a,\omega)\mu(\omega)$。</p>
+<p>應用在此處即意味著：$f$ 是發送者期望效用函數的圖 $(a(\mu),\sum_{\omega}v(a(\mu),\omega)\mu(\omega))$，其中 $v(a,\omega)$ 關於 $a$ 的連續性是根據假設得到的，而 $\sum_{\omega}v(a,\omega)\mu(\omega)$ 關於 $a$ 的連續性是根據前一點以及它作爲求和函數相結合得到的；這裏的可行性對應 $a^{\star}$ 為對接收者對於給定的後驗信念所得的最大化問題的解集 (根據將 Berge 最大值定理應用與接收者問題，這個對應是上半連續的；這一對應，在接收者問題中是解對應，在當前這個打破平局問題中是約束對應)，我們從接收者最大化問題的解集中選取對於發送者最有利的哪一個 (這是我們假設的打破平局的規則) 就意味著在做 $\max_{a\in a^{\star}(\mu)}\sum_{\omega}v(a,\omega)\mu(\omega)$，將其值函數定義爲 $\hat{v}(\mu)=\max_{a\in a^{\ast}(\mu)}\sum_{\omega}v(a,\omega)\mu(\omega)$。</p>
 <p>根據 hemi-semi 定理，$\hat{v}(\mu)$ 就是關於 $\mu$ 的上半連續函數。</p>
 <hr>
 <p>即：當 $a^{\ast}$ 為對應時是上半連續的，當 $a^{\ast}$ 為函數時是連續的。但前麵錶明它是多值的，從而 $a^{\ast}$ 是上半連續的，而這時 $\hat{v}(\mu)=\max{f(\mu,a(\mu))}$ 也是上半連續的。<br>&lt;!—<br>但是</p>
@@ -411,13 +411,13 @@ $$\sum_{\omega}u(\hat{a}(\mu_{0}),\omega)\mu_{s}(\omega)\leq\sum_{\omega}u(\hat{
 <script type="math/tex; mode=display">V=co(\left\lbrace (v,\mu)\in\mathbb{R}\times\Delta(\Omega)|v\leq\hat{v}(\mu)\right\rbrace)</script><p>根據Krein-Milman定理，下圖的凸包裏的每個點$(v^{\prime},\mu^{\prime})$都可以錶示為其極點的凸組合</p>
 <script type="math/tex; mode=display">(v^{\prime},\mu^{\prime})=\sum_{j}\lambda^{j}(v(\mu^{j}),\mu^{j})</script><p>發送者的凹化函數為</p>
 <script type="math/tex; mode=display">V(\mu)=\sup\left\lbrace v\in\mathbb{R}|(v,\mu)\in V\right\rbrace</script><p>我們將要錶明，給定任何一個信念$\mu$和$\text{hyp}(\hat{v})$的一個子集$S=\left\lbrace (\mu^{j},v^{j})\right\rbrace_{j}\subset\text{hyp}(\hat{v})$，，如果$(\mu,V(\mu))$在$S$的凸包裏，那麼$(\mu,V(\mu))$也“$S$與$\text{hyp}(\hat{v})$的交集”的凸包裏。</p>
-<p>假設$(\mu,V(\mu))=\sum<em>{j}\gamma^{j}(\mu^{j},v^{j})$，其中$\sum</em>{j}\gamma^{j}=1,\gamma^{i}\in[0,1],\forall j$，上一行中說我們要有$v^{j}=\hat{v}(\mu^{j}),\forall j$，反證，假設$\exists\gamma^{i}&gt;0$但$v^{i}&lt;\hat{v}(\mu^{i})$(註意，根據定義，下圖已經排除了反方嚮的不等式，所以這裏的反證其實是假設，構成凸組合的某個點不是極點、而是內點，但Krein-Milman定理隻告訴我們可以由凸組合錶示，並非隻能由凸組合錶示，所以需要來單獨證明)，那麼將原先的凸組合中的這個內點$(\mu^{i},v^{i})$替換為${(\mu^{i},\hat{v}(\mu^{i}))}$，則$\left\lbrace (\mu^{j},v^{j})\right\rbrace<em>{\left\lbrace j\right\rbrace\setminus i}\cup{(\mu^{i},\hat{v}(\mu^{i}))}\subset\text{hyp}(\hat{v})$。但使得$(\mu^{i},v^{i})$成為內點的是$v^{i}&lt;\hat{v}(\mu^{i})$，而$\gamma^{i}\mu^{i}+\sum</em>{\left\lbrace j\right\rbrace\setminus i}\gamma^{j}\mu^{j}=\mu$依然成立，並且$\gamma^{i}\hat{v}(\mu^{i})+\sum<em>{\left\lbrace j\right\rbrace\setminus i}\gamma^{j}v^{j}&gt;\sum</em>{j}\gamma^{j}v^{j}=V(\mu)$。然而，根據定義，$V(\mu)=\text{sup}\left\lbrace v\in\mathbb{R}|(v,\mu)\in\text{co}(\text{hyp}(\hat{v}))\right\rbrace$，於是前式意味著</p>
+<p>假設$(\mu,V(\mu))=\sum_{j}\gamma^{j}(\mu^{j},v^{j})$，其中$\sum_{j}\gamma^{j}=1,\gamma^{i}\in[0,1],\forall j$，上一行中說我們要有$v^{j}=\hat{v}(\mu^{j}),\forall j$，反證，假設$\exists\gamma^{i}&gt;0$但$v^{i}&lt;\hat{v}(\mu^{i})$(註意，根據定義，下圖已經排除了反方嚮的不等式，所以這裏的反證其實是假設，構成凸組合的某個點不是極點、而是內點，但Krein-Milman定理隻告訴我們可以由凸組合錶示，並非隻能由凸組合錶示，所以需要來單獨證明)，那麼將原先的凸組合中的這個內點$(\mu^{i},v^{i})$替換為${(\mu^{i},\hat{v}(\mu^{i}))}$，則$\left\lbrace (\mu^{j},v^{j})\right\rbrace_{\left\lbrace j\right\rbrace\setminus i}\cup{(\mu^{i},\hat{v}(\mu^{i}))}\subset\text{hyp}(\hat{v})$。但使得$(\mu^{i},v^{i})$成為內點的是$v^{i}&lt;\hat{v}(\mu^{i})$，而$\gamma^{i}\mu^{i}+\sum_{\left\lbrace j\right\rbrace\setminus i}\gamma^{j}\mu^{j}=\mu$依然成立，並且$\gamma^{i}\hat{v}(\mu^{i})+\sum_{\left\lbrace j\right\rbrace\setminus i}\gamma^{j}v^{j}&gt;\sum_{j}\gamma^{j}v^{j}=V(\mu)$。然而，根據定義，$V(\mu)=\text{sup}\left\lbrace v\in\mathbb{R}|(v,\mu)\in\text{co}(\text{hyp}(\hat{v}))\right\rbrace$，於是前式意味著</p>
 <script type="math/tex; mode=display">\begin{aligned}
 \left\lbrace (\mu^{j},v^{j})\right\rbrace_{\left\lbrace j\right\rbrace\setminus i}\cup{(\mu^{i},\hat{v}(\mu^{i}))}&\subset\text{hyp}(\hat{v})\\
 \gamma^{i}\hat{v}(\mu^{i})+\sum_{\left\lbrace j\right\rbrace\setminus i}\gamma^{j}v^{j}&>\text{sup}\left\lbrace v\in\mathbb{R}|(v,\mu)\in\text{co}(\text{hyp}(\hat{v}))\right\rbrace
 \end{aligned}</script><p>矛盾。</p>
 <p>接下來我們錶明，任何一個$(\mu,V(\mu))$都可以由$\left\lbrace (\mu^{i},\hat{v}(\mu^{i}))\right\rbrace_{i}$的凸組合得到。</p>
-<p>由於$\hat{v}(\mu)$關於$\mu$是上半(semi)連續的，它的下圖$\text{hyp}(\hat{v})$是閉集。記$H=\left\lbrace (\mu,v)\in\text{hyp}(\hat{v})|v\geq\inf<em>{\mu^{\prime}}\hat{v}(\mu^{\prime})\right\rbrace$(即把下圖從下方截斷：去掉那些任何時候都不會在優化問題中取到的點，例如，如果在問題中$\hat{v}(\mu)$能取到最低的值是0效用，那麼就把三四象限去掉，隻保留那些滿足$\left\lbrace (\mu,v)|0\leq v\leq \hat{v}(\mu)\right\rbrace$，這是為了使我們想找到錶達的凸集成為緊集，Krein Milman凸集錶示定理的要求)，由於$v$是連續函數，而$A$為緊集，因此$\hat{v}(\mu)=v(\hat{a}(\mu),\omega)$是有界的，從而$\inf</em>{\mu^{\prime}}\hat{v}(\mu^{\prime})$是存在的，而$\inf<em>{\mu^{\prime}}\hat{v}(\mu)$與$(\mu,v)\in\text{hyp}(\hat{v})=\left\lbrace (\mu,v)|v\leq\hat{v}({\mu})\right\rbrace$一起使得$H$是有界的，但$H=\text{hyp}(\hat{v})\cap\left\lbrace (\mu,v)|v\geq\inf</em>{\mu^{\prime}}\hat{v}(\mu^{\prime})\right\rbrace$，因此$H$是閉集，從而$H$是緊集，而有限維空間裏緊集的凸包仍是緊集，即$\text{co}(H)$是緊集，從而$\text{co}(\text{hyp}(\hat{v}))$是閉集(但一般地，閉集的凸包不一定是閉集，待補充)。</p>
+<p>由於$\hat{v}(\mu)$關於$\mu$是上半(semi)連續的，它的下圖$\text{hyp}(\hat{v})$是閉集。記$H=\left\lbrace (\mu,v)\in\text{hyp}(\hat{v})|v\geq\inf_{\mu^{\prime}}\hat{v}(\mu^{\prime})\right\rbrace$(即把下圖從下方截斷：去掉那些任何時候都不會在優化問題中取到的點，例如，如果在問題中$\hat{v}(\mu)$能取到最低的值是0效用，那麼就把三四象限去掉，隻保留那些滿足$\left\lbrace (\mu,v)|0\leq v\leq \hat{v}(\mu)\right\rbrace$，這是為了使我們想找到錶達的凸集成為緊集，Krein Milman凸集錶示定理的要求)，由於$v$是連續函數，而$A$為緊集，因此$\hat{v}(\mu)=v(\hat{a}(\mu),\omega)$是有界的，從而$\inf_{\mu^{\prime}}\hat{v}(\mu^{\prime})$是存在的，而$\inf_{\mu^{\prime}}\hat{v}(\mu)$與$(\mu,v)\in\text{hyp}(\hat{v})=\left\lbrace (\mu,v)|v\leq\hat{v}({\mu})\right\rbrace$一起使得$H$是有界的，但$H=\text{hyp}(\hat{v})\cap\left\lbrace (\mu,v)|v\geq\inf_{\mu^{\prime}}\hat{v}(\mu^{\prime})\right\rbrace$，因此$H$是閉集，從而$H$是緊集，而有限維空間裏緊集的凸包仍是緊集，即$\text{co}(H)$是緊集，從而$\text{co}(\text{hyp}(\hat{v}))$是閉集(但一般地，閉集的凸包不一定是閉集，待補充)。</p>
 <script type="math/tex; mode=display">\begin{aligned}
 V(\mu)=\sup_{\tau_{\Delta\Delta(\Omega)}}\int_{\Delta(\Omega)}\hat{v}(\mu)\tau(d\mu)\\
 s.t.\\
@@ -428,37 +428,37 @@ s.t.\\
 <script type="math/tex; mode=display">D^*=\inf_{\lambda\in\mathbb{R}^{|\Omega|}}D(\lambda)\geq W(\mu_{0})</script><p>而$\hat{v}$的下圖的凸包$V$根據設定就是個內部非空$\text{int}(V)\neq\emptyset$的凸集。</p>
 <p>但$\hat{v}$的上半(semi)連續意味著$\text{hyp}(\hat{v})$是閉集(upper semi continuous 意味著<strong>下圖</strong>是閉集；緊值的 upper hemi continuous 意味著<strong>圖</strong>是閉集，註意區別)，</p>
 <p>並且</p>
-<script type="math/tex; mode=display">V(\mu_{0})=\sup\left\lbrace v\in\mathbb{R}|(v,\mu_{0})\in V\right\rbrace</script><p>同時，根據$V(\mu)$的構造，$V(\mu<em>{0})&lt;\hat{v}(\mu</em>{0})$不成立，所以$(\mu<em>{0},V(\mu</em>{0}))\in V\setminus \text{int}(V)$。</p>
+<script type="math/tex; mode=display">V(\mu_{0})=\sup\left\lbrace v\in\mathbb{R}|(v,\mu_{0})\in V\right\rbrace</script><p>同時，根據$V(\mu)$的構造，$V(\mu_{0})&lt;\hat{v}(\mu_{0})$不成立，所以$(\mu_{0},V(\mu_{0}))\in V\setminus \text{int}(V)$。</p>
 <p>根據支撐超平麵定理，存在一個嚮量(比世界狀態空間的維度高一維)$(u,w)\in\mathbb{R}\times\mathbb{R}^{|\Omega|}$滿足$u&gt;0$使得</p>
-<script type="math/tex; mode=display">uV(\mu_{0})+w^{T}\mu_{0}\geq u\hat{v}(\mu)+w^{T}\mu</script><p>其中$(v,\mu)\in V$。即使用支撐超平麵定理，錶明$(\mu<em>{0},V(\mu</em>{0}))\in V\setminus \text{int}(V)$與$\text{int}(V)$在$(\mu<em>{0},V(\mu</em>{0}))$處存在支撐超平麵$(u,w)$。</p>
-<p>(1) 如果$V(\mu<em>{0})=\hat{v}(\mu</em>{0})$，那麼對於任何$\mu\in\Delta(\Omega)$，代入</p>
+<script type="math/tex; mode=display">uV(\mu_{0})+w^{T}\mu_{0}\geq u\hat{v}(\mu)+w^{T}\mu</script><p>其中$(v,\mu)\in V$。即使用支撐超平麵定理，錶明$(\mu_{0},V(\mu_{0}))\in V\setminus \text{int}(V)$與$\text{int}(V)$在$(\mu_{0},V(\mu_{0}))$處存在支撐超平麵$(u,w)$。</p>
+<p>(1) 如果$V(\mu_{0})=\hat{v}(\mu_{0})$，那麼對於任何$\mu\in\Delta(\Omega)$，代入</p>
 <script type="math/tex; mode=display">u\hat{v}(\mu_{0})+w^{T}\mu_{0}\geq u\hat{v}(\mu)+w^{T}\mu</script><p>得到</p>
-<script type="math/tex; mode=display">\hat{v}(\mu_{0})+\frac{1}{u}w^{T}\mu_{0}\geq \hat{v}(\mu)+\frac{1}{u}w^{T}\mu</script><p>接下來我們錶明$\tau=\delta<em>{\left\lbrace \mu</em>{0}\right\rbrace}$(即不揭露任何信息，唯一地使接收者的後驗信念確定為先驗信念$\mu_{0}$)</p>
-<p>在這種情況下($V(\mu<em>{0})=\hat{v}(\mu</em>{0})$)</p>
+<script type="math/tex; mode=display">\hat{v}(\mu_{0})+\frac{1}{u}w^{T}\mu_{0}\geq \hat{v}(\mu)+\frac{1}{u}w^{T}\mu</script><p>接下來我們錶明$\tau=\delta_{\left\lbrace \mu_{0}\right\rbrace}$(即不揭露任何信息，唯一地使接收者的後驗信念確定為先驗信念$\mu_{0}$)</p>
+<p>在這種情況下($V(\mu_{0})=\hat{v}(\mu_{0})$)</p>
 <p>對於發送者為唯一最優的</p>
-<p>(即$W(\mu<em>{0})=\hat{v}(\mu</em>{0})=V(\mu_{0})$)。</p>
+<p>(即$W(\mu_{0})=\hat{v}(\mu_{0})=V(\mu_{0})$)。</p>
 <p>根據</p>
 <script type="math/tex; mode=display">D(\lambda)=\sup_{\tau\in\Delta\Delta(\Omega)}\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau(d\mu)</script><p>可知，如果能夠找到某個$\lambda$使得</p>
 <script type="math/tex; mode=display">\delta_{\left\lbrace \mu_{0}\right\rbrace}\in\arg\max_{\tau\in\Delta\Delta(\Omega)}\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau(d\mu)</script><p>就可以了。但這就意味著找到了某個$\tau$使得原問題的目標函數取得了$D(\lambda)$這個期望效用，那麼原問題目標函數的上確界值函數$W(\mu_{0})$就至少為$D(\lambda)$，即</p>
 <script type="math/tex; mode=display">W(\mu_{0})\geq D(\lambda)</script><p>但根據定義有</p>
 <script type="math/tex; mode=display">D^*=\inf_{\lambda\in\mathbb{R}^{|\Omega|}}D(\lambda)\geq W(\mu_{0})</script><p>因此</p>
 <script type="math/tex; mode=display">W(\mu_{0})\geq D(\lambda)\geq D^*\geq W(\mu_{0})</script><p>即</p>
-<script type="math/tex; mode=display">W(\mu_{0})=D(\lambda)</script><p>因此$\delta<em>{\left\lbrace \mu</em>{0}\right\rbrace}$確實解了原始問題。下麵我們考慮如何找到這個$\lambda$</p>
+<script type="math/tex; mode=display">W(\mu_{0})=D(\lambda)</script><p>因此$\delta_{\left\lbrace \mu_{0}\right\rbrace}$確實解了原始問題。下麵我們考慮如何找到這個$\lambda$</p>
 <p>令$\lambda=-\frac{1}{u}w$</p>
 <p>則</p>
 <script type="math/tex; mode=display">\hat{v}(\mu_{0})+\frac{1}{u}w^{T}\mu_{0}\geq \hat{v}(\mu)+\frac{1}{u}w^{T}\mu</script><p>變為</p>
-<script type="math/tex; mode=display">\hat{v}(\mu_{0})+\lambda^{T}\mu_{0}\geq \hat{v}(\mu)+\lambda^{T}\mu</script><p>兩邊同時積分，並代入$\tau=\delta<em>{\left\lbrace \mu</em>{0}\right\rbrace}$，有</p>
-<script type="math/tex; mode=display">\int_{\Delta(\Omega)}(\hat{v}(\mu_{0})-\lambda^{T}\mu_{0})d\mu_{0}\geq\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau^{\prime}(d\mu)</script><p>但這就意味著當$\lambda=-\frac{1}{u}w$時，$\tau=\delta<em>{\left\lbrace \mu</em>{0}\right\rbrace}$比任何其他的$\tau^{\prime}\in\Delta\Delta(\Omega)$對於發送者來說都能帶來更高的效用。因此，當$V(\mu<em>{0})=\hat{v}(\mu</em>{0})$時，完全不披露任何信息，使得後驗信念與先驗信念完全重合是發送者的最優策略。</p>
-<p>(2) 如果$V(\mu<em>{0})&gt;\hat{v}(\mu</em>{0})$，那麼根據Caratheodory定理，存在$\left\lbrace \hat{v}(\mu^{j}),\mu^{j}\right\rbrace_{j=1}^{|\Omega|+2}\subset\left\lbrace (v,\mu)\in\mathbb{R}\times\Delta(\Omega)|v\leq\hat{v}(\mu)\right\rbrace$和$\alpha\in\Delta(\left\lbrace 1,…,|\Omega|+2\right\rbrace)$使得</p>
+<script type="math/tex; mode=display">\hat{v}(\mu_{0})+\lambda^{T}\mu_{0}\geq \hat{v}(\mu)+\lambda^{T}\mu</script><p>兩邊同時積分，並代入$\tau=\delta_{\left\lbrace \mu_{0}\right\rbrace}$，有</p>
+<script type="math/tex; mode=display">\int_{\Delta(\Omega)}(\hat{v}(\mu_{0})-\lambda^{T}\mu_{0})d\mu_{0}\geq\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau^{\prime}(d\mu)</script><p>但這就意味著當$\lambda=-\frac{1}{u}w$時，$\tau=\delta_{\left\lbrace \mu_{0}\right\rbrace}$比任何其他的$\tau^{\prime}\in\Delta\Delta(\Omega)$對於發送者來說都能帶來更高的效用。因此，當$V(\mu_{0})=\hat{v}(\mu_{0})$時，完全不披露任何信息，使得後驗信念與先驗信念完全重合是發送者的最優策略。</p>
+<p>(2) 如果$V(\mu_{0})&gt;\hat{v}(\mu_{0})$，那麼根據Caratheodory定理，存在$\left\lbrace \hat{v}(\mu^{j}),\mu^{j}\right\rbrace_{j=1}^{|\Omega|+2}\subset\left\lbrace (v,\mu)\in\mathbb{R}\times\Delta(\Omega)|v\leq\hat{v}(\mu)\right\rbrace$和$\alpha\in\Delta(\left\lbrace 1,…,|\Omega|+2\right\rbrace)$使得</p>
 <script type="math/tex; mode=display">\sum_{j=1}^{|\Omega|+2}\alpha_{j}(\mu^{j},\hat{v}(\mu^{j}))=(\mu_{0},V(\mu_{0}))</script><p>結合</p>
 <script type="math/tex; mode=display">uV(\mu_{0})+w^{T}\mu_{0}\geq u\hat{v}(\mu)+w^{T}\mu</script><p>可知</p>
 <script type="math/tex; mode=display">V(\mu_{0})=\hat{v}(\mu^{j}),\forall j</script><p>以及</p>
 <script type="math/tex; mode=display">uV(\mu_{0})+w^{T}\mu_{0}=u\hat{v}(\mu^{j})+w^{T}\mu^{j},\forall j</script><p>從而</p>
 <script type="math/tex; mode=display">u\hat{v}(\mu^{j})+w^{T}\mu^{j}\geq u\hat{v}(\mu)+w^{T}\mu,\forall j,\forall \mu\in\Delta\Delta(\Omega)</script><p>取$\lambda=-\frac{1}{u}w$，得</p>
-<script type="math/tex; mode=display">\hat{v}(\mu^{j})-\lambda^{T}\mu^{j}\geq \hat{v}(\mu)-\lambda^{T}\mu,\forall j,\forall \mu\in\Delta\Delta(\Omega)</script><p>由於$\left\lbrace \alpha<em>{j}\right\rbrace</em>{j=1}^{|\Omega|+2}$是凸組合的係數，因此可以作為$\tau$分配給$\mu^{j}$的權重，即</p>
+<script type="math/tex; mode=display">\hat{v}(\mu^{j})-\lambda^{T}\mu^{j}\geq \hat{v}(\mu)-\lambda^{T}\mu,\forall j,\forall \mu\in\Delta\Delta(\Omega)</script><p>由於$\left\lbrace \alpha_{j}\right\rbrace_{j=1}^{|\Omega|+2}$是凸組合的係數，因此可以作為$\tau$分配給$\mu^{j}$的權重，即</p>
 <script type="math/tex; mode=display">\tau(\mu^{j})=\alpha_{j},\forall j\in\left\lbrace 1,...,|\Omega|+2\right\rbrace</script><p>因此</p>
-<script type="math/tex; mode=display">\int_{\Delta(\Omega)}(\hat{v}(\mu^{j})-\lambda^{T}\mu^{j})\tau(d\mu^{j})\geq\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau^{\prime}(d\mu),\forall\tau^{\prime}\in\Delta\Delta(\Omega)</script><p>從而$\left\lbrace \tau(\mu^{j})|\tau(\mu^{j})=\alpha<em>{j},\text{such that}\sum</em>{j=1}^{|\Omega|+2}\alpha<em>{j}(\mu^{j},\hat{v}(\mu^{j}))=(\mu</em>{0},V(\mu<em>{0}))\right\rbrace</em>{j=1}^{|\Omega|+2}$確實解了原問題。因此$W(\mu<em>{0})=V(\mu</em>{0})$。</p>
-<p>這回答了：為什麼發送者通過選擇最優信息結構(根據前麵的引理，這等價於選擇在後驗信念上的最優分佈)所能實現的最大效用，就等於凹化函數在先驗信念處的取值？當$V(\mu<em>{0})=\hat{v}(\mu</em>{0})$時，我們找到了最優的$\tau=\delta<em>{\left\lbrace \mu</em>{0}\right\rbrace}$，即不分享信息；當$V(\mu<em>{0})&gt;\hat{v}(\mu</em>{0})$時，我們也找到了需要引緻接收者最優行為的$\tau$，即$\left\lbrace \tau(\mu^{j})|\tau(\mu^{j})=\alpha<em>{j},\text{such that}\sum</em>{j=1}^{|\Omega|+2}\alpha<em>{j}(\mu^{j},\hat{v}(\mu^{j}))=(\mu</em>{0},V(\mu<em>{0}))\right\rbrace</em>{j=1}^{|\Omega|+2}$。</p>
+<script type="math/tex; mode=display">\int_{\Delta(\Omega)}(\hat{v}(\mu^{j})-\lambda^{T}\mu^{j})\tau(d\mu^{j})\geq\int_{\Delta(\Omega)}(\hat{v}(\mu)-\lambda^{T}\mu)\tau^{\prime}(d\mu),\forall\tau^{\prime}\in\Delta\Delta(\Omega)</script><p>從而$\left\lbrace \tau(\mu^{j})|\tau(\mu^{j})=\alpha_{j},\text{such that}\sum_{j=1}^{|\Omega|+2}\alpha_{j}(\mu^{j},\hat{v}(\mu^{j}))=(\mu_{0},V(\mu_{0}))\right\rbrace_{j=1}^{|\Omega|+2}$確實解了原問題。因此$W(\mu_{0})=V(\mu_{0})$。</p>
+<p>這回答了：為什麼發送者通過選擇最優信息結構(根據前麵的引理，這等價於選擇在後驗信念上的最優分佈)所能實現的最大效用，就等於凹化函數在先驗信念處的取值？當$V(\mu_{0})=\hat{v}(\mu_{0})$時，我們找到了最優的$\tau=\delta_{\left\lbrace \mu_{0}\right\rbrace}$，即不分享信息；當$V(\mu_{0})&gt;\hat{v}(\mu_{0})$時，我們也找到了需要引緻接收者最優行為的$\tau$，即$\left\lbrace \tau(\mu^{j})|\tau(\mu^{j})=\alpha_{j},\text{such that}\sum_{j=1}^{|\Omega|+2}\alpha_{j}(\mu^{j},\hat{v}(\mu^{j}))=(\mu_{0},V(\mu_{0}))\right\rbrace_{j=1}^{|\Omega|+2}$。</p>
 <h3 id="命題三"><a href="#命題三" class="headerlink" title="命題三"></a>命題三</h3><ul>
 <li>若$\hat{v}(\mu)$關於$\mu$(嚴格)凹，則無批露(唯一地)最優；</li>
 <li>若$\hat{v}(\mu)$關於$\mu$(嚴格)凸，則完全披露(唯一地)最優；</li>
@@ -466,7 +466,7 @@ s.t.\\
 </ul>
 <p>證明：前兩部分很直觀，隻證明第三條。第三條意味著，如果發送者能通過分享信息獲利，那麼發送者的值函數關於接收者的信念不能是線性的。</p>
 <p>首先我們錶明，如果某個信念$\mu^{\prime}$為最優信息結構所引緻，那麼$V(\mu^{\prime})=\hat{v}(\mu^{\prime})$。即，最優信息結構所實現的效用$\mathbb{E}_{\tau}\hat{v}(\mu)=V(\mu)$，應由對應於值函數$\hat{v}(\mu)$與凹化函數$V(\mu)$取值相同的那些信念組成(即，如果這些信念作為先驗信念出現，那麼發送者將無法通過分享信息獲利)</p>
-<p>反證。假設某個最優信息結構$\tau$(前麵已經錶明信息結構$(S,q)$與後驗信念上分佈$\tau$的等價性，因此不加區別地使用)引緻了某個不使取值重合的後驗信念$\mu^{\prime}&gt;0$，即$V(\mu^{\prime})&gt;\hat{v}(\mu^{\prime})$(相反方嚮的不等號已經由$V(\mu)$的定義排除)，然而$(\mu^{\prime},V(\mu^{\prime}))\in\text{co}(\hat{v})$，那麼肯定還存在另一個信息結構$\tau^{\prime}$滿足貝葉斯可行$\mathbb{E}<em>{\tau^{\prime}}\mu=\mu^{\prime}$並使得$\mathbb{E}</em>{\tau^{\prime}}\hat{v}(\mu)=V(\mu^{\prime})$，那麼我們可以重新組合權重並構造一個新的信息結構$\tau^{\ast}$：</p>
+<p>反證。假設某個最優信息結構$\tau$(前麵已經錶明信息結構$(S,q)$與後驗信念上分佈$\tau$的等價性，因此不加區別地使用)引緻了某個不使取值重合的後驗信念$\mu^{\prime}&gt;0$，即$V(\mu^{\prime})&gt;\hat{v}(\mu^{\prime})$(相反方嚮的不等號已經由$V(\mu)$的定義排除)，然而$(\mu^{\prime},V(\mu^{\prime}))\in\text{co}(\hat{v})$，那麼肯定還存在另一個信息結構$\tau^{\prime}$滿足貝葉斯可行$\mathbb{E}_{\tau^{\prime}}\mu=\mu^{\prime}$並使得$\mathbb{E}_{\tau^{\prime}}\hat{v}(\mu)=V(\mu^{\prime})$，那麼我們可以重新組合權重並構造一個新的信息結構$\tau^{\ast}$：</p>
 <script type="math/tex; mode=display">\tau^{\ast}(\mu)=
 \begin{cases}
 \tau(\mu^{\prime})\tau^{\prime}(\mu)&\text{if}\mu\in\text{supp}(\tau^{\prime})\setminus\text{supp}(\tau)\\
@@ -474,7 +474,7 @@ s.t.\\
 \tau(\mu)&\text{if}\mu\in\text{supp}(\tau)\setminus(\text{supp}(\tau^{\prime})\cup\left\lbrace \mu^{\prime}\right\rbrace)
 \end{cases}</script><p>即在保持貝葉斯可行的條件下，把在$\tau$下放在$\mu^{\prime}$(得到較低的$\hat{v}(\mu^{\prime})&lt;V(\mu^{\prime})$)上的權重轉移到$\tau^{\prime}$上。</p>
 <p>可以驗證$\tau^{\ast}$能為發送者帶來更高的效用。因此反證得證。即：如果我們使用了冇有帶來$V(\mu)=\hat{v}(\mu)$的$\mu$作為某一信息結構引緻的後驗信念上分佈$\tau$的組成部分($\tau(\mu)&gt;0$)，那麼這樣的信息結構對於發送者來說就不會是最優的。</p>
-<p>如果$\hat{v}$不是凹函數，並且最優信息結構所引緻的分佈$\tau$中有某個內點$\mu<em>{m}$滿足$\tau(\mu</em>{m})&gt;0$，那麼根據上一步，有$V(\mu<em>{m})=\hat{v}(\mu</em>{m})$。<br>由於$\hat{v}$不是凹函數，那麼凹化函數至少在某些點上嚴格高於值函數(即發送者可以通過分享信息獲利)，即$\exists\mu<em>{l}$(盡管$\tau(\mu</em>{l})=0$)使得$V(\mu<em>{l})&gt;\hat{v}(\mu</em>{l})$，而由於$\mu<em>{m}$是內點，一定存在$\mu</em>{r}$(盡管我們不知道它是否被最優信息結構所引緻，但依然有$V(\mu<em>{r})\geq\hat{v}(\mu</em>{r})$根據$V(\mu)$的定義)和$\gamma\in(0,1)$使得$\mu<em>{m}=\gamma\mu</em>{l}+(1-\gamma)\mu_{r}$，從而</p>
+<p>如果$\hat{v}$不是凹函數，並且最優信息結構所引緻的分佈$\tau$中有某個內點$\mu_{m}$滿足$\tau(\mu_{m})&gt;0$，那麼根據上一步，有$V(\mu_{m})=\hat{v}(\mu_{m})$。<br>由於$\hat{v}$不是凹函數，那麼凹化函數至少在某些點上嚴格高於值函數(即發送者可以通過分享信息獲利)，即$\exists\mu_{l}$(盡管$\tau(\mu_{l})=0$)使得$V(\mu_{l})&gt;\hat{v}(\mu_{l})$，而由於$\mu_{m}$是內點，一定存在$\mu_{r}$(盡管我們不知道它是否被最優信息結構所引緻，但依然有$V(\mu_{r})\geq\hat{v}(\mu_{r})$根據$V(\mu)$的定義)和$\gamma\in(0,1)$使得$\mu_{m}=\gamma\mu_{l}+(1-\gamma)\mu_{r}$，從而</p>
 <script type="math/tex; mode=display">\begin{aligned}
 \hat{v}(\mu_{m})=V(\mu_{m})\geq&\gamma V(\mu_{l})+(1-\gamma)V(\mu_{r})\\
 \geq&\gamma V(\mu_{l})+(1-\gamma)\hat{v}(\mu_{r})\\
@@ -487,7 +487,7 @@ s.t.\\
 <script type="math/tex; mode=display">\forall\omega,\text{ such that }\left\lbrace \hat{a}(\mu)\right\rbrace\neq\arg\max u(a,\omega),\mu(\omega)=0</script><p>即，在這個信念下，接收者認為任何<strong>使自己不採取行動$\hat{a}(\mu)$</strong>的世界狀態發生的機率為0。</p>
 <p>接下來，我們證明這個命題。假設接收者採取了對發送者來說最壞的行動$\underline{a}$，</p>
 <script type="math/tex; mode=display">v(\underline{a},\omega)<u(a,\omega),\forall\omega,a\neq\underline{a}</script><p>並將那些使得接收者採取這個行動的世界狀態記為</p>
-<script type="math/tex; mode=display">\underline{\Omega}=\left\lbrace \omega|\hat{a}(\mu_{\omega})=\underline{a}\right\rbrace</script><p>其中$\mu<em>{\omega}$是一族退化的信念使得$\mu</em>{\omega}(\omega)=1$。<br>反證，假設最優信息結構應引緻$\tau$，<br>並且信念$\mu^{\prime}\in\text{supp}(\tau)$(即$\tau(\mu^{\prime})&gt;0$)，$\hat{a}(\mu^{\prime})=\underline{a}$，但</p>
+<script type="math/tex; mode=display">\underline{\Omega}=\left\lbrace \omega|\hat{a}(\mu_{\omega})=\underline{a}\right\rbrace</script><p>其中$\mu_{\omega}$是一族退化的信念使得$\mu_{\omega}(\omega)=1$。<br>反證，假設最優信息結構應引緻$\tau$，<br>並且信念$\mu^{\prime}\in\text{supp}(\tau)$(即$\tau(\mu^{\prime})&gt;0$)，$\hat{a}(\mu^{\prime})=\underline{a}$，但</p>
 <script type="math/tex; mode=display">\exists\in\overline{\Omega}\text{ such that }\mu^{\prime}(\overline{\omega})>0</script><p>其中</p>
 <script type="math/tex; mode=display">\overline{\Omega}=\Omega\setminus\underline{\Omega}</script><p>(即，接收者認為不會引緻自己採用$\underline{a}$的世界狀態發生的機率為正，也就是“並不確定”的意思)。記</p>
 <script type="math/tex; mode=display">\overline{\mu}(\overline{\omega})=1</script><p>和</p>
@@ -516,22 +516,22 @@ s.t.\\
 <script type="math/tex; mode=display">\sum_{\mu}\tau(\mu)\mu(\omega)=\mu_{0}(\omega),\forall\omega\in\Omega</script><p>即，隻要$\tau$滿足貝葉斯可行，則$\tau^{\ast}$就滿足貝葉斯可行。</p>
 <p>同時可以驗證$\tau^{\ast}$會為發送者帶來比$\tau$更高的效用。因此，原先的$\tau$便不是引緻最優信息結構的後驗信念上的分佈。矛盾。可知假設“接收者不確定”為假。</p>
 <h3 id="命題五"><a href="#命題五" class="headerlink" title="命題五"></a>命題五</h3><p>【假設一】不存在任何一個使得如下情況成立的接收者的行動$a$：</p>
-<p>(1) 對於任何信念$\mu$，發送者從接收者的行動$a$上得到的效用不會低於$\mu$下的值函數$\hat{v}(\mu)=\mathbb{E}<em>{\mu}v(\hat{a}({\mu}),\omega)\leq\mathbb{E}</em>{\mu}v(a,\omega)$；</p>
-<p>(2) 存在某個信念$\mu^{\prime}$使得雖然$a\neq\hat{a}(\mu^{\prime})$（雖然$a$不是這種情況下的最優行動）但$\hat{v}(\mu^{\prime})=\mathbb{E}<em>{\mu}v(\hat{a}({\mu^{\prime}}),\omega)=\mathbb{E}</em>{\mu^{\prime}}v(a,\omega)$（然而仍然為發送者實現了$\mu$下的值函數）</p>
+<p>(1) 對於任何信念$\mu$，發送者從接收者的行動$a$上得到的效用不會低於$\mu$下的值函數$\hat{v}(\mu)=\mathbb{E}_{\mu}v(\hat{a}({\mu}),\omega)\leq\mathbb{E}_{\mu}v(a,\omega)$；</p>
+<p>(2) 存在某個信念$\mu^{\prime}$使得雖然$a\neq\hat{a}(\mu^{\prime})$（雖然$a$不是這種情況下的最優行動）但$\hat{v}(\mu^{\prime})=\mathbb{E}_{\mu}v(\hat{a}({\mu^{\prime}}),\omega)=\mathbb{E}_{\mu^{\prime}}v(a,\omega)$（然而仍然為發送者實現了$\mu$下的值函數）</p>
 <p>命題五：當【假設一】成立時，如果發送者能夠通過勸說獲利，那麼在最優信息結構下，接收者在被引緻的任何內點信念$\mu$上其偏好都不會是離散的。</p>
 <p>註意，我們隻說在最優信息結構下的內點後驗信念上，接收者的偏好不是離散的。但對於先驗信念(已被假設為全支撐)來說雖然也是內點信念，但接收者的偏好是離散的。並且，我們隻要求那些內點後驗信念，不要求邊界點後驗信念。</p>
 <p>證明：首先我們錶明，</p>
-<p>隨後，如果某兩個後驗信念$\mu<em>{l}$和$\mu</em>{r}$是被最優信息結構引緻的，並且任取$\gamma\in[0,1]$組合成$\mu<em>{m}=\gamma\mu</em>{l}+(1-\gamma)\mu<em>{r}$，那麼這個凸組合得到的$\mu</em>{m}$給發送者帶來的值函數取值，不會高於最優信息結構下的$\mu<em>{l}$和$\mu</em>{r}$分別給發送者帶來的值函數取值的凸組合。即</p>
+<p>隨後，如果某兩個後驗信念$\mu_{l}$和$\mu_{r}$是被最優信息結構引緻的，並且任取$\gamma\in[0,1]$組合成$\mu_{m}=\gamma\mu_{l}+(1-\gamma)\mu_{r}$，那麼這個凸組合得到的$\mu_{m}$給發送者帶來的值函數取值，不會高於最優信息結構下的$\mu_{l}$和$\mu_{r}$分別給發送者帶來的值函數取值的凸組合。即</p>
 <script type="math/tex; mode=display">\hat{v}(\mu_{m})\leq\gamma\hat{v}(\mu_{l})+(1-\gamma)\hat{v}(\mu_{r})</script><p>或</p>
 <script type="math/tex; mode=display">\hat{v}(\mathbb{E}_{\tau}\mu)\leq\mathbb{E}_{\tau}\hat{v}(\mu)</script><p>（如果$\hat{v}(\mu)$是凸函數，那麼發送者總是可以通過勸說來獲利，上式根據Jensen’s Inequality總是成立的。但一般情況需要單獨證明）</p>
-<p>反證。假設某個最優信息結構下$\tau$使得$\tau(\mu<em>{l})&gt;0,\tau(\mu</em>{r})&gt;0$，然而$\hat{v}(\mu<em>{m})\geq\gamma\hat{v}(\mu</em>{l})+(1-\gamma)\hat{v}(\mu<em>{r})$。那麼我們可以任意選擇一個$\epsilon\in(0,1)$，並取$\epsilon^{\prime}=\epsilon\frac{\tau(\mu</em>{l})}{\tau(\mu_{r})}$，定義</p>
+<p>反證。假設某個最優信息結構下$\tau$使得$\tau(\mu_{l})&gt;0,\tau(\mu_{r})&gt;0$，然而$\hat{v}(\mu_{m})\geq\gamma\hat{v}(\mu_{l})+(1-\gamma)\hat{v}(\mu_{r})$。那麼我們可以任意選擇一個$\epsilon\in(0,1)$，並取$\epsilon^{\prime}=\epsilon\frac{\tau(\mu_{l})}{\tau(\mu_{r})}$，定義</p>
 <script type="math/tex; mode=display">\begin{aligned}
 \tau^{\ast}(\mu_{l})=&(1-\gamma\epsilon)\tau(\mu_{l})\\
 \tau^{\ast}(\mu_{r})=&(1-(1-\gamma)\epsilon^{\prime})\tau(\mu_{r})\\
 \tau^{\ast}(\mu_{m})=&\tau(\mu_{m})+\epsilon\tau(\mu_{l})\\
 \tau^{\ast}(\mu)=&\tau,\text{ if }\mu\notin\left\lbrace \mu_{l},\mu_{m},\mu_{r}\right\rbrace
 \end{aligned}</script><p>則$\tau^{\ast}$是滿足貝葉斯可行的、比$\tau$能給發送者帶來更高效用的信息結構(所引緻的後驗信念上的分佈)。矛盾。</p>
-<p>【定義】如果對於任何信念$\mu$，都有$\hat{v}(\mu)=\mathbb{E}<em>{\mu}v(\hat{a}(\mu),\omega)\leq\mathbb{E}</em>{\mu}v(a,\omega)$，那麼我們說$a$是<strong>引緻佔優</strong>的；如果對於任何使得$a\neq\hat{a}(\mu)$的信念$\mu$，都有$\hat{v}(\mu)=\mathbb{E}<em>{\mu}v(\hat{a}(\mu),\omega)&lt;\mathbb{E}</em>{\mu}v(a,\omega)$，則說$a$是<strong>嚴格引緻佔優</strong>的；如果$a$是引緻佔優的，並且存在某個使得$a\neq\hat{a}(\mu)$的$\mu$，有$\hat{v}(\mu)=\mathbb{E}_{\mu}v(a,\omega)$，則說$a$是<strong>弱、但不嚴格引緻佔優</strong>的。</p>
+<p>【定義】如果對於任何信念$\mu$，都有$\hat{v}(\mu)=\mathbb{E}_{\mu}v(\hat{a}(\mu),\omega)\leq\mathbb{E}_{\mu}v(a,\omega)$，那麼我們說$a$是<strong>引緻佔優</strong>的；如果對於任何使得$a\neq\hat{a}(\mu)$的信念$\mu$，都有$\hat{v}(\mu)=\mathbb{E}_{\mu}v(\hat{a}(\mu),\omega)&lt;\mathbb{E}_{\mu}v(a,\omega)$，則說$a$是<strong>嚴格引緻佔優</strong>的；如果$a$是引緻佔優的，並且存在某個使得$a\neq\hat{a}(\mu)$的$\mu$，有$\hat{v}(\mu)=\mathbb{E}_{\mu}v(a,\omega)$，則說$a$是<strong>弱、但不嚴格引緻佔優</strong>的。</p>
 <p>即：如果對於發送者來說，對於任何信念$\mu$，$a$都不比該信念下的最優行動$\hat{a}(\mu)$差，則$a$是引緻佔優的；如果對於任何使得$a$與最優行動$\hat{a}(\mu)$不同的$\mu$，都有$a$比$\hat{a}(\mu)$對發送者更好，則$a$是“心嚮往之，但不能至”，即嚴格引緻佔優的。如果有些$\mu$使得$a$與$\hat{a}(\mu)$不同，並且$a$是“心嚮往之，有時能至”，則是弱、但不嚴格引緻佔優的。</p>
 <p>那麼，如果發送者願意分享信息，那麼</p>
 <script type="math/tex; mode=display">\hat{v}(\mu)>\sum_{\omega}v(\hat{a}(\mu_{0}),\omega)\mu(\omega)</script><p>可見，這時$\hat{a}(\mu_{0})$必須不能是引緻佔優的。</p>
@@ -540,8 +540,8 @@ s.t.\\
 <p>接下來，我們錶明，當【假設一】成立時，若$\mu$是被最優信息結構所引緻的內點後驗信念，那麼，要麼(1)接收者的偏好在$\mu$處是非離散的，要麼(2)最優行為$\hat{a}(\mu)$是嚴格引緻佔優的。</p>
 <p>假設接收者的偏好在$\mu$處是離散的，那麼根據命題二，如果$\mu$就是先驗信念，那麼(1)當發送者不願意分享信息，那意味著發送者不能通過分享信息獲利，但這就意味著$\hat{a}(\mu)$是嚴格引緻佔優的；(2)發送者願意分享信息，那麼意味著發送者可以通過分享信息獲利，此時$V(\mu)=\hat{v}(\mu)$()，則此時$\hat{a}(\mu)$是引緻佔優(取等號)的，但【假設一】排除了弱、但不嚴格引緻佔優的情況，因此$\hat{a}(\mu)$必須是嚴格引緻佔優的。即，我們得到了，“(1)接收者的偏好在$\mu$處是非離散的”與“(2)最優行為$\hat{a}(\mu)$是嚴格引緻佔優的”在【假設一】成立、$\mu$是被最優信息結構所引緻的內點後驗信念下，是互斥的。</p>
 <p>接下來我們錶明，如果發送者能夠通過勸說獲利，並且$\mu$是最優信息結構引緻的後驗信念$\tau(\mu)$，同時$\hat{a}(\mu)$是嚴格引緻佔優的，那麼接收者的偏好在$\mu$處是非離散的。</p>
-<p>如果發送者能夠通過勸說獲利，那麼意味著$V(\mu<em>{0})&gt;\hat{v}(\mu</em>{0})$，因此要使得$V(\mu<em>{0})=\sum</em>{\mu}\hat{v}(\mu)\tau(\mu)$，至少需要兩個$\mu\text{和}\mu^{\prime},\text{滿足}V(\mu)=\hat{v}(\mu),V(\mu^{\prime})=\hat{v}(\mu^{\prime})\text{以及}\tau(\mu)\mu+\tau(\mu^{\prime})\mu^{\prime}=\mu_{0}$才能實現，同時，$\hat{a}(\mu)\neq\hat{a}(\mu^{\prime})$。反證，假設接收者的偏好在最優信息結構引緻的某個內點$\mu$是離散的，即</p>
-<script type="math/tex; mode=display">\exists \delta>0\text{使得}\forall \mu^{\prime}\in N(\mu,\delta)\text{都有}\hat{a}(\mu^{\prime})=\hat{a}(\mu)</script><p>因此可以選取$\epsilon&gt;0$，使得$\mu<em>{m}=\epsilon\mu^{\prime}+(1-\epsilon)\mu\in N(\mu,\delta)$，則$\hat{a}(\mu</em>{m})=\hat{a}(\mu)$，但由於$\mu$和$\mu^{\prime}$都被最優信息結構所引緻，那麼</p>
+<p>如果發送者能夠通過勸說獲利，那麼意味著$V(\mu_{0})&gt;\hat{v}(\mu_{0})$，因此要使得$V(\mu_{0})=\sum_{\mu}\hat{v}(\mu)\tau(\mu)$，至少需要兩個$\mu\text{和}\mu^{\prime},\text{滿足}V(\mu)=\hat{v}(\mu),V(\mu^{\prime})=\hat{v}(\mu^{\prime})\text{以及}\tau(\mu)\mu+\tau(\mu^{\prime})\mu^{\prime}=\mu_{0}$才能實現，同時，$\hat{a}(\mu)\neq\hat{a}(\mu^{\prime})$。反證，假設接收者的偏好在最優信息結構引緻的某個內點$\mu$是離散的，即</p>
+<script type="math/tex; mode=display">\exists \delta>0\text{使得}\forall \mu^{\prime}\in N(\mu,\delta)\text{都有}\hat{a}(\mu^{\prime})=\hat{a}(\mu)</script><p>因此可以選取$\epsilon&gt;0$，使得$\mu_{m}=\epsilon\mu^{\prime}+(1-\epsilon)\mu\in N(\mu,\delta)$，則$\hat{a}(\mu_{m})=\hat{a}(\mu)$，但由於$\mu$和$\mu^{\prime}$都被最優信息結構所引緻，那麼</p>
 <script type="math/tex; mode=display">\hat{v}(\mu_{m})\leq\epsilon\hat{v}(\mu^{\prime})+(1-\epsilon)\hat{v}(\mu)</script><p>又</p>
 <script type="math/tex; mode=display">\begin{aligned}
 \hat{v}(\mu_{m})=&\sum_{\omega}v(\hat{a}(\mu_{m}),\omega)\mu_{m}(\omega)\\

@@ -151,16 +151,16 @@
 <script type="math/tex; mode=display">(\exists\beta\in (0,1))(\forall x,y\in M)[d(f(X),f(y))\leq\beta d(x,y)]</script><p>则称$f$为压缩映射。可知，压缩映射即是李普希茨常数被限定在$(0,1)$的李普希茨连续算子。</p>
 <h2 id="定义：-非扩张映射"><a href="#定义：-非扩张映射" class="headerlink" title="定义： 非扩张映射"></a>定义： 非扩张映射</h2><p>若李普希茨常数为$1$。</p>
 <h2 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h2><p>如果$f:M\rightarrow M$为压缩映射，则$\forall x\in M$，序列$(x,f(x),f(f(x)),…)$为柯西列。</p>
-<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>如果$f:M\rightarrow M$为压缩映射，且$(M,d)$为完备度量空间（如果其中每个柯西列都是收敛列，且其极限位于该空间中，则称其为完备度量空间），则$f$具有唯一不动点，且从任意起始点$x<em>{0}$开始，如上面引理中定义的柯西列$(x</em>{0},f(x<em>{0}),f(f(x</em>{0}))…)$均收敛于该不动点。</p>
-<h3 id="存在性"><a href="#存在性" class="headerlink" title="存在性"></a>存在性</h3><p>因为$M$为完备度量空间，因此柯西列$(x<em>{0},f(x</em>{0}),f(f(x_{0}))…)$必收敛于空间中某点，记此点为$x^{\ast}$。$\forall\epsilon&gt;0$，$\exists T$，使得$\forall t&gt;T$</p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>如果$f:M\rightarrow M$为压缩映射，且$(M,d)$为完备度量空间（如果其中每个柯西列都是收敛列，且其极限位于该空间中，则称其为完备度量空间），则$f$具有唯一不动点，且从任意起始点$x_{0}$开始，如上面引理中定义的柯西列$(x_{0},f(x_{0}),f(f(x_{0}))…)$均收敛于该不动点。</p>
+<h3 id="存在性"><a href="#存在性" class="headerlink" title="存在性"></a>存在性</h3><p>因为$M$为完备度量空间，因此柯西列$(x_{0},f(x_{0}),f(f(x_{0}))…)$必收敛于空间中某点，记此点为$x^{\ast}$。$\forall\epsilon&gt;0$，$\exists T$，使得$\forall t&gt;T$</p>
 <ul>
 <li><p>根据收敛定义，有$d(x^{\ast},x_{t})&lt;\epsilon/3$；</p>
 </li>
-<li><p>根据柯西列定义，有$d(x<em>{t},x</em>{t+1})&lt;\epsilon/3$；</p>
+<li><p>根据柯西列定义，有$d(x_{t},x_{t+1})&lt;\epsilon/3$；</p>
 </li>
-<li><p>根据距离(度量)的三角不等式，有$d(x^{\ast},f(x^{\ast}))≤d(x^{\ast},x<em>{t})+d(x</em>{t},x<em>{t+1})+d(f(x</em>{t}),f(x^{\ast}))$；</p>
+<li><p>根据距离(度量)的三角不等式，有$d(x^{\ast},f(x^{\ast}))≤d(x^{\ast},x_{t})+d(x_{t},x_{t+1})+d(f(x_{t}),f(x^{\ast}))$；</p>
 </li>
-<li><p>根据压缩映射定义，有$\beta \in (0,1)$使得$d(f(x<em>{t}),f(x^{\ast}))&lt;\beta d(x</em>{t},x^{\ast})&lt;\beta\epsilon/3$。</p>
+<li><p>根据压缩映射定义，有$\beta \in (0,1)$使得$d(f(x_{t}),f(x^{\ast}))&lt;\beta d(x_{t},x^{\ast})&lt;\beta\epsilon/3$。</p>
 </li>
 </ul>
 <p>综上，有$d(x^{\ast},f(x^{\ast}))&lt;\epsilon$，亦即$d(x^{\ast},f(x^{\ast}))=0$。</p>

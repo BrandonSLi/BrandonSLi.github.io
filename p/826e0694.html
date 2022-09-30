@@ -159,19 +159,19 @@ K(\epsilon)&=K^{\star}+p_{2}\epsilon\\
 K_{T}(\epsilon)&=K_{T}^{\star}+\epsilon dK_{T}
 \end{aligned}
 \tag{3}</script><p>如果$C^{\star}$、$K^{\star}$和$K_{T}^{\star}$分別為最優值；<br>將擾動代入$L$得到$L(\epsilon)$，並將$L(\epsilon)$關於$\epsilon$求導，可得必要條件：</p>
-<script type="math/tex; mode=display">\int_{0}^{T}[e^{-\rho t}u^{\prime}(C^{\star})p_{1}+\lambda_{t}(f^{\prime}(K^{\star})p_{2}-p_{1})+\dot{\lambda_{t}}p_{2}]dt-\lambda_{T} dK_{T}+\mu e^{-rT} dK_{T}=0\tag{4}</script><p>若要求當$p<em>{1}$、$p</em>{2}$為任意方嚮的偏離都有式（4）成立，則需有：</p>
+<script type="math/tex; mode=display">\int_{0}^{T}[e^{-\rho t}u^{\prime}(C^{\star})p_{1}+\lambda_{t}(f^{\prime}(K^{\star})p_{2}-p_{1})+\dot{\lambda_{t}}p_{2}]dt-\lambda_{T} dK_{T}+\mu e^{-rT} dK_{T}=0\tag{4}</script><p>若要求當$p_{1}$、$p_{2}$為任意方嚮的偏離都有式（4）成立，則需有：</p>
 <ol>
 <li>$e^{-\rho t}u^{\prime}(C^{\star})=\lambda_{t},\forall t\tag{5}$</li>
-<li>$\lambda<em>{t}f^{\prime}(K^{\star})+\dot{\lambda</em>{t}}=0,\forall t\tag{6}$</li>
+<li>$\lambda_{t}f^{\prime}(K^{\star})+\dot{\lambda_{t}}=0,\forall t\tag{6}$</li>
 <li>$\lambda_{T}=\mu e^{-rT}\tag{7}$</li>
 </ol>
-<p>定義$\gamma<em>{t}=e^{\rho t}\lambda</em>{t}$，並相應地改寫$\dot{\lambda<em>{t}}=-\rho e^{-\rho t}\gamma</em>{t}+e^{-\rho t}\dot{\gamma_{t}}$即可得到常見的一階條件:</p>
+<p>定義$\gamma_{t}=e^{\rho t}\lambda_{t}$，並相應地改寫$\dot{\lambda_{t}}=-\rho e^{-\rho t}\gamma_{t}+e^{-\rho t}\dot{\gamma_{t}}$即可得到常見的一階條件:</p>
 <ol>
 <li>$u^{\prime}(C^{\star})=\gamma_{t},\forall t\tag{5’}$</li>
-<li>$\gamma<em>{t}f^{\prime}(K^{\star})+\dot{\gamma</em>{t}}=\rho \gamma_{t},\forall t\tag{6’}$</li>
-<li>$\gamma<em>{T}=\mu e^{-(r-\rho)T}\tag{7’}$<br>並且，將式（7’）與式（1）中原問題的非負約束相結合，有$\gamma</em>{T}e^{-(r-\rho)T}K<em>{T}=0$，當無窮期 $T\rightarrow\infty$ 時即為$\lim</em>{t\rightarrow\infty}\gamma<em>{t}e^{-(r-\rho)t}K</em>{t}=0$<br>其中因約束以等式成立，而省去各嚴格正的乘子$\mu$。</li>
+<li>$\gamma_{t}f^{\prime}(K^{\star})+\dot{\gamma_{t}}=\rho \gamma_{t},\forall t\tag{6’}$</li>
+<li>$\gamma_{T}=\mu e^{-(r-\rho)T}\tag{7’}$<br>並且，將式（7’）與式（1）中原問題的非負約束相結合，有$\gamma_{T}e^{-(r-\rho)T}K_{T}=0$，當無窮期 $T\rightarrow\infty$ 時即為$\lim_{t\rightarrow\infty}\gamma_{t}e^{-(r-\rho)t}K_{t}=0$<br>其中因約束以等式成立，而省去各嚴格正的乘子$\mu$。</li>
 </ol>
-<h2 id="Hamiltonian"><a href="#Hamiltonian" class="headerlink" title="Hamiltonian"></a>Hamiltonian</h2><p>我們在宏觀領域裏經常會見到“Present value Hamiltonian”和“Current value Hamiltonian”的說法，對於中文讀者來說，這兩個詞不都是“現在”的意思嗎？有什麼區別？<br>區別就是：<br>present在這裏指的是規劃期，常是第0期；<br>而current在這裏指的是第t期。<br>以這種方式理解：<br>$K$的運動方程錶示的是第t期的瞬時變化；<br>current value單期效用函數就是按第t期衡量的$u<em>{c}=u(C</em>{t})$；<br>把current單期效用函數前乘個$e^{-\rho t}$就變成了摺算成第0期的present value單期效用函數$u<em>{p}=e^{-\rho t}u(C</em>{t})$。<br>因此有：</p>
+<h2 id="Hamiltonian"><a href="#Hamiltonian" class="headerlink" title="Hamiltonian"></a>Hamiltonian</h2><p>我們在宏觀領域裏經常會見到“Present value Hamiltonian”和“Current value Hamiltonian”的說法，對於中文讀者來說，這兩個詞不都是“現在”的意思嗎？有什麼區別？<br>區別就是：<br>present在這裏指的是規劃期，常是第0期；<br>而current在這裏指的是第t期。<br>以這種方式理解：<br>$K$的運動方程錶示的是第t期的瞬時變化；<br>current value單期效用函數就是按第t期衡量的$u_{c}=u(C_{t})$；<br>把current單期效用函數前乘個$e^{-\rho t}$就變成了摺算成第0期的present value單期效用函數$u_{p}=e^{-\rho t}u(C_{t})$。<br>因此有：</p>
 <script type="math/tex; mode=display">\begin{aligned}
 H_{p}&=e^{-\rho t}H_{c}\\
 H_{c}&=e^{\rho t}[u_{p}(C(t))+\lambda_{t}(f(K_{t})-C_{t})]\\

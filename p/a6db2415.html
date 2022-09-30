@@ -147,22 +147,22 @@
 <h2 id="格-Lattice"><a href="#格-Lattice" class="headerlink" title="格 Lattice"></a>格 Lattice</h2><h3 id="偏序集"><a href="#偏序集" class="headerlink" title="偏序集"></a>偏序集</h3><p>給定一個集合 $X$，如果能夠在 $X$ 上定義一個序關係 $\geq$，使得 $\geq$ 在 $X$ 上滿足自反性、反對稱性和傳遞性，那麽 $(X,\geq)$ 便是一個偏序集。</p>
 <p>【舉例】嚮量的序關係</p>
 <p>$\forall i$</p>
-<p>$x = y$ iff $x<em>{i} = y</em>{i}$;</p>
-<p>$x\geq y$ iff $x<em>{i}\geq y</em>{i}$;</p>
-<p>$x&gt;y$ iff $x<em>{i}\geq y</em>{i}$且至少有一個不等式嚴格成立；</p>
-<p>$x&gt;&gt;y$ iff $x<em>{i}&gt;y</em>{i}$.</p>
+<p>$x = y$ iff $x_{i} = y_{i}$;</p>
+<p>$x\geq y$ iff $x_{i}\geq y_{i}$;</p>
+<p>$x&gt;y$ iff $x_{i}\geq y_{i}$且至少有一個不等式嚴格成立；</p>
+<p>$x&gt;&gt;y$ iff $x_{i}&gt;y_{i}$.</p>
 <h3 id="meet-與-join"><a href="#meet-與-join" class="headerlink" title="meet 與 join"></a>meet 與 join</h3><p>給定偏序集 $(X,\geq)$ 上的一對元素 $x,y\in X$，定義元素 $x$ 和 $y$ 的 meet ($\wedge$) 和 join ($\vee$) 為</p>
 <script type="math/tex; mode=display">\begin{aligned}
 x \wedge y &:=\sup\left\{z\in X;x\geq z,y\geq z\right\}\\
 x \vee y &:= \inf\left\{z\in X;z\geq x,z\geq y\right\}
 \end{aligned}</script><p>其中 $\sup$ 和 $\inf$ 是相對於偏序集 $(X,\geq)$ 上的序關係而言的，例如 $\geq$ 可以是歐式空間中的逐維大小關係、集合中的包含關係等等。</p>
 <p>【舉例】</p>
-<p>$x = (x<em>{1},…,x</em>{n})$;</p>
-<p>$y = (y<em>{1},…,y</em>{n})$.</p>
-<p>meet: $x\wedge y = z = (z<em>{1},…,z</em>{n})$</p>
-<p>其中對於每個$i$，$z<em>{i}$都是從相應的第$i$項$x</em>{i}$與$y<em>{i}$之間選取較小的那個；即$\forall i$,$z</em>{i} = min\lbrace x<em>{i},y</em>{i}  \rbrace$;</p>
-<p>join: $x\vee y = z = (z<em>{1},…,z</em>{n})$</p>
-<p>其中對於每個$i$，$z<em>{i}$都是從相應的第$i$項$x</em>{i}$與$y<em>{i}$之間選取較大的那個；即$\forall i$,$z</em>{i} = max\lbrace x<em>{i},y</em>{i}  \rbrace$;</p>
+<p>$x = (x_{1},…,x_{n})$;</p>
+<p>$y = (y_{1},…,y_{n})$.</p>
+<p>meet: $x\wedge y = z = (z_{1},…,z_{n})$</p>
+<p>其中對於每個$i$，$z_{i}$都是從相應的第$i$項$x_{i}$與$y_{i}$之間選取較小的那個；即$\forall i$,$z_{i} = min\lbrace x_{i},y_{i}  \rbrace$;</p>
+<p>join: $x\vee y = z = (z_{1},…,z_{n})$</p>
+<p>其中對於每個$i$，$z_{i}$都是從相應的第$i$項$x_{i}$與$y_{i}$之間選取較大的那個；即$\forall i$,$z_{i} = max\lbrace x_{i},y_{i}  \rbrace$;</p>
 <h3 id="Def-Lattice"><a href="#Def-Lattice" class="headerlink" title="Def: Lattice"></a>Def: Lattice</h3><p>給定一個偏序集 $(X,\geq)$ 如果對於集合中的任意<strong>一對</strong>元素 $x$ 和 $y$，都滿足</p>
 <script type="math/tex; mode=display">\begin{aligned}
 x \wedge y &:=\sup\left\{z\in X;x\geq z,y\geq z\right\}\in X\\
@@ -175,8 +175,8 @@ x \vee y &:= \inf \left\{z\in X;z\geq x,z\geq y\right\}\in X
 <h3 id="Def-最大（最小）元"><a href="#Def-最大（最小）元" class="headerlink" title="Def: 最大（最小）元"></a>Def: 最大（最小）元</h3><p>給定一個 Lattice集合 $\subset\mathbb R^{n}$，如果 $\forall x\in X$ 都有 $x^{\ast}\geq x$（$x^{\ast}\leq x$），則稱元素 $x^{\ast}\in X$ 為格 $X$ 的最大（最小）元。</p>
 <h3 id="Th3"><a href="#Th3" class="headerlink" title="Th3"></a>Th3</h3><p>非空緊格必有最大及最小元。</p>
 <p>證明</p>
-<p>對於每個$i\in\lbrace 1,2,…,n \rbrace$，從各$x<em>{i}$中選擇使得第$i$個坐標取到最大值的那一個作為$z^{i}\in X$，即$z^{i}\in arg max</em>{x\in X}x<em>{i}$。<br>由於$X$為緊集，因此對於任何一個$i$，如上所述的最大元$z^{i}$都是可以找到的。令$y = z^{1}\vee z^{2}\vee …\vee z^{n}$。而由於$X$是格，格內元素之join仍在格內，即$y\in X$。取$y = (z</em>{1}^{1},…,z_{n}^{n})$，即$y$的每個坐標都是那些能出現在該坐標的備選項中最大的，因此有$y\geq x$對於所有$x\in X$。</p>
-<h3 id="Def-強集序"><a href="#Def-強集序" class="headerlink" title="Def 強集序"></a>Def 強集序</h3><p>給定格 $(X,\geq<em>{\text{for elements}})$ ，對於任何子集 $A,B\subset X$，定義強集序 $\geq</em>{\text{for sets}}$ 為</p>
+<p>對於每個$i\in\lbrace 1,2,…,n \rbrace$，從各$x_{i}$中選擇使得第$i$個坐標取到最大值的那一個作為$z^{i}\in X$，即$z^{i}\in arg max_{x\in X}x_{i}$。<br>由於$X$為緊集，因此對於任何一個$i$，如上所述的最大元$z^{i}$都是可以找到的。令$y = z^{1}\vee z^{2}\vee …\vee z^{n}$。而由於$X$是格，格內元素之join仍在格內，即$y\in X$。取$y = (z_{1}^{1},…,z_{n}^{n})$，即$y$的每個坐標都是那些能出現在該坐標的備選項中最大的，因此有$y\geq x$對於所有$x\in X$。</p>
+<h3 id="Def-強集序"><a href="#Def-強集序" class="headerlink" title="Def 強集序"></a>Def 強集序</h3><p>給定格 $(X,\geq_{\text{for elements}})$ ，對於任何子集 $A,B\subset X$，定義強集序 $\geq_{\text{for sets}}$ 為</p>
 <script type="math/tex; mode=display">A\geq_{\text{for sets}} B\text{ iff } (\forall x\in A,y\in B)[y\geq_{\text{for elements}} x\Rightarrow (x\in B)\text{ and }(y\in A) ]</script><p>此處關於序關係的下標是爲了明確表明是應用於元素還是集合，但通過語境可以做出此種區分，因此後文將不再明確寫出。</p>
 <p>對於來自於同一個格的兩個子集來説，一個子集“大”與另一個子集等價於任選一對元素，其中更“大”的元素來自更“大”的集合，更“小”的元素來自更“小”的集合。</p>
 <p>但這<strong>并不意味著</strong>，從更“大”的集合中任選一個元素，從更“小”的集合中任選一個元素，前一個元素一定“大於”后一個元素。但<strong>確實意味著</strong>，更“大”的集合中的“最大元”一定“大於”更“小”集合中的“最大元”，并且更“大”集合中的“最小元”一定“大於”更“小”集合中的“最小元”，即：強集序只能保證極端元素的排序關係，更不能保證其中每個元素的排序關係，這也是爲什麽在超模博弈中，只有極端納什均衡具有單調比較靜態關係，但無法保證任意納什均衡具有單調比較靜態關係。</p>
@@ -191,11 +191,11 @@ x \vee y &:= \inf \left\{z\in X;z\geq x,z\geq y\right\}\in X
 <script type="math/tex; mode=display">h(y^{1})+h(y^{2}) = f(x^{1},y^{1})+f(x^{2},y^{2})</script><p>（根據我們對於$h(\cdot)$的設定）</p>
 <script type="math/tex; mode=display">\leq f(x^{1}\wedge x^{2},y^{1}\wedge y^{2})+f(x^{1}\vee x^{2},y^{1}\vee y^{2})</script><p>（根據我們對於$f(\cdot)$是超模的設定）</p>
 <script type="math/tex; mode=display">\leq h(y^{1}\wedge y^{2})+h(y^{1}\vee y^{2})</script><p>（再次根據我們對於$h(\cdot)$的設定）。$\square$</p>
-<h3 id="Def-乘積格"><a href="#Def-乘積格" class="headerlink" title="Def: 乘積格"></a>Def: 乘積格</h3><p>給定偏序集們 $(X<em>{i},\geq</em>{i})<em>{i\in N^{\text{finite}}}$，定義偏序集 $X:=\Pi</em>{i\in N^{\text{finite}}}X_{i}$，以及對於 $x,y\in X$</p>
+<h3 id="Def-乘積格"><a href="#Def-乘積格" class="headerlink" title="Def: 乘積格"></a>Def: 乘積格</h3><p>給定偏序集們 $(X_{i},\geq_{i})_{i\in N^{\text{finite}}}$，定義偏序集 $X:=\Pi_{i\in N^{\text{finite}}}X_{i}$，以及對於 $x,y\in X$</p>
 <script type="math/tex; mode=display">x\geq y\text{ iff }x_{i}\geq_{i}y_{i},\forall i</script><p>則稱 $(X,\geq)$ 為乘積格。</p>
-<h3 id="Def-增差"><a href="#Def-增差" class="headerlink" title="Def: 增差"></a>Def: 增差</h3><p>給定一個乘積格 $(X,\geq)$，函數 $f:X\rightarrow\mathbb{R}$ 滿足增差條件，當且僅當，任選維度 $i\neq j;i,j\in N$，給定 $(i,j;x<em>{ij};x</em>{i},x<em>{i}^{\prime};x</em>{j},x<em>{j}^{\prime})$，每當 $x</em>{i}^{\prime}\geq x<em>{i}$ 和 $x</em>{j}^{\prime}\geq x_{j}$ 都有</p>
+<h3 id="Def-增差"><a href="#Def-增差" class="headerlink" title="Def: 增差"></a>Def: 增差</h3><p>給定一個乘積格 $(X,\geq)$，函數 $f:X\rightarrow\mathbb{R}$ 滿足增差條件，當且僅當，任選維度 $i\neq j;i,j\in N$，給定 $(i,j;x_{ij};x_{i},x_{i}^{\prime};x_{j},x_{j}^{\prime})$，每當 $x_{i}^{\prime}\geq x_{i}$ 和 $x_{j}^{\prime}\geq x_{j}$ 都有</p>
 <script type="math/tex; mode=display">f(x_{i}^{\prime},x_{j}^{\prime};x_{-ij})-f(x_{i},x_{j}^{\prime};x_{-ij})\geq f(x_{i}^{\prime},x_{j};x_{-ij})-f(x_{i},x_{j};x_{-ij})</script><p>注意前式要對任意選取的一對 $i\neq j;i,j\in N$ 都成立。</p>
-<p>【舉例】令$X\subset\mathbb R^{n}$為一個格，函數$f:X\rightarrow\mathbb R$。對於每個$z\in X$，每對不同的指標$i,j$以及相應的$z<em>{i}^{\ast}\geq z</em>{i}$，$z<em>{j}^{\ast}\geq z</em>{j}$，如果都有</p>
+<p>【舉例】令$X\subset\mathbb R^{n}$為一個格，函數$f:X\rightarrow\mathbb R$。對於每個$z\in X$，每對不同的指標$i,j$以及相應的$z_{i}^{\ast}\geq z_{i}$，$z_{j}^{\ast}\geq z_{j}$，如果都有</p>
 <script type="math/tex; mode=display">f(z_{-ij},z_{i}^{\ast},z_{j}^{\ast})-f(z_{-ij},z_{i}^{\ast},z_{j})\geq f(z_{-ij},z_{i},z_{j}^{\ast})-f(z_{-ij},z_{i},z_{j})</script><p>則稱函數$f$對於$X$中的每對元素滿足<strong>增差性</strong>。</p>
 <p>增差是基數性質，未必在單調正變換下保持。</p>
 <h3 id="Th7"><a href="#Th7" class="headerlink" title="Th7"></a>Th7</h3><p>$X\subset\mathbb R^{n}$而$f:X\rightarrow\mathbb R$。則函數$f$為超模當且僅當$f$在$X$上滿足增差性。</p>
@@ -214,7 +214,7 @@ f(x^{\prime},t)> f(x,t)&\Rightarrow& f(x^{\prime},t^{\prime}> f(x,t^{\prime}))
 <h3 id="Def-非減自映射"><a href="#Def-非減自映射" class="headerlink" title="Def. 非減自映射"></a>Def. 非減自映射</h3><p>任給偏序集$(A,\leq)$。函數（自映射）$f:A\rightarrow A$ 稱為$(A,\leq)$上的<strong>非減自映射</strong>當且僅當對$A$中任意兩個元素$x,y\in A$ ，每當$x\leq y$便有$f(x)\leq f(y)$。 </p>
 <h3 id="Lemma-1"><a href="#Lemma-1" class="headerlink" title="Lemma 1"></a>Lemma 1</h3><p>任給完備格$(A,\leq)$。$f:A\rightarrow A$為$(A,\leq)$上的任一非減自映射，則：</p>
 <p>（1）對所有的$a,b\in A​$ ，若$a\leq b​$，則$(\left[a,b\right],\leq)​$也是一個完備格。其中，$\left[a,b\right]=\lbrace x\in A\mid a\leq x\leq b \rbrace ​$。</p>
-<p>（2）對所有的$a,b\in A$ ，若$a\leq b$、$a\leq f(a)$且$f(b)\leq b$，則$f\mid<em>{\left[a,b\right]}$是$(\left[a,b\right],\leq)$上的非減自映射。其中，$f\mid</em>{\left[a,b\right]}$錶示函數$f$在$\left[a,b\right]$上的限製。</p>
+<p>（2）對所有的$a,b\in A$ ，若$a\leq b$、$a\leq f(a)$且$f(b)\leq b$，則$f\mid_{\left[a,b\right]}$是$(\left[a,b\right],\leq)$上的非減自映射。其中，$f\mid_{\left[a,b\right]}$錶示函數$f$在$\left[a,b\right]$上的限製。</p>
 <h3 id="Lemma-2"><a href="#Lemma-2" class="headerlink" title="Lemma 2"></a>Lemma 2</h3><p>任給完備格$(A,\leq)$，$f:A\rightarrow A$為$(A,\leq)$上的任一非減自映射，則$f$有一個最大的不動點和一個最小的不動點。</p>
 <p>註意，這裏確界的存在來自於完備格的定義，隻要是完備格那麼根據定義其確界都在集合之內。這跟我們採用的是 $\mathbb{R}$ 還是 $\mathbb{R}^{N}$ 作爲例子是無關的，完備格這個偏序集使用的序關係不必與實數集或歐式空間上的序關係相同。</p>
 <p>證明</p>

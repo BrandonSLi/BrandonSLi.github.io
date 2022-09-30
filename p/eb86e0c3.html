@@ -153,16 +153,16 @@
 <h2 id="定义1-sigma-代数"><a href="#定义1-sigma-代数" class="headerlink" title="定义1 $\sigma$代数"></a>定义1 $\sigma$代数</h2><p>$X​$为一个集合，$\mathscr A\subset\mathscr P(X)​$，如果$\mathscr A​$满足如下三个条件，则称其为一个定义在$X​$上的<strong>$\sigma​$代数</strong></p>
 <p>(1)$X\in\mathscr A$；</p>
 <p>(2)任给$A\in\mathscr A$，有$A^{c}\in\mathscr A$；</p>
-<p>(3)任给可数个（比如我们指定指标集为$\mathbb N$）$A_{n}\in\mathscr A$，有$\bigcup_{n=1}^{\inf ty}A_{n}\in\mathscr A$；</p>
-<p>(${3}’$)任给可数个$A_{n}\in\mathscr A$，有$\bigcap_{n=1}^{\inf ty}A_{n}\in\mathscr A$。</p>
+<p>(3)任给可数个（比如我们指定指标集为$\mathbb N$）$A_{n}\in\mathscr A$，有$\bigcup_{n=1}^{\\inf ty}A_{n}\in\mathscr A$；</p>
+<p>(${3}’$)任给可数个$A_{n}\in\mathscr A$，有$\bigcap_{n=1}^{\\inf ty}A_{n}\in\mathscr A$。</p>
 <p>【注】当给定(1)和(2)时，(3)与(${3}’$)是等价的。$\sigma$是可数之意。</p>
 <h2 id="定义2-可测空间"><a href="#定义2-可测空间" class="headerlink" title="定义2 可测空间"></a>定义2 可测空间</h2><p>我们定义<strong>可测空间</strong>为$X=\lbrace \bar X,\mathscr F_{\bar X} \rbrace$，其中$\bar X$称为承载集（Underlying Space)，而$\mathscr F_{\bar X}$是定义在承载集$\bar X$上的$\sigma$代数。如果有某个集合$A\in \mathscr F_{\bar X}$，则我们称此$A$是<strong>$\mathscr F_{\bar X}$可测</strong>的。</p>
 <h2 id="定义3-可测映射"><a href="#定义3-可测映射" class="headerlink" title="定义3 可测映射"></a>定义3 可测映射</h2><p>$X,Y$为两个可测空间，我们称映射$f:X\rightarrow Y$是<strong>可测映射</strong>，如果任给$B\in \mathscr F_{\bar Y}$，都有$f^{-1}(B)\in \mathscr F_{\bar X}$。</p>
 <p>【注】此定义可以与连续函数的开集（或闭集）定义相类比。</p>
 <h2 id="定义4-生成"><a href="#定义4-生成" class="headerlink" title="定义4 生成"></a>定义4 生成</h2><p>令$X$为集合，$\mathscr A_{j}$（$j\in J$）是定义在$X$上的一系列$\sigma$代数，则$\bigcap_{j\in J}\mathscr A_{j}$依然是一个定义在$X$上的$\sigma$代数。如果对于$j\in J$考虑了所有包含$X$的$\sigma$代数$\mathscr A_{j}$，则我们称$\mathscr A(X):=\bigcap_{j\in J}\mathscr A_{j}$是由$X$ <strong>生成</strong>的$\sigma$代数。易知，此$\mathscr A(X)$是将$X$包含于其内的最小的$\sigma$代数。</p>
-<h2 id="定义5-测度"><a href="#定义5-测度" class="headerlink" title="定义5 测度"></a>定义5 测度</h2><p>$\lbrace X,\mathscr F \rbrace$为可测空间，我们称一个函数$\mu:\mathscr F\rightarrow\left[0,\inf ty\right]$（其中$\left[0,\inf ty\right]=\left[0,\inf ty\right)\cup\lbrace \inf ty \rbrace$称为拓展后的正实数域，记为$\bar{\mathbb R}_{+}$）为定义在$\lbrace X,\mathscr F \rbrace$上的一个<strong>测度</strong>，若$\mu$满足：</p>
-<p>(1)任给互不相交的可数个$A_{n}\in\mathscr F$都有$\mu(\bigcup_{n=1}^{\inf ty}A_{n})=\sum_{n=1}^{\inf ty}\mu(A_{N})$。</p>
-<p>(2)至少存在一个$A\in\mathscr F$，其测度是有限的$\mu(A)&lt;\inf ty$。</p>
+<h2 id="定义5-测度"><a href="#定义5-测度" class="headerlink" title="定义5 测度"></a>定义5 测度</h2><p>$\lbrace X,\mathscr F \rbrace$为可测空间，我们称一个函数$\mu:\mathscr F\rightarrow\left[0,\\inf ty\right]$（其中$\left[0,\\inf ty\right]=\left[0,\\inf ty\right)\cup\lbrace \\inf ty \rbrace$称为拓展后的正实数域，记为$\bar{\mathbb R}_{+}$）为定义在$\lbrace X,\mathscr F \rbrace$上的一个<strong>测度</strong>，若$\mu$满足：</p>
+<p>(1)任给互不相交的可数个$A_{n}\in\mathscr F$都有$\mu(\bigcup_{n=1}^{\\inf ty}A_{n})=\sum_{n=1}^{\\inf ty}\mu(A_{N})$。</p>
+<p>(2)至少存在一个$A\in\mathscr F$，其测度是有限的$\mu(A)&lt;\\inf ty$。</p>
 <p>(${2}’$)$\mu(\varnothing)=0$。</p>
 <p>【注】</p>
 <p>在给定条件(1)时，(2)与(${2}’$)是等价的；</p>
@@ -174,15 +174,15 @@
 <p>$P:\mathscr F\rightarrow\left[0,1\right]​$为一个映射。其中$\mathscr F​$为$\Omega​$的子集构成的$\sigma​$代数。如果$P​$满足如下三个条件，我们则称$P​$是定义在$\lbrace \Omega,\mathscr F \rbrace​$上的一个<strong>概率测度</strong>：</p>
 <p>(1)对于每个$A\in\mathscr F$都有$P(A)\geq0$；</p>
 <p>(2)$P(\Omega)=1$；</p>
-<p>(3)对于不相交的$A_{j}\in\mathscr F$，$P(\bigcup_{j=1}^{\inf ty}A_{j})=\sum_{j=1}^{\inf ty}P(A_{j})$。</p>
+<p>(3)对于不相交的$A_{j}\in\mathscr F$，$P(\bigcup_{j=1}^{\\inf ty}A_{j})=\sum_{j=1}^{\\inf ty}P(A_{j})$。</p>
 <p>我们称$\lbrace \Omega,\mathscr F,P \rbrace$为一个<strong>概率空间</strong>，其中$\Omega$为样本空间（所有<strong>可能结果</strong>—即<strong>样本点</strong>组成的集合），$\mathscr F$为由$\Omega$的子集组成的$\sigma$域，而$P$为定义在$\lbrace \Omega,\mathscr F \rbrace$上的一个概率测度。</p>
 <p>【注】如果$\mathscr F$本身为有限集，那么若想从$\mathscr F$中寻找出可数无限多个不相交的子集，仅有的可能便是寻找有限个非空子集，而其他无限多个皆为空集。此时，条件(3)便退化为不相交的$A,B\in\mathscr F$有$P(A_{1}\cup A_{2})=P(A_{1})+P(A_{2})$，并可经归纳法拓展到任何有限个集合（<strong>注意，归纳法只能拓展到任意有限个，而无法得出原条件(3)</strong>）。如果把范围从$\sigma$代数扩大到一般性的代数（而不仅有限），则例如强大数定律等许多有用的结论将不再成立。</p>
 <h2 id="定理1"><a href="#定理1" class="headerlink" title="定理1"></a>定理1</h2><p>如果一个代数仅包含有限个集合，则它自动成为$\sigma$代数。进而，如果一个代数是由有限集$\Omega$的子集所组成，它也是$\sigma$代数。</p>
-<p>当$\Omega$从有限集变为无限集时，类似的性质不能得到满足。比如集族$\mathscr F_{\ast}$由$\Omega=\left(0,1\right]$中形如$\left(a,b \right]$的区间及其有限并外加空集$\varnothing$构成。其中$a&lt;b$均为来自$\left[0,1\right]$的比例数（即有理数）。此$\mathscr F_{\ast}$为代数。其后，令$p_{n}=\left[10^{n}\pi\right]/10^{n}$而$a_{n}=1/p_{n}$，其中$\left[x\right]$表示满足$\leq x$的最大整数。易知$p_{n}\uparrow\pi$而$a_{n}\downarrow\pi^{-1}$当$n\rightarrow\inf ty$。因此，对于$n=1,2,3,…$有$\left(a_{n},1 \right]\in\mathscr F_{\ast}$，但$\bigcup_{n=1}^{\inf ty}\left(a_{n},1 \right]=\left(\pi^{-1},1 \right]\notin\mathscr F_{\ast}$，因为左端点$\pi^{-1}$不是比例数。鉴于此，我们发现$\mathscr F_{\ast}$对于可数并不是封闭的，因此$\mathscr F_{\ast}$不是$\sigma$代数。</p>
-<h2 id="定理2"><a href="#定理2" class="headerlink" title="定理2"></a>定理2</h2><p>若$\mathscr F$是一个代数，则根据归纳法，从“凡$A,B\in\mathscr F$必有$A\cap B$”可知其不仅对两集合$A,B$成立，而可推广至任意有限个集合之交，即对于任何$j=1,…,n&lt;\inf ty$个$A_{j}\in\mathscr F$都有$\bigcap_{j=1}^{n}A_{j}\in\mathscr F$。若由$\Omega$之子集构成的集族$\mathscr F$满足对取补封闭，且满足前述条件，则其成为代数。</p>
-<h2 id="定理3"><a href="#定理3" class="headerlink" title="定理3"></a>定理3</h2><p>若$\mathscr F$是一个$\sigma$代数，则对于任意可数个集合$A_{j}\in\mathscr F$都有$\bigcap_{j=1}^{\inf ty}A_{j}\in\mathscr F$。非空集合$\Omega$之子集构成的集族$\mathscr F$若满足对取补封闭，且满足前述条件，则其成为$\sigma$代数。</p>
+<p>当$\Omega$从有限集变为无限集时，类似的性质不能得到满足。比如集族$\mathscr F_{\ast}$由$\Omega=\left(0,1\right]$中形如$\left(a,b \right]$的区间及其有限并外加空集$\varnothing$构成。其中$a&lt;b$均为来自$\left[0,1\right]$的比例数（即有理数）。此$\mathscr F_{\ast}$为代数。其后，令$p_{n}=\left[10^{n}\pi\right]/10^{n}$而$a_{n}=1/p_{n}$，其中$\left[x\right]$表示满足$\leq x$的最大整数。易知$p_{n}\uparrow\pi$而$a_{n}\downarrow\pi^{-1}$当$n\rightarrow\\inf ty$。因此，对于$n=1,2,3,…$有$\left(a_{n},1 \right]\in\mathscr F_{\ast}$，但$\bigcup_{n=1}^{\\inf ty}\left(a_{n},1 \right]=\left(\pi^{-1},1 \right]\notin\mathscr F_{\ast}$，因为左端点$\pi^{-1}$不是比例数。鉴于此，我们发现$\mathscr F_{\ast}$对于可数并不是封闭的，因此$\mathscr F_{\ast}$不是$\sigma$代数。</p>
+<h2 id="定理2"><a href="#定理2" class="headerlink" title="定理2"></a>定理2</h2><p>若$\mathscr F$是一个代数，则根据归纳法，从“凡$A,B\in\mathscr F$必有$A\cap B$”可知其不仅对两集合$A,B$成立，而可推广至任意有限个集合之交，即对于任何$j=1,…,n&lt;\\inf ty$个$A_{j}\in\mathscr F$都有$\bigcap_{j=1}^{n}A_{j}\in\mathscr F$。若由$\Omega$之子集构成的集族$\mathscr F$满足对取补封闭，且满足前述条件，则其成为代数。</p>
+<h2 id="定理3"><a href="#定理3" class="headerlink" title="定理3"></a>定理3</h2><p>若$\mathscr F$是一个$\sigma$代数，则对于任意可数个集合$A_{j}\in\mathscr F$都有$\bigcap_{j=1}^{\\inf ty}A_{j}\in\mathscr F$。非空集合$\Omega$之子集构成的集族$\mathscr F$若满足对取补封闭，且满足前述条件，则其成为$\sigma$代数。</p>
 <p>【注】在对取补封闭的条件下，“对可数交封闭”和“对可数并封闭”这两个条件哪个容易验证就去验证哪个，因为在对取补封闭的条件下，根据德摩根律这两个条件是等价的。</p>
-<h2 id="定理4"><a href="#定理4" class="headerlink" title="定理4"></a>定理4</h2><p>若$\mathscr F$为一个代数，且$j=1,2,3…$可数个$A_{j}$（未必彼此不相交）属于$\mathscr F$。则存在彼此不相交的可数个$B_{j}$满足$\bigcup_{j=1}^{\inf ty} A_{j}=\bigcup_{j=1}^{\inf ty} B_{j}$，而对$\mathscr F$是否为$\sigma$代数的验证可通过检验$B_{j}$在可数并下的表现来进行。</p>
+<h2 id="定理4"><a href="#定理4" class="headerlink" title="定理4"></a>定理4</h2><p>若$\mathscr F$为一个代数，且$j=1,2,3…$可数个$A_{j}$（未必彼此不相交）属于$\mathscr F$。则存在彼此不相交的可数个$B_{j}$满足$\bigcup_{j=1}^{\\inf ty} A_{j}=\bigcup_{j=1}^{\\inf ty} B_{j}$，而对$\mathscr F$是否为$\sigma$代数的验证可通过检验$B_{j}$在可数并下的表现来进行。</p>
 <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>迹和秩是矩阵的两个关键的不变性。</p>
 <h2 id="实对称阵"><a href="#实对称阵" class="headerlink" title="实对称阵"></a>实对称阵</h2><h3 id="实对称阵可用正交矩阵对角化。"><a href="#实对称阵可用正交矩阵对角化。" class="headerlink" title="实对称阵可用正交矩阵对角化。"></a>实对称阵可用正交矩阵对角化。</h3><h2 id="迹"><a href="#迹" class="headerlink" title="迹"></a>迹</h2><h3 id="迹的轮换性"><a href="#迹的轮换性" class="headerlink" title="迹的轮换性"></a>迹的轮换性</h3><p>$trace(ABCD)=trace(BCDA)=trace(CDAB)=trace(DABC)$</p>
 <h3 id="实对称阵的迹等于其特征很之和。"><a href="#实对称阵的迹等于其特征很之和。" class="headerlink" title="实对称阵的迹等于其特征很之和。"></a>实对称阵的迹等于其特征很之和。</h3><h3 id="对角化"><a href="#对角化" class="headerlink" title="对角化"></a>对角化</h3><p>${C}’AC=\Lambda$。</p>
@@ -191,7 +191,7 @@
 <p>${X}’AX={y}’{C}’ACy={y}’\Lambda y$。<br>如果$\Lambda$里的$\lambda_{i}$除了为$0$就是为$1$，并且假设$y$为$n$维标准正态分布，则$y$的每个分量也是$N\left(0,1\right)$。<br>此时二次型${X}’AX$就是自由度为$m$的卡方分布$\chi^{2}(m)$，其中$m$为取值为$1$的特征根个数。</p>
 <h2 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h2><p>谱分解<br>乔勒斯基分解<br>奇异值分解</p>
 <h1 id="概率与统计"><a href="#概率与统计" class="headerlink" title="概率与统计"></a>概率与统计</h1><h2 id="大样本分布理论"><a href="#大样本分布理论" class="headerlink" title="大样本分布理论"></a>大样本分布理论</h2><p>在多数情况下，在一组给定规模的样本中估计量是否无偏或抽样方差究竟如何是未知的。但当样本规模扩大时，我们能够得到关于估计量分布情况的近似结果。例如，无论个体观测值的分布具体为何，只要样本量持续扩大，样本均值将近似于正态分布。利用关于估计量分布极限行为的信息可以对有限样本时估计量的分布作出近似的推断。在考察如上理论之前，有必要了解一下随机变量的收敛性。</p>
-<h3 id="依概率收敛"><a href="#依概率收敛" class="headerlink" title="依概率收敛"></a>依概率收敛</h3><p>称随机变量$x_{n}$依概率收敛于常数$c$，若对于无论多小的正数$\epsilon$，都有$\lim _{n\rightarrow\inf ty}Prob\left(\left|x_{n}-c\right|&gt;\epsilon\right)=0$。此处$x_{n}$的下标$n$指样本量。</p>
+<h3 id="依概率收敛"><a href="#依概率收敛" class="headerlink" title="依概率收敛"></a>依概率收敛</h3><p>称随机变量$x_{n}$依概率收敛于常数$c$，若对于无论多小的正数$\epsilon$，都有$\lim _{n\rightarrow\\inf ty}Prob\left(\left|x_{n}-c\right|&gt;\epsilon\right)=0$。此处$x_{n}$的下标$n$指样本量。</p>
 <p>依概率收敛表示，当样本量持续扩大时，“随机变量取值异于$c$”这件事越来越不可能。例如，随机变量$x_{n}$以$1-(1/n)$的概率取$0$，而以$(1/n)$的概率取$n$。随着$n$持续变大，$x_{n}$将以趋近于$0$的概率取值趋向于无穷，此时，$x_{n}$依概率收敛到值$0$。这一类型的收敛之核心在于，概率分布将向常数$c$集中。</p>
 <p>我们也记$p\lim  x_{n}=c$。</p>
 <h2 id="全期望法则（二重律，迭代期望法则）"><a href="#全期望法则（二重律，迭代期望法则）" class="headerlink" title="全期望法则（二重律，迭代期望法则）"></a>全期望法则（二重律，迭代期望法则）</h2><p>$E\left[E(y\mid X)\right]=E(y)$.<br>$E\left[E(y\mid x,z)\mid X\right]=E(y\mid X)$.</p>

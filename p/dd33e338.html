@@ -149,12 +149,12 @@
 <p>$X\in\mathbb R^{n}$ 为一个非空紧凸集，而$f:X\rightarrow X$ 为连续函数，则存在$x\in X$使得$f(x)=x$。</p>
 <h2 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h2><h3 id="Step1"><a href="#Step1" class="headerlink" title="Step1."></a>Step1.</h3><p>在最简单的非空紧凸集即单纯形$\Delta$上证明。</p>
 <p>设任意连续函数$h:\Delta\rightarrow\Delta$。</p>
-<p>任取$x\in\Delta$，将其写成重心坐标形式即$x=\sum x<em>{i}v</em>{i}$，其中$v<em>{i}$为第$i$个顶点，$x</em>{i}$为系数。(记得n维单纯形为n+1个仿射无关的顶点之凸组合)，$h:\Delta\rightarrow\Delta$，而$h(x)=\sum h<em>{i}(x) v</em>{i}$。满足$\sum x<em>{i}=\sum h</em>{i}(x)=1$。</p>
-<p>将$F<em>{i}$定义为$\lbrace x\in\Delta:h</em>{i} (x)\leq x<em>{i}  \rbrace =\lbrace  x\in\Delta:h</em>{i} (x)-x<em>{i} \leq 0 \rbrace $。意即$F</em>{i}$由那些被$h$射之后比被射之前在第$i$顶点方向上更靠近重心的点组成。</p>
-<p>而根据设定，$h​$在$\Delta​$上连续，且$x​$在$\Delta​$上连续，从而$h<em>{i}(x)-x</em>{i}​$在$\Delta​$上连续。而某函数$f​$在定义域上连续等价于其不好集$\lbrace x\in X:f(x)\leq c \rbrace ​$及不差集$\lbrace x\in X:f(x)\geq c \rbrace ​$为闭集，因此$F_{i}​$对每个$i​$均为闭集。</p>
-<h4 id="Claim"><a href="#Claim" class="headerlink" title="Claim"></a>Claim</h4><p>$\forall i<em>{0},…,i</em>{k},(k=0,…,n)$有$co(V<em>{i1},…,V</em>{ik})\in\bigcup<em>{i}F</em>{i}$。</p>
-<p>即从顶点中任选一组顶点（也可以所有顶点都选），这组被选中的点构成的凸包要在那些闭集$F<em>{i}$的闭之中。这一步是为了应用KKM lemma。证明：if not，即在凸包中存在一点不满足$F</em>{i}$的定义，即不满足$h<em>{i}(x)\geq x</em>{i}$而相反却是$h<em>{i}(x)&lt;x</em>{i},\forall i$，将会得到$1=\sum x<em>{i}&lt;\sum h</em>{i}(x)=1$，矛盾。</p>
-<p>故而，适用KKM lemma，$\exists x^{\ast}\in\Delta,s.th.x^{\ast}\in\cap F<em>{i}$ ，即满足$\forall i$有$h</em>{i}(x^{\ast})\leq x<em>{i}^{\ast}$，但$1=\sum x</em>{i}^{\ast}\leq\sum h<em>{i}(x^{\ast})=1$，因此只能为$x</em>{i}^{\ast}=h_{i}(x^{\ast}),∀i$，即$h(x^{\ast})=x^{\ast}$。</p>
+<p>任取$x\in\Delta$，将其写成重心坐标形式即$x=\sum x_{i}v_{i}$，其中$v_{i}$为第$i$个顶点，$x_{i}$为系数。(记得n维单纯形为n+1个仿射无关的顶点之凸组合)，$h:\Delta\rightarrow\Delta$，而$h(x)=\sum h_{i}(x) v_{i}$。满足$\sum x_{i}=\sum h_{i}(x)=1$。</p>
+<p>将$F_{i}$定义为$\lbrace x\in\Delta:h_{i} (x)\leq x_{i}  \rbrace =\lbrace  x\in\Delta:h_{i} (x)-x_{i} \leq 0 \rbrace $。意即$F_{i}$由那些被$h$射之后比被射之前在第$i$顶点方向上更靠近重心的点组成。</p>
+<p>而根据设定，$h​$在$\Delta​$上连续，且$x​$在$\Delta​$上连续，从而$h_{i}(x)-x_{i}​$在$\Delta​$上连续。而某函数$f​$在定义域上连续等价于其不好集$\lbrace x\in X:f(x)\leq c \rbrace ​$及不差集$\lbrace x\in X:f(x)\geq c \rbrace ​$为闭集，因此$F_{i}​$对每个$i​$均为闭集。</p>
+<h4 id="Claim"><a href="#Claim" class="headerlink" title="Claim"></a>Claim</h4><p>$\forall i_{0},…,i_{k},(k=0,…,n)$有$co(V_{i1},…,V_{ik})\in\bigcup_{i}F_{i}$。</p>
+<p>即从顶点中任选一组顶点（也可以所有顶点都选），这组被选中的点构成的凸包要在那些闭集$F_{i}$的闭之中。这一步是为了应用KKM lemma。证明：if not，即在凸包中存在一点不满足$F_{i}$的定义，即不满足$h_{i}(x)\geq x_{i}$而相反却是$h_{i}(x)&lt;x_{i},\forall i$，将会得到$1=\sum x_{i}&lt;\sum h_{i}(x)=1$，矛盾。</p>
+<p>故而，适用KKM lemma，$\exists x^{\ast}\in\Delta,s.th.x^{\ast}\in\cap F_{i}$ ，即满足$\forall i$有$h_{i}(x^{\ast})\leq x_{i}^{\ast}$，但$1=\sum x_{i}^{\ast}\leq\sum h_{i}(x^{\ast})=1$，因此只能为$x_{i}^{\ast}=h_{i}(x^{\ast}),∀i$，即$h(x^{\ast})=x^{\ast}$。</p>
 <h3 id="Step2"><a href="#Step2" class="headerlink" title="Step2."></a>Step2.</h3><p>令$X$为欧氏空间中非空紧凸集。$f:X\rightarrow X$为连续函数。</p>
 <h4 id="同胚"><a href="#同胚" class="headerlink" title="[同胚]"></a>[同胚]</h4><p>$X$与$\Delta$为同胚，若存在$g: X\rightarrow\Delta$，$g^{-1}:\Delta\rightarrow X$，且$g$与$g^{-1}$均为连续函数。   </p>
 <p>$h:\Delta\rightarrow\Delta,h(x)=g(f(g^{-1}(x)))$，因为$g$、$f$、$g^{-1}$均为连续函数，因此$h$亦连续，根据Step1，$h$存在不动点，即$h(x^{\ast})=g(f(g^{-1}(x^{\ast})))$，亦即$f(g^{-1}(x^{\ast}))=g^{-1}(x^{\ast})$，但这就意味着$g^{-1}(x^{\ast})$是$f$的不动点。$\square$</p>

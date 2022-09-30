@@ -146,16 +146,16 @@
 <h1 id="闲谝"><a href="#闲谝" class="headerlink" title="闲谝"></a>闲谝</h1><p>自从用了Dropbox加自动触发的方法以后，写博客、记笔记变得方便了好多，手机、平板，坐车、路上都可以，姥爷开心。最近刷了一遍Dougherty，稍微膜了膜蒋岳祥老师，大概有了点印象，这份<strong>笔记</strong>算是半回忆半整理，应该还需要不停修改，算是为自己复习也方便吧。三年了还没学会计量，这是我最差的一门了，基本是什么都不会，面对这门占125分的科目，不禁为自己感到担忧。</p>
 <h1 id="经典线性回归"><a href="#经典线性回归" class="headerlink" title="经典线性回归"></a>经典线性回归</h1><h2 id="回归的理由"><a href="#回归的理由" class="headerlink" title="回归的理由"></a>回归的理由</h2><ul>
 <li>如果条件期望函数是线性的，那么总体回归方程就应该是这个线性函数；</li>
-<li>给定$x<em>{i}$，$x</em>{i}^{T}\beta$是（在最小化均方误意义上）对$y_{i}$的最优线性估计量；</li>
-<li>$x<em>{i}^{T}\beta$是（在最小化均方误意义上）对$E(y</em>{i}\mid x_{i})$的最优线性近似。</li>
+<li>给定$x_{i}$，$x_{i}^{T}\beta$是（在最小化均方误意义上）对$y_{i}$的最优线性估计量；</li>
+<li>$x_{i}^{T}\beta$是（在最小化均方误意义上）对$E(y_{i}\mid x_{i})$的最优线性近似。</li>
 <li>$E\left(Y\mid X\right)=arg max\left(\rho_{Y,L(X)}\right),即在所有关于$X$的函数中，条件期望函数E\left(Y\mid X\right)拥有与$Y$最大的相关系数。<br>（这一最大的相关系数之平方即为拟合优度。）</li>
 </ul>
 <h2 id="经典线性回归假设"><a href="#经典线性回归假设" class="headerlink" title="经典线性回归假设"></a>经典线性回归假设</h2><h3 id="线性（总体）"><a href="#线性（总体）" class="headerlink" title="线性（总体）"></a>线性（总体）</h3><p>$y=E(y\mid X)+\epsilon=X\beta+\epsilon$.即条件期望函数为线性形式。<br>其中$X\beta$部分来源于经济理论，而$\epsilon$部分来源于统计学。</p>
 <h3 id="严格外生性（总体）"><a href="#严格外生性（总体）" class="headerlink" title="严格外生性（总体）"></a>严格外生性（总体）</h3><p>$E(\epsilon_{i}\mid X)=0$，这意味着</p>
 <ul>
-<li>$E(\epsilon<em>{i})=E\left[E(\epsilon</em>{i}\mid X)\right]=0$</li>
-<li>$E(x<em>{jk}\epsilon</em>{i})=E\left[E(x<em>{jk}\epsilon</em>{i}\mid x<em>{jk})\right]<br>=E\left[x</em>{jk}E(\epsilon<em>{i}\mid x</em>{jk})\right]=0$</li>
-<li>$Cov(\epsilon<em>{i},x</em>{jk})=E(x<em>{jk}\epsilon</em>{i})-E(x<em>{jk})E(\epsilon</em>{i})=<br>E(x<em>{jk}\epsilon</em>{i})=0$</li>
+<li>$E(\epsilon_{i})=E\left[E(\epsilon_{i}\mid X)\right]=0$</li>
+<li>$E(x_{jk}\epsilon_{i})=E\left[E(x_{jk}\epsilon_{i}\mid x_{jk})\right]<br>=E\left[x_{jk}E(\epsilon_{i}\mid x_{jk})\right]=0$</li>
+<li>$Cov(\epsilon_{i},x_{jk})=E(x_{jk}\epsilon_{i})-E(x_{jk})E(\epsilon_{i})=<br>E(x_{jk}\epsilon_{i})=0$</li>
 </ul>
 <h3 id="无多重共线性（样本）"><a href="#无多重共线性（样本）" class="headerlink" title="无多重共线性（样本）"></a>无多重共线性（样本）</h3><p>$rank(X)=K$，即数据矩阵为列满秩，没有任何一个变量可以表示为其他变量的线性组合。这意味着：</p>
 <ul>
@@ -166,11 +166,11 @@
 <h3 id="球状扰动项（总体）"><a href="#球状扰动项（总体）" class="headerlink" title="球状扰动项（总体）"></a>球状扰动项（总体）</h3><p>$E(\epsilon\epsilon^{T}\mid X)=\sigma^{2}I_{n}$；或等价地是如下两个假设的结合：</p>
 <ul>
 <li>同方差：$E(\epsilon_{i}^{2}\mid X)=\sigma^{2}&gt;0$;</li>
-<li>无自相关：$E(\epsilon<em>{i}\epsilon</em>{j}\mid X)=0$.</li>
+<li>无自相关：$E(\epsilon_{i}\epsilon_{j}\mid X)=0$.</li>
 </ul>
 <p><em>据说始终假定具有非零有限前四阶矩，但具体咋回事忘记了，查了再补。</em></p>
 <h3 id="条件正态性（总体。为便于统计推断）"><a href="#条件正态性（总体。为便于统计推断）" class="headerlink" title="条件正态性（总体。为便于统计推断）"></a>条件正态性（总体。为便于统计推断）</h3><p>$\epsilon\mid X\sim N(0,\sigma^{2})$.</p>
-<h2 id="随机抽样"><a href="#随机抽样" class="headerlink" title="随机抽样"></a>随机抽样</h2><p>如果$(y<em>{i},x</em>{i})$是独立同分布的，则称$(y,X)$为随机样本。<br>在随机样本情况下，$(\epsilon<em>{i},x</em>{i})$的分布不依赖于$i$，因此无条件期望$E(\epsilon<em>{i}^{2})$是常数；而条件期望$E(\epsilon</em>{i}^{2}\mid x_{i})$的函数形式是固定的，但未必是常数，因此球状扰动项的假定仍是重要的。</p>
+<h2 id="随机抽样"><a href="#随机抽样" class="headerlink" title="随机抽样"></a>随机抽样</h2><p>如果$(y_{i},x_{i})$是独立同分布的，则称$(y,X)$为随机样本。<br>在随机样本情况下，$(\epsilon_{i},x_{i})$的分布不依赖于$i$，因此无条件期望$E(\epsilon_{i}^{2})$是常数；而条件期望$E(\epsilon_{i}^{2}\mid x_{i})$的函数形式是固定的，但未必是常数，因此球状扰动项的假定仍是重要的。</p>
 <h2 id="固定回归元"><a href="#固定回归元" class="headerlink" title="固定回归元"></a>固定回归元</h2><p>如果回归元是固定的，则前述假设中条件期望与无条件期望是等价的。但Wooldridge、Hayashi等认为将回归元视为随机变量更合适。</p>
 <p><em>今天先记到这儿吧</em></p>
 <p>脱胎自：<br><em>Hayashi: Econometrics</em>;<br><em>蒋岳祥：高级计量经济学</em>;<br><em>Dougherty: Introduction to Econometrics</em>;<br><em>Wooldridge: Introductory Econometrics</em>;<br><em>靳云汇：高级计量经济学</em>；<br><em>Angrist&amp;Pischke: Mostly Harmless Econometrics</em>.</p>
