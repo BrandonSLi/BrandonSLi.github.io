@@ -9,7 +9,7 @@
 <meta property="article:modified_time" content="2021-08-02T12:55:38.000Z">
 <meta property="article:author" content="Brandon Song Li">
 <meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
-<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/c9c31a7a"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/c9c31a7a"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -143,12 +143,11 @@
     })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">阿罗-理性选择函数与排序</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2017-09-19T05:42:08.000Z" title="發表於 2017-09-19 13:42:08">2017-09-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-08-02T12:55:38.000Z" title="更新於 2021-08-02 20:55:38">2021-08-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="阿罗-理性选择函数与排序"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>翻译：理性选择函数与排序</p>
 <p>肯尼斯·阿罗</p>
 <span id="more"></span>
-
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>尽管近年来消费者需求理论已经取得了长足的发展，但仍然存有令人困惑之处。消费者需求理论的基本目标是解释当个人面对价格向量$p$和收入$M$时对需求向量$d(p,M)$所作出的选择。古诺引入了需求函数的概念，而其他人对需求函数所具有性质作出了推断。例如，在商品自身的价格上升时，需求是单调下降的。而在19世纪后半叶经戈森（Gossen）、杰文斯（Jevons）、门格尔（Menger）、瓦尔拉（Walras）及其后继者基于对帕累托（Pareto）序数基础的重新解释发展出了效用理论，这一理论对如何将可得商品束进行排序提供了基础。面对给定的$p$和$M$，行为人在所有符合预算约束限制的商品向量中选择最偏好的一个作为需求向量。</p>
 <p>从（以无差异图形或效用函数来表示的）排序而得出需求函数的做法成为了标准的处理方式，并经斯拉茨基（Slutzky）、希克斯（Hicks）、艾伦（Allen）、霍特林（Hotelling）和罗伊（Roy）等人的发展而得出了关于需求函数相当丰富的理论推论。除了可积性问题以外，首个与排序方法不同的思路是由萨缪尔森（Samuelson）提出的显示偏好方法。在显示偏好方法中依然对需求函数作出了某些假设，而所需的假设数量比排序方法更少。在这些假设成立时，可以得出需求函数的许多性质。</p>
 <p>已有不少研究尝试对如下问题作出回答：在对需求函数做何种假设时，能够确保存在一个序关系足以生成这一需求函数。萨缪尔森最初的假设（现被称为显示偏好弱公理）是不够的。而 Ville 和 Houthakker 分别提出了对弱公理的修改，这一如今被称为显示偏好强公理（见下文C1）的假设是足够的。</p>
 <p>需求函数和序关系都可以被视为特殊的选择函数。对于备选物的任何集合$X​$，令$C(X)​$为从$X​$中选出的某些备选物（可以同时选出一个以上的备选物）。而$C​$不必定义于所有可能的集合$X​$上，可以仅将需要用到的那些集合纳入一个集族$\mathscr B​$里。显示偏好或其他某些研究需求函数的方法只将考察范围限定在这些集族$\mathscr B​$里，而通常集族$\mathscr B​$是由如下预算约束集所组成：</p>
-<p>(1)$\sum p_{i}x_{i}\leq M,x_{i}\geq 0$。</p>
+<p>(1)$\sum p<em>{i}x</em>{i}\leq M,x_{i}\geq 0$。</p>
 <p>此外，序关系可以理解为一系列命题，其中每个命题对从具有两个元素的集合（简称为双元集）中所作出的选择进行判定。而对于从更大一些的集合所作出的选择，包括(1)中所定义的集合，是以逐项的二元选择所定义的。因此，由序关系所定义的选择函数将定义域确定在集族$\mathscr B$上，此集族不仅包括(1)中所定义的集合，还包括许多其他集合，特别地，会包括所有双点集乃至所有有限集。</p>
 <p>本文的建议是，如果我们将选择函数的定义范围扩大到包括所有有限集，则对于需求函数的研究将被大大简化。正如 Georgescu-Roegen 所说，直观地讲，显示偏好弱公理这一假设与预算约束集的特殊形式无关，而是隐含地依赖于对双元集的考虑。</p>
 <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>在引言中所提到的研究方法已由宇泽（Uzawa）付诸实践，这里我们仅作较小变动而大体上遵循其论文的做法。</p>
@@ -157,15 +156,13 @@
 <p>(R2)任给$x,y,z$，若$xRy$且$yRz$，则$xRz$（传递性）</p>
 <p><strong>选择函数</strong>$C(X)$，从非空集合$X$映入其非空子集。X所来自的集族由$\mathscr B$所表示，我们假设作为任何选择函数$C(X)$定义域的集族$\mathscr B$包含所有的有限集。</p>
 <h2 id="定义1"><a href="#定义1" class="headerlink" title="定义1"></a>定义1</h2><p>对于任意二元关系$R$，我们定义</p>
-<p>$$C(X)&#x3D;\lbrace x|x\in X,xRy对于所有y\in X \rbrace$$</p>
-<p>为<strong>由关系$R$得出的选择函数</strong>。</p>
+<script type="math/tex; mode=display">C(X)=\lbrace x|x\in X,xRy对于所有y\in X \rbrace</script><p>为<strong>由关系$R$得出的选择函数</strong>。</p>
 <h2 id="定义2"><a href="#定义2" class="headerlink" title="定义2"></a>定义2</h2><p>对于任何选择函数$C(X)$，我们定义</p>
-<p>$$xRy&#x3D;df.x\in C(\lbrace x,y \rbrace)$$</p>
-<p>为<strong>由选择函数$C(X)$生成的关系</strong>。</p>
+<script type="math/tex; mode=display">xRy=df.x\in C(\lbrace x,y \rbrace)</script><p>为<strong>由选择函数$C(X)$生成的关系</strong>。</p>
 <p>这里$\lbrace x,y \rbrace$为由两个元素$x$和$y$所组成的集合。</p>
 <p>接下来我们需要对选择函数作出一些假设。既然这些假设都是关于理性行为的，我们便遵循宇泽的做法而将满足这些假设的选择函数称为<strong>理性选择函数</strong>。我们将一次给出关于理性选择函数的五个定义，并研究其内涵之间的关系及对弱序存在性的影响。首先，我们先引入由给定选择函数所定义的另外两种关系。</p>
-<h2 id="定义3"><a href="#定义3" class="headerlink" title="定义3"></a>定义3</h2><p>我们称**$x$显示偏好于$y$**（记为$x\tilde{P}y$），当且仅当，存在某$x\in\mathscr B$，使得$x\in C(X)$且$y\in X\setminus C(X)$。</p>
-<h2 id="定义4"><a href="#定义4" class="headerlink" title="定义4"></a>定义4</h2><p>称元素**$x$间接显示偏好于$y$*<em>（记为$xP^{</em>}y$），当且仅当，存在序列$x^{i}$（其中$i&#x3D;0,…,n$）使得$x^{0}&#x3D;x,x^{n}&#x3D;y$且中间各项满足$x^{i-1}\tilde{P}x^{i}$（对于$i&#x3D;1,…,n$）。</p>
+<h2 id="定义3"><a href="#定义3" class="headerlink" title="定义3"></a>定义3</h2><p>我们称<strong>$x$显示偏好于$y$</strong>（记为$x\tilde{P}y$），当且仅当，存在某$x\in\mathscr B$，使得$x\in C(X)$且$y\in X\setminus C(X)$。</p>
+<h2 id="定义4"><a href="#定义4" class="headerlink" title="定义4"></a>定义4</h2><p>称元素<strong>$x$间接显示偏好于$y$</strong>（记为$xP^{*}y$），当且仅当，存在序列$x^{i}$（其中$i=0,…,n$）使得$x^{0}=x,x^{n}=y$且中间各项满足$x^{i-1}\tilde{P}x^{i}$（对于$i=1,…,n$）。</p>
 <p>宇泽为理性选择函数定义了如下两个性质：</p>
 <h2 id="C1"><a href="#C1" class="headerlink" title="(C1)"></a>(C1)</h2><p>对于任何$x$和$y$，如果存在一个$X$使得$x\in C(X)$且$y\in C(X)$，那么$xP^{*}y$就不成立。</p>
 <p>（只要能找到任何一个选择背景，使两元素在此背景下同时被选择，那么我们（就算在其他选择背景下也）不能说其中哪个间接显示偏好于另一个。）</p>
@@ -174,7 +171,7 @@
 <p>下面这个条件与(C2)是等价的。</p>
 <h2 id="C3"><a href="#C3" class="headerlink" title="(C3)"></a>(C3)</h2><p>如果$X\subset Y$，那么$C(Y)\cap X\subset C(X)$。</p>
 <p>（其中$A\cap B$是指同时处于$A$和$B$中的备选物）。(C2)及其等价条件(C3)都是很弱的，其加强版本如下：</p>
-<h2 id="C4"><a href="#C4" class="headerlink" title="(C4)"></a>(C4)</h2><p>如果$X\subset Y$且$C(Y)\cap X$非空，则$C(X)&#x3D;C(Y)\cap X$。</p>
+<h2 id="C4"><a href="#C4" class="headerlink" title="(C4)"></a>(C4)</h2><p>如果$X\subset Y$且$C(Y)\cap X$非空，则$C(X)=C(Y)\cap X$。</p>
 <p>对于这一条件，较为符合直觉的解释如下：如果某些元素在较大集合$Y$里被选择了，那么在选择范围从$Y$缩小到$X$后，只要$X$中仍然包含原先备选元素中的一部分，那么这一部分现在还是会被选择；而原来没被选择的，现在仍然不会被选择。</p>
 <p>最后，我们引入由显示偏好弱公理所定义的理性。</p>
 <h2 id="C5"><a href="#C5" class="headerlink" title="(C5)"></a>(C5)</h2><p>如果$x\tilde{P}y$，那么不存在任何能使$x\in Y$且$y\in C(Y)$这样的$Y$。</p>
@@ -196,26 +193,26 @@
 <p>(3)$y\in X\setminus C(X)$；</p>
 <p>(4)$x\in Y$；</p>
 <p>(5)$y\in C(Y)$。</p>
-<p>根据(2-3)，有$\lbrace x,y \rbrace\subset X$，并且$\lbrace x,y \rbrace\cap C(X)$为单点集$\lbrace x \rbrace$。而根据(C4)，如果$\lbrace x,y \rbrace\subset X$且$\lbrace x,y \rbrace\cap C(X)$非空，则$C(\lbrace x,y \rbrace)&#x3D;\lbrace x,y \rbrace\cap C(X)$。即：</p>
-<p>(6)$C(\lbrace x,y \rbrace)&#x3D;\lbrace x \rbrace$</p>
-<p>但根据(4-5)我们还有$\lbrace x,y \rbrace\subset Y$，且再次利用(5)有$\lbrace x,y \rbrace\cap C(Y)$非空（至少有$y$）。从(C4)可知$C(\lbrace x,y \rbrace)&#x3D;\lbrace x,y \rbrace\cap C(Y)$因此$y\in C(\lbrace x,y \rbrace)$，而这就违反了(6)（因为既然 $C(\lbrace x,y \rbrace)&#x3D;\lbrace x \rbrace$就不会再有$y\in C(\lbrace x,y \rbrace)$），除非$y&#x3D;x$；但因为(2)和(3)，$x$和$y$分属$X$不相交的两部分，因此$y&#x3D;x$是不可能的。故a得证。</p>
+<p>根据(2-3)，有$\lbrace x,y \rbrace\subset X$，并且$\lbrace x,y \rbrace\cap C(X)$为单点集$\lbrace x \rbrace$。而根据(C4)，如果$\lbrace x,y \rbrace\subset X$且$\lbrace x,y \rbrace\cap C(X)$非空，则$C(\lbrace x,y \rbrace)=\lbrace x,y \rbrace\cap C(X)$。即：</p>
+<p>(6)$C(\lbrace x,y \rbrace)=\lbrace x \rbrace$</p>
+<p>但根据(4-5)我们还有$\lbrace x,y \rbrace\subset Y$，且再次利用(5)有$\lbrace x,y \rbrace\cap C(Y)$非空（至少有$y$）。从(C4)可知$C(\lbrace x,y \rbrace)=\lbrace x,y \rbrace\cap C(Y)$因此$y\in C(\lbrace x,y \rbrace)$，而这就违反了(6)（因为既然 $C(\lbrace x,y \rbrace)=\lbrace x \rbrace$就不会再有$y\in C(\lbrace x,y \rbrace)$），除非$y=x$；但因为(2)和(3)，$x$和$y$分属$X$不相交的两部分，因此$y=x$是不可能的。故a得证。</p>
 <p>接下来证明b。假设(C5)成立，而(C4)所需的假设成立$X\subset Y$且$C(Y)\cap X$非空，但结论不成立，即$C(X)\neq C(Y)\cap X$。这有两种可能，要么$C(X)\setminus \left[C(Y)\cap X\right]$非空，即$C(X)$真包含$C(Y)\cap X$；或反之。</p>
 <p>如果$C(X)\setminus \left[C(Y)\cap X\right]$非空，那么任取$y\in C(X)\setminus \left[C(Y)\cap X\right]$，$x\in C(Y)\cap X$，而$x\in C(Y)$，且由于$y\in C(X)\subset X\subset Y$，有$y\in Y$，由于$y\in C(X)\setminus \left[C(Y)\cap X\right]$，有$y\notin C(Y)$。因此$y\in Y\setminus C(Y)$，进而$x\tilde{P}y$。但这就意味着我们找到了$x,y\in X$，$y\in C(X)$，同时$x\tilde{P}y$。这就违反了(C5)。</p>
 <p><em>暂时省略</em></p>
 <h1 id="弱序与由其导出的选择函数"><a href="#弱序与由其导出的选择函数" class="headerlink" title="弱序与由其导出的选择函数"></a>弱序与由其导出的选择函数</h1><h2 id="定理2"><a href="#定理2" class="headerlink" title="定理2"></a>定理2</h2><p>给定一个弱序$R$，令$C(X)$为由其导出的选择函数，而$R^{\prime}$为由$C(X)$生成的序关系。则$C(X)$同时满足前述(C1-5)，并且$R$与$R^{\prime}$等同。</p>
 <p>证明：</p>
-<h1 id="理性选择函数与由其生成的关系"><a href="#理性选择函数与由其生成的关系" class="headerlink" title="理性选择函数与由其生成的关系"></a>理性选择函数与由其生成的关系</h1><h2 id="定理3"><a href="#定理3" class="headerlink" title="定理3"></a>定理3</h2><p>如果$C(X)$同时满足(C1)、(C4)、(C5)，令$R$为由$C(X)$生成的关系，而$C^{\prime}(X)$为从$R$导出的选择函数。则$R$是一个弱序，且$C^{\prime}(X)&#x3D;C(X)$。</p>
+<h1 id="理性选择函数与由其生成的关系"><a href="#理性选择函数与由其生成的关系" class="headerlink" title="理性选择函数与由其生成的关系"></a>理性选择函数与由其生成的关系</h1><h2 id="定理3"><a href="#定理3" class="headerlink" title="定理3"></a>定理3</h2><p>如果$C(X)$同时满足(C1)、(C4)、(C5)，令$R$为由$C(X)$生成的关系，而$C^{\prime}(X)$为从$R$导出的选择函数。则$R$是一个弱序，且$C^{\prime}(X)=C(X)$。</p>
 <p>证明：</p>
 <h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><p>定义(C1)与(C4)和(C5)是等价的。</p>
 <p>证明：</p>
-<h2 id="注1"><a href="#注1" class="headerlink" title="注1"></a>注1</h2><p>令$P$为从弱序$R$中导出的偏好关系，即每当$xRy$但反之$yRx$不成立时，便称$xPy$（可以理解为由不差于得出严格好于）。宇泽表明，在$P&#x3D;P^{*}$的假设下（意即满足C1、C4、C5中任何一个时），这一偏好关系与间接显示偏好是一致的。</p>
+<h2 id="注1"><a href="#注1" class="headerlink" title="注1"></a>注1</h2><p>令$P$为从弱序$R$中导出的偏好关系，即每当$xRy$但反之$yRx$不成立时，便称$xPy$（可以理解为由不差于得出严格好于）。宇泽表明，在$P=P^{*}$的假设下（意即满足C1、C4、C5中任何一个时），这一偏好关系与间接显示偏好是一致的。</p>
 <h2 id="注2"><a href="#注2" class="headerlink" title="注2"></a>注2</h2><p>对于定理3来说，仅有(C2)或(C3)是不够的，我们可以用一个例子来说明。</p>
 <p>令$R$为一个序关系，$C(X)$表示从$R$中导出的选择函数，</p>
-<p>(-1-)如果$X$是任何双点集，则令$C^{\prime}(X)&#x3D;X$；</p>
-<p>(-2-)如果$X$是任何其他集合，则令$C^{\prime}(X)&#x3D;C(X)$。</p>
+<p>(-1-)如果$X$是任何双点集，则令$C^{\prime}(X)=X$；</p>
+<p>(-2-)如果$X$是任何其他集合，则令$C^{\prime}(X)=C(X)$。</p>
 <p>则根据定理2，$C(X)$满足(C2)所需条件。而另一方面，如果$X$为单点集或双点集，则根据我们在(-1-)中的构建，$X\setminus C^{\prime}(X)$是空集，因此，只要$X$仅包含两个或两个以下个元素，则</p>
 <p>(9)每当$X\subset Y$，便有$X\setminus C^{\prime}(X)\subset Y\setminus C^{\prime}(Y)$。</p>
-<p>而如果$X$有多于两个元素，那么$Y$也必然包含多于两个元素，则根据我们在(-2-)中的构建，必有$C^{\prime}(X)&#x3D;C(X)$和$C^{\prime}(Y)&#x3D;C(Y)$，从而(9)依然成立。根据(C3)，当我们从$Y$转而考虑其子集$X$时，选择集$C(X)$相对来说太大了。</p>
+<p>而如果$X$有多于两个元素，那么$Y$也必然包含多于两个元素，则根据我们在(-2-)中的构建，必有$C^{\prime}(X)=C(X)$和$C^{\prime}(Y)=C(Y)$，从而(9)依然成立。根据(C3)，当我们从$Y$转而考虑其子集$X$时，选择集$C(X)$相对来说太大了。</p>
 <p>宇泽已经证明了，如果对于任何集合$X$来说，选择函数$C(X)$都仅从中选取唯一一个元素，那么(C2)可以成为使得定理3得以成立的充分条件；但“$C(X)$仅取唯一元素”这一假设同时也将无差异情况排除了。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>最有趣的结论在于，能够生成选择函数的序关系之存在性与显示偏好弱公理是完全等价的。只要我们将预算约束集以及选择函数的定义域都限定为有限集，那么二者的等价性可以很容易地表述出来。尽管这种处理方式会使我们错过很多有趣的数学问题，但这种限定仍然是值得的。</p>
 <p>已经有研究表明将选择函数限定于有限集之上这一处理方式与我们对于显示偏好的直觉理解是相符合的。我们还要注意，任何以实验方法研究偏好的尝试将不可避免地需要处理定义在无限集上的选择函数。</p>

@@ -9,7 +9,7 @@
 <meta property="article:modified_time" content="2021-09-06T11:03:27.000Z">
 <meta property="article:author" content="Brandon Song Li">
 <meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩">
-<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/2b881b2d"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://brandonsli.com/p/2b881b2d"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/img/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -142,96 +142,81 @@
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不求甚解學經濟</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">不求甚解學經濟-一些簡單的單調比較靜態分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2021-08-31T16:06:33.000Z" title="發表於 2021-09-01 00:06:33">2021-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-09-06T11:03:27.000Z" title="更新於 2021-09-06 19:03:27">2021-09-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="不求甚解學經濟-一些簡單的單調比較靜態分析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>一些簡單的單調比較靜態分析</p>
 <span id="more"></span>
-
 <p>某些預備知識可參見<a href="https://brandonsli.com/p/a6db2415.html">不動點定理（六）塔斯基不動點定理 Tarski’s Fixed Point Theorem 及其他</a></p>
 <p>例如：</p>
-<h3 id="Def-強集序"><a href="#Def-強集序" class="headerlink" title="Def 強集序"></a>Def 強集序</h3><p>給定格 $(X,\geq_{\text{for elements}})$ ，對於任何子集 $A,B\subset X$，定義強集序 $\geq_{\text{for sets}}$ 為</p>
-<p>$$A\geq_{\text{for sets}} B\text{ iff } (\forall x\in A,y\in B)[y\geq_{\text{for elements}} x\Rightarrow (x\in B)\text{ and }(y\in A) ]$$</p>
-<p>此處關於序關係的下標是爲了明確表明是應用於元素還是集合，但通過語境可以做出此種區分，因此後文將不再明確寫出。</p>
+<h3 id="Def-強集序"><a href="#Def-強集序" class="headerlink" title="Def 強集序"></a>Def 強集序</h3><p>給定格 $(X,\geq<em>{\text{for elements}})$ ，對於任何子集 $A,B\subset X$，定義強集序 $\geq</em>{\text{for sets}}$ 為</p>
+<script type="math/tex; mode=display">A\geq_{\text{for sets}} B\text{ iff } (\forall x\in A,y\in B)[y\geq_{\text{for elements}} x\Rightarrow (x\in B)\text{ and }(y\in A) ]</script><p>此處關於序關係的下標是爲了明確表明是應用於元素還是集合，但通過語境可以做出此種區分，因此後文將不再明確寫出。</p>
 <p>對於來自於同一個格的兩個子集來説，一個子集“大”與另一個子集等價於任選一對元素，其中更“大”的元素來自更“大”的集合，更“小”的元素來自更“小”的集合。</p>
 <p>但這<strong>并不意味著</strong>，從更“大”的集合中任選一個元素，從更“小”的集合中任選一個元素，前一個元素一定“大於”后一個元素。但<strong>確實意味著</strong>，更“大”的集合中的“最大元”一定“大於”更“小”集合中的“最大元”，并且更“大”集合中的“最小元”一定“大於”更“小”集合中的“最小元”，即：強集序只能保證極端元素的排序關係，更不能保證其中每個元素的排序關係，這也是爲什麽在超模博弈中，只有極端納什均衡具有單調比較靜態關係，但無法保證任意納什均衡具有單調比較靜態關係。</p>
 <h2 id="先考慮簡單情況"><a href="#先考慮簡單情況" class="headerlink" title="先考慮簡單情況"></a>先考慮簡單情況</h2><p>【簡單情況】選擇空間 $X\subset\mathbb{R}$，參數空間 $\Theta\subset\mathbb{R}$，函數 $\phi:X\times\Theta\rightarrow\mathbb{R}$</p>
 <h3 id="單交叉條件"><a href="#單交叉條件" class="headerlink" title="單交叉條件"></a>單交叉條件</h3><p>如果任給 $x^{\prime}&gt;x$ 和 $\theta^{\prime}&gt;\theta$ 函數 $\phi$ 滿足下式，則稱 $\phi$ 關於 $(x,\theta)$ 滿足單交叉條件</p>
-<p>$$\phi(x^{\prime},\theta)\geq\phi(x,\theta)\Rightarrow\phi(x^{\prime},\theta^{\prime})\geq\phi(x,\theta^{\prime})$$</p>
-<p>以及</p>
-<p>$$\phi(x^{\prime},\theta)&gt;\phi(x,\theta)\Rightarrow\phi(x^{\prime},\theta^{\prime})&gt;\phi(x,\theta^{\prime})$$</p>
-<p>解讀：如果我們將函數 $\phi$ 視爲效用函數，$x$ 視爲消費數量，$\theta$ 視爲消費者個人特質，那麽單交叉條件意味著，對於給定的兩組消費束 $x$ 和 $x^{\prime}$，如果具有個人特質 $\theta$ 的消費者偏好消費束 $x^{\prime}$ 勝過消費束 $x$，那麽任何具有更高個人特質 $\theta^{\prime}&gt;\theta$ 的消費者同樣偏好消費束 $x^{\prime}$ 勝過消費束 $x$。</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta)\geq\phi(x,\theta)\Rightarrow\phi(x^{\prime},\theta^{\prime})\geq\phi(x,\theta^{\prime})</script><p>以及</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta)>\phi(x,\theta)\Rightarrow\phi(x^{\prime},\theta^{\prime})>\phi(x,\theta^{\prime})</script><p>解讀：如果我們將函數 $\phi$ 視爲效用函數，$x$ 視爲消費數量，$\theta$ 視爲消費者個人特質，那麽單交叉條件意味著，對於給定的兩組消費束 $x$ 和 $x^{\prime}$，如果具有個人特質 $\theta$ 的消費者偏好消費束 $x^{\prime}$ 勝過消費束 $x$，那麽任何具有更高個人特質 $\theta^{\prime}&gt;\theta$ 的消費者同樣偏好消費束 $x^{\prime}$ 勝過消費束 $x$。</p>
 <p>注意，函數關於 $(x,\theta)$ 滿足單交叉條件<strong>不同於</strong>函數關於 $(\theta,x)$ 滿足單交叉條件。在前例中，效用函數關於 $(\theta,x)$ 滿足單交叉條件則意味著我們在做人際閒比較。即</p>
-<p>$$\phi(\theta^{\prime},x)\geq\phi(\theta,x)\Rightarrow\phi(\theta^{\prime},x^{\prime})\geq\phi(\theta,x^{\prime})$$</p>
-<p>即對於給定的兩個消費者，分別具有個人特質 $\theta$ 和 $\theta^{\prime}&gt;\theta$，如果在消費束 $x$ 下消費者 $\theta^{\prime}$ 的福祉高於消費者 $\theta$ 的福祉，那麽在任何消費束 $x^{\prime}&gt;x$ 下消費者 $\theta^{\prime}$ 的福祉仍然高於消費者 $\theta$ 的福祉。</p>
+<script type="math/tex; mode=display">\phi(\theta^{\prime},x)\geq\phi(\theta,x)\Rightarrow\phi(\theta^{\prime},x^{\prime})\geq\phi(\theta,x^{\prime})</script><p>即對於給定的兩個消費者，分別具有個人特質 $\theta$ 和 $\theta^{\prime}&gt;\theta$，如果在消費束 $x$ 下消費者 $\theta^{\prime}$ 的福祉高於消費者 $\theta$ 的福祉，那麽在任何消費束 $x^{\prime}&gt;x$ 下消費者 $\theta^{\prime}$ 的福祉仍然高於消費者 $\theta$ 的福祉。</p>
 <p>一般來説，我們要求前一種單交叉條件：給定一組選擇變量，比較不同參數所帶來的區別。</p>
 <h3 id="增差"><a href="#增差" class="headerlink" title="增差"></a>增差</h3><p>如果任給 $x^{\prime}&gt;x$ 和 $\theta^{\prime}&gt;\theta$ 函數 $\phi$ 滿足下式，則稱 $\phi$ 關於 $(x,\theta)$ 滿足增差條件</p>
-<p>$$\phi(x^{\prime},\theta^{\prime})-\phi(x,\theta^{\prime})\geq\phi(x^{\prime},\theta)-\phi(x,\theta)$$</p>
-<p>或等價地</p>
-<p>$$\phi(x^{\prime},\theta^{\prime})-\phi(x^{\prime},\theta)\geq\phi(x,\theta^{\prime})-\phi(x,\theta)$$</p>
-<p>或在當前設定下 ($X\subset\mathbb{R}$ 和 $\Theta\subset\mathbb{R}$) 等價地意味著超模性</p>
-<p>$$\phi(x^{\prime},\theta^{\prime})+\phi(x,\theta)\geq\phi(x^{\prime},\theta)+\phi(x,\theta^{\prime})$$</p>
-<h3 id="單交叉與增差的關係"><a href="#單交叉與增差的關係" class="headerlink" title="單交叉與增差的關係"></a>單交叉與增差的關係</h3><p>假設函數 $\phi$ 對於任意 $x^{\prime}&gt;x$ 和 $\theta^{\prime}&gt;\theta$ 滿足</p>
-<p>$$\phi(x^{\prime},\theta^{\prime})-\phi(x,\theta^{\prime})\geq\phi(x^{\prime},\theta)-\phi(x,\theta)$$</p>
-<p>但存在某個 $x^{\prime\prime}&gt;x$ 和 $\theta^{\prime\prime}&gt;\theta$ 卻使得</p>
-<p>$$\phi(x^{\prime\prime},\theta)\geq\phi(x,\theta)$$</p>
-<p>$$\phi(x^{\prime\prime},\theta^{\prime\prime})&lt;\phi(x,\theta^{\prime\prime})$$</p>
-<p>則</p>
-<p>$$\begin{aligned}\phi(x^{\prime\prime},\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})&amp;\geq\phi(x^{\prime\prime},\theta)-\phi(x,\theta)\<br>&amp;\geq\phi(x,\theta)-\phi(x,\theta)\<br>&amp;&#x3D;0<br>\end{aligned}$$</p>
-<p>但</p>
-<p>$$\begin{aligned}<br>\phi(x^{\prime\prime},\theta)-\phi(x,\theta)&amp;\leq\phi(x^{\prime\prime},\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})\<br>&amp;&lt;\phi(x,\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})\<br>&amp;&#x3D;0<br>\end{aligned}$$</p>
-<p>即 $0&lt;0$，矛盾。</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta^{\prime})-\phi(x,\theta^{\prime})\geq\phi(x^{\prime},\theta)-\phi(x,\theta)</script><p>或等價地</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta^{\prime})-\phi(x^{\prime},\theta)\geq\phi(x,\theta^{\prime})-\phi(x,\theta)</script><p>或在當前設定下 ($X\subset\mathbb{R}$ 和 $\Theta\subset\mathbb{R}$) 等價地意味著超模性</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta^{\prime})+\phi(x,\theta)\geq\phi(x^{\prime},\theta)+\phi(x,\theta^{\prime})</script><h3 id="單交叉與增差的關係"><a href="#單交叉與增差的關係" class="headerlink" title="單交叉與增差的關係"></a>單交叉與增差的關係</h3><p>假設函數 $\phi$ 對於任意 $x^{\prime}&gt;x$ 和 $\theta^{\prime}&gt;\theta$ 滿足</p>
+<script type="math/tex; mode=display">\phi(x^{\prime},\theta^{\prime})-\phi(x,\theta^{\prime})\geq\phi(x^{\prime},\theta)-\phi(x,\theta)</script><p>但存在某個 $x^{\prime\prime}&gt;x$ 和 $\theta^{\prime\prime}&gt;\theta$ 卻使得</p>
+<script type="math/tex; mode=display">\phi(x^{\prime\prime},\theta)\geq\phi(x,\theta)</script><script type="math/tex; mode=display">\phi(x^{\prime\prime},\theta^{\prime\prime})<\phi(x,\theta^{\prime\prime})</script><p>則</p>
+<script type="math/tex; mode=display">\begin{aligned}\phi(x^{\prime\prime},\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})&\geq\phi(x^{\prime\prime},\theta)-\phi(x,\theta)\\
+&\geq\phi(x,\theta)-\phi(x,\theta)\\
+&=0
+\end{aligned}</script><p>但</p>
+<script type="math/tex; mode=display">\begin{aligned}
+\phi(x^{\prime\prime},\theta)-\phi(x,\theta)&\leq\phi(x^{\prime\prime},\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})\\
+&<\phi(x,\theta^{\prime\prime})-\phi(x,\theta^{\prime\prime})\\
+&=0
+\end{aligned}</script><p>即 $0&lt;0$，矛盾。</p>
 <p>因此增差可以推出單交叉，即增差的要求要 weakly stronger than 單交叉條件的要求。</p>
 <p>但增差是基數條件，單交叉是序數條件：單交叉可在單調增變換下保持，而增差 (或超模) 不能。(待補充)</p>
-<h3 id="超模與增差的關係"><a href="#超模與增差的關係" class="headerlink" title="超模與增差的關係"></a>超模與增差的關係</h3><p>給定偏序集們 $(X_{i},\geq_{i})<em>{i\in N^{\text{finite}}}$，定義偏序集 $X:&#x3D;\Pi</em>{i\in N^{\text{finite}}}X_{i}$，以及對於 $x,y\in X$</p>
-<p>$$x\geq y\text{ iff }x_{i}\geq_{i}y_{i},\forall i$$</p>
-<p>則稱 $(X,\geq)$ 為乘積格。</p>
+<h3 id="超模與增差的關係"><a href="#超模與增差的關係" class="headerlink" title="超模與增差的關係"></a>超模與增差的關係</h3><p>給定偏序集們 $(X<em>{i},\geq</em>{i})<em>{i\in N^{\text{finite}}}$，定義偏序集 $X:=\Pi</em>{i\in N^{\text{finite}}}X_{i}$，以及對於 $x,y\in X$</p>
+<script type="math/tex; mode=display">x\geq y\text{ iff }x_{i}\geq_{i}y_{i},\forall i</script><p>則稱 $(X,\geq)$ 為乘積格。</p>
 <p>關係：函數 $\phi$ 在 $(X,\geq)$ 上的超模性，等價於兩個條件的結合：函數 $\phi$ 滿足增差；函數 $\phi$ 在任選一對維度 $i,j\in N^{\text{finite}}$ 上滿足超模性。當 $(X,\geq)$ 為 $\mathbb{R}^{N}$ 時，前述三個條件互相等價。</p>
 <h2 id="更具有廣汎性的情況"><a href="#更具有廣汎性的情況" class="headerlink" title="更具有廣汎性的情況"></a>更具有廣汎性的情況</h2><p>選擇空間為格 $(X,\geq)$，參數空間為偏序集 $(\Theta,\geq)$</p>
 <h3 id="單調性"><a href="#單調性" class="headerlink" title="單調性"></a>單調性</h3><p>汎函 $f:\Theta\rightarrow X$ 被稱爲弱遞增函數，如果滿足下式</p>
-<p>$$\theta^{\prime}\geq\theta\Rightarrow f(\theta^{\prime})\geq f(\theta)$$</p>
-<p>對應 $\phi:\Theta\Rightarrow X$ 被稱爲弱遞增對應 (或弱遞增的集值函數)，如果滿足下式</p>
-<p>$$\theta^{\prime}\geq\theta\Rightarrow f(\theta^{\prime})\geq_{\text{強集序}} f(\theta)$$</p>
-<h3 id="定義：序拓撲"><a href="#定義：序拓撲" class="headerlink" title="定義：序拓撲"></a>定義：序拓撲</h3><p>對於<strong>完備</strong>格 $(X,\geq)$，根據完備的定義，對於任何單調 (增或減) 序列 $x_{n}$ 來説</p>
-<p>$$\sup\left{x_{n};n\in\mathbb{N}\right}\in X$$</p>
-<p>$$\inf\left{x_{n};n\in\mathbb{N}\right}\in X$$</p>
-<p>定義關於完備格 $(X,\geq)$ 來説的序拓撲為滿足下式的最弱拓撲</p>
-<p>$$\forall x_{n}\text{ with }x_{n+1}\geq x_{n},\lim x_{n}&#x3D;\sup x_{n}$$</p>
-<p>$$\forall x_{n}\text{ with }x_{n+1}\leq x_{n},\lim x_{n}&#x3D;\inf x_{n}$$</p>
-<h3 id="定義：在序拓撲下的連續函數"><a href="#定義：在序拓撲下的連續函數" class="headerlink" title="定義：在序拓撲下的連續函數"></a>定義：在序拓撲下的連續函數</h3><p>給定完備格 $(X,\geq)$ 和一個拓撲空間 $Y$，稱汎函 $f:X\rightarrow Y$ 在相應于 $(X,\geq)$ 的序拓撲下為連續汎函，如果對於任何單調 (遞增或遞減) 的序列 $x_{n}$ 來説，$f$ 滿足</p>
-<p>$$\lim f(x_{n})&#x3D;f(\lim x_{n})$$</p>
-<hr>
+<script type="math/tex; mode=display">\theta^{\prime}\geq\theta\Rightarrow f(\theta^{\prime})\geq f(\theta)</script><p>對應 $\phi:\Theta\Rightarrow X$ 被稱爲弱遞增對應 (或弱遞增的集值函數)，如果滿足下式</p>
+<script type="math/tex; mode=display">\theta^{\prime}\geq\theta\Rightarrow f(\theta^{\prime})\geq_{\text{強集序}} f(\theta)</script><h3 id="定義：序拓撲"><a href="#定義：序拓撲" class="headerlink" title="定義：序拓撲"></a>定義：序拓撲</h3><p>對於<strong>完備</strong>格 $(X,\geq)$，根據完備的定義，對於任何單調 (增或減) 序列 $x_{n}$ 來説</p>
+<script type="math/tex; mode=display">\sup\left\{x_{n};n\in\mathbb{N}\right\}\in X</script><script type="math/tex; mode=display">\inf\left\{x_{n};n\in\mathbb{N}\right\}\in X</script><p>定義關於完備格 $(X,\geq)$ 來説的序拓撲為滿足下式的最弱拓撲</p>
+<script type="math/tex; mode=display">\forall x_{n}\text{ with }x_{n+1}\geq x_{n},\lim x_{n}=\sup x_{n}</script><script type="math/tex; mode=display">\forall x_{n}\text{ with }x_{n+1}\leq x_{n},\lim x_{n}=\inf x_{n}</script><h3 id="定義：在序拓撲下的連續函數"><a href="#定義：在序拓撲下的連續函數" class="headerlink" title="定義：在序拓撲下的連續函數"></a>定義：在序拓撲下的連續函數</h3><p>給定完備格 $(X,\geq)$ 和一個拓撲空間 $Y$，稱汎函 $f:X\rightarrow Y$ 在相應于 $(X,\geq)$ 的序拓撲下為連續汎函，如果對於任何單調 (遞增或遞減) 的序列 $x_{n}$ 來説，$f$ 滿足</p>
+<script type="math/tex; mode=display">\lim f(x_{n})=f(\lim x_{n})</script><hr>
 <p>下面我們將介紹四個單調性定理，其中前兩個需要超模性 (基數性質) 假設，後兩個需要擬超模性和單交叉性 (均爲序數性質) 假設。</p>
 <h3 id="單調性定理-一-：Topkis-單調性定理"><a href="#單調性定理-一-：Topkis-單調性定理" class="headerlink" title="單調性定理 (一)：Topkis 單調性定理"></a>單調性定理 (一)：Topkis 單調性定理</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和超模函數 $f:X\times\Theta\rightarrow\mathbb{R}$，定義</p>
-<p>$$X^{\star}(\theta)&#x3D;\arg\max_{x\in S(\theta)}f(x,\theta)$$</p>
-<p>其中 $S(\theta)$ 為當參數為 $\theta$ 時的約束集，如果 $\theta^{\prime}\geq\theta$ 并且 $S(\theta^{\prime})\geq_{\text{強集序}} S(\theta)$，則 </p>
-<p>$$X^{\star}(\theta^{\prime})\geq_{\text{強集序}}X^{\star}(\theta)$$</p>
-<h4 id="推論"><a href="#推論" class="headerlink" title="推論"></a>推論</h4><p>如果對於任何 $\theta\in\Theta$，$S(\theta)$ 都是子格，則 $X^{\star}(\theta)$ 也是子格。</p>
+<script type="math/tex; mode=display">X^{\star}(\theta)=\arg\max_{x\in S(\theta)}f(x,\theta)</script><p>其中 $S(\theta)$ 為當參數為 $\theta$ 時的約束集，如果 $\theta^{\prime}\geq\theta$ 并且 $S(\theta^{\prime})\geq_{\text{強集序}} S(\theta)$，則 </p>
+<script type="math/tex; mode=display">X^{\star}(\theta^{\prime})\geq_{\text{強集序}}X^{\star}(\theta)</script><h4 id="推論"><a href="#推論" class="headerlink" title="推論"></a>推論</h4><p>如果對於任何 $\theta\in\Theta$，$S(\theta)$ 都是子格，則 $X^{\star}(\theta)$ 也是子格。</p>
 <h3 id="單調性定理-二"><a href="#單調性定理-二" class="headerlink" title="單調性定理 (二)"></a>單調性定理 (二)</h3><p>給定完備格 $(X,\geq)$ 和超模函數 $f:X\rightarrow\mathbb{R}$，假設 $f$ 在相應于 $(X,\geq)$ 的序拓撲下連續，則定於任何完備子格 $S$</p>
-<p>$$X^{\star}&#x3D;\arg\max_{x\in S}f(x)$$</p>
-<p>也是個完備子格，并且 $\max X^{\star}\in X^{\star}$ 和 $\min X^{\star}\in X^{\star}$ 成立，即解集中存在最大最大元和最小最大元。</p>
+<script type="math/tex; mode=display">X^{\star}=\arg\max_{x\in S}f(x)</script><p>也是個完備子格，并且 $\max X^{\star}\in X^{\star}$ 和 $\min X^{\star}\in X^{\star}$ 成立，即解集中存在最大最大元和最小最大元。</p>
 <h3 id="單交叉"><a href="#單交叉" class="headerlink" title="單交叉"></a>單交叉</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 對於任何 $x^{\prime}&gt;x$ 和 $\theta^{\prime}&gt;\theta$ 都滿足下式，則稱函數 $f$ 關於 $(x,\theta)$ 滿足單交叉條件：</p>
-<p>$$\begin{aligned}<br>f(x^{\prime},\theta)\geq f(x,\theta)&amp;\Rightarrow f(x^{\prime},\theta^{\prime})\geq f(x,\theta^{\prime})\<br>f(x^{\prime},\theta)&gt; f(x,\theta)&amp;\Rightarrow f(x^{\prime},\theta^{\prime})&gt; f(x,\theta^{\prime})<br>\end{aligned}$$</p>
-<h3 id="擬超模性"><a href="#擬超模性" class="headerlink" title="擬超模性"></a>擬超模性</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 對於任何 $x^{\prime}&gt;x$ 和所有的 $\theta$ 都滿足下式，則稱函數 $f$ 關於 $x$ 具有擬超模性：</p>
-<p>$$\begin{aligned}<br>f(x,\theta)\geq f(x\vee x^{\prime},\theta)&amp;\Rightarrow f(x\wedge x^{\prime},\theta)\geq f(x^{\prime},\theta)\<br>f(x,\theta)&gt; f(x\vee x^{\prime},\theta)&amp;\Rightarrow f(x\wedge x^{\prime},\theta)&gt; f(x^{\prime},\theta)<br>\end{aligned}$$</p>
-<h3 id="單調性定理-三"><a href="#單調性定理-三" class="headerlink" title="單調性定理 (三)"></a>單調性定理 (三)</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 滿足單交叉條件，則</p>
-<p>$$X^{\star}(\theta)&#x3D;\arg\max_{x\in X}f(x,\theta)$$</p>
-<p>關於 $\theta$ 在強集序意義上單調非遞減。</p>
+<script type="math/tex; mode=display">\begin{aligned}
+f(x^{\prime},\theta)\geq f(x,\theta)&\Rightarrow f(x^{\prime},\theta^{\prime})\geq f(x,\theta^{\prime})\\
+f(x^{\prime},\theta)> f(x,\theta)&\Rightarrow f(x^{\prime},\theta^{\prime})> f(x,\theta^{\prime})
+\end{aligned}</script><h3 id="擬超模性"><a href="#擬超模性" class="headerlink" title="擬超模性"></a>擬超模性</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 對於任何 $x^{\prime}&gt;x$ 和所有的 $\theta$ 都滿足下式，則稱函數 $f$ 關於 $x$ 具有擬超模性：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+f(x,\theta)\geq f(x\vee x^{\prime},\theta)&\Rightarrow f(x\wedge x^{\prime},\theta)\geq f(x^{\prime},\theta)\\
+f(x,\theta)> f(x\vee x^{\prime},\theta)&\Rightarrow f(x\wedge x^{\prime},\theta)> f(x^{\prime},\theta)
+\end{aligned}</script><h3 id="單調性定理-三"><a href="#單調性定理-三" class="headerlink" title="單調性定理 (三)"></a>單調性定理 (三)</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 滿足單交叉條件，則</p>
+<script type="math/tex; mode=display">X^{\star}(\theta)=\arg\max_{x\in X}f(x,\theta)</script><p>關於 $\theta$ 在強集序意義上單調非遞減。</p>
 <h3 id="單調性定理-四"><a href="#單調性定理-四" class="headerlink" title="單調性定理 (四)"></a>單調性定理 (四)</h3><p>給定格 $(X,\geq)$ 和偏序集 $(\Theta,\geq)$，如果函數 $f:X\times\Theta\rightarrow\mathbb{R}$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 滿足單交叉條件，并且優化域 $S$ 在強集序意義上單調非遞減，則</p>
-<p>$$X^{\star}(\theta,S)&#x3D;\arg\max_{x\in S}f(x,\theta)$$</p>
-<p>關於 $\theta$ 和 $S$ 在強集序意義上單調非遞減。</p>
+<script type="math/tex; mode=display">X^{\star}(\theta,S)=\arg\max_{x\in S}f(x,\theta)</script><p>關於 $\theta$ 和 $S$ 在強集序意義上單調非遞減。</p>
 <hr>
 <p>接下來我們給出解集關於參數或優化域具有單調性的必要條件。</p>
-<h3 id="單調性要求-一"><a href="#單調性要求-一" class="headerlink" title="單調性要求 (一)"></a>單調性要求 (一)</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和函數 $f:X\times\Theta\rightarrow\mathbb{R}$。如果 $X^{\star}(\theta,S):&#x3D;\arg\max_{x\in S}f(x,\theta)$ 關於 $\theta$ 在強集序意義上單調非遞減，其中 $S\subset X$ 形如 $S&#x3D;\left{\bar{x},\bar{x}^{\prime}\right},\bar{x}^{\prime}\geq\bar{x}$ (即集合 $S$ 在給定序關係下為連通集)，則要求：</p>
+<h3 id="單調性要求-一"><a href="#單調性要求-一" class="headerlink" title="單調性要求 (一)"></a>單調性要求 (一)</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和函數 $f:X\times\Theta\rightarrow\mathbb{R}$。如果 $X^{\star}(\theta,S):=\arg\max_{x\in S}f(x,\theta)$ 關於 $\theta$ 在強集序意義上單調非遞減，其中 $S\subset X$ 形如 $S=\left{\bar{x},\bar{x}^{\prime}\right},\bar{x}^{\prime}\geq\bar{x}$ (即集合 $S$ 在給定序關係下為連通集)，則要求：</p>
 <p>函數 $f(x,\theta)$ 關於 $(x,\theta)$ 滿足單交叉條件。</p>
-<h3 id="單調性要求-二"><a href="#單調性要求-二" class="headerlink" title="單調性要求 (二)"></a>單調性要求 (二)</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和函數 $f:X\times\Theta\rightarrow\mathbb{R}$。如果任意固定 $\theta$，$X^{\star}(\theta,S):&#x3D;\arg\max_{x\in S}f(x,\theta)$ 關於 $S$ 在強集序意義上單調非遞減，則要求：</p>
+<h3 id="單調性要求-二"><a href="#單調性要求-二" class="headerlink" title="單調性要求 (二)"></a>單調性要求 (二)</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和函數 $f:X\times\Theta\rightarrow\mathbb{R}$。如果任意固定 $\theta$，$X^{\star}(\theta,S):=\arg\max_{x\in S}f(x,\theta)$ 關於 $S$ 在強集序意義上單調非遞減，則要求：</p>
 <p>函數 $f(x,\theta)$ 關於 $x$ 具有擬超模性。</p>
 <hr>
 <p>接下來是解集關於參數或優化域具有單調性的充要條件。</p>
 <h3 id="Milgrom-Shannon-定理"><a href="#Milgrom-Shannon-定理" class="headerlink" title="Milgrom - Shannon 定理"></a>Milgrom - Shannon 定理</h3><p>給定格 $(X,\geq)$ 、偏序集 $(\Theta,\geq)$ 和函數 $f:X\times\Theta\rightarrow\mathbb{R}$。則如下兩命題等價：</p>
 <ul>
-<li><p>$X^{\star}(\theta,S):&#x3D;\arg\max_{x\in S}f(x,\theta)$ 關於 $t$ 和 $S$ 在強集序意義上單調非遞減</p>
+<li><p>$X^{\star}(\theta,S):=\arg\max_{x\in S}f(x,\theta)$ 關於 $t$ 和 $S$ 在強集序意義上單調非遞減</p>
 </li>
 <li><p>函數 $f$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 具有單交叉性</p>
 </li>
 </ul>
 <p>證明：</p>
-<p>根據單調性要求 (一) 和單調性要求 (二)，可知，$X^{\star}(\theta,S):&#x3D;\arg\max_{x\in S}f(x,\theta)$ 關於 $t$ 和 $S$ 在強集序意義上單調非遞減足以推出函數 $f$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 具有單交叉性。所以我們只需要證明函數 $f$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 具有單交叉性能夠推出解集關於參數和優化域單調非遞減。</p>
+<p>根據單調性要求 (一) 和單調性要求 (二)，可知，$X^{\star}(\theta,S):=\arg\max_{x\in S}f(x,\theta)$ 關於 $t$ 和 $S$ 在強集序意義上單調非遞減足以推出函數 $f$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 具有單交叉性。所以我們只需要證明函數 $f$ 關於 $x$ 具有擬超模性，并且關於 $(x,\theta)$ 具有單交叉性能夠推出解集關於參數和優化域單調非遞減。</p>
 <p>【參考文獻】</p>
 <ul>
 <li>SARVER, Todd. Microeconomic Theory Note. 2021 Version.</li>
